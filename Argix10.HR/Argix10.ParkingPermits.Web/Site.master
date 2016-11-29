@@ -1,0 +1,56 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+<!DOCTYPE HTML>
+
+<html>
+<head runat="server">
+    <title>Argix Logistics HR Security</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Cache-Control" content="no-cache='set-cookie', no-store" />
+	<meta http-equiv="Expires" content="-1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="viewport" content="user-scalable=no, width=device-width" />    
+    <asp:ContentPlaceHolder ID="cphMeta" runat="server" />
+    <link href='https://fonts.googleapis.com/css?family=Michroma' rel='stylesheet' type='text/css' />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,300italic' rel='stylesheet' type='text/css' />
+    <link id="Link1" runat="server" href="~/App_Themes/Argix/Argix.css?v=1.2" rel="stylesheet" type="text/css" />
+    <link id="Link2" runat="server" rel="shortcut icon" href="~/favicon.ico">
+    <script type="text/javascript">
+        function beginRequest(sender, args) { window.status = "..."; document.body.style.cursor = "wait"; }
+        function pageLoaded(sender, args) { window.status = ""; document.body.style.cursor = "default"; }
+    </script>
+</head>
+<body>
+<form id="idForm" runat="server">
+    <asp:ScriptManager ID="smPage" runat="server" EnableCdn="false" EnablePartialRendering="true" AsyncPostBackTimeout="600" ScriptMode="Auto" LoadScriptsBeforeUI="true">
+        <Scripts>
+            <asp:ScriptReference Path="~/Scripts/jquery-1.10.2.js" />
+            <asp:ScriptReference Path="~/Scripts/jquery-globalize-1.10.2.js" />
+            <asp:ScriptReference Path="~/Scripts/jquery-ui-1.10.3.js" />
+            <asp:ScriptReference Path="~/Scripts/jquery.inputmask.js" />
+            <asp:ScriptReference Path="~/App_Themes/Argix/jquery-ui-blitzer.css" />
+        </Scripts>
+    </asp:ScriptManager>
+    <script type="text/javascript">
+        Sys.WebForms.PageRequestManager.getInstance().add_beginRequest(beginRequest);
+        Sys.WebForms.PageRequestManager.getInstance().add_pageLoaded(pageLoaded);
+	</script>
+    <div class="gridcontainer">
+        <div class="gridbox gridheader">
+            <div class="header">
+                <div class="logo">
+                    <a href="https://www.argixlogistics.com" target="_self"><img runat="server" src="~/App_Themes/Argix/Images/argix-logo.gif" alt="Argix logo" style="border: 0;" /></a>
+                    <asp:UpdatePanel runat="server" ID="pnlMsg" UpdateMode="Always"><ContentTemplate><asp:Label ID="lblMsg" runat="server" Text="" /></ContentTemplate></asp:UpdatePanel>
+                </div>
+                <div class="title">Parking Permits</div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="gridbox gridbody"><div class="body"><asp:ContentPlaceHolder ID="cphBody" runat="server" /></div></div>
+        <div class="clear"></div>
+        <div class="gridbox gridfooter"><div class="footer">Copyright 2015 Argix Logistics, Inc. v4.0.0.20150629</div></div>
+    </div>
+</form>
+</body>
+</html>

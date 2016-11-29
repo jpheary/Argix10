@@ -1,0 +1,209 @@
+              --------------------------------------------------------
+                    		TLViewer Application Readme File
+		                       		July, 2015
+              --------------------------------------------------------
+                         (c) Copyright Argix Logistics, 2004-2015
+
+This document provides late-breaking or other information that supplements the TLViewer documentation.
+
+------------------------
+How to Use This Document
+------------------------
+To view the Readme file on-screen in Windows Notepad, maximize the Notepad window and click Word 
+Wrap on the Edit menu. To print the Readme file, open it in Notepad or another word processor, 
+and then use the Print command on the File menu.
+
+==============
+CONTENTS
+==============
+INSTALLATION
+   DEPLOYMENT
+   CONFIGURATION
+
+NOTES
+   GENERAL
+   DEPENDENCIES
+   OPERATION
+   VERSION HISTORY
+==============
+
+
+INSTALLATION
+==============
+DEPLOYMENT
+TLViewer is installed into a Click-Once deployment folder visible from an IIS web service as follows:
+1.	Create a virtual folder c:\inetpub\wwwroot\Argix10\Apps\Freight\TLViewer on a web server like rgxvmweb using 
+	Windows explorer. 
+2.	Create a sub-folder called Application Files. 
+3.	Copy the new versioned Click-Once deployment folder (i.e TLViewer_4_0_0_2) into the Application Files folder; this folder 
+	contains the following:
+		Argix10.Export.Lib.dll
+		Argix10.Windows.Lib.dll
+		TLViewer.application
+		TLViewer.exe
+		TLViewer.exe.config
+		TLViewer.exe.manifest
+		Infragistics4.Shared.v12.1.dll
+		Infragistics4.Win.UltraWinGrid.v12.1.dll
+		Infragistics4.Win.v12.1.dll
+		releasenotes.txt
+4.	Copy the deployment manifest, TLViewer.application, into the TLViewer folder. This manifest points to
+	tha application manifest (i.e. \TLViewer_4_0_0_2\TLViewer.exe.manifest)
+5.	Launch the Internet Information Services snap-in and validate that the virtual folder allows
+	anonymous access. A web application does not need to be created for deployment.
+6.	Verify http access from Internet Explorer to the following url: 
+		http://rgxvmweb/Argix10/Apps/Freight/TLViewer/TLViewer.application
+7.	The Click-Once deployment is installed on the client machine in the C:\Users\<username>\AppData\Local\Apps\2.0 folder.
+8.	Version rollbacks are accomplished by simply copying the deployment manifest (i.e. TLViewer.application) from 
+	a previous Click-Once deployment folder (i.e TLViewer_4_0_0_1) into the TLViewer root folder
+
+
+CONFIGURATION
+Open the global database (i.e. RGXSQL400 on jargxvmts), goto the Configuration table, and add/edit the 
+values below. Individual users can have overrides from the default values.
+	Application     PCName          Key                       Value                     Security 
+	--------------- --------------- ------------------------- ------------------------- -------- 
+	TLViewer        Default         TraceLevel                4                         1        
+
+
+NOTES
+==============
+GENERAL
+The TLViewer Application (TLViewer.exe) is a Windows based application that provides information
+about trailer load capacities (weight, cube) for a selection of active TLs at a given terminal. It
+also provides summary information about trailer loads and load capacities for each agent.
+
+
+DEPENDENCIES
+The Dispatch application is dependent upon the following web services: 
+- http://rgxvmweb/Argix10/Argix10.Freight.Services/TLViewerService.svc
+- http://rgxvmweb/Argix10/Argix10.Membership.Services/RoleService.svc
+
+
+ROLE MANAGEMENT
+The following roles are used in this application:
+Warehouse Supervisor
+- can do everything.
+Shipping Supervisor
+- can do everything.
+Shipping Clerk
+- can do everything.
+
+Use the following link to access the role manager to create and edit role assignments for Argix employees: 
+http://rgxvmweb/Argix10/Apps/IT/Membership/Membership.application
+
+
+OPERATION
+Normal:
+The TLViewer Application (tlviewer.exe) operates by launching from a web server deployment 
+url (i.e. http://rgxweb/tlviewer/tlviewer.exe). After a brief splash screen , a view of TLs 
+for the selected terminal will appear. Additional operating steps can be found in the 
+on-line documentation provided by the Help/Contents menu item.
+
+
+VERSION HISTORY
+v2.1.0, 09/14/04 ---------------------------------------------------------------------------
+Requirements/features
+- no new requirements or features
+Design/deployment
+ -	added app.config key (UseWebSvc) for configuration switching between backend data source access 
+	(web service or ado.net)
+ -	added additional configuration parameters to database (MISPassword, TraceLevel= 0:None; 1:Debug; 
+	2:Information; 3:Warning; 4:Error)
+ -	changed from custom web service to generic web service Tsort.Data.WebSvc (no longer required: 
+	Tsort.Sort.WebSvc web service)
+ -	upgraded to Infragistics NetAdvantage 2004 third party control suite (required: 
+	Infragistics.Win.v3.2.dll, Infragistics.Shared.v3.2.dll, Infragistics.Win.UltraWinGrid.v3.2.dll)
+
+v2.2.0, 12/14/04 ---------------------------------------------------------------------------
+Requirements/features
+ -	none
+Design/deployment
+ - updated stored procedure names per canges to database
+ - using new features built into Tsort.Shared.User.dll
+ - revised Help menu to support dynamically configurable (app.config) ShowHelp menu items
+ - revised implementation to support Diagnostics mode
+ 
+ v2.3.0, 06/30/05 ---------------------------------------------------------------------------
+Requirements/features
+ -	corrected issues with grid focus.
+ -  added muli-column sort support.
+ -  removed toolbar button for terminal selection.
+Design/deployment
+ - revised design per latest design paradigm.
+ - upgraded to Infragistics NetAdvantage 2005 third party control suite (required: 
+   Infragistics.Win.v5.1.dll, Infragistics.Shared.v5.1.dll, Infragistics.Win.UltraWinGrid.v5.1.dll)
+
+ v2.5.0, 01/25/06 ---------------------------------------------------------------------------
+Requirements/features
+ - none.
+Design/deployment
+ - replaced Tsort.Shared.User.dll with Tsort.Data.dll and Tsort.Windows.dll.
+
+ v2.5.1, 10/11/06 ---------------------------------------------------------------------------
+Requirements/features
+ -	none.
+Design/deployment
+ - full trailer weight/cube now configurable in app.config.
+ - revised exception handlers.
+
+ v2.7.0, 01/02/08 ---------------------------------------------------------------------------
+Requirements/features
+ - none.
+Design/deployment
+ - added grid columns for TL Date and Close Number to all applicable grids.
+ - upgraded to Infragistics NetAdvantage 2006 third party control suite (required: Infragistics.Win.v6.3.dll, Infragistics.Shared.v6.3.dll, Infragistics.Win.UltraWinGrid.v6.3.dll)
+ - removed Tsort.Controls.dll (replaced by the updated Tsort.Windows.dll).
+
+ v2.8.0, 08/14/08 ---------------------------------------------------------------------------
+Requirements/features
+ - .Net Framework 2.0
+Design/deployment
+ - ported to VS 2005
+
+v3.5.0, 08/19/10 ---------------------------------------------------------------------------
+Requirements/features
+- None.
+Design/deployment
+- Application ported to .NET Framework 3.5 using Visual Studio 2008.
+
+v3.5.1, 01/10/11, 03/30/11 -----------------------------------------------------------------
+Requirements/features
+- None.
+Design/deployment
+- Re-designed to use Argix08.GlobalServices.TLViewerService WCF service.
+
+v4.0.0, 12/06/13 ---------------------------------------------------------------------------
+Requirements/features
+- added save to Excel for TLView and Agent Summary view.
+Design/deployment
+- re-designed to use Argix10.Freight.Services/TLViewerService.svc web service
+- upgraded to Infragistics NetAdvantage 2012 third party control suite (required: Infragistics4.Win.v12.1.dll, Infragistics2.Shared.v12.1.dll, Infragistics2.Win.UltraWinGrid.v12.1.dll)
+- added role-based security using web service http://rgxvmweb/Argix10/Argix10.Membership.Services/RoleService.svc.
+
+v4.0.1, 05/13/14, 06/23/14 -----------------------------------------------------------------
+Requirements/features
+- modified save to Excel for TLView for selected rows only.
+- added TL detail dialog (double-click a TL) that shows store deliveries
+Design/deployment
+- none.
+
+v4.0.2, 06/26/14 ---------------------------------------------------------------------------
+Requirements/features
+- none.
+Design/deployment
+- added menu\toolbar items for TL Detail; removed doublue-click from grid
+- restored SaveAs to saving 'all' TLs to Excel; added menu\toolbar items for Export of 'selected' TLs
+
+v4.0.3, 11/19/14 ---------------------------------------------------------------------------
+Requirements/features
+- added refresh, print, print preview, and saveAs to TL Detail dialog.
+Design/deployment
+- none.
+
+v4.0.4, 07/09/15 ---------------------------------------------------------------------------
+Requirements/features
+- none.
+Design/deployment
+- added auto refresh but... not a good idea because it will wipe out closed TLs before they can export them;
+  also, need to restore multi-select grid state after refresh.

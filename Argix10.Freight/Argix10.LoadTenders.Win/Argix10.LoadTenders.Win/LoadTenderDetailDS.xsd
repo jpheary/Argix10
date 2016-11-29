@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="LoadTenderDetailDS" targetNamespace="http://tempuri.org/LoadTenderDetailDS.xsd" elementFormDefault="qualified" xmlns="http://tempuri.org/LoadTenderDetailDS.xsd" xmlns:mstns="http://tempuri.org/LoadTenderDetailDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="LoadTenderDetailDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+		<xs:complexType>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="LoadTenderDetailTable">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Load" type="xs:string" minOccurs="0" />
+              <xs:element name="ReferenceNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="Location" type="xs:string" minOccurs="0" />
+              <xs:element name="AddressLine1" type="xs:string" minOccurs="0" />
+              <xs:element name="AddressLine2" type="xs:string" minOccurs="0" />
+              <xs:element name="City" type="xs:string" minOccurs="0" />
+              <xs:element name="StateOrProvince" type="xs:string" minOccurs="0" />
+              <xs:element name="PostalCode" type="xs:string" minOccurs="0" />
+              <xs:element name="LocationNumber" type="xs:int" minOccurs="0" />
+              <xs:element name="LocationID" type="xs:string" minOccurs="0" />
+              <xs:element name="PONumber" type="xs:string" minOccurs="0" />
+              <xs:element name="ItemNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="ItemDescription" type="xs:string" minOccurs="0" />
+              <xs:element name="Client" type="xs:string" minOccurs="0" />
+              <xs:element name="ClientName" type="xs:string" minOccurs="0" />
+              <xs:element name="StoreNumber" type="xs:int" minOccurs="0" />
+              <xs:element name="QuantityOrdered" type="xs:int" minOccurs="0" />
+              <xs:element name="UOM" type="xs:string" minOccurs="0" />
+              <xs:element name="SortedItemNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="SortedPONumber" type="xs:string" minOccurs="0" />
+              <xs:element name="Sorted" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+       </xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

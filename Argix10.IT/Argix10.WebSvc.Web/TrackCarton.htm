@@ -1,0 +1,127 @@
+<html>
+<head>
+  <title>Tracking Client</title>
+  <style type="text/css">
+    body {
+      color: #000000;
+      background-color: #ffffff;
+      font-family: sans-serif;
+      margin: 0px 0px;
+    }
+    .gridcontent {
+      margin-left: 30px;
+      font-size: .70em;
+      padding-bottom: 2em;
+    }
+    .header {
+      width: 100%;
+      margin: 0px 0px 0px -30px;
+      padding: 10px 0px 3px 15px;
+      background-color: #003366;
+      color: #ffffff;
+      font-size: 26px;
+      font-weight: normal;
+    }
+    .title {
+      width: 100%;
+      font-size: 1.5em;
+      font-weight: bold;
+      margin: 25px 0px 10px -15px;
+      padding: 5px 0px;
+      border-top: 1px solid #003366;
+      color: #003366;
+    }
+    .subtitle {
+      margin: 10px 0px 10px -15px;
+      color: #000000;
+      font-size: 1.1em;
+      font-style: italic;
+    }
+    .frmHeader {
+      color: #000000;
+      background: #dcdcdc;
+      font-family: Verdana;
+      font-size: .7em;
+      font-weight: normal;
+      border-right: 2px solid #ffffff;
+      border-bottom: 1px solid #dcdcdc;
+      padding-top: 2px;
+      padding-bottom: 2px;
+    }
+    .frmText {
+      margin: 8px 0px 0px 32px;
+      font-size: .7em;
+    }
+    .frmInput {
+      font-size: 1em;
+    }
+    .button {
+      background-color: #dcdcdc;
+      border-top: #cccccc 1px solid;
+      border-right: #666666 1px solid;
+      border-bottom: #666666 1px solid;
+      border-left: #cccccc 1px solid;
+      font-size: 1em;
+    }
+    td {
+      color: #000000;
+      font-size: .7em;
+    }
+    a:link {
+      color: #336699;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+    a:visited {
+      color: #6699cc;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+    a:active {
+      color: #336699;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+    a:hover {
+      color: #cc3300;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="gridcontent">
+    <div class="header">Argix Logistics Carton Tracking Service Client</div>
+    <div class="title">Track Carton</div>
+    <div class="subtitle">GET Test</div>
+    To test the operation using the HTTP GET protocol, click the link below.
+    <br /><br />
+    <table cellspacing="0" cellpadding="5" frame="box" bordercolor="#dcdcdc" rules="none" style="border-collapse:collapse; border-color:#dcdcdc">
+      <tr><td class="frmHeader">&nbsp;</td><td class="frmHeader">&nbsp;</td><td class="frmHeader">&nbsp;</td></tr>
+      <tr>
+        <td class="frmText">Address Validation</td>
+        <td><a href="https://www.argixlogistics.com/tracking/HelloWorld.asmx/Hello" target="_blank">Hello</a></td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr style="font-size:1px;"><td colspan="3">&nbsp;</td></tr>
+    </table>
+    <br /><br /><br />
+    <div class="subtitle">POST Test</div>
+    To test the operation using the HTTP POST protocol, click the 'Invoke' button.
+    <br /><br />
+    <form target="_blank" action='https://www.argixlogistics.com/tracking/carton.asmx/TrackCarton' method="POST">
+      <table cellspacing="0" cellpadding="4" frame="box" bordercolor="#dcdcdc" rules="none" style="border-collapse: collapse;">
+        <tr><td class="frmHeader">Parameter</td><td class="frmHeader">Value</td><td class="frmHeader">&nbsp;</td></tr>
+        <tr>
+          <td class="frmText">Carton Number</td>
+          <td><input class="frmInput" type="text" size="30" name="cartonNumber" value="00417090113473083940" /></td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr style="font-size:1px;"><td colspan="3">&nbsp;</td></tr>
+        <tr><td>&nbsp;</td><td align="right"><input type="submit" value="Track Carton" class="button"></td><td>&nbsp;</td></tr>
+        <tr style="font-size:1px;"><td colspan="3">&nbsp;</td></tr>
+      </table>
+    </form>
+  </div>
+</body>
+</html>

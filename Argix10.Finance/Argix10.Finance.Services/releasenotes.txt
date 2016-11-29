@@ -1,0 +1,67 @@
+              --------------------------------------------------------
+							Finnance Services Readme File
+		                       		September, 2014
+              --------------------------------------------------------
+                         (c) Copyright Argix Logistics, 2011-2014
+
+This document provides late-breaking or other information that supplements the Enterprise Services documentation.
+
+------------------------
+How to Use This Document
+------------------------
+To view the Readme file on-screen in Windows Notepad, maximize the Notepad window and click Word 
+Wrap on the Edit menu. To print the Readme file, open it in Notepad or another word processor, 
+and then use the Print command on the File menu.
+
+==============
+CONTENTS
+==============
+NOTES
+   GENERAL
+   DEPENDENCIES
+   VERSION HISTORY
+==============
+
+
+NOTES
+==============
+GENERAL
+The Finance Service is a WCF web application that provides Finance 
+business services related to Argix Logistics business activities for Rate
+Quotes, Invoicing, and Driver Compensation.
+
+
+DEPENDENCIES
+SMTP Services (http://rgxvmweb/Argix10/Argix10.Enterprise.Services/SMTP.svc).
+RateWare CzarLite services (http://demo.smc3.com/AdminManager/services/RateWareXL?WSDL) for rating.
+
+
+VERSION HISTORY
+v4.0.0, 09/09/13 ---------------------------------------------------------------------------
+Requirements/features
+- none.
+Design
+- none.
+
+VERSION HISTORY
+v4.0.1, 07/31/14 ---------------------------------------------------------------------------
+Requirements/features
+- modifications to support determining route expenses.
+Design
+- added int RouteIndex to class DriverRoute.
+- replaced stored procedures in DriverCompGateway with uspDCRoadshowRoutesGetList2, uspDCDriverRouteNew2; revised
+  DriverCompGateway::CreateDriverRoute() to pass new DriverRoute.RouteIndex value.
+- updated Microsoft.Practices.EnterpriseLibrary.Common.dll and Microsoft.Practices.EnterpriseLibrary.Data.dll 
+  to version 5.0.
+
+VERSION HISTORY
+v4.0.2, 09/04/14 ---------------------------------------------------------------------------
+Requirements/features
+- modified for new driver bonus requirement.
+Design
+- changed DriverCompGateway::ReadRoadshowRoutes() to use new uspDCRoadshowRoutesGetList3 (adds field OperatorHireDate).
+- changed DriverCompGateway::ReadDriverRoutes() to use new uspDCDriverRoutesGetList2 (adds field RouteIndex).
+- added new data member BonusRate to data contract IDriverCompService::TerminalConfiguration.
+- added BonusRate field to table dcTerminalConfiguration; changed DriverCompGateway::ReadTerminalConfigurations() to use 
+  new uspDCTerminalConfigurationGet2 (adds field BonusRate).
+

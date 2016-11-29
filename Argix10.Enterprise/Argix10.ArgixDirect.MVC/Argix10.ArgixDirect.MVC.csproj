@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5382D1AB-2775-42B4-B5CF-4796284C0679}</ProjectGuid>
+    <ProjectTypeGuids>{F85E285D-A4E0-4152-9332-AB1D724D3325};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Argix</RootNamespace>
+    <AssemblyName>ArgixDirect</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Areas\Mobile\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Mobile\MobileAreaRegistration.cs" />
+    <Compile Include="Areas\Mobile\Models\EmailServices.cs" />
+    <Compile Include="Areas\Mobile\Models\HomeModels.cs" />
+    <Compile Include="Areas\Tracking\Controllers\AdministrationController.cs" />
+    <Compile Include="Areas\Tracking\Controllers\ReportsController.cs" />
+    <Compile Include="Areas\Tracking\Models\TrackingModels.cs" />
+    <Compile Include="Areas\Tracking\TrackingAreaRegistration.cs" />
+    <Compile Include="Areas\Tracking\Views\Administration\Administration.master.cs">
+      <DependentUpon>Administration.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas\Tracking\Views\Reports\Reports.master.cs">
+      <DependentUpon>Reports.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas\Tracking\Views\Tracking\Tracking.master.cs">
+      <DependentUpon>Tracking.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AboutUsController.cs" />
+    <Compile Include="Areas\Tracking\Controllers\TrackingController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ServicesController.cs" />
+    <Compile Include="Controllers\WhyArgixController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\HomeModels.cs" />
+    <Compile Include="Models\EmailServices.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\Enterprise\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AboutUs\AboutUs.master.cs">
+      <DependentUpon>AboutUs.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\AboutUs\AboutUs.master.designer.cs">
+      <DependentUpon>AboutUs.master</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Landing\Landing_B2C.aspx.cs">
+      <DependentUpon>Landing_B2C.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Landing\Landing_Tour.aspx.cs">
+      <DependentUpon>Landing_Tour.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Services\Services.master.cs">
+      <DependentUpon>Services.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Services\Services.master.designer.cs">
+      <DependentUpon>Services.master</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Tracking\Views\Shared\Site.master.cs">
+      <DependentUpon>Site.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas\Tracking\Views\Shared\Site.master.designer.cs">
+      <DependentUpon>Site.master</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WhyArgix\WhyArgix.master.cs">
+      <DependentUpon>WhyArgix.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\WhyArgix\WhyArgix.master.designer.cs">
+      <DependentUpon>WhyArgix.master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\00000.xml" />
+    <Content Include="App_Data\00011.xml" />
+    <Content Include="App_Data\00012.xml" />
+    <Content Include="App_Data\00035.xml" />
+    <Content Include="App_Data\00160.xml" />
+    <Content Include="App_Data\blank.xml" />
+    <Content Include="App_Data\default.xml" />
+    <Content Include="Areas\Mobile\Views\Home\AboutUs.aspx" />
+    <Content Include="Areas\Mobile\Views\Home\ContactUs.aspx" />
+    <Content Include="Areas\Mobile\Views\Home\Index.aspx" />
+    <Content Include="Areas\Mobile\Views\Home\Services.aspx" />
+    <Content Include="Areas\Mobile\Views\Home\SmartScan.aspx" />
+    <Content Include="Areas\Mobile\Views\Home\SynthesizedShipments.aspx" />
+    <Content Include="Areas\Mobile\Views\Home\ThankYou.aspx" />
+    <Content Include="Areas\Mobile\Views\Home\Tracking.aspx" />
+    <Content Include="Areas\Mobile\Views\Home\WhyArgix.aspx" />
+    <Content Include="Areas\Tracking\Views\Administration\ChangePassword.aspx" />
+    <Content Include="Areas\Tracking\Views\Administration\ManageGuests.aspx" />
+    <Content Include="Areas\Tracking\Views\Administration\ManageMembership.aspx" />
+    <Content Include="Areas\Tracking\Views\Administration\ManageUsers.aspx" />
+    <Content Include="Areas\Tracking\Views\Tracking\CartonDetail.aspx" />
+    <Content Include="Areas\Tracking\Views\Tracking\CartonSummary.aspx" />
+    <Content Include="Areas\Tracking\Views\Administration\Administration.aspx" />
+    <Content Include="Areas\Tracking\Views\Reports\Reports.aspx" />
+    <Content Include="Areas\Tracking\Views\Tracking\StoreDetail.aspx" />
+    <Content Include="Areas\Tracking\Views\Tracking\StoreSummary.aspx" />
+    <Content Include="Areas\Tracking\Views\Tracking\TrackByCarton.aspx" />
+    <Content Include="Areas\Tracking\Views\Tracking\TrackByContract.aspx" />
+    <Content Include="Areas\Tracking\Views\Tracking\TrackByStore.aspx" />
+    <Content Include="Content\Account.css" />
+    <Content Include="Content\Tracking.css" />
+    <Content Include="Content\Images\address.gif" />
+    <Content Include="Content\Images\canvas.jpg" />
+    <Content Include="Content\Images\jamesburg.jpg" />
+    <Content Include="Content\Images\logo.jpg" />
+    <Content Include="Content\Images\services.gif" />
+    <Content Include="Content\Images\zonemap.gif" />
+    <Content Include="Content\Images\zonemap.jpg" />
+    <Content Include="Content\Landing.css" />
+    <Content Include="Content\Mobile.css" />
+    <Content Include="Global.asax" />
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Service References\Enterprise\Argix.Enterprise.TrackingItems.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Enterprise\Tracking.disco" />
+    <None Include="Service References\Enterprise\configuration91.svcinfo" />
+    <None Include="Service References\Enterprise\configuration.svcinfo" />
+    <None Include="Service References\Enterprise\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Views\Home\ThankYou.aspx" />
+    <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Views\Services\SmartScan.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Content\Images\anntaylor.jpg" />
+    <Content Include="Content\Images\blackbar.jpg" />
+    <Content Include="Content\Images\bn.jpg" />
+    <Content Include="Content\Images\consolidation.jpg" />
+    <Content Include="Content\Images\customerservice.jpg" />
+    <Content Include="Content\Images\dcbypass.jpg" />
+    <Content Include="Content\Images\deconsolidation.jpg" />
+    <Content Include="Content\Images\deliveries.jpg" />
+    <Content Include="Content\Images\freight.jpg" />
+    <Content Include="Content\Images\house.jpg" />
+    <Content Include="Content\Images\integrity.jpg" />
+    <Content Include="Content\Images\linehaul.jpg" />
+    <Content Include="Content\Images\noSurcharges.jpg" />
+    <Content Include="Content\Images\scanlabel.jpg" />
+    <Content Include="Content\Images\solutions.jpg" />
+    <Content Include="Content\Images\warehousing.jpg" />
+    <Content Include="Content\Images\synthesize.jpg" />
+    <Content Include="Content\Images\Thankyou.jpg" />
+    <Content Include="Content\Images\topBanner.jpg" />
+    <Content Include="Content\Images\transitMap.png" />
+    <Content Include="Content\Images\transittimes.jpg" />
+    <Content Include="Content\Images\whyargix.jpg" />
+    <Content Include="Scripts\jquery-1.4.4.min.js" />
+    <Content Include="Scripts\jquery.js" />
+    <Content Include="Views\AboutUs\Location.aspx" />
+    <Content Include="Views\AboutUs\LocationLargeMap.aspx" />
+    <Content Include="Views\AboutUs\AboutUs.aspx" />
+    <Content Include="Views\Home\ContactUs.aspx" />
+    <Content Include="Areas\Tracking\Views\Tracking\Tracking.aspx" />
+    <Content Include="Views\Landing\Landing_B2C.aspx" />
+    <Content Include="Views\Landing\Landing_Tour.aspx" />
+    <Content Include="Views\Landing\Landing_TourLargeMap.aspx" />
+    <Content Include="Views\Landing\ThankYou.aspx" />
+    <Content Include="Views\Services\Services.aspx" />
+    <Content Include="Views\Services\Consolidation.aspx" />
+    <Content Include="Views\Services\ConsumerDirect.aspx" />
+    <Content Include="Views\Services\DCBypass.aspx" />
+    <Content Include="Views\Services\FreightPickup.aspx" />
+    <Content Include="Views\Services\ImportDeconsolidation.aspx" />
+    <Content Include="Views\Services\LineHaul.aspx" />
+    <Content Include="Views\Services\Warehousing.aspx" />
+    <Content Include="Views\Services\StoreDelivery.aspx" />
+    <Content Include="Views\Home\Testimonials.aspx" />
+    <Content Include="Views\WhyArgix\WhyArgix.aspx" />
+    <Content Include="Views\WhyArgix\CustomerService.aspx" />
+    <Content Include="Views\WhyArgix\CustomizedSolutions.aspx" />
+    <Content Include="Views\WhyArgix\SynthesizedShipments.aspx" />
+    <Content Include="Views\WhyArgix\ShipmentIntegrity.aspx" />
+    <Content Include="Views\WhyArgix\SmartScan.aspx" />
+    <Content Include="Views\WhyArgix\TransitTimes.aspx" />
+    <Content Include="Views\WhyArgix\VolumeTotals.aspx" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\MicrosoftAjax.js" />
+    <Content Include="Scripts\MicrosoftAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
+    <Content Include="Views\Account\ChangePassword.aspx" />
+    <Content Include="Views\Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Views\Account\LogOn.aspx" />
+    <Content Include="Views\Account\Register.aspx" />
+    <Content Include="Views\Shared\Error.aspx" />
+    <Content Include="Views\Shared\LogOnUserControl.ascx" />
+    <Content Include="Views\Shared\Site.Master" />
+    <Content Include="Views\Web.config" />
+    <None Include="Service References\Enterprise\Tracking.wsdl" />
+    <None Include="Service References\Enterprise\Tracking2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Enterprise\Tracking3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Enterprise\Tracking4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Enterprise\TrackingService.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Tracking\Views\Web.config" />
+    <Content Include="Areas\Mobile\Views\Web.config" />
+    <Content Include="Views\AboutUs\AboutUs.master" />
+    <Content Include="Views\WhyArgix\WhyArgix.master" />
+    <Content Include="Views\Services\Services.master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Mobile\Views\Shared\Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Tracking\Views\Shared\Site.master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Tracking\Views\Tracking\Tracking.master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Tracking\Views\Administration\Administration.master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Tracking\Views\Reports\Reports.master" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\Enterprise\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Enterprise\Tracking.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Enterprise\Tracking1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target> -->
+  <Target Name="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(ProjectDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53819</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,7 @@
+﻿x	Add pickup/delivery date option for store tracking	
+x	Add zone to delivery and store tracking results
+x	Cache lists for a day, user can restart for updates if necessary
+x	Cache new issue data for failure or until user cancels, same for new actions
+	Add reports for issue analysis, available to managers only
+	Add role-based security; roles: Manager, Agent Control, Customer Rep, Guest
+	Bring the role object down from the web service n cache it; remove the local role class

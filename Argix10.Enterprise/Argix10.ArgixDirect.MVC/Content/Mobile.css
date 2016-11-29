@@ -1,0 +1,117 @@
+
+body {
+    font-size: .80em;
+    font-family: "Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
+    margin: 0px;
+    padding: 0px;
+	background-color:#333333;
+}
+
+#header {
+    width: 320px;
+    height: 50px;
+    background: #cc3333;
+    
+}
+#logo {
+    height: 40px;
+    margin: 5px 5px;
+}
+
+#content { 
+    width: 308px;
+    padding: 12px 6px;
+	background: #a9a9a9 url(../content/images/canvas.jpg) repeat-y;
+}
+
+#menu {
+    width: 320px;
+    height: 25px;
+    background: #cc3333;
+    margin: 0px;
+    padding: 0px;
+}
+.menuItem {
+    float: left;
+    width: 78px;
+    border: 1px solid #000000;
+    margin: 0px;
+    padding: 2px 0px;
+    text-align: center;
+}
+.menuItem a {
+    color: #ffffff;
+    text-decoration: none;
+	text-transform: uppercase;
+}
+
+.pageMenu {
+    display: block;
+    width: 270px;
+    font-size: 1.0em;
+    border: 0px solid #000000;
+    margin: 3px 5px;
+    padding: 5px 5px;
+    background: #000000;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+ .imgFloatRight {
+	float:right;
+	margin: 20px 5px 5px 5px;
+}
+.textContainer {
+	margin: 10px 30px 10px 10px;
+    text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 1.0em;
+    color: #000000;
+    font-variant: small-caps;
+    text-transform: none;
+    font-weight: 600;
+    margin-bottom: 0px;
+}
+h1 { font-size: 1.2em; padding-bottom: 0px; margin-bottom: 0px; }
+h2 { font-size: 1.1em; font-weight: 800; }
+h3 { font-size: 1.1em; }
+h4 { font-size: 1.0em; }
+h5, h6 { font-size: 1em; }
+
+p {
+    margin-bottom: 5px;
+    line-height: 1.2em;
+}
+
+.hidden { display: none; }
+.unhidden { display: block; }
+
+.execName {
+    width: 75px;
+
+}
+.execTerm {
+	font-style: italic;
+	font-weight: bold;
+	color: #D23059;
+}
+.redText {
+	color:#D23059;
+}
+
+.boldText  {
+	font-weight: bold;
+}
+
+#back {
+    height: 25px;
+}
+#back a {
+    padding: 2px 25px 2px 10px;
+    border: 0px solid #000000;
+    background: #000000;
+    color: #ffffff;
+    text-decoration: none;
+}

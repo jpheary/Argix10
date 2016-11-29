@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Argix.Finance" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Argix.Finance" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="RateQuoteFault">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RateQuoteFault" nillable="true" type="tns:RateQuoteFault" />
+  <xs:complexType name="Rates">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Rate" nillable="true" type="tns:Rate" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Rates" nillable="true" type="tns:Rates" />
+  <xs:complexType name="Rate">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DestZip" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MinCharge" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrgZip" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Rate1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Rate10001" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Rate1001" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Rate20001" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Rate2001" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Rate5001" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Rate501" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Rate" nillable="true" type="tns:Rate" />
+</xs:schema>

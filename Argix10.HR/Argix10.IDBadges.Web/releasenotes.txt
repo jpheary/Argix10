@@ -1,0 +1,80 @@
+              --------------------------------------------------------
+							Argix10.IDBadges.Web Readme File
+		                       			September, 2014
+              --------------------------------------------------------
+                         (c) Copyright Argix Logistics, 2013-2014
+
+This document provides late-breaking or other information that supplements the PalletShipment documentation.
+
+------------------------
+How to Use This Document
+------------------------
+To view the Readme file on-screen in Windows Notepad, maximize the Notepad window and click Word 
+Wrap on the Edit menu. To print the Readme file, open it in Notepad or another word processor, 
+and then use the Print command on the File menu.
+
+==============
+CONTENTS
+==============
+NOTES
+   GENERAL
+   DEPENDENCIES
+   VERSION HISTORY
+==============
+
+
+NOTES
+==============
+GENERAL
+Argix10.IDBadges.Web is an ASP.NET web application that provides business capability 
+for managing employee and vendor badge data. This data is replicated into the Lenel 
+System to create the physical badges.
+
+
+DEPENDENCIES
+The Dispatch application is dependent upon the following web services: 
+- http://rgxvmweb/Argix10/Argix10.HR.Services/Badge.svc
+- http://rgxvmweb/Argix10/Argix10.Membership.Services/RoleService.svc
+
+
+ROLE MANAGEMENT
+The following roles are used in this application:
+HR Assistant/HR Manager- can create/update employee and vendor badge data.
+Administrator- can create/update employee and vendor badge data and add new Departments.
+
+Use the following link to access the role manager to create and edit role assignments for Argix employees: 
+http://rgxvmweb/Argix10/Apps/IT/Membership/Membership.application
+
+
+VERSION HISTORY
+v4.0.0, 02/06/14 ---------------------------------------------------------------------------
+Requirements/features
+- initial release.
+Design
+- initial release.
+
+v4.0.1, 07/10/14 ---------------------------------------------------------------------------
+Requirements/features
+- none.
+Design
+- added Browser definitions.
+
+v4.0.2, 08/29/14 ---------------------------------------------------------------------------
+Requirements/features
+- added search feature (by last name) for drivers, employees, and vendors.
+Design
+- removed photo and signature fields from view stored procedures to improve performance.
+
+v4.0.3, 09/12/14 ---------------------------------------------------------------------------
+Requirements/features
+- added Admin.aspx to allow IT to create new departments.
+Design
+- Admin.aspx authorized with Administrator role.
+
+
+v4.1.0, 06/29/15 ---------------------------------------------------------------------------
+Requirements/features
+- added new features for Parking Permits.
+Design
+- changed Default.aspx to Badges\Badges.aspx; moved _____Badge.aspx into Badges folder.
+- added new aspx pages for Parking Permits in folder Permits.

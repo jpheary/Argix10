@@ -1,0 +1,257 @@
+                         --------------------------------------------------
+                    	     Dispatch Application Readme File
+											August, 2015
+                         --------------------------------------------------
+                         		(c) Copyright Argix Logistics, 2013-2015
+
+This document provides late-breaking or other information that supplements the Dispatch 
+documentation.
+
+------------------------
+How to Use This Document
+------------------------
+To view the Readme file on-screen in Windows Notepad, maximize the Notepad window and click Word 
+Wrap on the Edit menu. To print the Readme file, open it in Notepad or another word processor, 
+and then use the Print command on the File menu.
+
+==============
+CONTENTS
+==============
+INSTALLATION
+   DEPLOYMENT
+   CONFIGURATION
+
+NOTES
+   GENERAL
+   DEPENDENCIES
+   OPERATION
+   VERSION HISTORY
+==============
+
+
+INSTALLATION
+==============
+DEPLOYMENT
+Dispatch is installed into a Click-Once deployment folder visible from an IIS web service as follows:
+1.	Create a virtual folder c:\inetpub\wwwroot\Argix10\Apps\Freight\Dispatch on a web server like rgxvmweb using 
+	Windows explorer. 
+2.	Create a sub-folder called Application Files.
+3.	Copy the new versioned Click-Once deployment folder (i.e Dispatch_4_0_0_2) into the Application Files folder; this folder 
+	contains the following:
+		Argix10.Export.Lib.dll
+		Argix10.Windows.Lib.dll
+		Dispatch.application
+		Dispatch.exe
+		Dispatch.exe.config
+		Dispatch.exe.manifest
+		Infragistics2.Shared.v10.1.dll
+		Infragistics2.Win.UltraWinGrid.v10.1.dll
+		Infragistics2.Win.v10.1.dll
+		releasenotes.txt
+4.	Copy the deployment manifest, Dispatch.application, into the Dispatch folder. This manifest points to
+	tha application manifest (i.e. \Dispatch_4_0_0_2\Dispatch.exe.manifest)
+5.	Launch the Internet Information Services snap-in and validate that the virtual folder allows
+	anonymous access. A web application does not need to be created for deployment.
+6.	Verify http access from Internet Explorer to the following url: 
+		http://rgxvmweb/Argix10/Apps/Freight/Dispatch/Dispatch.application
+7.	The Click-Once deployment is installed on the client machine in the C:\Users\<username>\AppData\Local\Apps\2.0 folder.
+8.	Version rollbacks are accomplished by simply copying the deployment manifest (i.e. Dispatch.application) from 
+	a previous Click-Once deployment folder (i.e Dispatch_4_0_0_1) into the Dispatch root folder
+
+
+CONFIGURATION	
+Open the local sort database (i.e. TSORT on rgxsql400), goto the Configuration table, and add/edit the 
+values below. Individual users can have overrides from the default values.
+	Application               PCName          Key                       Value                     Security 
+	------------------------- --------------- ------------------------- ------------------------- -------- 
+    Dispatch        Default         TraceLevel                2                         1        
+
+
+NOTES
+==============
+GENERAL
+The Dispatch Application (Dispatch.exe) is a Windows based application used to:
+- manage pickup and delivery appointments for inbound freight arriving at the Argix National terminal
+- manage freight pickups at the Argix local terminals from client store locations
+- manage Argix drivers and Argix contracted drivers allocated to inbounding freight to Argix terminals
+- manage Argix drivers and Argix contracted drivers allocated to outbounding freight from the Argix National terminal
+
+
+DEPENDENCIES
+The Dispatch application is dependent upon the following web services: 
+- http://rgxvmweb/Argix10/Argix10.Freight.Services/Dispatch.svc
+- http://rgxvmweb/Argix10/Argix10.Terminals.Services/Roadshow.svc
+- http://rgxvmweb/Argix10/Argix10.Membership.Services/RoleService.svc
+
+
+OPERATION
+The Dispatch Application (Dispatch.exe) operates by launching from a web server deployment url 
+(i.e. http://rgxweb/Argix10/Apps/Freight/Dispatch/Dispatch.application). After a brief splash screen, a sizeable window 
+appears that allows interaction with the Client Inbound Sheet, Inbound Schedule, Outbound Schedule, and Pickup Log.
+Additional operating steps can be found in the on-line documentation provided by the Help/Contents menu item.
+
+ROLE MANAGEMENT
+The following roles are used in this application:
+Dispatch Supervisor- can do everything.
+Dispatch Clerk- can edit carrier/driver, and comments on Client Inbound and Inbound/Outbound;
+				can edit shipper, driver, order type, actual pickup and comments on PickupLog;
+				can export pickup requests for import into Roadshow on PickupLog
+Window Clerk-	can do everything on Client Inbound.
+				can edit carrier/driver, trailer, drop empty, amount, actual departure/arrival, TDS information, 
+				and comments on Inbound/Outbound, and PickupLog.
+Client Rep- can view the Pickup Log and add/edit pickup requests.
+Tsort Supervisor- can view all schedules.
+Tsort Clerk- can view the Client Inbound Schedule.
+Shipping Supervisor- can view all schedules.
+Shipping Clerk- can view the Outbound Schedule.
+Warehouse Supervisor- can view all schedules.
+
+Use the following link to access the role manager to create and edit role assignments for Argix employees: 
+http://rgxvmweb/Argix10/Apps/IT/Membership/Membership.application
+
+
+VERSION HISTORY
+v4.0.0 06/12/12 ----------------------------------------------------------------------------
+Requirements/features
+- new application.
+Design/deployment
+- supports Pickup Log.
+
+v4.0.1 07/31/12 ----------------------------------------------------------------------------
+Requirements/features
+- none.
+Design/deployment
+- added role-based security using new web service http://rgxvmweb/Argix10/Argix10.Membership.Services/RoleService.svc.
+
+v4.0.2 08/02/12 ----------------------------------------------------------------------------
+Requirements/features
+- none.
+Design/deployment
+- moved Dispatch web service at http://rgxvmweb/Argix10/Argix10.Dispatch.Services/Dispatch.svc into 
+  production web service http://rgxvmweb/Argix10/Argix10.Freight.Services/Dispatch.svc.
+- moved Roadshow web service at http://rgxvmweb/Argix10/Argix10.Dispatch.Services/Roadshow.svc into 
+  production web service http://rgxvmweb/Argix10/Argix10.Terminals.Services/Roadshow.svc.
+
+v4.0.3 01/23/13 ----------------------------------------------------------------------------
+Requirements/features
+- added support for Client Inbound Sheet, Inbound Schedule, and Outbound Schedule.
+Design/deployment
+- none.
+
+v4.0.4 02/19/13, 02/20/13 ------------------------------------------------------------------
+Requirements/features
+- corrected bug with double-click outside of grid rows (kept opening dialog for active row).
+- added column filter for drivers on Inbound Schedule and Outbound Schedule.
+- added Full Screen view (hides the navigation pane).
+- added feature to save column widths and column order in Client Inbound Sheet, Inbound Schedule,
+  Outbound Schedule, and Pickup Log.
+- removed column In? from Client Inbound Sheet (not needed since added ActualArrival field).
+- added feature to allow Dispatch Supervisor to delete (i.e. cancel) appointment and trip templates.
+- added alerts for ActualDeparture/ActualArrival: field turns red when >30 minutes beyond
+  ScheduledDeparture/ScheduledArrival on Inbound Schedule and Outbound Schedule.
+Design/deployment
+- modified backend database for table/storred procedure changes.
+
+v4.0.5 02/21/13, 02/22/13, 02/26/13, 03/01/13 ----------------------------------------------
+Requirements/features
+- added views of Jamesburg and Shipper ship schedules to Inbound Schedule and Outbound Schedule.
+- added feature CTL-C/CTL-V for copying appointments and trips.
+- addded user role to the status bar
+- added carrier and driver lists
+- added location lists (i.e. origin, destination)
+- added feature to allow user selected application font
+Design/deployment
+- added access to web service http://rgxvmweb/Argix10/Argix10.AgentLineHaul.Services/ShipScheduleService.svc 
+  on new interface ShipScheduleService:IDispatchService.
+- added AmountType to Inbound/Outbound Schedules
+- allowed change of Origin/Origin Location and Destination/Destination Location on Inbound/Outbound Schedules
+
+v4.0.6 03/06/13, 03/07/13, 03/11/13 --------------------------------------------------------
+Requirements/features
+- corrected bug in Pickup Request dialog (i.e. System.Data- This row has been removed from a table...)
+- corrected bug in Pickup Request dialog related to selecting a Shipper that had multiple entries with
+  the same name (i.e. Alfred Dunner)
+- added feature to automatically select terminal (RF, CT, MA) when shipper selected in Pickup Request dialog
+- updated origin/destination default "Argix Jamesburg" to "ARGIX LOGISTICS NATIONAL" in Inbound/Outbound dialogs
+- corrected print/print preview titles for Inbound Shcedule and Outbound Schedule 
+- corrected issue with loading templates on Inbound/Outbound Schedules to not overwrite origin/destination
+  with "ARGIX LOGISTICS NATIONAL"
+- changed auto-refresh timer from 60sec to 30 sec.
+- added feature for MDI window action (i.e. cascade, tile)
+- enabled edit of Client in PickpRequest dialog
+- added user message "ShipperNumber null" and omitted request from the export file when exporting pickup requests
+Design/deployment
+- added Customer2 data transfer object with new TerritoryID field to RoadshowService:IRoadshowService
+  to support determining terminal for selected shipper in Pickup request dialog
+- modified code when updating PickupRequest, Appointments, and Trips to use a new dataset row instead of passing
+  in the selected row (this was causing System.Data- This row has been removed... error after auto refreshes)
+- reviewed and revised error handling in modules
+
+v4.0.7 03/15/13, 03/20/13, 03/21/13, 03/26/13 ----------------------------------------------
+Requirements/features
+- added support for Trailer Tracking
+- enabled filtering of ScheduleDate for all schedules (wanted feature for filtering archive views)
+- modified Trailer Tracking view to show Yard Check, Archive, and Search
+- added trailer search to Trailer Tracking
+- updated print/print preview titles
+- added new Blog feature
+- added appointment notifications to the Blog
+- coded delete key to cancel in Client Inbound, Inbound, and Outbound Schedules
+- corrected selected row to remain active when scrolling
+Design/deployment
+- implemented Trailer Tracking
+- compiled for Any CPU (was set for 32-bit only; now supports 32 and 64 bit operating systems)
+- implemented new Blog feature
+- implemented appointment arrival notification (to blog)
+
+v4.0.8 04/29/13 ----------------------------------------------------------------------------
+Requirements/features
+- added confirmation dialog when cancelling appointments, trps, or requsts
+- added Arrival alert (30 minutes) to Client Inbound, Inbound, and Outbound Schedules
+- added warning when a pickup request with >10pallets OR >10,000lbs is not serviced by Argix National
+- added new feature to print a pickup request
+Design/deployment
+- updated Argix10.Freight.Services::DispatchGateway to pass freight type to stored procedures for
+  inserting and updating the inbound/outbound schedule tables; revised stored procedures as well.
+- corrected Roadshow Exporter when determining cube (needed to multiply by amount)
+- corrected date behind scheduled departure/arrival fields: scheduled arrival = schedule date; 
+  scheduled departure can be day before (i.e. depart the night before the arrival)
+
+v4.0.9 06/18/13, 03/07/14 ------------------------------------------------------------------
+Requirements/features
+- added user-configurable fixed columns on all schedule
+- made archive days back user configurable (defaults to 60) when viewing schedule archive
+Design/deployment
+- none
+
+v4.0.10 03/07/14 ---------------------------------------------------------------------------
+Requirements/features
+- removed Ship Schedule features
+Design/deployment
+- corrected exception in Pickup Request when weight=0
+- modified Pickup Request export function to accomodate shipper numbers < 10 characters
+
+v4.0.11 03/25/14 ---------------------------------------------------------------------------
+Requirements/features
+- none
+Design/deployment
+- removed Ship Schedule references
+
+v4.0.12 03/23/15 ----------------------------------------------------------------------------
+Requirements/features
+- none.
+Design/deployment
+- changed default export UNC paths in web.config for server change from rgxflsrv to rgxcifs1.
+
+v4.0.13 07/29/15, ~08/13/15, !08/19/15 ------------------------------------------------------
+Requirements/features
+- added PCS freight type.
+- added reports.
+- added Created column to winInbound and winPickupLog.
+~ added color coding to inbound trips and pickups for PCS freight arrived more than 48hrs after created.
+! added freight type BBB-PCS.
+Design/deployment
+- this.DialogResult = DialogResult.OK; to last statement in all dialog::OnCommandClick() handlers so
+  that any error will leave the user in the dialog (to correct).
+~ corrected setting FreightType in dlgPickupRequest; only supported ISA and TSort; now supports all types (i.e. PCS).
+! modified terminal select logic in dlgPickupRequest::OnShipperCurrentChanged().

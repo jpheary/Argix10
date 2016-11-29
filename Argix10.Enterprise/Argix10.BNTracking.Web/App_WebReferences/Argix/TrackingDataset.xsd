@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://www.argixdirect.com/Tracking/TrackingDataset" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://www.argixdirect.com/Tracking/TrackingDataset" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://www.argixdirect.com/Tracking/TrackingDataset" id="TrackingDataset" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="TrackingDataset">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TrackingSummaryTable">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="LabelSequenceNumber" type="xs:long" />
+              <xs:element name="ItemNumber" type="xs:string" />
+              <xs:element minOccurs="0" name="OsTrackingNumber" type="xs:string" />
+              <xs:element minOccurs="0" name="Date" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="Time" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="Status" type="xs:string" />
+              <xs:element minOccurs="0" name="LocationName" type="xs:string" />
+              <xs:element minOccurs="0" name="ShipperName" type="xs:string" />
+              <xs:element minOccurs="0" name="ShipperCity" type="xs:string" />
+              <xs:element minOccurs="0" name="ShipperState" type="xs:string" />
+              <xs:element minOccurs="0" name="ShipperZip" type="xs:string" />
+              <xs:element minOccurs="0" name="ShipperCountry" type="xs:string" />
+              <xs:element minOccurs="0" name="ConsigneeName" type="xs:string" />
+              <xs:element minOccurs="0" name="ConsigneeCity" type="xs:string" />
+              <xs:element minOccurs="0" name="ConsigneeState" type="xs:string" />
+              <xs:element minOccurs="0" name="ConsigneeZip" type="xs:string" />
+              <xs:element minOccurs="0" name="ConsigneeCountry" type="xs:string" />
+              <xs:element minOccurs="0" name="Pieces" type="xs:int" />
+              <xs:element minOccurs="0" name="Weight" type="xs:int" />
+              <xs:element minOccurs="0" name="ShipDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="ShipTime" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="TenderedDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="TenderedTime" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TrackingDetailTable">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="ItemNumber" type="xs:string" />
+              <xs:element minOccurs="0" name="Date" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="Time" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="Status" type="xs:string" />
+              <xs:element minOccurs="0" name="LocationName" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TrackingTable">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="SCNTP" type="xs:decimal" />
+              <xs:element minOccurs="0" name="OM" type="xs:string" />
+              <xs:element minOccurs="0" name="CTN" type="xs:string" />
+              <xs:element minOccurs="0" name="LBL" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PUD" type="xs:string" />
+              <xs:element minOccurs="0" name="BL" type="xs:decimal" />
+              <xs:element minOccurs="0" name="SRTLOC" type="xs:string" />
+              <xs:element minOccurs="0" name="AGNM" type="xs:string" />
+              <xs:element minOccurs="0" name="AGCT" type="xs:string" />
+              <xs:element minOccurs="0" name="AGST" type="xs:string" />
+              <xs:element minOccurs="0" name="AGZ" type="xs:decimal" />
+              <xs:element minOccurs="0" name="SAGNM" type="xs:string" />
+              <xs:element minOccurs="0" name="SAGCT" type="xs:string" />
+              <xs:element minOccurs="0" name="SAGST" type="xs:string" />
+              <xs:element minOccurs="0" name="SAGZ" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CL" type="xs:string" />
+              <xs:element minOccurs="0" name="CLNM" type="xs:string" />
+              <xs:element minOccurs="0" name="V" type="xs:string" />
+              <xs:element minOccurs="0" name="VNM" type="xs:string" />
+              <xs:element minOccurs="0" name="VCT" type="xs:string" />
+              <xs:element minOccurs="0" name="VST" type="xs:string" />
+              <xs:element minOccurs="0" name="VZ" type="xs:decimal" />
+              <xs:element minOccurs="0" name="S" type="xs:decimal" />
+              <xs:element minOccurs="0" name="SNM" type="xs:string" />
+              <xs:element minOccurs="0" name="SA1" type="xs:string" />
+              <xs:element minOccurs="0" name="SA2" type="xs:string" />
+              <xs:element minOccurs="0" name="SCT" type="xs:string" />
+              <xs:element minOccurs="0" name="SST" type="xs:string" />
+              <xs:element minOccurs="0" name="SZ" type="xs:decimal" />
+              <xs:element minOccurs="0" name="ASFD" type="xs:string" />
+              <xs:element minOccurs="0" name="ASFT" type="xs:string" />
+              <xs:element minOccurs="0" name="ADPD" type="xs:string" />
+              <xs:element minOccurs="0" name="ADPT" type="xs:string" />
+              <xs:element minOccurs="0" name="AARD" type="xs:string" />
+              <xs:element minOccurs="0" name="AART" type="xs:string" />
+              <xs:element minOccurs="0" name="ACTSDD" type="xs:string" />
+              <xs:element minOccurs="0" name="SCD" type="xs:string" />
+              <xs:element minOccurs="0" name="SCTM" type="xs:string" />
+              <xs:element minOccurs="0" name="PO" type="xs:string" />
+              <xs:element minOccurs="0" name="WT" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TL" type="xs:string" />
+              <xs:element minOccurs="0" name="T" type="xs:string" />
+              <xs:element minOccurs="0" name="ISMN" type="xs:int" />
+              <xs:element minOccurs="0" name="PVNO" type="xs:string" />
+              <xs:element minOccurs="0" name="SHPR" type="xs:string" />
+              <xs:element minOccurs="0" name="VK" type="xs:string" />
+              <xs:element minOccurs="0" name="ShipmentNumber" type="xs:string" />
+              <xs:element minOccurs="0" name="CBOL" type="xs:string" />
+              <xs:element minOccurs="0" name="Signer" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CartonDetailForStoreTable">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Store" type="xs:string" />
+              <xs:element minOccurs="0" name="TL" type="xs:string" />
+              <xs:element minOccurs="0" name="CartonCount" type="xs:int" />
+              <xs:element minOccurs="0" name="CBOL" type="xs:string" />
+              <xs:element minOccurs="0" name="OFD1" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="Terminal" type="xs:string" />
+              <xs:element minOccurs="0" name="CartonNo" type="xs:string" />
+              <xs:element minOccurs="0" name="LBLNo" type="xs:decimal" />
+              <xs:element minOccurs="0" name="Pudt" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="Weight" type="xs:decimal" />
+              <xs:element minOccurs="0" name="ShpName" type="xs:string" />
+              <xs:element minOccurs="0" name="ShpCity" type="xs:string" />
+              <xs:element minOccurs="0" name="ShpState" type="xs:string" />
+              <xs:element minOccurs="0" name="ShpZip" type="xs:string" />
+              <xs:element minOccurs="0" name="CtnSts" type="xs:string" />
+              <xs:element minOccurs="0" name="ScnSts" type="xs:string" />
+              <xs:element minOccurs="0" name="PodDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="PodTime" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="AG" type="xs:string" />
+              <xs:element minOccurs="0" name="AgName" type="xs:string" />
+              <xs:element minOccurs="0" name="Trf" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="Constraint1">
+      <xs:selector xpath=".//mstns:TrackingSummaryTable" />
+      <xs:field xpath="mstns:ItemNumber" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="TrackingSummaryTable_TrackingDetailTable" msdata:parent="TrackingSummaryTable" msdata:child="TrackingDetailTable" msdata:parentkey="ItemNumber" msdata:childkey="ItemNumber" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

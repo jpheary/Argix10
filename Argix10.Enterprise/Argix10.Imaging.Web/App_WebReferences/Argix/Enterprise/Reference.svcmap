@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="eb97a6a4-204a-4f8c-9075-98ed5e6031b4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:53791/Argix10.Enterprise.Services/Imaging.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Imaging.wsdl" MetadataType="Wsdl" ID="aa56d91c-8846-4e35-85b1-588fd49f9f4b" SourceId="1" SourceUrl="http://localhost:53791/Argix10.Enterprise.Services/Imaging.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="Imaging.disco" MetadataType="Disco" ID="f6f75f81-8e34-44e2-b62f-9aad4c87b173" SourceId="1" SourceUrl="http://localhost:53791/Argix10.Enterprise.Services/Imaging.svc?disco" />
+    <MetadataFile FileName="Imaging.xsd" MetadataType="Schema" ID="a39f05a7-fe54-48dc-837d-41d871247eef" SourceId="1" SourceUrl="http://localhost:53791/Argix10.Enterprise.Services/Imaging.svc?xsd=xsd2" />
+    <MetadataFile FileName="Imaging1.xsd" MetadataType="Schema" ID="bc8b9ef2-d82e-44b3-9449-f9163d941ebb" SourceId="1" SourceUrl="http://localhost:53791/Argix10.Enterprise.Services/Imaging.svc?xsd=xsd4" />
+    <MetadataFile FileName="Imaging2.xsd" MetadataType="Schema" ID="f8df23e9-242a-484c-ba86-b717b4aecbd3" SourceId="1" SourceUrl="http://localhost:53791/Argix10.Enterprise.Services/Imaging.svc?xsd=xsd1" />
+    <MetadataFile FileName="ImagingService.wsdl" MetadataType="Wsdl" ID="2e03503f-bc6d-47e7-9c3e-ad969cdba011" SourceId="1" SourceUrl="http://localhost:53791/Argix10.Enterprise.Services/Imaging.svc?wsdl" />
+    <MetadataFile FileName="Imaging3.xsd" MetadataType="Schema" ID="de2ba9ff-36fb-4954-9e3c-d9ab73e42e4b" SourceId="1" SourceUrl="http://localhost:53791/Argix10.Enterprise.Services/Imaging.svc?xsd=xsd3" />
+    <MetadataFile FileName="Imaging4.xsd" MetadataType="Schema" ID="f0b85b74-6b57-44eb-a166-d3a3fc8aab92" SourceId="1" SourceUrl="http://localhost:53791/Argix10.Enterprise.Services/Imaging.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

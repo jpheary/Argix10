@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="InboundDataset" targetNamespace="http://tempuri.org/InboundDataset.xsd" elementFormDefault="qualified"
+	attributeFormDefault="qualified" xmlns="http://tempuri.org/InboundDataset.xsd" xmlns:mstns="http://tempuri.org/InboundDataset.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="InboundDataset" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+        <xs:element name="InboundScheduleTable">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" type="xs:int" minOccurs="0" />
+              <xs:element name="Created" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CreateUserID" type="xs:string" minOccurs="0" />
+              <xs:element name="ScheduleDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Origin" type="xs:string" minOccurs="0" />
+              <xs:element name="OriginLocation" type="xs:string" minOccurs="0" />
+              <xs:element name="Destination" type="xs:string" minOccurs="0" />
+              <xs:element name="DestinationLocation" type="xs:string" minOccurs="0" />
+              <xs:element name="CarrierName" type="xs:string" minOccurs="0" />
+              <xs:element name="DriverName" type="xs:string" minOccurs="0" />
+              <xs:element name="TrailerNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="DropEmptyTrailerNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="ScheduledDeparture" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ActualDeparture" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ScheduledArrival" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ActualArrival" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Confirmed" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Amount" type="xs:int" minOccurs="0" />
+              <xs:element name="AmountType" type="xs:string" minOccurs="0" />
+              <xs:element name="FreightType" type="xs:string" minOccurs="0" />
+              <xs:element name="Comments" type="xs:string" minOccurs="0" />
+              <xs:element name="IsTemplate" type="xs:boolean" minOccurs="0" />
+              <xs:element name="CancelledUserID" type="xs:string" minOccurs="0" />
+              <xs:element name="Cancelled" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LastUpdated" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="UserID" type="xs:string" minOccurs="0" />
+              <xs:element name="RowVersion" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

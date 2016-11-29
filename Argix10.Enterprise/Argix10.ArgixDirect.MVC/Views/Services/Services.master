@@ -1,0 +1,24 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Views/Shared/Site.Master" AutoEventWireup="true" CodeBehind="Services.master.cs" Inherits="Argix.Views.Services.Services" %>
+<%@ MasterType VirtualPath="~/Views/Shared/Site.master" %>
+
+<asp:Content ID="cMeta" runat="server" ContentPlaceHolderID="MetaContent">
+    <asp:ContentPlaceHolder ID="MetaContent" runat="server" />
+</asp:Content>
+<asp:Content ID="cLeft" runat="server" ContentPlaceHolderID="LeftContent">
+    <div id="title">Services</div>
+    <div id="submenu">
+		<ul>
+            <li><%: Html.ActionLink("Store Delivery", "StoreDelivery", "Services")%></li>
+            <li><%: Html.ActionLink("Consumer Direct", "ConsumerDirect", "Services")%></li>
+            <li><%: Html.ActionLink("DC Bypass", "DCBypass", "Services")%></li>
+            <li><%: Html.ActionLink("Freight Pickup", "FreightPickup", "Services")%></li>
+            <li><%: Html.ActionLink("Import Deconsolidation", "ImportDeconsolidation", "Services")%></li>
+            <li><%: Html.ActionLink("Consolidation", "Consolidation", "Services")%></li>
+            <li><%: Html.ActionLink("Line Haul", "LineHaul", "Services")%></li>
+            <li><%: Html.ActionLink("Warehousing","Warehousing","Services")%></li>
+		</ul>
+	</div>
+</asp:Content>
+<asp:Content ID="cRight" runat="server" ContentPlaceHolderID="RightContent">
+    <asp:ContentPlaceHolder ID="PageContent" runat="server"/>
+</asp:Content>

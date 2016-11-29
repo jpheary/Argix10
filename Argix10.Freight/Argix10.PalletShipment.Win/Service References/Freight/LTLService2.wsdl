@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://Argix.Freight" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="LTLService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="WSHttpBinding_ILTLService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_ILTLAdminService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_ILTLClientService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:import namespace="http://Argix.Freight" location="http://localhost:33220/Argix10.FreightBeta.Services/LTLService.svc?wsdl=wsdl0" />
+  <wsdl:types />
+  <wsdl:binding name="WSHttpBinding_ILTLService" type="i0:ILTLService">
+    <wsp:PolicyReference URI="#WSHttpBinding_ILTLService_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetServiceInfo">
+      <soap12:operation soapAction="http://Argix.Freight/ILTLService/GetServiceInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ConfigurationFaultFault">
+        <soap12:fault use="literal" name="ConfigurationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserConfiguration">
+      <soap12:operation soapAction="http://Argix.Freight/ILTLService/GetUserConfiguration" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ConfigurationFaultFault">
+        <soap12:fault use="literal" name="ConfigurationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="WriteLogEntry">
+      <soap12:operation soapAction="http://Argix.Freight/ILTLService/WriteLogEntry" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSHttpBinding_ILTLAdminService" type="i0:ILTLAdminService">
+    <wsp:PolicyReference URI="#WSHttpBinding_ILTLAdminService_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ViewLTLClients">
+      <soap12:operation soapAction="http://Argix.Freight/ILTLAdminService/ViewLTLClients" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="LTLFaultFault">
+        <soap12:fault use="literal" name="LTLFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetLTLClient">
+      <soap12:operation soapAction="http://Argix.Freight/ILTLAdminService/GetLTLClient" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="LTLFaultFault">
+        <soap12:fault use="literal" name="LTLFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ApproveLTLClient">
+      <soap12:operation soapAction="http://Argix.Freight/ILTLAdminService/ApproveLTLClient" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="LTLFaultFault">
+        <soap12:fault use="literal" name="LTLFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReadPalletLabels">
+      <soap12:operation soapAction="http://Argix.Freight/ILTLAdminService/ReadPalletLabels" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="LTLFaultFault">
+        <soap12:fault use="literal" name="LTLFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSHttpBinding_ILTLClientService" type="i0:ILTLClientService">
+    <wsp:PolicyReference URI="#WSHttpBinding_ILTLClientService_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateQuote">
+      <soap12:operation soapAction="http://Argix.Freight/ILTLClientService/CreateQuote" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="LTLFaultFault">
+        <soap12:fault use="literal" name="LTLFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateLTLClient">
+      <soap12:operation soapAction="http://Argix.Freight/ILTLClientService/CreateLTLClient" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="LTLFaultFault">
+        <soap12:fault use="literal" name="LTLFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReadLTLClient">
+      <soap12:operation soapAction="http://Argix.Freight/ILTLClientService/ReadLTLClient" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="LTLFaultFault">
+        <soap12:fault use="literal" name="LTLFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLTLClient">
+      <soap12:operation soapAction="http://Argix.Freight/ILTLClientService/UpdateLTLClient" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="LTLFaultFault">
+        <soap12:fault use="literal" name="LTLFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ViewLTLShippersForClient">
+      <soap12:operation soapAction="http://Argix.Freight/ILTLClientService/ViewLTLShippersForClient" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="LTLFaultFault">
+        <soap12:fault use="literal" name="LTLFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateLTLShipper">
+      <soap12:operation soapAction="http://Argix.Freight/ILTLClientService/CreateLTLShipper" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="LTLFaultFault">
+        <soap12:fault use="literal" name="LTLFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReadLTLShippersList">
+      <soap12:operation soapAction="http://Argix.Freight/ILTLClientService/ReadLTLShippersList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="LTLFaultFault">
+        <soap12:fault use="literal" name="LTLFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReadLTLShipper">
+      <soap12:operation soapAction="http://Argix.Freight/ILTLClientService/ReadLTLShipper" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="LTLFaultFault">
+        <soap12:fault use="literal" name="LTLFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLTLShipper">
+      <soap12:operation soapAction="http://Argix.Freight/ILTLClientService/UpdateLTLShipper" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="LTLFaultFault">
+        <soap12:fault use="literal" name="LTLFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ViewLTLConsigneesForClient">
+      <soap12:operation soapAction="http://Argix.Freight/ILTLClientService/ViewLTLConsigneesForClient" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="LTLFaultFault">
+        <soap12:fault use="literal" name="LTLFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateLTLConsignee">
+      <soap12:operation soapAction="http://Argix.Freight/ILTLClientService/CreateLTLConsignee" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="LTLFaultFault">
+        <soap12:fault use="literal" name="LTLFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReadLTLConsigneesList">
+      <soap12:operation soapAction="http://Argix.Freight/ILTLClientService/ReadLTLConsigneesList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="LTLFaultFault">
+        <soap12:fault use="literal" name="LTLFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReadLTLConsignee">
+      <soap12:operation soapAction="http://Argix.Freight/ILTLClientService/ReadLTLConsignee" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="LTLFaultFault">
+        <soap12:fault use="literal" name="LTLFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLTLConsignee">
+      <soap12:operation soapAction="http://Argix.Freight/ILTLClientService/UpdateLTLConsignee" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="LTLFaultFault">
+        <soap12:fault use="literal" name="LTLFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ViewLTLShipments">
+      <soap12:operation soapAction="http://Argix.Freight/ILTLClientService/ViewLTLShipments" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="LTLFaultFault">
+        <soap12:fault use="literal" name="LTLFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateLTLShipment">
+      <soap12:operation soapAction="http://Argix.Freight/ILTLClientService/CreateLTLShipment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="LTLFaultFault">
+        <soap12:fault use="literal" name="LTLFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReadLTLShipment">
+      <soap12:operation soapAction="http://Argix.Freight/ILTLClientService/ReadLTLShipment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="LTLFaultFault">
+        <soap12:fault use="literal" name="LTLFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLTLShipment">
+      <soap12:operation soapAction="http://Argix.Freight/ILTLClientService/UpdateLTLShipment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="LTLFaultFault">
+        <soap12:fault use="literal" name="LTLFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CancelLTLShipment">
+      <soap12:operation soapAction="http://Argix.Freight/ILTLClientService/CancelLTLShipment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="LTLFaultFault">
+        <soap12:fault use="literal" name="LTLFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReadServiceLocation">
+      <soap12:operation soapAction="http://Argix.Freight/ILTLClientService/ReadServiceLocation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="LTLFaultFault">
+        <soap12:fault use="literal" name="LTLFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReadPickupLocation">
+      <soap12:operation soapAction="http://Argix.Freight/ILTLClientService/ReadPickupLocation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="LTLFaultFault">
+        <soap12:fault use="literal" name="LTLFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="LTLService">
+    <wsdl:port name="WSHttpBinding_ILTLService" binding="tns:WSHttpBinding_ILTLService">
+      <soap12:address location="http://localhost:33220/Argix10.FreightBeta.Services/LTLService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://localhost:33220/Argix10.FreightBeta.Services/LTLService.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="WSHttpBinding_ILTLAdminService" binding="tns:WSHttpBinding_ILTLAdminService">
+      <soap12:address location="http://localhost:33220/Argix10.FreightBeta.Services/LTLService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://localhost:33220/Argix10.FreightBeta.Services/LTLService.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="WSHttpBinding_ILTLClientService" binding="tns:WSHttpBinding_ILTLClientService">
+      <soap12:address location="http://localhost:33220/Argix10.FreightBeta.Services/LTLService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://localhost:33220/Argix10.FreightBeta.Services/LTLService.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

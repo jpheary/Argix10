@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="bac309e0-04dd-4fdd-bf2c-b4869a05ec8f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:53791/Argix10.Enterprise.Services/ConsumerTracking.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ConsumerTracking.xsd" MetadataType="Schema" ID="0f970572-3830-46c3-ba28-71d1fe1d0e4a" SourceId="1" SourceUrl="http://localhost:53791/Argix10.Enterprise.Services/ConsumerTracking.svc?xsd=xsd2" />
+    <MetadataFile FileName="ConsumerTracking1.xsd" MetadataType="Schema" ID="684d3554-acbe-4650-9b3a-638baf2cf789" SourceId="1" SourceUrl="http://localhost:53791/Argix10.Enterprise.Services/ConsumerTracking.svc?xsd=xsd1" />
+    <MetadataFile FileName="ConsumerTracking.disco" MetadataType="Disco" ID="539c6f1f-1ed7-4ec5-8324-1d4904a097d0" SourceId="1" SourceUrl="http://localhost:53791/Argix10.Enterprise.Services/ConsumerTracking.svc?disco" />
+    <MetadataFile FileName="ConsumerTracking2.xsd" MetadataType="Schema" ID="15c61ee6-413b-4829-a85b-979a7a0d18b9" SourceId="1" SourceUrl="http://localhost:53791/Argix10.Enterprise.Services/ConsumerTracking.svc?xsd=xsd5" />
+    <MetadataFile FileName="ConsumerTracking.wsdl" MetadataType="Wsdl" ID="a52b8bcc-9fba-4c57-97fd-a3f87296d3e1" SourceId="1" SourceUrl="http://localhost:53791/Argix10.Enterprise.Services/ConsumerTracking.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="ConsumerTrackingService.wsdl" MetadataType="Wsdl" ID="3abca7ca-da58-42e7-ab85-66e989a0b993" SourceId="1" SourceUrl="http://localhost:53791/Argix10.Enterprise.Services/ConsumerTracking.svc?wsdl" />
+    <MetadataFile FileName="ConsumerTracking3.xsd" MetadataType="Schema" ID="b5d67dc3-8b23-4dc3-a079-798bdcbfc093" SourceId="1" SourceUrl="http://localhost:53791/Argix10.Enterprise.Services/ConsumerTracking.svc?xsd=xsd0" />
+    <MetadataFile FileName="TrackingDataset.xsd" MetadataType="Schema" ID="a2b352ba-ba74-4159-bbf3-7fd2cecdb636" SourceId="1" SourceUrl="http://localhost:53791/Argix10.Enterprise.Services/ConsumerTracking.svc?xsd=xsd3" />
+    <MetadataFile FileName="ConsumerTracking4.xsd" MetadataType="Schema" ID="c3147ce6-4b1c-4dfc-bd0a-8626c849fcb5" SourceId="1" SourceUrl="http://localhost:53791/Argix10.Enterprise.Services/ConsumerTracking.svc?xsd=xsd4" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://Argix.AgentLineHaul" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://Argix.AgentLineHaul" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://Argix.AgentLineHaul/Imports">
+      <xsd:import schemaLocation="http://localhost:55732/Argix10.AgentLineHaul.Services/ShipScheduleTemplatesService.svc?xsd=xsd0" namespace="http://Argix.AgentLineHaul" />
+      <xsd:import schemaLocation="http://localhost:55732/Argix10.AgentLineHaul.Services/ShipScheduleTemplatesService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Argix" />
+      <xsd:import schemaLocation="http://localhost:55732/Argix10.AgentLineHaul.Services/ShipScheduleTemplatesService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:55732/Argix10.AgentLineHaul.Services/ShipScheduleTemplatesService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:55732/Argix10.AgentLineHaul.Services/ShipScheduleTemplatesService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Argix.AgentLineHaul" />
+      <xsd:import schemaLocation="http://localhost:55732/Argix10.AgentLineHaul.Services/ShipScheduleTemplatesService.svc?xsd=xsd4" />
+      <xsd:import schemaLocation="http://localhost:55732/Argix10.AgentLineHaul.Services/ShipScheduleTemplatesService.svc?xsd=xsd6" namespace="http://schemas.microsoft.com/Message" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IShipScheduleTemplatesService_GetServiceInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetServiceInfo" />
+  </wsdl:message>
+  <wsdl:message name="IShipScheduleTemplatesService_GetServiceInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetServiceInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IShipScheduleTemplatesService_GetServiceInfo_ConfigurationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/Argix" name="detail" element="q1:ConfigurationFault" />
+  </wsdl:message>
+  <wsdl:message name="IShipScheduleTemplatesService_GetUserConfiguration_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserConfiguration" />
+  </wsdl:message>
+  <wsdl:message name="IShipScheduleTemplatesService_GetUserConfiguration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserConfigurationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IShipScheduleTemplatesService_GetUserConfiguration_ConfigurationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/Argix" name="detail" element="q2:ConfigurationFault" />
+  </wsdl:message>
+  <wsdl:message name="IShipScheduleTemplatesService_WriteLogEntry_InputMessage">
+    <wsdl:part name="parameters" element="tns:WriteLogEntry" />
+  </wsdl:message>
+  <wsdl:message name="IShipScheduleTemplatesService_GetShippersAndTerminals_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetShippersAndTerminals" />
+  </wsdl:message>
+  <wsdl:message name="IShipScheduleTemplatesService_GetShippersAndTerminals_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetShippersAndTerminalsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IShipScheduleTemplatesService_GetShippersAndTerminals_ShipScheduleFaultFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/Argix.AgentLineHaul" name="detail" element="q3:ShipScheduleFault" />
+  </wsdl:message>
+  <wsdl:message name="IShipScheduleTemplatesService_GetCarriers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCarriers" />
+  </wsdl:message>
+  <wsdl:message name="IShipScheduleTemplatesService_GetCarriers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCarriersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IShipScheduleTemplatesService_GetCarriers_ShipScheduleFaultFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/Argix.AgentLineHaul" name="detail" element="q4:ShipScheduleFault" />
+  </wsdl:message>
+  <wsdl:message name="IShipScheduleTemplatesService_GetAgents_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgents" />
+  </wsdl:message>
+  <wsdl:message name="IShipScheduleTemplatesService_GetAgents_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IShipScheduleTemplatesService_GetAgents_ShipScheduleFaultFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/Argix.AgentLineHaul" name="detail" element="q5:ShipScheduleFault" />
+  </wsdl:message>
+  <wsdl:message name="IShipScheduleTemplatesService_GetDaysOfWeek_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDaysOfWeek" />
+  </wsdl:message>
+  <wsdl:message name="IShipScheduleTemplatesService_GetDaysOfWeek_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDaysOfWeekResponse" />
+  </wsdl:message>
+  <wsdl:message name="IShipScheduleTemplatesService_GetWeekday_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWeekday" />
+  </wsdl:message>
+  <wsdl:message name="IShipScheduleTemplatesService_GetWeekday_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWeekdayResponse" />
+  </wsdl:message>
+  <wsdl:message name="IShipScheduleTemplatesService_GetTemplates_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTemplates" />
+  </wsdl:message>
+  <wsdl:message name="IShipScheduleTemplatesService_GetTemplates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTemplatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IShipScheduleTemplatesService_GetTemplates_ShipScheduleFaultFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/Argix.AgentLineHaul" name="detail" element="q6:ShipScheduleFault" />
+  </wsdl:message>
+  <wsdl:message name="IShipScheduleTemplatesService_AddTemplate_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddTemplate" />
+  </wsdl:message>
+  <wsdl:message name="IShipScheduleTemplatesService_AddTemplate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddTemplateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IShipScheduleTemplatesService_AddTemplate_ShipScheduleFaultFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/Argix.AgentLineHaul" name="detail" element="q7:ShipScheduleFault" />
+  </wsdl:message>
+  <wsdl:message name="IShipScheduleTemplatesService_UpdateTemplate_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTemplate" />
+  </wsdl:message>
+  <wsdl:message name="IShipScheduleTemplatesService_UpdateTemplate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTemplateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IShipScheduleTemplatesService_UpdateTemplate_ShipScheduleFaultFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/Argix.AgentLineHaul" name="detail" element="q8:ShipScheduleFault" />
+  </wsdl:message>
+  <wsdl:message name="IShipScheduleTemplatesService_GetExportDefinition_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExportDefinition" />
+  </wsdl:message>
+  <wsdl:message name="IShipScheduleTemplatesService_GetExportDefinition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExportDefinitionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IShipScheduleTemplatesService">
+    <wsdl:operation name="GetServiceInfo">
+      <wsdl:input wsaw:Action="http://Argix.AgentLineHaul/IShipScheduleTemplatesService/GetServiceInfo" message="tns:IShipScheduleTemplatesService_GetServiceInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.AgentLineHaul/IShipScheduleTemplatesService/GetServiceInfoResponse" message="tns:IShipScheduleTemplatesService_GetServiceInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.ConfigurationFault" name="ConfigurationFaultFault" message="tns:IShipScheduleTemplatesService_GetServiceInfo_ConfigurationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserConfiguration">
+      <wsdl:input wsaw:Action="http://Argix.AgentLineHaul/IShipScheduleTemplatesService/GetUserConfiguration" message="tns:IShipScheduleTemplatesService_GetUserConfiguration_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.AgentLineHaul/IShipScheduleTemplatesService/GetUserConfigurationResponse" message="tns:IShipScheduleTemplatesService_GetUserConfiguration_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.ConfigurationFault" name="ConfigurationFaultFault" message="tns:IShipScheduleTemplatesService_GetUserConfiguration_ConfigurationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WriteLogEntry">
+      <wsdl:input wsaw:Action="http://Argix.AgentLineHaul/IShipScheduleTemplatesService/WriteLogEntry" message="tns:IShipScheduleTemplatesService_WriteLogEntry_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetShippersAndTerminals">
+      <wsdl:input wsaw:Action="http://Argix.AgentLineHaul/IShipScheduleTemplatesService/GetShippersAndTerminals" message="tns:IShipScheduleTemplatesService_GetShippersAndTerminals_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.AgentLineHaul/IShipScheduleTemplatesService/GetShippersAndTerminalsResponse" message="tns:IShipScheduleTemplatesService_GetShippersAndTerminals_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.AgentLineHaul.ShipScheduleFault" name="ShipScheduleFaultFault" message="tns:IShipScheduleTemplatesService_GetShippersAndTerminals_ShipScheduleFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCarriers">
+      <wsdl:input wsaw:Action="http://Argix.AgentLineHaul/IShipScheduleTemplatesService/GetCarriers" message="tns:IShipScheduleTemplatesService_GetCarriers_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.AgentLineHaul/IShipScheduleTemplatesService/GetCarriersResponse" message="tns:IShipScheduleTemplatesService_GetCarriers_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.AgentLineHaul.ShipScheduleFault" name="ShipScheduleFaultFault" message="tns:IShipScheduleTemplatesService_GetCarriers_ShipScheduleFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAgents">
+      <wsdl:input wsaw:Action="http://Argix.AgentLineHaul/IShipScheduleTemplatesService/GetAgents" message="tns:IShipScheduleTemplatesService_GetAgents_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.AgentLineHaul/IShipScheduleTemplatesService/GetAgentsResponse" message="tns:IShipScheduleTemplatesService_GetAgents_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.AgentLineHaul.ShipScheduleFault" name="ShipScheduleFaultFault" message="tns:IShipScheduleTemplatesService_GetAgents_ShipScheduleFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDaysOfWeek">
+      <wsdl:input wsaw:Action="http://Argix.AgentLineHaul/IShipScheduleTemplatesService/GetDaysOfWeek" message="tns:IShipScheduleTemplatesService_GetDaysOfWeek_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.AgentLineHaul/IShipScheduleTemplatesService/GetDaysOfWeekResponse" message="tns:IShipScheduleTemplatesService_GetDaysOfWeek_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWeekday">
+      <wsdl:input wsaw:Action="http://Argix.AgentLineHaul/IShipScheduleTemplatesService/GetWeekday" message="tns:IShipScheduleTemplatesService_GetWeekday_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.AgentLineHaul/IShipScheduleTemplatesService/GetWeekdayResponse" message="tns:IShipScheduleTemplatesService_GetWeekday_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTemplates">
+      <wsdl:input wsaw:Action="http://Argix.AgentLineHaul/IShipScheduleTemplatesService/GetTemplates" message="tns:IShipScheduleTemplatesService_GetTemplates_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.AgentLineHaul/IShipScheduleTemplatesService/GetTemplatesResponse" message="tns:IShipScheduleTemplatesService_GetTemplates_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.AgentLineHaul.ShipScheduleFault" name="ShipScheduleFaultFault" message="tns:IShipScheduleTemplatesService_GetTemplates_ShipScheduleFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddTemplate">
+      <wsdl:input wsaw:Action="http://Argix.AgentLineHaul/IShipScheduleTemplatesService/AddTemplate" message="tns:IShipScheduleTemplatesService_AddTemplate_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.AgentLineHaul/IShipScheduleTemplatesService/AddTemplateResponse" message="tns:IShipScheduleTemplatesService_AddTemplate_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.AgentLineHaul.ShipScheduleFault" name="ShipScheduleFaultFault" message="tns:IShipScheduleTemplatesService_AddTemplate_ShipScheduleFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTemplate">
+      <wsdl:input wsaw:Action="http://Argix.AgentLineHaul/IShipScheduleTemplatesService/UpdateTemplate" message="tns:IShipScheduleTemplatesService_UpdateTemplate_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.AgentLineHaul/IShipScheduleTemplatesService/UpdateTemplateResponse" message="tns:IShipScheduleTemplatesService_UpdateTemplate_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.AgentLineHaul.ShipScheduleFault" name="ShipScheduleFaultFault" message="tns:IShipScheduleTemplatesService_UpdateTemplate_ShipScheduleFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExportDefinition">
+      <wsdl:input wsaw:Action="http://Argix.AgentLineHaul/IShipScheduleTemplatesService/GetExportDefinition" message="tns:IShipScheduleTemplatesService_GetExportDefinition_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.AgentLineHaul/IShipScheduleTemplatesService/GetExportDefinitionResponse" message="tns:IShipScheduleTemplatesService_GetExportDefinition_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

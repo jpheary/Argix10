@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="FreightDataset" targetNamespace="http://tempuri.org/FreightDataset.xsd" xmlns:mstns="http://tempuri.org/FreightDataset.xsd" xmlns="http://tempuri.org/FreightDataset.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="FreightDataset" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" >
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TerminalTable">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TerminalID" type="xs:int" minOccurs="0" />
+              <xs:element name="Number" type="xs:string" minOccurs="0" />
+              <xs:element name="Description" type="xs:string" minOccurs="0" />
+              <xs:element name="AgentID" type="xs:string" minOccurs="0" />
+              <xs:element name="AgentNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="ShipperID" type="xs:string" minOccurs="0" />
+              <xs:element name="ClientDivision" type="xs:string" minOccurs="0" />
+              <xs:element name="IsActive" type="xs:unsignedByte" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TLTable">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TerminalID" type="xs:int" minOccurs="0" />
+              <xs:element name="Zone" type="xs:string" minOccurs="0" />
+              <xs:element name="AgentNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="AgentName" type="xs:string" minOccurs="0" />
+              <xs:element name="TLNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="TLDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CloseNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="ClientNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="ClientName" type="xs:string" minOccurs="0" />
+              <xs:element name="ShipToLocationID" type="xs:string" minOccurs="0" />
+              <xs:element name="ShipToLocationName" type="xs:string" minOccurs="0" />
+              <xs:element name="Lane" type="xs:string" minOccurs="0" />
+              <xs:element name="SmallLane" type="xs:string" minOccurs="0" />
+              <xs:element name="Cartons" type="xs:int" default="0" minOccurs="0" />
+              <xs:element name="Pallets" type="xs:int" default="0" minOccurs="0" />
+              <xs:element name="Weight" type="xs:int" default="0" minOccurs="0" />
+              <xs:element name="Cube" type="xs:int" default="0" minOccurs="0" />
+              <xs:element name="WeightPercent" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CubePercent" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

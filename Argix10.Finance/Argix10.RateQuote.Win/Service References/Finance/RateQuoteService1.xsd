@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Argix.RateWare" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Argix.RateWare" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:34780/Argix10.Finance.Services/RateQuoteService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/System.ComponentModel" />
+  <xs:complexType name="ArrayOfDataModule">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DataModule" nillable="true" type="tns:DataModule" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDataModule" nillable="true" type="tns:ArrayOfDataModule" />
+  <xs:complexType name="DataModule">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System.ComponentModel" name="PropertyChanged" nillable="true" type="q1:PropertyChangedEventHandler" />
+      <xs:element name="descriptionField" nillable="true" type="xs:string" />
+      <xs:element name="effectiveDateField" nillable="true" type="xs:string" />
+      <xs:element name="productNumberField" nillable="true" type="xs:string" />
+      <xs:element name="releaseField" nillable="true" type="xs:string" />
+      <xs:element name="tariffNameField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DataModule" nillable="true" type="tns:DataModule" />
+  <xs:complexType name="LTLRateShipmentSimpleRequest">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/System.ComponentModel" name="PropertyChanged" nillable="true" type="q2:PropertyChangedEventHandler" />
+      <xs:element name="destinationCountryField" nillable="true" type="xs:string" />
+      <xs:element name="destinationPostalCodeField" nillable="true" type="xs:string" />
+      <xs:element name="detailsField" nillable="true" type="tns:ArrayOfLTLRequestDetail" />
+      <xs:element name="originCountryField" nillable="true" type="xs:string" />
+      <xs:element name="originPostalCodeField" nillable="true" type="xs:string" />
+      <xs:element name="shipmentDateCCYYMMDDField" nillable="true" type="xs:string" />
+      <xs:element name="shipmentIDField" nillable="true" type="xs:string" />
+      <xs:element name="tariffNameField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LTLRateShipmentSimpleRequest" nillable="true" type="tns:LTLRateShipmentSimpleRequest" />
+  <xs:complexType name="ArrayOfLTLRequestDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LTLRequestDetail" nillable="true" type="tns:LTLRequestDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLTLRequestDetail" nillable="true" type="tns:ArrayOfLTLRequestDetail" />
+  <xs:complexType name="LTLRequestDetail">
+    <xs:sequence>
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/System.ComponentModel" name="PropertyChanged" nillable="true" type="q3:PropertyChangedEventHandler" />
+      <xs:element name="nmfcClassField" nillable="true" type="xs:string" />
+      <xs:element name="weightField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LTLRequestDetail" nillable="true" type="tns:LTLRequestDetail" />
+  <xs:complexType name="LTLRateShipmentSimpleResponse">
+    <xs:sequence>
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/System.ComponentModel" name="PropertyChanged" nillable="true" type="q4:PropertyChangedEventHandler" />
+      <xs:element name="destinationCountryField" nillable="true" type="xs:string" />
+      <xs:element name="destinationPostalCodeField" nillable="true" type="xs:string" />
+      <xs:element name="detailsField" nillable="true" type="tns:ArrayOfLTLResponseDetail" />
+      <xs:element name="effectiveDateField" nillable="true" type="xs:string" />
+      <xs:element name="errorCodeField" nillable="true" type="xs:string" />
+      <xs:element name="originCountryField" nillable="true" type="xs:string" />
+      <xs:element name="originPostalCodeField" nillable="true" type="xs:string" />
+      <xs:element name="shipmentDateCCYYMMDDField" nillable="true" type="xs:string" />
+      <xs:element name="shipmentIDField" nillable="true" type="xs:string" />
+      <xs:element name="tariffNameField" nillable="true" type="xs:string" />
+      <xs:element name="totalChargeField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LTLRateShipmentSimpleResponse" nillable="true" type="tns:LTLRateShipmentSimpleResponse" />
+  <xs:complexType name="ArrayOfLTLResponseDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LTLResponseDetail" nillable="true" type="tns:LTLResponseDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLTLResponseDetail" nillable="true" type="tns:ArrayOfLTLResponseDetail" />
+  <xs:complexType name="LTLResponseDetail">
+    <xs:sequence>
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/System.ComponentModel" name="PropertyChanged" nillable="true" type="q5:PropertyChangedEventHandler" />
+      <xs:element name="chargeField" nillable="true" type="xs:string" />
+      <xs:element name="errorField" nillable="true" type="xs:string" />
+      <xs:element name="nmfcClassField" nillable="true" type="xs:string" />
+      <xs:element name="rateField" nillable="true" type="xs:string" />
+      <xs:element name="weightField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LTLResponseDetail" nillable="true" type="tns:LTLResponseDetail" />
+  <xs:complexType name="LTLRateShipmentRequest">
+    <xs:sequence>
+      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/System.ComponentModel" name="PropertyChanged" nillable="true" type="q6:PropertyChangedEventHandler" />
+      <xs:element name="destinationCityField" nillable="true" type="xs:string" />
+      <xs:element name="destinationCountryField" nillable="true" type="xs:string" />
+      <xs:element name="destinationPostalCodeField" nillable="true" type="xs:string" />
+      <xs:element name="destinationStateField" nillable="true" type="xs:string" />
+      <xs:element name="detailsField" nillable="true" type="tns:ArrayOfLTLRequestDetail" />
+      <xs:element name="discountApplicationField" nillable="true" type="xs:string" />
+      <xs:element name="lTL_SurchargeField" nillable="true" type="xs:string" />
+      <xs:element name="mcDiscountField" nillable="true" type="xs:string" />
+      <xs:element name="orgDestToGateWayPointFlagField" nillable="true" type="xs:string" />
+      <xs:element name="originCityField" nillable="true" type="xs:string" />
+      <xs:element name="originCountryField" nillable="true" type="xs:string" />
+      <xs:element name="originPostalCodeField" nillable="true" type="xs:string" />
+      <xs:element name="originStateField" nillable="true" type="xs:string" />
+      <xs:element name="rateAdjustmentFactorField" nillable="true" type="xs:string" />
+      <xs:element name="shipmentDateCCYYMMDDField" nillable="true" type="xs:string" />
+      <xs:element name="shipmentIDField" nillable="true" type="xs:string" />
+      <xs:element name="stopAlternationWeightField" nillable="true" type="xs:string" />
+      <xs:element name="surchargeApplicationField" nillable="true" type="xs:string" />
+      <xs:element name="tL_SurchargeField" nillable="true" type="xs:string" />
+      <xs:element name="tariffNameField" nillable="true" type="xs:string" />
+      <xs:element name="useDiscountsField" nillable="true" type="xs:string" />
+      <xs:element name="useSingleShipmentChargesField" nillable="true" type="xs:string" />
+      <xs:element name="userMinimumChargeFloorField" nillable="true" type="xs:string" />
+      <xs:element name="weightBreak_Discount_10Field" nillable="true" type="xs:string" />
+      <xs:element name="weightBreak_Discount_11Field" nillable="true" type="xs:string" />
+      <xs:element name="weightBreak_Discount_1Field" nillable="true" type="xs:string" />
+      <xs:element name="weightBreak_Discount_2Field" nillable="true" type="xs:string" />
+      <xs:element name="weightBreak_Discount_3Field" nillable="true" type="xs:string" />
+      <xs:element name="weightBreak_Discount_4Field" nillable="true" type="xs:string" />
+      <xs:element name="weightBreak_Discount_5Field" nillable="true" type="xs:string" />
+      <xs:element name="weightBreak_Discount_6Field" nillable="true" type="xs:string" />
+      <xs:element name="weightBreak_Discount_7Field" nillable="true" type="xs:string" />
+      <xs:element name="weightBreak_Discount_8Field" nillable="true" type="xs:string" />
+      <xs:element name="weightBreak_Discount_9Field" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LTLRateShipmentRequest" nillable="true" type="tns:LTLRateShipmentRequest" />
+  <xs:complexType name="LTLRateShipmentResponse">
+    <xs:sequence>
+      <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/System.ComponentModel" name="PropertyChanged" nillable="true" type="q7:PropertyChangedEventHandler" />
+      <xs:element name="absoluteMCFloorField" nillable="true" type="xs:string" />
+      <xs:element name="actualWgtField" nillable="true" type="xs:string" />
+      <xs:element name="billedWgtField" nillable="true" type="xs:string" />
+      <xs:element name="deficitChargeField" nillable="true" type="xs:string" />
+      <xs:element name="deficitRateField" nillable="true" type="xs:string" />
+      <xs:element name="deficitWeightField" nillable="true" type="xs:string" />
+      <xs:element name="destinationCityField" nillable="true" type="xs:string" />
+      <xs:element name="destinationCountryField" nillable="true" type="xs:string" />
+      <xs:element name="destinationPostalCodeField" nillable="true" type="xs:string" />
+      <xs:element name="destinationStateField" nillable="true" type="xs:string" />
+      <xs:element name="detailsField" nillable="true" type="tns:ArrayOfLTLResponseDetail" />
+      <xs:element name="discountAmountField" nillable="true" type="xs:string" />
+      <xs:element name="discountApplicationField" nillable="true" type="xs:string" />
+      <xs:element name="discountPctUsedField" nillable="true" type="xs:string" />
+      <xs:element name="effectiveDateField" nillable="true" type="xs:string" />
+      <xs:element name="errorCodeField" nillable="true" type="xs:string" />
+      <xs:element name="lHGrossChargeField" nillable="true" type="xs:string" />
+      <xs:element name="lTL_SurchargeField" nillable="true" type="xs:string" />
+      <xs:element name="mcDiscountField" nillable="true" type="xs:string" />
+      <xs:element name="minimumChargeField" nillable="true" type="xs:string" />
+      <xs:element name="orgDestToGateWayPointFlagField" nillable="true" type="xs:string" />
+      <xs:element name="originCityField" nillable="true" type="xs:string" />
+      <xs:element name="originCountryField" nillable="true" type="xs:string" />
+      <xs:element name="originPostalCodeField" nillable="true" type="xs:string" />
+      <xs:element name="originStateField" nillable="true" type="xs:string" />
+      <xs:element name="rBNOField" nillable="true" type="xs:string" />
+      <xs:element name="rateAdjustmentFactorField" nillable="true" type="xs:string" />
+      <xs:element name="rateApplicationField" nillable="true" type="xs:string" />
+      <xs:element name="shipmentDateCCYYMMDDField" nillable="true" type="xs:string" />
+      <xs:element name="shipmentIDField" nillable="true" type="xs:string" />
+      <xs:element name="stopAlternationWeightField" nillable="true" type="xs:string" />
+      <xs:element name="suffixField" nillable="true" type="xs:string" />
+      <xs:element name="surchargeAmountField" nillable="true" type="xs:string" />
+      <xs:element name="surchargeApplicationField" nillable="true" type="xs:string" />
+      <xs:element name="surchargePercentUsedField" nillable="true" type="xs:string" />
+      <xs:element name="tL_SurchargeField" nillable="true" type="xs:string" />
+      <xs:element name="tariffNameField" nillable="true" type="xs:string" />
+      <xs:element name="tblnoField" nillable="true" type="xs:string" />
+      <xs:element name="totalChargeField" nillable="true" type="xs:string" />
+      <xs:element name="useDiscountsField" nillable="true" type="xs:string" />
+      <xs:element name="useSingleShipmentChargesField" nillable="true" type="xs:string" />
+      <xs:element name="userMinimumChargeFloorField" nillable="true" type="xs:string" />
+      <xs:element name="weightBreak_Discount_10Field" nillable="true" type="xs:string" />
+      <xs:element name="weightBreak_Discount_11Field" nillable="true" type="xs:string" />
+      <xs:element name="weightBreak_Discount_1Field" nillable="true" type="xs:string" />
+      <xs:element name="weightBreak_Discount_2Field" nillable="true" type="xs:string" />
+      <xs:element name="weightBreak_Discount_3Field" nillable="true" type="xs:string" />
+      <xs:element name="weightBreak_Discount_4Field" nillable="true" type="xs:string" />
+      <xs:element name="weightBreak_Discount_5Field" nillable="true" type="xs:string" />
+      <xs:element name="weightBreak_Discount_6Field" nillable="true" type="xs:string" />
+      <xs:element name="weightBreak_Discount_7Field" nillable="true" type="xs:string" />
+      <xs:element name="weightBreak_Discount_8Field" nillable="true" type="xs:string" />
+      <xs:element name="weightBreak_Discount_9Field" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LTLRateShipmentResponse" nillable="true" type="tns:LTLRateShipmentResponse" />
+  <xs:complexType name="ArrayOfLTLRateShipmentRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LTLRateShipmentRequest" nillable="true" type="tns:LTLRateShipmentRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLTLRateShipmentRequest" nillable="true" type="tns:ArrayOfLTLRateShipmentRequest" />
+  <xs:complexType name="ArrayOfLTLRateShipmentResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LTLRateShipmentResponse" nillable="true" type="tns:LTLRateShipmentResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLTLRateShipmentResponse" nillable="true" type="tns:ArrayOfLTLRateShipmentResponse" />
+  <xs:complexType name="LTLPointListRequest">
+    <xs:sequence>
+      <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/System.ComponentModel" name="PropertyChanged" nillable="true" type="q8:PropertyChangedEventHandler" />
+      <xs:element name="countryField" nillable="true" type="xs:string" />
+      <xs:element name="effectiveDateField" nillable="true" type="xs:string" />
+      <xs:element name="originDestinationField" nillable="true" type="xs:string" />
+      <xs:element name="pageNumberField" nillable="true" type="xs:string" />
+      <xs:element name="postalCodeField" nillable="true" type="xs:string" />
+      <xs:element name="provinceStateCodeField" nillable="true" type="xs:string" />
+      <xs:element name="tariffNameField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LTLPointListRequest" nillable="true" type="tns:LTLPointListRequest" />
+  <xs:complexType name="LTLPointListResponse">
+    <xs:sequence>
+      <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/System.ComponentModel" name="PropertyChanged" nillable="true" type="q9:PropertyChangedEventHandler" />
+      <xs:element name="countryField" nillable="true" type="xs:string" />
+      <xs:element name="detailsField" nillable="true" type="tns:ArrayOfLTLPointListDetail" />
+      <xs:element name="effectiveDateField" nillable="true" type="xs:string" />
+      <xs:element name="errorCodeField" nillable="true" type="xs:string" />
+      <xs:element name="originDestinationField" nillable="true" type="xs:string" />
+      <xs:element name="pageNumberField" nillable="true" type="xs:string" />
+      <xs:element name="pageSizeField" nillable="true" type="xs:string" />
+      <xs:element name="postalCodeField" nillable="true" type="xs:string" />
+      <xs:element name="provinceStateCodeField" nillable="true" type="xs:string" />
+      <xs:element name="tariffNameField" nillable="true" type="xs:string" />
+      <xs:element name="totalPointsField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LTLPointListResponse" nillable="true" type="tns:LTLPointListResponse" />
+  <xs:complexType name="ArrayOfLTLPointListDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LTLPointListDetail" nillable="true" type="tns:LTLPointListDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLTLPointListDetail" nillable="true" type="tns:ArrayOfLTLPointListDetail" />
+  <xs:complexType name="LTLPointListDetail">
+    <xs:sequence>
+      <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/System.ComponentModel" name="PropertyChanged" nillable="true" type="q10:PropertyChangedEventHandler" />
+      <xs:element name="cityField" nillable="true" type="xs:string" />
+      <xs:element name="countryField" nillable="true" type="xs:string" />
+      <xs:element name="provinceStateField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LTLPointListDetail" nillable="true" type="tns:LTLPointListDetail" />
+  <xs:complexType name="ArrayOfDensityRateShipmentRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DensityRateShipmentRequest" nillable="true" type="tns:DensityRateShipmentRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDensityRateShipmentRequest" nillable="true" type="tns:ArrayOfDensityRateShipmentRequest" />
+  <xs:complexType name="DensityRateShipmentRequest">
+    <xs:sequence>
+      <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/System.ComponentModel" name="PropertyChanged" nillable="true" type="q11:PropertyChangedEventHandler" />
+      <xs:element name="destinationCityField" nillable="true" type="xs:string" />
+      <xs:element name="destinationCountryField" nillable="true" type="xs:string" />
+      <xs:element name="destinationPostalCodeField" nillable="true" type="xs:string" />
+      <xs:element name="destinationStateField" nillable="true" type="xs:string" />
+      <xs:element name="detailTypeField" nillable="true" type="xs:string" />
+      <xs:element name="detailsField" nillable="true" type="tns:ArrayOfDensityRequestDetail" />
+      <xs:element name="dimFactorField" nillable="true" type="xs:string" />
+      <xs:element name="dimFactorUnitsField" nillable="true" type="xs:string" />
+      <xs:element name="discountApplicationField" nillable="true" type="xs:string" />
+      <xs:element name="lTL_SurchargeField" nillable="true" type="xs:string" />
+      <xs:element name="mcDiscountField" nillable="true" type="xs:string" />
+      <xs:element name="orgDestToGateWayPointFlagField" nillable="true" type="xs:string" />
+      <xs:element name="originCityField" nillable="true" type="xs:string" />
+      <xs:element name="originCountryField" nillable="true" type="xs:string" />
+      <xs:element name="originPostalCodeField" nillable="true" type="xs:string" />
+      <xs:element name="originStateField" nillable="true" type="xs:string" />
+      <xs:element name="rateAdjustmentFactorField" nillable="true" type="xs:string" />
+      <xs:element name="shipmentDateCCYYMMDDField" nillable="true" type="xs:string" />
+      <xs:element name="shipmentIDField" nillable="true" type="xs:string" />
+      <xs:element name="stopAlternationWeightField" nillable="true" type="xs:string" />
+      <xs:element name="surchargeApplicationField" nillable="true" type="xs:string" />
+      <xs:element name="tL_SurchargeField" nillable="true" type="xs:string" />
+      <xs:element name="tariffNameField" nillable="true" type="xs:string" />
+      <xs:element name="useDimMCField" nillable="true" type="xs:string" />
+      <xs:element name="useDiscountsField" nillable="true" type="xs:string" />
+      <xs:element name="useSingleShipmentChargesField" nillable="true" type="xs:string" />
+      <xs:element name="userMinimumChargeFloorField" nillable="true" type="xs:string" />
+      <xs:element name="weightBreak_Discount_10Field" nillable="true" type="xs:string" />
+      <xs:element name="weightBreak_Discount_11Field" nillable="true" type="xs:string" />
+      <xs:element name="weightBreak_Discount_1Field" nillable="true" type="xs:string" />
+      <xs:element name="weightBreak_Discount_2Field" nillable="true" type="xs:string" />
+      <xs:element name="weightBreak_Discount_3Field" nillable="true" type="xs:string" />
+      <xs:element name="weightBreak_Discount_4Field" nillable="true" type="xs:string" />
+      <xs:element name="weightBreak_Discount_5Field" nillable="true" type="xs:string" />
+      <xs:element name="weightBreak_Discount_6Field" nillable="true" type="xs:string" />
+      <xs:element name="weightBreak_Discount_7Field" nillable="true" type="xs:string" />
+      <xs:element name="weightBreak_Discount_8Field" nillable="true" type="xs:string" />
+      <xs:element name="weightBreak_Discount_9Field" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DensityRateShipmentRequest" nillable="true" type="tns:DensityRateShipmentRequest" />
+  <xs:complexType name="ArrayOfDensityRequestDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DensityRequestDetail" nillable="true" type="tns:DensityRequestDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDensityRequestDetail" nillable="true" type="tns:ArrayOfDensityRequestDetail" />
+  <xs:complexType name="DensityRequestDetail">
+    <xs:sequence>
+      <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/System.ComponentModel" name="PropertyChanged" nillable="true" type="q12:PropertyChangedEventHandler" />
+      <xs:element name="cubeField" nillable="true" type="xs:string" />
+      <xs:element name="cubeUnitsField" nillable="true" type="xs:string" />
+      <xs:element name="densityField" nillable="true" type="xs:string" />
+      <xs:element name="densityUnitsField" nillable="true" type="xs:string" />
+      <xs:element name="dimensionUnitsField" nillable="true" type="xs:string" />
+      <xs:element name="heightField" nillable="true" type="xs:string" />
+      <xs:element name="lengthField" nillable="true" type="xs:string" />
+      <xs:element name="piecesField" nillable="true" type="xs:string" />
+      <xs:element name="weightField" nillable="true" type="xs:string" />
+      <xs:element name="weightUnitsField" nillable="true" type="xs:string" />
+      <xs:element name="widthField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DensityRequestDetail" nillable="true" type="tns:DensityRequestDetail" />
+  <xs:complexType name="ArrayOfDensityRateShipmentResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DensityRateShipmentResponse" nillable="true" type="tns:DensityRateShipmentResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDensityRateShipmentResponse" nillable="true" type="tns:ArrayOfDensityRateShipmentResponse" />
+  <xs:complexType name="DensityRateShipmentResponse">
+    <xs:sequence>
+      <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/System.ComponentModel" name="PropertyChanged" nillable="true" type="q13:PropertyChangedEventHandler" />
+      <xs:element name="absoluteMCFloorField" nillable="true" type="xs:string" />
+      <xs:element name="actualWgtField" nillable="true" type="xs:string" />
+      <xs:element name="billedWgtField" nillable="true" type="xs:string" />
+      <xs:element name="deficitChargeField" nillable="true" type="xs:string" />
+      <xs:element name="deficitCubeField" nillable="true" type="xs:string" />
+      <xs:element name="deficitRateField" nillable="true" type="xs:string" />
+      <xs:element name="deficitWeightField" nillable="true" type="xs:string" />
+      <xs:element name="destinationCityField" nillable="true" type="xs:string" />
+      <xs:element name="destinationCountryField" nillable="true" type="xs:string" />
+      <xs:element name="destinationPostalCodeField" nillable="true" type="xs:string" />
+      <xs:element name="destinationStateField" nillable="true" type="xs:string" />
+      <xs:element name="detailTypeField" nillable="true" type="xs:string" />
+      <xs:element name="detailsField" nillable="true" type="tns:ArrayOfDensityResponseDetail" />
+      <xs:element name="dimFactorField" nillable="true" type="xs:string" />
+      <xs:element name="dimFactorUnitsField" nillable="true" type="xs:string" />
+      <xs:element name="discountAmountField" nillable="true" type="xs:string" />
+      <xs:element name="discountApplicationField" nillable="true" type="xs:string" />
+      <xs:element name="discountPctUsedField" nillable="true" type="xs:string" />
+      <xs:element name="effectiveDateField" nillable="true" type="xs:string" />
+      <xs:element name="errorCodeField" nillable="true" type="xs:string" />
+      <xs:element name="lHGrossChargeField" nillable="true" type="xs:string" />
+      <xs:element name="lTL_SurchargeField" nillable="true" type="xs:string" />
+      <xs:element name="mcDiscountField" nillable="true" type="xs:string" />
+      <xs:element name="minimumChargeField" nillable="true" type="xs:string" />
+      <xs:element name="orgDestToGateWayPointFlagField" nillable="true" type="xs:string" />
+      <xs:element name="originCityField" nillable="true" type="xs:string" />
+      <xs:element name="originCountryField" nillable="true" type="xs:string" />
+      <xs:element name="originPostalCodeField" nillable="true" type="xs:string" />
+      <xs:element name="originStateField" nillable="true" type="xs:string" />
+      <xs:element name="rBNOField" nillable="true" type="xs:string" />
+      <xs:element name="rateAdjustmentFactorField" nillable="true" type="xs:string" />
+      <xs:element name="rateApplicationField" nillable="true" type="xs:string" />
+      <xs:element name="shipmentDateCCYYMMDDField" nillable="true" type="xs:string" />
+      <xs:element name="shipmentIDField" nillable="true" type="xs:string" />
+      <xs:element name="stopAlternationWeightField" nillable="true" type="xs:string" />
+      <xs:element name="suffixField" nillable="true" type="xs:string" />
+      <xs:element name="surchargeAmountField" nillable="true" type="xs:string" />
+      <xs:element name="surchargeApplicationField" nillable="true" type="xs:string" />
+      <xs:element name="surchargePercentUsedField" nillable="true" type="xs:string" />
+      <xs:element name="tL_SurchargeField" nillable="true" type="xs:string" />
+      <xs:element name="tariffNameField" nillable="true" type="xs:string" />
+      <xs:element name="tblnoField" nillable="true" type="xs:string" />
+      <xs:element name="totalChargeField" nillable="true" type="xs:string" />
+      <xs:element name="useDimMCField" nillable="true" type="xs:string" />
+      <xs:element name="useDiscountsField" nillable="true" type="xs:string" />
+      <xs:element name="useSingleShipmentChargesField" nillable="true" type="xs:string" />
+      <xs:element name="userMinimumChargeFloorField" nillable="true" type="xs:string" />
+      <xs:element name="weightBreak_Discount_10Field" nillable="true" type="xs:string" />
+      <xs:element name="weightBreak_Discount_11Field" nillable="true" type="xs:string" />
+      <xs:element name="weightBreak_Discount_1Field" nillable="true" type="xs:string" />
+      <xs:element name="weightBreak_Discount_2Field" nillable="true" type="xs:string" />
+      <xs:element name="weightBreak_Discount_3Field" nillable="true" type="xs:string" />
+      <xs:element name="weightBreak_Discount_4Field" nillable="true" type="xs:string" />
+      <xs:element name="weightBreak_Discount_5Field" nillable="true" type="xs:string" />
+      <xs:element name="weightBreak_Discount_6Field" nillable="true" type="xs:string" />
+      <xs:element name="weightBreak_Discount_7Field" nillable="true" type="xs:string" />
+      <xs:element name="weightBreak_Discount_8Field" nillable="true" type="xs:string" />
+      <xs:element name="weightBreak_Discount_9Field" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DensityRateShipmentResponse" nillable="true" type="tns:DensityRateShipmentResponse" />
+  <xs:complexType name="ArrayOfDensityResponseDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DensityResponseDetail" nillable="true" type="tns:DensityResponseDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDensityResponseDetail" nillable="true" type="tns:ArrayOfDensityResponseDetail" />
+  <xs:complexType name="DensityResponseDetail">
+    <xs:sequence>
+      <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/System.ComponentModel" name="PropertyChanged" nillable="true" type="q14:PropertyChangedEventHandler" />
+      <xs:element name="chargeField" nillable="true" type="xs:string" />
+      <xs:element name="cubeField" nillable="true" type="xs:string" />
+      <xs:element name="cubeUnitsField" nillable="true" type="xs:string" />
+      <xs:element name="densityField" nillable="true" type="xs:string" />
+      <xs:element name="densityUnitsField" nillable="true" type="xs:string" />
+      <xs:element name="dimensionUnitsField" nillable="true" type="xs:string" />
+      <xs:element name="errorField" nillable="true" type="xs:string" />
+      <xs:element name="heightField" nillable="true" type="xs:string" />
+      <xs:element name="lengthField" nillable="true" type="xs:string" />
+      <xs:element name="piecesField" nillable="true" type="xs:string" />
+      <xs:element name="rateField" nillable="true" type="xs:string" />
+      <xs:element name="usedCubeField" nillable="true" type="xs:string" />
+      <xs:element name="usedDensityField" nillable="true" type="xs:string" />
+      <xs:element name="usedWeightField" nillable="true" type="xs:string" />
+      <xs:element name="weightField" nillable="true" type="xs:string" />
+      <xs:element name="weightUnitsField" nillable="true" type="xs:string" />
+      <xs:element name="widthField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DensityResponseDetail" nillable="true" type="tns:DensityResponseDetail" />
+  <xs:complexType name="ArrayOfLinearRateShipmentRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LinearRateShipmentRequest" nillable="true" type="tns:LinearRateShipmentRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLinearRateShipmentRequest" nillable="true" type="tns:ArrayOfLinearRateShipmentRequest" />
+  <xs:complexType name="LinearRateShipmentRequest">
+    <xs:sequence>
+      <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/System.ComponentModel" name="PropertyChanged" nillable="true" type="q15:PropertyChangedEventHandler" />
+      <xs:element name="destinationCityField" nillable="true" type="xs:string" />
+      <xs:element name="destinationCountryField" nillable="true" type="xs:string" />
+      <xs:element name="destinationPostalCodeField" nillable="true" type="xs:string" />
+      <xs:element name="destinationStateField" nillable="true" type="xs:string" />
+      <xs:element name="detailsField" nillable="true" type="tns:ArrayOfLinearRequestDetail" />
+      <xs:element name="discountApplicationField" nillable="true" type="xs:string" />
+      <xs:element name="discountPercentageField" nillable="true" type="xs:string" />
+      <xs:element name="maxLinearFeetAllowedField" nillable="true" type="xs:string" />
+      <xs:element name="maxTrailerLengthOverrideField" nillable="true" type="xs:string" />
+      <xs:element name="mcDiscountField" nillable="true" type="xs:string" />
+      <xs:element name="orgDestToGateWayPointFlagField" nillable="true" type="xs:string" />
+      <xs:element name="originCityField" nillable="true" type="xs:string" />
+      <xs:element name="originCountryField" nillable="true" type="xs:string" />
+      <xs:element name="originPostalCodeField" nillable="true" type="xs:string" />
+      <xs:element name="originStateField" nillable="true" type="xs:string" />
+      <xs:element name="rateAdjustmentFactorField" nillable="true" type="xs:string" />
+      <xs:element name="shipmentDateCCYYMMDDField" nillable="true" type="xs:string" />
+      <xs:element name="shipmentIDField" nillable="true" type="xs:string" />
+      <xs:element name="stopAlternationWeightField" nillable="true" type="xs:string" />
+      <xs:element name="surchargeApplicationField" nillable="true" type="xs:string" />
+      <xs:element name="surchargeField" nillable="true" type="xs:string" />
+      <xs:element name="tariffNameField" nillable="true" type="xs:string" />
+      <xs:element name="useDiscountsField" nillable="true" type="xs:string" />
+      <xs:element name="userMinimumChargeFloorField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LinearRateShipmentRequest" nillable="true" type="tns:LinearRateShipmentRequest" />
+  <xs:complexType name="ArrayOfLinearRequestDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LinearRequestDetail" nillable="true" type="tns:LinearRequestDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLinearRequestDetail" nillable="true" type="tns:ArrayOfLinearRequestDetail" />
+  <xs:complexType name="LinearRequestDetail">
+    <xs:sequence>
+      <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/System.ComponentModel" name="PropertyChanged" nillable="true" type="q16:PropertyChangedEventHandler" />
+      <xs:element name="linearFeetField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LinearRequestDetail" nillable="true" type="tns:LinearRequestDetail" />
+  <xs:complexType name="ArrayOfLinearRateShipmentResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LinearRateShipmentResponse" nillable="true" type="tns:LinearRateShipmentResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLinearRateShipmentResponse" nillable="true" type="tns:ArrayOfLinearRateShipmentResponse" />
+  <xs:complexType name="LinearRateShipmentResponse">
+    <xs:sequence>
+      <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/System.ComponentModel" name="PropertyChanged" nillable="true" type="q17:PropertyChangedEventHandler" />
+      <xs:element name="destinationCityField" nillable="true" type="xs:string" />
+      <xs:element name="destinationCountryField" nillable="true" type="xs:string" />
+      <xs:element name="destinationPostalCodeField" nillable="true" type="xs:string" />
+      <xs:element name="destinationStateField" nillable="true" type="xs:string" />
+      <xs:element name="detailsField" nillable="true" type="tns:ArrayOfLinearResponseDetail" />
+      <xs:element name="discountAmountField" nillable="true" type="xs:string" />
+      <xs:element name="discountApplicationField" nillable="true" type="xs:string" />
+      <xs:element name="discountPctUsedField" nillable="true" type="xs:string" />
+      <xs:element name="discountPercentageField" nillable="true" type="xs:string" />
+      <xs:element name="effectiveDateField" nillable="true" type="xs:string" />
+      <xs:element name="errorCodeField" nillable="true" type="xs:string" />
+      <xs:element name="lHGrossChargeField" nillable="true" type="xs:string" />
+      <xs:element name="maxLinearFeetAllowedField" nillable="true" type="xs:string" />
+      <xs:element name="maxTrailerLengthOverrideField" nillable="true" type="xs:string" />
+      <xs:element name="mcDiscountField" nillable="true" type="xs:string" />
+      <xs:element name="minimumChargeField" nillable="true" type="xs:string" />
+      <xs:element name="orgDestToGateWayPointFlagField" nillable="true" type="xs:string" />
+      <xs:element name="originCityField" nillable="true" type="xs:string" />
+      <xs:element name="originCountryField" nillable="true" type="xs:string" />
+      <xs:element name="originPostalCodeField" nillable="true" type="xs:string" />
+      <xs:element name="originStateField" nillable="true" type="xs:string" />
+      <xs:element name="rBNOField" nillable="true" type="xs:string" />
+      <xs:element name="rateAdjustmentFactorField" nillable="true" type="xs:string" />
+      <xs:element name="rateApplicationField" nillable="true" type="xs:string" />
+      <xs:element name="shipmentDateCCYYMMDDField" nillable="true" type="xs:string" />
+      <xs:element name="shipmentIDField" nillable="true" type="xs:string" />
+      <xs:element name="stopAlternationWeightField" nillable="true" type="xs:string" />
+      <xs:element name="suffixField" nillable="true" type="xs:string" />
+      <xs:element name="surchargeAmountField" nillable="true" type="xs:string" />
+      <xs:element name="surchargeApplicationField" nillable="true" type="xs:string" />
+      <xs:element name="surchargeField" nillable="true" type="xs:string" />
+      <xs:element name="tariffNameField" nillable="true" type="xs:string" />
+      <xs:element name="tblnoField" nillable="true" type="xs:string" />
+      <xs:element name="totalChargeField" nillable="true" type="xs:string" />
+      <xs:element name="useDiscountsField" nillable="true" type="xs:string" />
+      <xs:element name="userMinimumChargeFloorField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LinearRateShipmentResponse" nillable="true" type="tns:LinearRateShipmentResponse" />
+  <xs:complexType name="ArrayOfLinearResponseDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LinearResponseDetail" nillable="true" type="tns:LinearResponseDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLinearResponseDetail" nillable="true" type="tns:ArrayOfLinearResponseDetail" />
+  <xs:complexType name="LinearResponseDetail">
+    <xs:sequence>
+      <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/System.ComponentModel" name="PropertyChanged" nillable="true" type="q18:PropertyChangedEventHandler" />
+      <xs:element name="chargeField" nillable="true" type="xs:string" />
+      <xs:element name="errorField" nillable="true" type="xs:string" />
+      <xs:element name="linearFeetField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LinearResponseDetail" nillable="true" type="tns:LinearResponseDetail" />
+</xs:schema>

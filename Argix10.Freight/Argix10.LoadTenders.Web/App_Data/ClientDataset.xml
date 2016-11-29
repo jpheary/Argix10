@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ClientDataset xmlns="http://www.tempuri.org/ClientDataset.xsd">
+  <ClientTable>
+    <ClientNumber>012</ClientNumber>
+    <DivisionNumber>01</DivisionNumber>
+    <ClientName>L'OCCITANE</ClientName>
+    <TerminalCode>05</TerminalCode>
+    <Status>A</Status>
+  </ClientTable>
+  <ClientTable>
+    <ClientNumber>014</ClientNumber>
+    <DivisionNumber>01</DivisionNumber>
+    <ClientName>MELVITA</ClientName>
+    <TerminalCode>05</TerminalCode>
+    <Status>A</Status>
+  </ClientTable>
+  <ClientTable>
+    <ClientNumber>025</ClientNumber>
+    <DivisionNumber>01</DivisionNumber>
+    <ClientName>PRATT RETAIL SPECIALTIES</ClientName>
+    <TerminalCode>05</TerminalCode>
+    <Status>A</Status>
+  </ClientTable>
+</ClientDataset>

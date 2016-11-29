@@ -1,0 +1,65 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Default.master.cs" Inherits="DefaultMaster" ClassName="DefaultMaster" %>
+<%@ Register Assembly="System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Namespace="System.Web.UI.WebControls" TagPrefix="asp" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1" runat="server">
+    <title>Pallet Shipment Program</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <asp:ContentPlaceHolder ID="cpMeta" runat="server" />
+    <link id="Link1" runat="server" href="~/App_Themes/Argix/Argix.css" rel="stylesheet" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Michroma' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,300italic' rel='stylesheet' type='text/css'>
+    <script type="text/jscript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.10.2.js"></script>
+    <script type="text/jscript" src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/jquery-ui.js"></script>
+    <link rel="stylesheet" href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/themes/blitzer/jquery-ui.css" />
+    <script type="text/jscript" src="scripts/jquery.inputmask.js"></script>
+</head>
+<body id="idBody" runat="server" style=" position:relative; margin-top:0; " >
+<form id="idForm" runat="server" >
+    <asp:ScriptManager ID="smPage" runat="server" EnableCdn="false" EnablePartialRendering="true" AsyncPostBackTimeout="600" ScriptMode="Auto" LoadScriptsBeforeUI="false"></asp:ScriptManager>
+    <div id="page">
+        <div id="header">
+            <div id="logo">
+                <a href="http://www.argixlogistics.com" target="_self"><img runat="server" src="~/App_Themes/Argix/Images/argix-logo.gif" alt="Argix logo" style="border: 0;" /></a>
+                <asp:UpdatePanel runat="server" ID="pnlMsg" UpdateMode="Always"><ContentTemplate><asp:Label ID="lblMsg" runat="server" Text="" /></ContentTemplate></asp:UpdatePanel>
+            </div>
+            <div id="superMenu">
+		        <ul>
+			        <li>
+                        <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                            <AnonymousTemplate><asp:HyperLink ID="lnkLogin" runat="server" NavigateUrl="~/Account/Login.aspx" Text="Quick Quote">[Login]</asp:HyperLink></AnonymousTemplate>
+                            <LoggedInTemplate>
+                                Welcome <span class="bold"><asp:LoginName ID="HeadLoginName" runat="server" /></span>
+                                <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutText="Log Out" LogoutAction="Redirect" LogoutPageUrl="http://www.argixlogistics.com" OnLoggedOut="OnLogout" />
+                            </LoggedInTemplate>
+                        </asp:LoginView>
+                    </li>
+		        </ul>
+            </div>
+            <div class="clearRight"></div>
+            <div id="mainMenu">
+		        <ul>
+                    <li><asp:HyperLink ID="lnkQuote" runat="server" NavigateUrl="~/QuickQuote.aspx" Text="Quick Quote" /></li>
+                    <li><asp:HyperLink ID="lnkEnroll" runat="server" NavigateUrl="~/Enroll.aspx" Text="Enroll" /></li>
+			        <li><asp:HyperLink ID="lnkShipments" runat="server" NavigateUrl="~/Client/PickupLog.aspx" Text="Shipments" /></li>
+			        <li><asp:HyperLink ID="lnkManage" runat="server" NavigateUrl="~/Client/Manage.aspx" Text="Manage" /></li>
+		        </ul>
+	        </div>
+        </div>
+        <div id="head"></div>
+        <div>
+            <div id="title" style="float:left">Pallet Shipment Program</div>
+            <div style="float:right; margin-top:5px">
+                <table>
+                    <tr><td style="width:75px; text-align:right"><asp:Label ID="_lblClient" runat="server" Text="Client:" ForeColor="#ee2a24" Font-Italic="true" Visible="false" />&nbsp;</td><td><asp:Label ID="lblClient" runat="server" Text="" Visible="false" /><asp:DropDownList ID="cboClients" runat="server" Width="200px" DataTextField="Name" DataValueField="ID" AutoPostBack="true" OnSelectedIndexChanged="OnCurrentClientChanged" Visible="false" /></td><td><asp:HyperLink ID="lnkEnrollClient" runat="server" NavigateUrl="~/Enroll.aspx" Text="Enroll" ToolTip="Click here to enroll a new client" Visible="false" /></td></tr>
+                    <tr><td style="width:75px; text-align:right"><asp:Label ID="_lblSalesRep" runat="server" Text="Sales Rep:" ForeColor="#ee2a24" Font-Italic="true" Visible="false" />&nbsp;</td><td><asp:Label ID="lblSalesRep" runat="server" Text="" Visible="false" /><asp:HyperLink ID="lnkGetSalesRep" runat="server" NavigateUrl="~/Client/RequestSalesRep.aspx" Text="Request a sales rep" ToolTip="Click here to find out more about sales reps" Visible="false" /></td><td>&nbsp;</td></tr>
+                </table>
+            </div>
+        </div>
+        <div id="body"><asp:contentplaceholder id="cpBody" runat="server"></asp:contentplaceholder></div>
+        <div id="footer">Copyright 2013-2014 Argix Logistics, Inc. v02132014</div>
+    </div>
+</form>
+</body>
+</html>

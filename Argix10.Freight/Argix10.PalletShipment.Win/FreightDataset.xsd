@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="FreightDataset" targetNamespace="http://tempuri.org/FreightDataset.xsd" xmlns:mstns="http://tempuri.org/FreightDataset.xsd" xmlns="http://tempuri.org/FreightDataset.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="FreightDataset" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" >
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="LTLClientTable" >
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" type="xs:int" minOccurs="0" />
+              <xs:element name="ClientNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="Name" type="xs:string" minOccurs="0" />
+              <xs:element name="AddressLine1" type="xs:string" minOccurs="0" />
+              <xs:element name="AddressLine2" type="xs:string" minOccurs="0" />
+              <xs:element name="City" type="xs:string" minOccurs="0" />
+              <xs:element name="State" type="xs:string" minOccurs="0" />
+              <xs:element name="Zip" type="xs:string" minOccurs="0" />
+              <xs:element name="Zip4" type="xs:string" minOccurs="0" />
+              <xs:element name="ContactName" type="xs:string" minOccurs="0" />
+              <xs:element name="ContactPhone" type="xs:string" minOccurs="0" />
+              <xs:element name="ContactEmail" type="xs:string" minOccurs="0" />
+              <xs:element name="CorporateName" type="xs:string" minOccurs="0" />
+              <xs:element name="CorporateAddressLine1" type="xs:string" minOccurs="0" />
+              <xs:element name="CorporateAddressLine2" type="xs:string" minOccurs="0" />
+              <xs:element name="CorporateCity" type="xs:string" minOccurs="0" />
+              <xs:element name="CorporateState" type="xs:string" minOccurs="0" />
+              <xs:element name="CorporateZip" type="xs:string" minOccurs="0" />
+              <xs:element name="CorporateZip4" type="xs:string" minOccurs="0" />
+              <xs:element name="TaxID" type="xs:string" minOccurs="0" />
+              <xs:element name="BillingAddressLine1" type="xs:string" minOccurs="0" />
+              <xs:element name="BillingAddressLine2" type="xs:string" minOccurs="0" />
+              <xs:element name="BillingCity" type="xs:string" minOccurs="0" />
+              <xs:element name="BillingState" type="xs:string" minOccurs="0" />
+              <xs:element name="BillingZip" type="xs:string" minOccurs="0" />
+              <xs:element name="BillingZip4" type="xs:string" minOccurs="0" />
+              <xs:element name="ApprovalDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ApprovalUser" type="xs:string" minOccurs="0" />
+              <xs:element name="DenialDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DenialUser" type="xs:string" minOccurs="0" />
+              <xs:element name="IsActive" type="xs:int" minOccurs="0" />
+              <xs:element name="LastUpdated" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="UserID" type="xs:string" minOccurs="0" />
+              <xs:element name="SalesRepClientNumber" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="LTLShipperTable" >
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ShipperNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="ClientNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="ClientName" type="xs:string" minOccurs="0" />
+              <xs:element name="Name" type="xs:string" minOccurs="0" />
+              <xs:element name="AddressLine1" type="xs:string" minOccurs="0" />
+              <xs:element name="AddressLine2" type="xs:string" minOccurs="0" />
+              <xs:element name="City" type="xs:string" minOccurs="0" />
+              <xs:element name="State" type="xs:string" minOccurs="0" />
+              <xs:element name="Zip" type="xs:string" minOccurs="0" />
+              <xs:element name="Zip4" type="xs:string" minOccurs="0" />
+              <xs:element name="ContactName" type="xs:string" minOccurs="0" />
+              <xs:element name="ContactPhone" type="xs:string" minOccurs="0" />
+              <xs:element name="ContactEmail" type="xs:string" minOccurs="0" />
+              <xs:element name="WindowTimeStart" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="WindowTimeEnd" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="IsActive" type="xs:int" minOccurs="0" />
+              <xs:element name="AgentNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="AgentName" type="xs:string" minOccurs="0" />
+              <xs:element name="LastUpdated" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="UserID" type="xs:string" minOccurs="0" />
+              <xs:element name="Rowversion" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="LTLConsigneeTable" >
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ConsigneeNumber" type="xs:int" minOccurs="0" />
+              <xs:element name="ClientNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="ClientName" type="xs:string" minOccurs="0" />
+              <xs:element name="Name" type="xs:string" minOccurs="0" />
+              <xs:element name="AddressLine1" type="xs:string" minOccurs="0" />
+              <xs:element name="AddressLine2" type="xs:string" minOccurs="0" />
+              <xs:element name="City" type="xs:string" minOccurs="0" />
+              <xs:element name="State" type="xs:string" minOccurs="0" />
+              <xs:element name="Zip" type="xs:string" minOccurs="0" />
+              <xs:element name="Zip4" type="xs:string" minOccurs="0" />
+              <xs:element name="ContactName" type="xs:string" minOccurs="0" />
+              <xs:element name="ContactPhone" type="xs:string" minOccurs="0" />
+              <xs:element name="ContactEmail" type="xs:string" minOccurs="0" />
+              <xs:element name="WindowTimeStart" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="WindowTimeEnd" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="IsActive" type="xs:int" minOccurs="0" />
+              <xs:element name="LastUpdated" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="UserID" type="xs:string" minOccurs="0" />
+              <xs:element name="Rowversion" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="LTLShipmentTable">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ShipmentNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="BLNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="ShipDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ClientNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="ClientName" type="xs:string" minOccurs="0" />
+              <xs:element name="ShipperNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="ShipperName" type="xs:string" minOccurs="0" />
+              <xs:element name="InsidePickup" type="xs:string" minOccurs="0" />
+              <xs:element name="LiftGateOrigin" type="xs:string" minOccurs="0" />
+              <xs:element name="PickupAppointmentDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PickupAppointmentWindowTimeStart" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PickupAppointmentWindowTimeEnd" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TheSameDayPickup" type="xs:string" minOccurs="0" />
+              <xs:element name="ConsigneeNumber" type="xs:int" minOccurs="0" />
+              <xs:element name="ConsigneeName" type="xs:string" minOccurs="0" />
+              <xs:element name="InsideDelivery" type="xs:string" minOccurs="0" />
+              <xs:element name="LiftGateDestination" type="xs:string" minOccurs="0" />
+              <xs:element name="DeliveryAppointmentDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DeliveryAppointmentWindowTimeStart" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DeliveryAppointmentWindowTimeEnd" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Pallets" type="xs:int" minOccurs="0" />
+              <xs:element name="Weight" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PalletRate" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FuelSurcharge" type="xs:decimal" minOccurs="0" />
+              <xs:element name="AccessorialCharge" type="xs:decimal" minOccurs="0" />
+              <xs:element name="InsuranceCharge" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TollCharge" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalCharge" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TerminalCode" type="xs:string" minOccurs="0" />
+              <xs:element name="LTLZone" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ContactName" type="xs:string" minOccurs="0" />
+              <xs:element name="ContactPhone" type="xs:string" minOccurs="0" />
+              <xs:element name="Created" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CreatedUserID" type="xs:string" minOccurs="0" />
+              <xs:element name="PickupID" type="xs:int" minOccurs="0" />
+              <xs:element name="PickupDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Cancelled" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LastUpdated" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="UserID" type="xs:string" minOccurs="0" />
+              <xs:element name="Rowversion" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Table1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TrackingNumber" type="xs:long" minOccurs="0" />
+              <xs:element name="ItemNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="PONumber" type="xs:string" minOccurs="0" />
+              <xs:element name="ReferenceNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="Weight" type="xs:decimal" minOccurs="0" />
+              <xs:element name="InsuranceValue" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ShipmentNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="EstimatedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="EstimatedDeliveryDate" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

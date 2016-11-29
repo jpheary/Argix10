@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Argix.Freight" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Argix.Freight" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="DispatchFault">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DispatchFault" nillable="true" type="tns:DispatchFault" />
+  <xs:complexType name="TrailerEntry">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BOLNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cancelled" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CancelledUserID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Comments" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreateUserID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Created" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="InboundCarrier" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InboundDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="InboundDriverName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InboundSeal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InitialYardLocation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsTemplate" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastUpdated" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OutboundCarrier" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OutboundDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OutboundDriverName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OutboundSeal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ScheduleDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TDSNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TrailerNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TrailerEntry" nillable="true" type="tns:TrailerEntry" />
+  <xs:complexType name="BlogEntry">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Comment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BlogEntry" nillable="true" type="tns:BlogEntry" />
+  <xs:complexType name="PickupRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActualPickup" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Amount" type="xs:int" />
+      <xs:element minOccurs="0" name="AmountType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CallerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cancelled" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CancelledUserID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Client" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ClientNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Comments" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreateUserID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Created" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DriverName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FreightType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsTemplate" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastUpdated" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OrderType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RequestID" type="xs:int" />
+      <xs:element minOccurs="0" name="ScheduleDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Shipper" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShipperAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShipperNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShipperPhone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Terminal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TerminalNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Weight" type="xs:int" />
+      <xs:element minOccurs="0" name="WindowClose" type="xs:int" />
+      <xs:element minOccurs="0" name="WindowOpen" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PickupRequest" nillable="true" type="tns:PickupRequest" />
+  <xs:complexType name="ClientInboundFreight">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActualArrival" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Amount" type="xs:int" />
+      <xs:element minOccurs="0" name="AmountType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cancelled" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CancelledUserID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CarrierName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Comments" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ConsigneeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreateUserID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Created" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DriverName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FreightType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="IsLiveUnload" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsTemplate" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastUpdated" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ScheduleDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ScheduledArrival" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="SortDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TDSCreateUserID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TDSNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TrailerNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VendorName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ClientInboundFreight" nillable="true" type="tns:ClientInboundFreight" />
+  <xs:complexType name="InboundFreight">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActualArrival" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ActualDeparture" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Amount" type="xs:int" />
+      <xs:element minOccurs="0" name="AmountType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cancelled" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CancelledUserID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CarrierName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Comments" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Confirmed" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CreateUserID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Created" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Destination" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DestinationLocation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DriverName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DropEmptyTrailerNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FreightType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="IsTemplate" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastUpdated" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Origin" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OriginLocation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ScheduleDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ScheduledArrival" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ScheduledDeparture" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TrailerNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InboundFreight" nillable="true" type="tns:InboundFreight" />
+  <xs:complexType name="OutboundFreight">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActualArrival" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ActualDeparture" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Amount" type="xs:int" />
+      <xs:element minOccurs="0" name="AmountType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cancelled" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CancelledUserID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CarrierName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Comments" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Confirmed" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CreateUserID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Created" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Destination" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DestinationLocation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DriverName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DropEmptyTrailerNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FreightType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="IsTemplate" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastUpdated" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Origin" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OriginLocation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ScheduleDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ScheduledArrival" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ScheduledDeparture" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TrailerNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OutboundFreight" nillable="true" type="tns:OutboundFreight" />
+</xs:schema>

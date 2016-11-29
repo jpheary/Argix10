@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="50098c4a-653d-47b9-8560-19c314150749" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://rgxvmweb/Argix10/Argix10.Enterprise.Services/SMTP.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SMTP.xsd" MetadataType="Schema" ID="1e223549-b7dd-4af2-95fe-df0d9057b75c" SourceId="1" SourceUrl="http://rgxvmweb.argix.com/Argix10/Argix10.Enterprise.Services/SMTP.svc?xsd=xsd0" />
+    <MetadataFile FileName="SMTP1.xsd" MetadataType="Schema" ID="a9a0e7dd-d55b-4828-b953-1cecf80a24d3" SourceId="1" SourceUrl="http://rgxvmweb.argix.com/Argix10/Argix10.Enterprise.Services/SMTP.svc?xsd=xsd1" />
+    <MetadataFile FileName="SMTP.disco" MetadataType="Disco" ID="bb88bc80-331d-49f4-8473-7a7241b9f669" SourceId="1" SourceUrl="http://rgxvmweb.argix.com/Argix10/Argix10.Enterprise.Services/SMTP.svc?disco" />
+    <MetadataFile FileName="SMTPService.wsdl" MetadataType="Wsdl" ID="afba53d3-9092-469f-8e80-0d231f51feaa" SourceId="1" SourceUrl="http://rgxvmweb.argix.com/Argix10/Argix10.Enterprise.Services/SMTP.svc?wsdl" />
+    <MetadataFile FileName="SMTP2.xsd" MetadataType="Schema" ID="cf437139-b3ef-42cf-b61a-0e3402791220" SourceId="1" SourceUrl="http://rgxvmweb.argix.com/Argix10/Argix10.Enterprise.Services/SMTP.svc?xsd=xsd2" />
+    <MetadataFile FileName="SMTP.wsdl" MetadataType="Wsdl" ID="15c9a08d-3877-48e9-9dae-f9368b1563bf" SourceId="1" SourceUrl="http://rgxvmweb.argix.com/Argix10/Argix10.Enterprise.Services/SMTP.svc?wsdl=wsdl0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

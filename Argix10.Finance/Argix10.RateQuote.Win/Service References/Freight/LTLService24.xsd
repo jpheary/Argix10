@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Argix.Freight" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Argix.Freight" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="LTLQuote2">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccessorialCharge" type="xs:decimal" />
+      <xs:element minOccurs="0" name="AppointmentDestination" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AppointmentDestinationCharge" type="xs:decimal" />
+      <xs:element minOccurs="0" name="AppointmentOrigin" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AppointmentOriginCharge" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ClientID" type="xs:int" />
+      <xs:element minOccurs="0" name="ConsigneeNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="Created" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DestinationCity" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DestinationState" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DestinationZip" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FuelSurcharge" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="InsideDelivery" type="xs:boolean" />
+      <xs:element minOccurs="0" name="InsideDeliveryCharge" type="xs:decimal" />
+      <xs:element minOccurs="0" name="InsidePickup" type="xs:boolean" />
+      <xs:element minOccurs="0" name="InsidePickupCharge" type="xs:decimal" />
+      <xs:element minOccurs="0" name="InsuranceCharge" type="xs:decimal" />
+      <xs:element minOccurs="0" name="LiftGateDestination" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LiftGateDestinationCharge" type="xs:decimal" />
+      <xs:element minOccurs="0" name="LiftGateOrigin" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LiftGateOriginCharge" type="xs:decimal" />
+      <xs:element minOccurs="0" name="OriginCity" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OriginState" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OriginZip" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pallet1Class" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pallet1InsuranceValue" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Pallet1Weight" type="xs:int" />
+      <xs:element minOccurs="0" name="Pallet2Class" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pallet2InsuranceValue" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Pallet2Weight" type="xs:int" />
+      <xs:element minOccurs="0" name="Pallet3Class" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pallet3InsuranceValue" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Pallet3Weight" type="xs:int" />
+      <xs:element minOccurs="0" name="Pallet4Class" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pallet4InsuranceValue" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Pallet4Weight" type="xs:int" />
+      <xs:element minOccurs="0" name="Pallet5Class" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pallet5InsuranceValue" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Pallet5Weight" type="xs:int" />
+      <xs:element minOccurs="0" name="PalletRate" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Pallets" type="xs:int" />
+      <xs:element minOccurs="0" name="SameDayPickupOrigin" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ShipDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ShipperNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TollCharge" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TotalCharge" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TransitMax" type="xs:int" />
+      <xs:element minOccurs="0" name="TransitMin" type="xs:int" />
+      <xs:element minOccurs="0" name="Weight" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LTLQuote2" nillable="true" type="tns:LTLQuote2" />
+  <xs:complexType name="LTLFault">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LTLFault" nillable="true" type="tns:LTLFault" />
+  <xs:complexType name="LTLClient2">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AddressLine1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AddressLine2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ApprovalDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ApprovalUser" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BillingAddressLine1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BillingAddressLine2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BillingCity" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BillingState" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BillingZip" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BillingZip4" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContactEmail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContactName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContactPhone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CorporateAddressLine1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CorporateAddressLine2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CorporateCity" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CorporateName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CorporateState" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CorporateZip" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CorporateZip4" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DenialDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DenialUser" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:int" />
+      <xs:element minOccurs="0" name="LastUpdated" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Number" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SalesRepClientNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TaxID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Zip" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Zip4" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LTLClient2" nillable="true" type="tns:LTLClient2" />
+  <xs:complexType name="LTLShipper2">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AddressLine1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AddressLine2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AgentName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AgentNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ClientNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContactEmail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContactName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContactPhone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastUpdated" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Number" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Rowversion" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WindowTimeEnd" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="WindowTimeStart" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Zip" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Zip4" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LTLShipper2" nillable="true" type="tns:LTLShipper2" />
+  <xs:complexType name="LTLConsignee2">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AddressLine1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AddressLine2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AgentName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AgentNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ClientNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContactEmail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContactName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContactPhone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastUpdated" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Number" type="xs:int" />
+      <xs:element minOccurs="0" name="Rowversion" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WindowTimeEnd" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="WindowTimeStart" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Zip" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Zip4" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LTLConsignee2" nillable="true" type="tns:LTLConsignee2" />
+  <xs:complexType name="LTLShipment2">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccessorialCharge" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BLNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cancelled" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ClientName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ClientNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ConsigneeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ConsigneeNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="Created" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DeliveryAppointmentDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DeliveryAppointmentWindowTimeEnd" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DeliveryAppointmentWindowTimeStart" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FuelSurcharge" type="xs:decimal" />
+      <xs:element minOccurs="0" name="InsideDelivery" type="xs:boolean" />
+      <xs:element minOccurs="0" name="InsidePickup" type="xs:boolean" />
+      <xs:element minOccurs="0" name="InsuranceCharge" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Items" nillable="true" type="tns:LTLPallets2" />
+      <xs:element minOccurs="0" name="LTLZone" type="xs:decimal" />
+      <xs:element minOccurs="0" name="LastUpdated" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LiftGateDestination" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LiftGateOrigin" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Pallet1Class" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pallet1InsuranceValue" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Pallet1Weight" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Pallet2Class" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pallet2InsuranceValue" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Pallet2Weight" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Pallet3Class" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pallet3InsuranceValue" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Pallet3Weight" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Pallet4Class" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pallet4InsuranceValue" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Pallet4Weight" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Pallet5Class" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pallet5InsuranceValue" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Pallet5Weight" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PalletRate" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Pallets" type="xs:int" />
+      <xs:element minOccurs="0" name="PickupAppointmentDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PickupAppointmentWindowTimeEnd" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PickupAppointmentWindowTimeStart" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PickupDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PickupID" type="xs:int" />
+      <xs:element minOccurs="0" name="Rowversion" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="ShipDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ShipmentNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShipperName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShipperNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TerminalCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TollCharge" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TotalCharge" type="xs:decimal" />
+      <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Weight" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LTLShipment2" nillable="true" type="tns:LTLShipment2" />
+  <xs:complexType name="LTLPallets2">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LTLPallet2" nillable="true" type="tns:LTLPallet2" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LTLPallets2" nillable="true" type="tns:LTLPallets2" />
+  <xs:complexType name="LTLPallet2">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="InsuranceValue" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ItemNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NMFCClass" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PONumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReferenceNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShipmentNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TrackingNumber" type="xs:long" />
+      <xs:element minOccurs="0" name="Weight" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LTLPallet2" nillable="true" type="tns:LTLPallet2" />
+  <xs:complexType name="ServiceLocation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AgentNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ZipCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ZoneCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServiceLocation" nillable="true" type="tns:ServiceLocation" />
+  <xs:complexType name="ServiceLocations">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ServiceLocation" nillable="true" type="tns:ServiceLocation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServiceLocations" nillable="true" type="tns:ServiceLocations" />
+</xs:schema>

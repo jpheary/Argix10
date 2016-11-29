@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<reports Text="Argix Logistics">
+	<department Text="PacSun" ToolTip="">
+		<report Text="PacSun Summary" Value="PacSunSummary" NavigateUrl="~/Reports/PacSunSummary.aspx" ToolTip="" />
+		<report Text="PacSun Delivery" Value="PacSunDelivery" NavigateUrl="~/Reports/PacSunDelivery.aspx" ToolTip="" />
+	</department>
+</reports>

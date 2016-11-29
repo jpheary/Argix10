@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="LTLPalletBOLDataset" targetNamespace="http://tempuri.org/LTLPalletBOLDataset.xsd" elementFormDefault="qualified" attributeFormDefault="qualified" xmlns="http://tempuri.org/LTLPalletBOLDataset.xsd" xmlns:mstns="http://tempuri.org/LTLPalletBOLDataset.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="LTLPalletBOLDataset" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="LTLPalletBOLTable">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ShipmentNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="BLNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="ShipDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TerminalCode" type="xs:string" minOccurs="0" />
+              <xs:element name="LTLZone" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ClientNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="ClientDivision" type="xs:string" minOccurs="0" />
+              <xs:element name="ClientName" type="xs:string" minOccurs="0" />
+              <xs:element name="ClientAddressLine1" type="xs:string" minOccurs="0" />
+              <xs:element name="ClientAddressLine2" type="xs:string" minOccurs="0" />
+              <xs:element name="ClientCity" type="xs:string" minOccurs="0" />
+              <xs:element name="ClientState" type="xs:string" minOccurs="0" />
+              <xs:element name="ClientZip" type="xs:string" minOccurs="0" />
+              <xs:element name="ClientPhone" type="xs:string" minOccurs="0" />
+              <xs:element name="VendorNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="VendorName" type="xs:string" minOccurs="0" />
+              <xs:element name="VendorAddressLine1" type="xs:string" minOccurs="0" />
+              <xs:element name="VendorAddressLine2" type="xs:string" minOccurs="0" />
+              <xs:element name="VendorCity" type="xs:string" minOccurs="0" />
+              <xs:element name="VendorState" type="xs:string" minOccurs="0" />
+              <xs:element name="VendorZip" type="xs:string" minOccurs="0" />
+              <xs:element name="ConsigneeNumber" type="xs:int" minOccurs="0" />
+              <xs:element name="ConsigneeName" type="xs:string" minOccurs="0" />
+              <xs:element name="ConsigneeAddressLine1" type="xs:string" minOccurs="0" />
+              <xs:element name="ConsigneeAddressLine2" type="xs:string" minOccurs="0" />
+              <xs:element name="ConsigneeCity" type="xs:string" minOccurs="0" />
+              <xs:element name="ConsigneeState" type="xs:string" minOccurs="0" />
+              <xs:element name="ConsigneeZip" type="xs:string" minOccurs="0" />
+              <xs:element name="ConsigneePhone" type="xs:string" minOccurs="0" />
+              <xs:element name="PickupAppointmentDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PickupAppointmentWindowTimeStart" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PickupAppointmentWindowTimeEnd" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PickupID" type="xs:int" minOccurs="0" />
+              <xs:element name="PickupDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DeliveryAppointmentDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DeliveryAppointmentWindowTimeStart" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DeliveryAppointmentWindowTimeEnd" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="InsidePickup" type="xs:string" minOccurs="0" />
+              <xs:element name="InsideDelivery" type="xs:string" minOccurs="0" />
+              <xs:element name="LiftGateOrigin" type="xs:string" minOccurs="0" />
+              <xs:element name="LiftGateDestination" type="xs:string" minOccurs="0" />
+              <xs:element name="TheSameDayPickup" type="xs:string" minOccurs="0" />
+              <xs:element name="ContactName" type="xs:string" minOccurs="0" />
+              <xs:element name="ContactPhone" type="xs:string" minOccurs="0" />
+              <xs:element name="Cancelled" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TrackingNumber" type="xs:long" minOccurs="0" />
+              <xs:element name="ItemNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="PONumber" type="xs:string" minOccurs="0" />
+              <xs:element name="ReferenceNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="ItemWeight" type="xs:decimal" minOccurs="0" />
+              <xs:element name="InsuranceValue" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

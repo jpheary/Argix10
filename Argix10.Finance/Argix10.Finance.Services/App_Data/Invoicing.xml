@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<invoicing>
+  <client name="Aerosoles" number="004">
+    <invoices types="IC" IC="http://rgxvmweb/Argix10/Apps/Finance/Invoicing/Argix.InvoiceAerosoles.xltx" />
+  </client>
+  <client name="Amscan" number="048">
+    <invoices types="IC" IC="http://rgxvmweb/Argix10/Apps/Finance/Invoicing/Argix.InvoicePartyCity.xltx" />
+  </client>
+  <client name="Amscan" number="248">
+    <invoices types="IC" IC="http://rgxvmweb/Argix10/Apps/Finance/Invoicing/Argix.InvoicePartyCity.xltx" />
+  </client>
+  <client name="Ann Taylor" number="033">
+    <invoices types="IC" IC="http://rgxvmweb/Argix10/Apps/Finance/Invoicing/Argix.InvoiceClientByReleaseDateByTL.xltx" />
+  </client>
+  <client name="Ann Taylor Display Pallets" number="133">
+    <invoices types="IC" IC="http://rgxvmweb/Argix10/Apps/Finance/Invoicing/Argix.InvoiceClientByReleaseDate.xltx" />
+  </client>
+  <client name="Benetton" number="006">
+    <invoices types="IC" IC="http://rgxvmweb/Argix10/Apps/Finance/Invoicing/Argix.InvoiceBenetton.xltx" />
+  </client>
+  <client name="Bourassa" number="003">
+    <invoices types="IC,IV" IC="http://rgxvmweb/Argix10/Apps/Finance/Invoicing/Argix.InvoiceBourassa.xltx" IV="http://rgxvmweb/Argix10/Apps/Finance/Invoicing/Argix.InvoiceBourassaV.xltx" />
+  </client>
+  <client name="Bourassa" number="007">
+    <invoices types="IC" IC="http://rgxvmweb/Argix10/Apps/Finance/Invoicing/Argix.InvoiceBourassa.xltx" />
+  </client>
+  <client name="Bourassa" number="021">
+    <invoices types="IC" IC="http://rgxvmweb/Argix10/Apps/Finance/Invoicing/Argix.InvoiceBourassa.xltx" />
+  </client>
+  <client name="Burlington" number="132">
+    <invoices types="IC" IC="http://rgxvmweb/Argix13/Apps/Finance/Invoicing/Argix.InvoiceBurlington.xltx" />
+  </client>
+  <client name="Camper" number="120">
+    <invoices types="IC,IR" IC="http://rgxvmweb/Argix10/Apps/Finance/Invoicing/Argix.InvoiceClient.xltx" IR="http://rgxvmweb/Argix13/Apps/Finance/Invoicing/Argix.InvoiceClientReturns.xltx" />
+  </client>
+  <client name="Cargomatic" number="116">
+    <invoices types="IC" IC="http://rgxvmweb/Argix13/Apps/Finance/Invoicing/Argix.InvoiceCargomatic.xltx" />
+  </client>
+  <client name="CMT/Urban Behavior " number="059">
+    <invoices types="IC" IC="http://rgxvmweb/Argix10/Apps/Finance/Invoicing/Argix.InvoiceClientByReleaseDate.xltx" />
+  </client>
+  <client name="Coach" number="010">
+    <invoices types="IC" IC="http://rgxvmweb/Argix10/Apps/Finance/Invoicing/Argix.InvoiceCoach.xltx" />
+  </client>
+  <client name="DOTS" number="069">
+    <invoices types="IC" IC="http://rgxvmweb/Argix10/Apps/Finance/Invoicing/Argix.InvoiceDots.xltx" />
+  </client>
+  <client name="Famous Footwear" number="062">
+    <invoices types="IC" IC="http://rgxvmweb/Argix10/Apps/Finance/Invoicing/Argix.InvoiceClient.xltx" />
+  </client>
+  <client name="GNC" number="152">
+    <invoices types="IC" IC="http://rgxvmweb/Argix10/Apps/Finance/Invoicing/Argix.InvoiceGNC2.xltx" />
+  </client>
+  <client name="Hugo Boss" number="092">
+    <invoices types="IC,IR" IC="http://rgxvmweb/Argix10/Apps/Finance/Invoicing/Argix.InvoiceHugoBoss.xltx" IR="http://rgxvmweb/Argix13/Apps/Finance/Invoicing/Argix.InvoiceHugoBossReturns.xltx" />
+  </client>
+  <client name="Imperial Bag" number="076">
+    <invoices types="IC" IC="http://rgxvmweb/Argix10/Apps/Finance/Invoicing/Argix.InvoiceClientByReleaseDateByPro.xltx" />
+  </client>
+  <client name="Ingram Book Company Returns" number="211">
+    <invoices types="IR,I4" IR="http://rgxvmweb/Argix13/Apps/Finance/Invoicing/Argix.InvoiceClientReturns.xltx" I4="http://rgxvmweb/Argix13/Apps/Finance/Invoicing/Argix.InvoiceClientReturnsToVendor.xltx" />
+  </client>
+  <client name="Loccitane" number="012">
+    <invoices types="IC" IC="http://rgxvmweb/Argix10/Apps/Finance/Invoicing/Argix.InvoiceLoccitane.xltx" />
+  </client>
+  <client name="Loccitane" number="013">
+    <invoices types="IC" IC="http://rgxvmweb/Argix10/Apps/Finance/Invoicing/Argix.InvoiceLoccitane.xltx" />
+  </client>
+  <client name="Loccitane" number="122">
+    <invoices types="IC" IC="http://rgxvmweb/Argix10/Apps/Finance/Invoicing/Argix.InvoiceLoccitane.xltx" />
+  </client>
+  <client name="PacSun" number="011">
+    <invoices types="IC" IC="http://rgxvmweb/Argix10/Apps/Finance/Invoicing/Argix.InvoicePacSun.xltx" />
+  </client>
+  <client name="Party City" number="296">
+    <invoices types="IC" IC="http://rgxvmweb/Argix10/Apps/Finance/Invoicing/Argix.InvoicePartyCity.xltx" />
+  </client>
+  <client name="Party City" number="097">
+    <invoices types="IC" IC="http://rgxvmweb/Argix10/Apps/Finance/Invoicing/Argix.InvoiceClientByReleaseDate.xltx" />
+  </client>
+  <client name="Pratt" number="023">
+    <invoices types="IC" IC="http://rgxvmweb/Argix10/Apps/Finance/Invoicing/Argix.InvoiceClient.xltx" />
+  </client>
+  <client name="Pratt" number="025">
+    <invoices types="IC" IC="http://rgxvmweb/Argix10/Apps/Finance/Invoicing/Argix.InvoiceClient.xltx" />
+  </client>
+  <client name="Pratt" number="050">
+    <invoices types="IC" IC="http://rgxvmweb/Argix10/Apps/Finance/Invoicing/Argix.InvoiceClient.xltx" />
+  </client>
+  <client name="Pollock" number="032">
+    <invoices types="IC, IV" IC="http://rgxvmweb/Argix10/Apps/Finance/Invoicing/Argix.InvoicePollock.xltx" IV="http://rgxvmweb/Argix10/Apps/Finance/Invoicing/Argix.InvoicePollock.xltx" />
+  </client>
+  <client name="Retail Group of America" number="106">
+    <invoices types="IC" IC="http://rgxvmweb/Argix10/Apps/Finance/Invoicing/Argix.InvoiceClientByReleaseDateByTL.xltx" />
+  </client>
+  <client name="Streamlite" number="066">
+    <invoices types="IC,IV" IC="http://rgxvmweb/Argix10/Apps/Finance/Invoicing/Argix.InvoiceClient.xltx" IV="http://rgxvmweb/Argix10/Apps/Finance/Invoicing/Argix.InvoiceVendor.xltx" />
+  </client>
+  <client name="Tommy Hilfiger" number="037">
+    <invoices types="IC" IC="http://rgxvmweb/Argix10/Apps/Finance/Invoicing/Argix.InvoiceClient.xltx" />
+  </client>
+  <client name="Toys R Us" number="057">
+    <invoices types="IC" IC="http://rgxvmweb/Argix10/Apps/Finance/Invoicing/Argix.InvoiceClientByReleaseDate.xltx" />
+  </client>
+  <client name="The Vitamin Shoppe" number="017">
+    <invoices types="IC" IC="http://rgxvmweb/Argix10/Apps/Finance/Invoicing/Argix.InvoiceVitaminShoppe.xltx" />
+  </client>
+  <client name="Wet Seal" number="157">
+    <invoices types="IC" IC="http://rgxvmweb/Argix10/Apps/Finance/Invoicing/Argix.InvoiceClientByReleaseDateByTL.xltx" />
+  </client>
+  <client name="Yankee Candle" number="061">
+    <invoices types="IC" IC="http://rgxvmweb/Argix10/Apps/Finance/Invoicing/Argix.InvoiceClientByReleaseDateByPro.xltx" />
+  </client>
+</invoicing>

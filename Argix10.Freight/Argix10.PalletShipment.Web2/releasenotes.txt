@@ -1,0 +1,96 @@
+              --------------------------------------------------------
+							Argix10.PalletShipment.Web2 Readme File
+		                       			July, 2015
+              --------------------------------------------------------
+                         (c) Copyright Argix Logistics, 2013-2015
+
+This document provides late-breaking or other information that supplements the PalletShipment documentation.
+
+------------------------
+How to Use This Document
+------------------------
+To view the Readme file on-screen in Windows Notepad, maximize the Notepad window and click Word 
+Wrap on the Edit menu. To print the Readme file, open it in Notepad or another word processor, 
+and then use the Print command on the File menu.
+
+==============
+CONTENTS
+==============
+NOTES
+   GENERAL
+   DEPENDENCIES
+   VERSION HISTORY
+==============
+
+
+NOTES
+==============
+GENERAL
+Argix10.PalletShipment.Web2 is an ASP.NET web application that provides business capability 
+for moving LTL pallet shipments to an Internet audience. This allows anonymous users and 
+approved clients to obtain quotes for LTL pallet shipments from an Internet web site. In 
+addition, approved clients would book and manage their own shipments. Argix Logistics would 
+like to backhaul these LTL pallets to the local terminals; delivery would be nationwide.
+
+
+DEPENDENCIES
+None.
+
+
+VERSION HISTORY
+v4.0.0, 04/10/14 ---------------------------------------------------------------------------
+Requirements/features
+- initial release.
+Design
+- initial release.
+
+v4.0.1, 05/14/14 ---------------------------------------------------------------------------
+Requirements/features
+- limited pickup dates to weekdays only on QuickQuote.aspx and Shipment.aspx.
+- revised QuickQuote.aspx.cs to use the logged in client (if a client is logged in) or the 
+  selected client (if a sales rep is logged in) to obtain quotes with applicable discounts.
+- updated TermsConditions.aspx: "Pickups one business day..."
+Design
+- none.
+
+v4.0.2, 07/29/14 ---------------------------------------------------------------------------
+Requirements/features
+- added support for a customer reference# on each shipment.
+Design
+- added text field to shipment.aspx to capture customer reference#- mapped to BLNumber; added column 
+  BL# to shipments.aspx.
+
+
+v4.0.3, 08/26/14 ---------------------------------------------------------------------------
+Requirements/features
+- none.
+Design
+- set new shipment shipdate to next valid date (was next day).
+
+
+v4.0.4, 03/10/15 ---------------------------------------------------------------------------
+Requirements/features
+- added support to print BOL.
+Design
+- added FreightGateway::ReadPalletBOLData().
+- added ~/clients/BOL.aspx.
+
+
+v4.0.5, 03/23/15, 06/08/15, 06/17/15, ~07/07/15 --------------------------------------------
+Requirements/features
+- added estimated delivery date to QuickQuote.aspx and Shipment.aspx.
+- added shipment search feature.
+Design
+- site changed to HTML5.
+- Shipper.aspx: set string length limits on Shipper fields; modified method OnZipChanged() to find service
+  location only for new Shipper and when zip.length=5.
+- Consignee.aspx: set string length limits on Consignee fields; modified method OnZipChanged() to find service
+  location only for new Consignee and when zip.length=5.
+- Shipment.aspx: revised layout for wider shipper/consignee drop down lists to show name with full address.
+- FreightGateway::ReadLTLShippersList() modified to add addressline1/city/state/zip to Name field; uspLTLShippersGetList
+  modified to return AddressLine1, City, State fields.
+- FreightGateway::ReadLTLConsigneeList() modified to add addressline1/city/state/zip to Name field; uspLTLConsigneesGetList
+  modified to return AddressLine1, City, State fields.
+~ added <meta> tags to Default.master to prevent page caching.
+~ corrected <sessionState cookieles="false" /> to <sessionState cookieless="UseCookies" /> in web.config; 
+  "false" is invalid; "UseCookies" is required for AJAX-enabled sites. 

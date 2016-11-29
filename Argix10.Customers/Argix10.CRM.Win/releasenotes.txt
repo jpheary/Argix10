@@ -1,0 +1,192 @@
+              --------------------------------------------------------
+							CRM Application Readme File
+		                       	  September, 2014
+              --------------------------------------------------------
+                         (c) Copyright Argix Logistics, 2005-2014
+
+This document provides late-breaking or other information that supplements the CRM documentation.
+
+------------------------
+How to Use This Document
+------------------------
+To view the Readme file on-screen in Windows Notepad, maximize the Notepad window and click Word 
+Wrap on the Edit menu. To print the Readme file, open it in Notepad or another word processor, 
+and then use the Print command on the File menu.
+
+==============
+CONTENTS
+==============
+INSTALLATION
+   DEPLOYMENT
+   CONFIGURATION
+
+NOTES
+   GENERAL
+   DEPENDENCIES
+   OPERATION
+   VERSION HISTORY
+==============
+
+
+INSTALLATION
+==============
+DEPLOYMENT
+CRM is installed into a Click-Once deployment folder visible from an IIS web service as follows:
+1.	Create a virtual folder c:\inetpub\wwwroot\Argix10\Apps\Customers\CRM on a web server like rgxvmweb using 
+	Windows explorer. 
+2.	Create a sub-folder called Application Files. 
+3.	Copy the new versioned Click-Once deployment folder (i.e CRM_4_0_0_2) into the Application Files folder; this folder 
+	contains the following:
+		Argix10.Export.Lib.dll
+		Argix10.Windows.Lib.dll
+		CRM.application
+		CRM.exe
+		CRM.exe.config
+		CRM.exe.manifest
+		Infragistics4.Shared.v12.1.dll
+		Infragistics4.Win.UltraWinGrid.v12.1.dll
+		Infragistics4.Win.v12.1.dll
+		Microsoft.Office.Interop.Excel.dll
+		Microsoft.Office.Interop.Word.dll
+		Microsoft.ReporViewer.Common.dll
+		Microsoft.ReporViewer.WinForms.dll
+		Office.dll
+		releasenotes.txt
+		stold.dll
+4.	Copy the deployment manifest, CRM.application, into the CRM folder. This manifest points to
+	tha application manifest (i.e. \CRM_4_0_0_2\CRM.exe.manifest)
+5.	Launch the Internet Information Services snap-in and validate that the virtual folder allows
+	anonymous access. A web application does not need to be created for deployment.
+6.	Verify http access from Internet Explorer to the following url: 
+		http://rgxvmweb/Argix10/Apps/Customers/CRM/CRM.application
+7.	The Click-Once deployment is installed on the client machine in the C:\Users\<username>\AppData\Local\Apps\2.0 folder.
+8.	Version rollbacks are accomplished by simply copying the deployment manifest (i.e. CRM.application) from 
+	a previous Click-Once deployment folder (i.e CRM_4_0_0_1) into the CRM root folder
+
+NOTES
+==============
+GENERAL
+The Customer Relationship Management (CRM) Application (CRM.exe) is a Windows based application used to manage cutomer
+and agent business relationships.
+
+OPERATION
+Normal:
+The CRM Application (CRM.exe) operates by launching from a web server deployment url 
+(i.e. http://rgxvmweb/Argix10/Apps/Customers/CRM/CRM.application). After a brief splash screen, a sizeable window appears and 
+displays a split window. The taskbar displays the operating location and connection status. 
+Additional operating steps can be found in the on-line documentation provided by the Help/Contents menu item.
+
+
+VERSION HISTORY
+v2.8.0, 01/07/09 ---------------------------------------------------------------------------
+Requirements/features
+- Initial release.
+Design/deployment
+- Initial release.
+
+v2.8.3, 05/11/09 ---------------------------------------------------------------------------
+Requirements/features
+- New Action comment text box character limit changed from 500 to 2500 characters.
+Design/deployment
+- Initial release.
+
+v2.8.4, 05/14/09 ---------------------------------------------------------------------------
+Requirements/features
+- Added spell checking to actions dialog.
+Design/deployment
+- Added reference to Microsoft Word 11.0.
+
+v2.8.5, 05/14/09 ---------------------------------------------------------------------------
+Requirements/features
+- Corrected refresh problem.
+Design/deployment
+- None.
+
+v3.1.0, 04/22/10 ---------------------------------------------------------------------------
+Requirements/features
+- Changed to SDI user interface.
+- Added drag/drop of attachments from desktop and from Outlook.
+- Added Max view to show/hide Contact and Delivery Details and maximize Action panes.
+Design/deployment
+- Changed to main view from MDI to SDI.
+- Added local uiser settings for issue header column header order and column filters.
+
+
+v3.1.1, 05/06/10 ---------------------------------------------------------------------------
+Requirements/features
+- Changed zone to Main Zone; main zone always populated by agent or store main zone.
+- Added issue header column for Coordinator (data unavailable at present) and Create User.
+- Company NOT selected, by default, in the new issue dialog.
+- Removed AutoRefresh menu item from the issue header context menu.
+- Improved issue printing: font matches view; fixed multi-page problem.
+- New issue cannot be created until the store is verified to exist.
+- New issue dialog shows agents that are applicable to the selected company.
+Design/deployment
+- Added local WinPrinter class to handle printing an issue.
+- AutoRefreshOn (bool) added to the configuration database.
+
+
+v3.1.2, 06/16/10 ---------------------------------------------------------------------------
+Requirements/features
+- Issue header view now shows new/updated issues in bold font until selected. 
+- Modified File\SaveAs menu feature to export issue headers to an Excel spreadsheet.
+- Changed title line from subject to zone/store/agent/company/type/subject combination.
+- Modified action view; removed header and running option.
+Design/deployment
+- Corrected bug in Location control that allowed location selection without company selected.
+- Re-added highlight of search word in action view.
+
+v3.2.0, 07/15/10 ---------------------------------------------------------------------------
+Requirements/features
+- None.
+Design/deployment
+- Implemented issue header local cache and partial updates (i.e. new/changed headers from new actions) on refresh.
+- Moved components from Argix10.CRM.Lib into the main application.
+
+v3.5.0, 09/10/10 ---------------------------------------------------------------------------
+Requirements/features
+- Advanced search
+- Clear filters toolbar button
+- Save filters and column headers when closing- restore on next session
+- Hold sorted item record between OSD and POD screens
+Design/deployment
+- Design changes including a new backend wcf service (Argix10.CustomerServices)
+- Fix for inactive customers
+
+v4.0.1, 09/07/12, 10/05/12, 10/09/12, 10/12/12 ---------------------------------------------
+Requirements/features
+ - corrected drag/drop
+ - hold prior display in dashboards when switching tabbed views
+ - added zone to Deliveries and Store Tracking views
+ - added ability to retry on failure for new issues and new actions
+Design/deployment
+ - moved code for Deliveries, Store Tracking, and Carton Tracking Tools to user controls
+ - deleting an exisiting file when opening an attachment in the Temp folder 
+ - corrected issue with reminders: snooze was adding snooze time to prior reminder time instead of to the current time
+
+ v4.0.2, 02/12/13, 05/20/13 ----------------------------------------------------------------
+ Requirements/features
+ - added columns for Open and Queue
+ - changed client dashboard reports to rolling 14 days
+ - allowed copy from all tools grids; added report for carton detail in store/carton tracking
+ - removed default selection of action type on new issues
+ - modified tracking tools
+ - corrected double-click issue when scrolling
+ Design/deployment
+ - added ICRMService interface to Argix10.Enterprise.Services (was previously using ITrackingService)
+
+v4.0.2, 10/24/13, 01/16/14 -----------------------------------------------------------------
+Requirements/features
+- None.
+Design/deployment
+- upgraded to Infragistics NetAdvantage 2012 third party control suite (required: Infragistics4.Win.v12.1.dll, Infragistics2.Shared.v12.1.dll, Infragistics2.Win.UltraWinGrid.v12.1.dll)
+- corrected bug with agent list in New Issue dialog
+
+v4.0.3, 09/16/14 ---------------------------------------------------------------------------
+Requirements/features
+- moved database configurations AutoRefreshOn, IssueDaysBack, and TempFolder to user settings.
+- enabled SaveAs for issue search results.
+- enabled Tools\Configuration menu item.
+- added FirstActionComment to issue list (hidden in view, available in issue export)
+Design/deployment
+- none.

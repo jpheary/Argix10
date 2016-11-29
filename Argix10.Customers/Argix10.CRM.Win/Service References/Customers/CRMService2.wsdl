@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://Argix.Customers" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://Argix.Customers" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://Argix.Customers/Imports">
+      <xsd:import schemaLocation="http://localhost:2421/Argix10.Customers.Services/CRMService.svc?xsd=xsd0" namespace="http://Argix.Customers" />
+      <xsd:import schemaLocation="http://localhost:2421/Argix10.Customers.Services/CRMService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Argix" />
+      <xsd:import schemaLocation="http://localhost:2421/Argix10.Customers.Services/CRMService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:2421/Argix10.Customers.Services/CRMService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:2421/Argix10.Customers.Services/CRMService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Argix.Customers" />
+      <xsd:import schemaLocation="http://localhost:2421/Argix10.Customers.Services/CRMService.svc?xsd=xsd4" />
+      <xsd:import schemaLocation="http://localhost:2421/Argix10.Customers.Services/CRMService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Argix.Enterprise" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICRMService_GetServiceInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetServiceInfo" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_GetServiceInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetServiceInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_GetServiceInfo_ConfigurationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/Argix" name="detail" element="q1:ConfigurationFault" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_GetUserConfiguration_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserConfiguration" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_GetUserConfiguration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserConfigurationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_GetUserConfiguration_ConfigurationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/Argix" name="detail" element="q2:ConfigurationFault" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_WriteLogEntry_InputMessage">
+    <wsdl:part name="parameters" element="tns:WriteLogEntry" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_ViewIssues_InputMessage">
+    <wsdl:part name="parameters" element="tns:ViewIssues" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_ViewIssues_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ViewIssuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_ViewIssues_CustomersFaultFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/Argix.Customers" name="detail" element="q3:CustomersFault" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_GetIssuesForDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIssuesForDate" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_GetIssuesForDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIssuesForDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_GetIssuesForDate_CustomersFaultFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/Argix.Customers" name="detail" element="q4:CustomersFault" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_ViewIssuesForAgent_InputMessage">
+    <wsdl:part name="parameters" element="tns:ViewIssuesForAgent" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_ViewIssuesForAgent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ViewIssuesForAgentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_ViewIssuesForAgent_CustomersFaultFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/Argix.Customers" name="detail" element="q5:CustomersFault" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_SearchIssues_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchIssues" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_SearchIssues_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchIssuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_SearchIssues_CustomersFaultFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/Argix.Customers" name="detail" element="q6:CustomersFault" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_SearchIssuesAdvanced_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchIssuesAdvanced" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_SearchIssuesAdvanced_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchIssuesAdvancedResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_SearchIssuesAdvanced_CustomersFaultFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/Argix.Customers" name="detail" element="q7:CustomersFault" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_SearchIssuesAdvancedForAgent_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchIssuesAdvancedForAgent" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_SearchIssuesAdvancedForAgent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchIssuesAdvancedForAgentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_SearchIssuesAdvancedForAgent_CustomersFaultFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/Argix.Customers" name="detail" element="q8:CustomersFault" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_GetIssue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIssue" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_GetIssue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIssueResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_GetIssue_CustomersFaultFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/Argix.Customers" name="detail" element="q9:CustomersFault" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_GetAttachment_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAttachment" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_GetAttachment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAttachmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_GetAttachment_CustomersFaultFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/Argix.Customers" name="detail" element="q10:CustomersFault" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_CreateIssue_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateIssue" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_CreateIssue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateIssueResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_CreateIssue_CustomersFaultFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/Argix.Customers" name="detail" element="q11:CustomersFault" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_AddAction_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddAction" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_AddAction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddActionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_AddAction_CustomersFaultFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/Argix.Customers" name="detail" element="q12:CustomersFault" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_AddAttachment_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddAttachment" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_AddAttachment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddAttachmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_AddAttachment_CustomersFaultFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/Argix.Customers" name="detail" element="q13:CustomersFault" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_GetIssueTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIssueTypes" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_GetIssueTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIssueTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_CreateIssueType_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateIssueType" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_CreateIssueType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateIssueTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_UpdateIssueType_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateIssueType" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_UpdateIssueType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateIssueTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_GetActionTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetActionTypes" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_GetActionTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetActionTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_GetTerminals_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTerminals" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_GetTerminals_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTerminalsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_GetTerminals_EnterpriseFaultFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/Argix.Enterprise" name="detail" element="q14:EnterpriseFault" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_GetCompanies_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanies" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_GetCompanies_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompaniesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_GetCompanies_EnterpriseFaultFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/Argix.Enterprise" name="detail" element="q15:EnterpriseFault" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_GetRegionsDistricts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRegionsDistricts" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_GetRegionsDistricts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRegionsDistrictsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_GetRegionsDistricts_EnterpriseFaultFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/Argix.Enterprise" name="detail" element="q16:EnterpriseFault" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_GetAgentsByClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgentsByClient" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_GetAgentsByClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgentsByClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_GetAgentsByClient_EnterpriseFaultFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://schemas.datacontract.org/2004/07/Argix.Enterprise" name="detail" element="q17:EnterpriseFault" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_GetAgents_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgents" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_GetAgents_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_GetAgents_EnterpriseFaultFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.datacontract.org/2004/07/Argix.Enterprise" name="detail" element="q18:EnterpriseFault" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_GetAgentTerminals_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgentTerminals" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_GetAgentTerminals_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgentTerminalsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_GetAgentTerminals_EnterpriseFaultFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://schemas.datacontract.org/2004/07/Argix.Enterprise" name="detail" element="q19:EnterpriseFault" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_GetStoreDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStoreDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_GetStoreDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStoreDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_GetStoreDetail_EnterpriseFaultFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://schemas.datacontract.org/2004/07/Argix.Enterprise" name="detail" element="q20:EnterpriseFault" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_GetSubStoreDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubStoreDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_GetSubStoreDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubStoreDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_GetSubStoreDetail_EnterpriseFaultFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://schemas.datacontract.org/2004/07/Argix.Enterprise" name="detail" element="q21:EnterpriseFault" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_GetDeliveries_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeliveries" />
+  </wsdl:message>
+  <wsdl:message name="ICRMService_GetDeliveries_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeliveriesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICRMService">
+    <wsdl:operation name="GetServiceInfo">
+      <wsdl:input wsaw:Action="http://Argix.Customers/ICRMService/GetServiceInfo" message="tns:ICRMService_GetServiceInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Customers/ICRMService/GetServiceInfoResponse" message="tns:ICRMService_GetServiceInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.ConfigurationFault" name="ConfigurationFaultFault" message="tns:ICRMService_GetServiceInfo_ConfigurationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserConfiguration">
+      <wsdl:input wsaw:Action="http://Argix.Customers/ICRMService/GetUserConfiguration" message="tns:ICRMService_GetUserConfiguration_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Customers/ICRMService/GetUserConfigurationResponse" message="tns:ICRMService_GetUserConfiguration_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.ConfigurationFault" name="ConfigurationFaultFault" message="tns:ICRMService_GetUserConfiguration_ConfigurationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WriteLogEntry">
+      <wsdl:input wsaw:Action="http://Argix.Customers/ICRMService/WriteLogEntry" message="tns:ICRMService_WriteLogEntry_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ViewIssues">
+      <wsdl:input wsaw:Action="http://Argix.Customers/ICRMService/ViewIssues" message="tns:ICRMService_ViewIssues_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Customers/ICRMService/ViewIssuesResponse" message="tns:ICRMService_ViewIssues_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Customers.CustomersFault" name="CustomersFaultFault" message="tns:ICRMService_ViewIssues_CustomersFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIssuesForDate">
+      <wsdl:input wsaw:Action="http://Argix.Customers/ICRMService/GetIssuesForDate" message="tns:ICRMService_GetIssuesForDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Customers/ICRMService/GetIssuesForDateResponse" message="tns:ICRMService_GetIssuesForDate_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Customers.CustomersFault" name="CustomersFaultFault" message="tns:ICRMService_GetIssuesForDate_CustomersFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ViewIssuesForAgent">
+      <wsdl:input wsaw:Action="http://Argix.Customers/ICRMService/ViewIssuesForAgent" message="tns:ICRMService_ViewIssuesForAgent_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Customers/ICRMService/ViewIssuesForAgentResponse" message="tns:ICRMService_ViewIssuesForAgent_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Customers.CustomersFault" name="CustomersFaultFault" message="tns:ICRMService_ViewIssuesForAgent_CustomersFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchIssues">
+      <wsdl:input wsaw:Action="http://Argix.Customers/ICRMService/SearchIssues" message="tns:ICRMService_SearchIssues_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Customers/ICRMService/SearchIssuesResponse" message="tns:ICRMService_SearchIssues_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Customers.CustomersFault" name="CustomersFaultFault" message="tns:ICRMService_SearchIssues_CustomersFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchIssuesAdvanced">
+      <wsdl:input wsaw:Action="http://Argix.Customers/ICRMService/SearchIssuesAdvanced" message="tns:ICRMService_SearchIssuesAdvanced_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Customers/ICRMService/SearchIssuesAdvancedResponse" message="tns:ICRMService_SearchIssuesAdvanced_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Customers.CustomersFault" name="CustomersFaultFault" message="tns:ICRMService_SearchIssuesAdvanced_CustomersFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchIssuesAdvancedForAgent">
+      <wsdl:input wsaw:Action="http://Argix.Customers/ICRMService/SearchIssuesAdvancedForAgent" message="tns:ICRMService_SearchIssuesAdvancedForAgent_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Customers/ICRMService/SearchIssuesAdvancedForAgentResponse" message="tns:ICRMService_SearchIssuesAdvancedForAgent_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Customers.CustomersFault" name="CustomersFaultFault" message="tns:ICRMService_SearchIssuesAdvancedForAgent_CustomersFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIssue">
+      <wsdl:input wsaw:Action="http://Argix.Customers/ICRMService/GetIssue" message="tns:ICRMService_GetIssue_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Customers/ICRMService/GetIssueResponse" message="tns:ICRMService_GetIssue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Customers.CustomersFault" name="CustomersFaultFault" message="tns:ICRMService_GetIssue_CustomersFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAttachment">
+      <wsdl:input wsaw:Action="http://Argix.Customers/ICRMService/GetAttachment" message="tns:ICRMService_GetAttachment_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Customers/ICRMService/GetAttachmentResponse" message="tns:ICRMService_GetAttachment_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Customers.CustomersFault" name="CustomersFaultFault" message="tns:ICRMService_GetAttachment_CustomersFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateIssue">
+      <wsdl:input wsaw:Action="http://Argix.Customers/ICRMService/CreateIssue" message="tns:ICRMService_CreateIssue_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Customers/ICRMService/CreateIssueResponse" message="tns:ICRMService_CreateIssue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Customers.CustomersFault" name="CustomersFaultFault" message="tns:ICRMService_CreateIssue_CustomersFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAction">
+      <wsdl:input wsaw:Action="http://Argix.Customers/ICRMService/AddAction" message="tns:ICRMService_AddAction_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Customers/ICRMService/AddActionResponse" message="tns:ICRMService_AddAction_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Customers.CustomersFault" name="CustomersFaultFault" message="tns:ICRMService_AddAction_CustomersFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAttachment">
+      <wsdl:input wsaw:Action="http://Argix.Customers/ICRMService/AddAttachment" message="tns:ICRMService_AddAttachment_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Customers/ICRMService/AddAttachmentResponse" message="tns:ICRMService_AddAttachment_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Customers.CustomersFault" name="CustomersFaultFault" message="tns:ICRMService_AddAttachment_CustomersFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIssueTypes">
+      <wsdl:input wsaw:Action="http://Argix.Customers/ICRMService/GetIssueTypes" message="tns:ICRMService_GetIssueTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Customers/ICRMService/GetIssueTypesResponse" message="tns:ICRMService_GetIssueTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateIssueType">
+      <wsdl:input wsaw:Action="http://Argix.Customers/ICRMService/CreateIssueType" message="tns:ICRMService_CreateIssueType_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Customers/ICRMService/CreateIssueTypeResponse" message="tns:ICRMService_CreateIssueType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateIssueType">
+      <wsdl:input wsaw:Action="http://Argix.Customers/ICRMService/UpdateIssueType" message="tns:ICRMService_UpdateIssueType_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Customers/ICRMService/UpdateIssueTypeResponse" message="tns:ICRMService_UpdateIssueType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActionTypes">
+      <wsdl:input wsaw:Action="http://Argix.Customers/ICRMService/GetActionTypes" message="tns:ICRMService_GetActionTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Customers/ICRMService/GetActionTypesResponse" message="tns:ICRMService_GetActionTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTerminals">
+      <wsdl:input wsaw:Action="http://Argix.Customers/ICRMService/GetTerminals" message="tns:ICRMService_GetTerminals_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Customers/ICRMService/GetTerminalsResponse" message="tns:ICRMService_GetTerminals_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Enterprise.EnterpriseFault" name="EnterpriseFaultFault" message="tns:ICRMService_GetTerminals_EnterpriseFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanies">
+      <wsdl:input wsaw:Action="http://Argix.Customers/ICRMService/GetCompanies" message="tns:ICRMService_GetCompanies_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Customers/ICRMService/GetCompaniesResponse" message="tns:ICRMService_GetCompanies_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Enterprise.EnterpriseFault" name="EnterpriseFaultFault" message="tns:ICRMService_GetCompanies_EnterpriseFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRegionsDistricts">
+      <wsdl:input wsaw:Action="http://Argix.Customers/ICRMService/GetRegionsDistricts" message="tns:ICRMService_GetRegionsDistricts_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Customers/ICRMService/GetRegionsDistrictsResponse" message="tns:ICRMService_GetRegionsDistricts_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Enterprise.EnterpriseFault" name="EnterpriseFaultFault" message="tns:ICRMService_GetRegionsDistricts_EnterpriseFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAgentsByClient">
+      <wsdl:input wsaw:Action="http://Argix.Customers/ICRMService/GetAgentsByClient" message="tns:ICRMService_GetAgentsByClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Customers/ICRMService/GetAgentsByClientResponse" message="tns:ICRMService_GetAgentsByClient_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Enterprise.EnterpriseFault" name="EnterpriseFaultFault" message="tns:ICRMService_GetAgentsByClient_EnterpriseFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAgents">
+      <wsdl:input wsaw:Action="http://Argix.Customers/ICRMService/GetAgents" message="tns:ICRMService_GetAgents_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Customers/ICRMService/GetAgentsResponse" message="tns:ICRMService_GetAgents_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Enterprise.EnterpriseFault" name="EnterpriseFaultFault" message="tns:ICRMService_GetAgents_EnterpriseFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAgentTerminals">
+      <wsdl:input wsaw:Action="http://Argix.Customers/ICRMService/GetAgentTerminals" message="tns:ICRMService_GetAgentTerminals_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Customers/ICRMService/GetAgentTerminalsResponse" message="tns:ICRMService_GetAgentTerminals_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Enterprise.EnterpriseFault" name="EnterpriseFaultFault" message="tns:ICRMService_GetAgentTerminals_EnterpriseFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStoreDetail">
+      <wsdl:input wsaw:Action="http://Argix.Customers/ICRMService/GetStoreDetail" message="tns:ICRMService_GetStoreDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Customers/ICRMService/GetStoreDetailResponse" message="tns:ICRMService_GetStoreDetail_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Enterprise.EnterpriseFault" name="EnterpriseFaultFault" message="tns:ICRMService_GetStoreDetail_EnterpriseFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubStoreDetail">
+      <wsdl:input wsaw:Action="http://Argix.Customers/ICRMService/GetSubStoreDetail" message="tns:ICRMService_GetSubStoreDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Customers/ICRMService/GetSubStoreDetailResponse" message="tns:ICRMService_GetSubStoreDetail_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Enterprise.EnterpriseFault" name="EnterpriseFaultFault" message="tns:ICRMService_GetSubStoreDetail_EnterpriseFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDeliveries">
+      <wsdl:input wsaw:Action="http://Argix.Customers/ICRMService/GetDeliveries" message="tns:ICRMService_GetDeliveries_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Customers/ICRMService/GetDeliveriesResponse" message="tns:ICRMService_GetDeliveries_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

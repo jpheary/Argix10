@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://Argix.Freight" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://Argix.Freight" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://Argix.Freight/Imports">
+      <xsd:import schemaLocation="http://localhost:5026/Argix10.AgentLineHaul.Services/ShipScheduleService.svc?xsd=xsd6" namespace="http://Argix.Freight" />
+      <xsd:import schemaLocation="http://localhost:5026/Argix10.AgentLineHaul.Services/ShipScheduleService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Argix.Freight" />
+      <xsd:import schemaLocation="http://localhost:5026/Argix10.AgentLineHaul.Services/ShipScheduleService.svc?xsd=xsd0" namespace="http://Argix.AgentLineHaul" />
+      <xsd:import schemaLocation="http://localhost:5026/Argix10.AgentLineHaul.Services/ShipScheduleService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:5026/Argix10.AgentLineHaul.Services/ShipScheduleService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Argix" />
+      <xsd:import schemaLocation="http://localhost:5026/Argix10.AgentLineHaul.Services/ShipScheduleService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:5026/Argix10.AgentLineHaul.Services/ShipScheduleService.svc?xsd=xsd4" />
+      <xsd:import schemaLocation="http://localhost:5026/Argix10.AgentLineHaul.Services/ShipScheduleService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Argix.AgentLineHaul" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDispatchService_GetShipSchedules_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetShipSchedules" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_GetShipSchedules_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetShipSchedulesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_GetShipSchedules_DispatchFaultFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q1:DispatchFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_GetShipSchedule_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetShipSchedule" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_GetShipSchedule_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetShipScheduleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_GetShipSchedule_DispatchFaultFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q2:DispatchFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_GetTerminals_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTerminals" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_GetTerminals_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTerminalsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IDispatchService">
+    <wsdl:operation name="GetShipSchedules">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchService/GetShipSchedules" message="tns:IDispatchService_GetShipSchedules_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchService/GetShipSchedulesResponse" message="tns:IDispatchService_GetShipSchedules_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.DispatchFault" name="DispatchFaultFault" message="tns:IDispatchService_GetShipSchedules_DispatchFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetShipSchedule">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchService/GetShipSchedule" message="tns:IDispatchService_GetShipSchedule_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchService/GetShipScheduleResponse" message="tns:IDispatchService_GetShipSchedule_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.DispatchFault" name="DispatchFaultFault" message="tns:IDispatchService_GetShipSchedule_DispatchFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTerminals">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchService/GetTerminals" message="tns:IDispatchService_GetTerminals_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchService/GetTerminalsResponse" message="tns:IDispatchService_GetTerminals_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

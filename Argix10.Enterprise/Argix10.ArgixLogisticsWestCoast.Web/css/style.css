@@ -1,0 +1,1405 @@
+html, body{
+    background-color:#545454;
+    overflow-x: hidden;
+    margin: 0;
+    font-family: 'OpenSans';
+}
+
+strong {
+    font-family: 'OpenSans-Bold';
+    font-weight: normal;
+}
+.wrapper {
+    background: none repeat scroll 0 0 #fff;
+    padding: 0;
+    width: 100%;
+}
+.wrapper header {
+    padding: 0;
+    margin: 0;
+    z-index: 999999;
+}
+.headerContain {
+    margin: 0 auto;
+    padding: 0 0 0 40px;
+    width: 1280px;
+}
+.logo{
+    padding: 6px 0;
+}
+.logo img {
+    max-width: 100%;
+}
+.navContain {
+    padding: 30px 0;
+}
+.nav {
+    float: right;
+}
+.nav li {
+    float: right;
+    margin-left: 30px;
+}
+.nav > li > a {
+    color: #505050;
+    font-size: 16px;
+    text-transform: capitalize;
+    line-height: 18px;
+    padding: 5px 15px 7px;
+}
+.panel4Titile {
+        font-size:44px important;
+        line-height: 38px;   
+        top: 20px;
+    }
+.nav > li.last > a {
+    background-color: #ed2724;
+    color: #fff;
+    font-family: 'OpenSans-Bold';
+    padding: 5px 30px 7px 20px;
+    text-transform: uppercase;
+}
+.bannerContain {
+    margin: 0 auto;
+    padding: 0;
+    width: 1280px;
+}
+.standContain {
+    display: table;
+    height: 235px;
+    padding: 0;
+    position: relative;
+    width: 100%;
+}
+.standContain .grid {
+    display: table;
+    height: 100%;
+    position: relative;
+    vertical-align: bottom;
+    background-image: url(../images/shoe-stand.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.standContain .grid .image {
+    bottom: 29px;
+    left: 5%;
+    position: absolute;
+    width: 100%;
+    z-index: 9999;
+}
+.standContain .grid .image img {
+    margin: 0 auto;
+    max-width: 50%;
+}
+
+.bannerFull {
+    position: relative;
+}
+.lg{ border:none !importent;}
+.bannerFull:before, .bannerFull:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 180px;
+    background-image: url(../images/banner-shadow-top.png);
+    background-repeat: repeat-x;
+    background-position: 0 0;
+    background-size: auto 100%;
+    z-index: 9;
+    opacity: 0.7;
+}
+.bannerFull:after {
+    background-image: url(../images/banner-shadow-bottom.png);
+    top: auto;
+    bottom: 0;
+}
+.bannerContent {
+    background-color: rgba(0,0,0,0.7);
+    left: 50%;
+    margin-left: -480px;
+    margin-top: -100px;
+    padding: 10px 15px 15px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 960px;
+    z-index: 99999;
+    color: #fff;
+}
+.bannerTitle {
+    font-family: 'OpenSans-Light';
+    font-size: 42px;
+    font-weight: normal;
+    line-height: 45px;
+    margin-bottom: 15px;
+}
+.bannerTitle span {
+    display: block;
+}
+.bannerContent .bannerText {
+    font-size: 17px;
+       line-height: 24px;
+    display: block;
+}
+.callDetail {
+    background-color: rgba(0,0,0,0.7);
+    left: 50%;
+    margin-left: -480px;
+    padding: 5px 15px;
+    position: absolute;
+    text-align: center;
+    top: auto;
+    bottom: 0;
+    width: 960px;
+    z-index: 99999;
+    color: #fff;
+    font-size: 24px;
+    line-height: 24px;
+    font-family: 'OpenSans-Light';
+}
+.callDetail span {
+    display: inline-block;
+}
+.callDetail strong {
+    font-family: 'OpenSans-Bold';
+    color: #ed2724;
+    position: relative;
+}
+.callDetail strong:before {
+    content: "";
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+    top: 2px;
+    width: 30px;
+    width: 30px;
+    height: 22px;
+    background-image: url(../images/phone-icon.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.panel2Full {
+    padding: 42px 0;
+}
+.panel2Contain {
+    margin: 0 auto;
+    padding: 0;
+    width: 1280px;
+}
+.panel2Title {
+    font-size: 44px;
+    line-height: 46px;
+    padding: 0;
+    margin: 0 0 50px;
+    text-align: center;
+    font-family: 'OpenSans-Light';
+}
+.panel2row {
+    float: left;
+}
+.panel2row, .panel2Image {
+    padding: 0;
+}
+.panel2Image img {
+    max-width: 100%;
+}
+.panel2Content {
+    padding: 20px 0; 
+}
+.panel2Content > p {
+    margin-bottom: 25px;
+}
+.panel2Content .text-uppercase strong {
+    font-weight: bold;
+}
+.panel2Content > ul {
+    margin: -5px 0 0;
+    padding: 0;
+}
+.panel2Content li {
+    list-style: outside none none;
+    padding: 0 50px 20px 40px;
+    position: relative;
+}
+.panel2Content li:before {
+    content: ".";
+    display: inline-block;
+    font-size: 40px;
+    left: 0;
+    top: 0;
+    line-height: 0;
+    position: absolute;
+}
+.panel2Content li strong {
+    display: block;
+}
+
+.panel3Full {
+    background-color: #ed2724;
+    color: #ffffff;
+    padding: 25px 0 60px;
+    text-align: center;
+	line-height:25px;
+	padding-bottom:74px;
+}
+.panel3Contain {
+    width: 100%;
+}
+.panel3Title {
+    font-size: 41px;
+    padding: 0 0 12px;
+    font-family: 'OpenSans-Light';
+    line-height: 48px;
+}
+.panel3Title > p {
+    border-bottom: 1px solid;
+    display: inline-block;
+    padding: 10px 0 20px;
+}
+.panel3Title strong {
+    display: block;
+    font-size: 41px;
+}
+
+
+.panel4Full {
+    padding: 0;
+}
+.panel4Contain {
+    margin: 0 auto;
+    width: 1280px;
+    position: relative;
+    padding-bottom: 100px;
+}
+.panel4Titile {
+    font-size: 44px;
+    line-height: 46px;
+    position: absolute;
+    text-align: center;
+    top: 30px;
+    width: 100%;
+    font-family: 'OpenSans-Light';
+}
+.panel4Titile strong {
+    display: block;
+}
+.panel4Contain img {
+    max-width: 100%;
+}
+.chartContain {
+    top: 340px;
+    left: 25px;
+    position: absolute;
+    text-align: center;
+    width: 370px;
+}
+.roundContain {
+    display: table-cell;
+    width: 210px;
+}
+.panel4Content {
+    display: table-cell;
+    vertical-align: top;
+}
+.roundContain > img {
+    background-color: #dddddd;
+    border: 25px solid #dddddd;
+    border-radius: 100px;
+}
+.panel4Content {
+    display: table-cell;
+    padding: 0;
+    vertical-align: top;
+    font-size: 12px;
+}
+.chartContain .panel4Content {
+    margin-top: 5px;
+    padding: 0 20px;
+    display: block;
+}
+.chartContain .roundContain {
+    display: block;
+    margin: 0 auto;
+}
+
+.shipContain {
+    bottom: 20px;
+    display: table;
+    left: 460px;
+    position: absolute;
+}
+.shipContain .roundContain {
+    display: table-cell;
+    width: 210px;
+}
+.shipContain .panel4Content {
+    display: table-cell;
+    padding: 0;
+    vertical-align: bottom;
+    width: 340px;
+}
+
+.bridgeContain {
+    display: table;
+    left: 627px;
+    position: absolute;
+    top: 155px;
+    width: 525px;
+}
+.bridgeContain .panel4Content {
+    padding-left: 5px;
+}
+
+
+.panel5Full {
+    padding: 15px 0;
+    background-color: #45adb9;
+    color: #fff;
+}
+.panel5Contain {
+    width: 1280px;
+    margin: 0 auto;
+}
+.panel5Title {
+    font-family: 'OpenSans-Light';
+    text-align: center;
+    font-size: 44px;
+	font-weight:bold;
+}
+
+.listImageContain {
+    float: left;
+    padding: 57px 0;
+    width: 100%;
+}
+.squareImage {
+    float: left;
+    margin-right: 150px;
+    position: relative;
+    z-index: 9;
+}
+.squareImage > img {
+    border: 10px solid #ffffff;
+    max-width: 100%;
+}
+.squareImage.last {
+    margin-right: 0;
+}
+.squareImage:before {
+    background: #ffffff;
+    content: "";
+    display: block;
+    height: 1px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    z-index: -1;
+}
+.squareImage:after {
+    background-image: url("../images/arr.png");
+    content: "";
+    display: block;
+    height: 31px;
+    left: 100%;
+    margin-left: 65px;
+    margin-top: -15px;
+    position: absolute;
+    top: 50%;
+    width: 21px;
+    z-index: -1;
+}
+.squareImage.last:before, .squareImage.last:after {
+    display: none;
+}
+.panel5Contain > p {
+    clear: both;
+    font-size: 18px;
+    letter-spacing: 0.018em;
+    line-height: 20px;
+}
+.panel5Contain > p span {
+    color: #ffe25c;
+}
+.partnerLogo > img {
+    border: 15px solid #71c1ca;
+    border-radius: 100px;
+    background-color: #71c1ca;
+}
+.panel5Content {
+    margin: 25px 0;
+    padding: 0;
+}
+.partnerLogo {
+    float: left;
+}
+.partnerContent {
+    float: left;
+    padding: 5px 30px;
+}
+.partnerContent > p {
+    font-size: 20px;
+}
+.partnerContent > ul {
+    list-style: outside none none;
+    padding: 0;
+}
+.partnerContent li {
+    padding: 0 0 0 36px;
+    position: relative;
+}
+.partnerContent li:before {
+    content: ".";
+    font-size: 32px;
+    left: 0;
+    line-height: 4px;
+    position: absolute;
+    top: 0;
+}
+
+.panel6Full {
+    padding: 30px 0;
+}
+.panel6Contain {
+    margin: 0 auto;
+    width: 1280px;
+}
+.panel6Title {
+    font-size: 28px;
+    text-align: center;
+    line-height: 46px;
+}
+
+.panel6Title strong {
+    display: block;
+    font-size: 44px;
+	font-weight:bold;
+}
+.redMenus {
+    font-size: 17px;
+    margin: 25px 0 0;
+    text-align: center;
+    color: #ed2724;
+}
+.redMenus span {
+    border-right: 1px solid #acacac;
+    display: inline-block;
+    line-height: 18px;
+    padding: 2px 10px;
+}
+.redMenus span:first-child {
+  /*  border-left: 1px solid #acacac;*/
+}
+.lg{ border:none !important;}
+
+.panel7Full {
+    background-color: #d1ceba;
+    padding: 30px 0 60px;
+}
+.panel7Contain {
+    width: 1280px;
+    margin: 0 auto;
+    width: 1280px;
+}
+.panel7Title {
+    font-size: 44px;
+    line-height: 44px;
+    text-align: center;
+}
+.panel7Text {
+    font-size: 18px;
+    padding: 0 149px;
+    text-align: center;
+	line-height: 25px;
+}
+
+.fieldContain {
+    padding: 0 58px 0 300px;
+}
+.fieldContain .form-control {
+    background-color: #efeee7;
+    border: medium none;
+    border-radius: 5px;
+    box-shadow: none;
+    height: 40px;
+    color: #505050;
+}
+#t {
+    color: #EC2623;
+    font-size: 16px;
+    margin: 0;
+    padding: 0 300px;
+    font-family: 'OpenSans-Bold';
+}
+.fieldContain .clrerror {
+    background-color: #B8B5A4;
+    color: #fff;
+    border: 3px solid #989586;
+}
+.checkBoxContain {
+    padding: 13px 0 0 62px;
+}
+.checkbox {
+    font-size: 14px;
+    margin-bottom: 8px;
+    padding: 5px 20px 0;
+}
+.checkbox label {
+    display: inline-block;
+    position: relative;
+    padding-left: 15px; 
+}
+.checkbox label::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    left: 0;
+    margin-left: -20px;
+    border: 0;
+    border-radius: 3px;
+    background-color: #efeee7;
+    -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+    -o-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+    transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+    top: 3px;
+}
+    .checkbox label::after {
+    display: inline-block;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 0;
+    top: 2px;
+    margin-left: -20px;
+    padding-left: 3px;
+    padding-top: 1px;
+    font-size: 11px;
+    color: #555555; 
+}
+.checkbox input[type="checkbox"] {
+    opacity: 0;
+    z-index: 1;
+}
+.checkbox input[type="checkbox"]:focus + label::before {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px; 
+}
+.checkbox input[type="checkbox"]:checked + label::after {
+    font-family: 'FontAwesome';
+    content: "\f00c"; 
+}
+.checkbox input[type="checkbox"]:disabled + label {
+    opacity: 0.65; 
+}
+.checkbox input[type="checkbox"]:disabled + label::before {
+    background-color: #eeeeee;
+    cursor: not-allowed;
+}
+.checkbox.checkbox-circle label::before {
+    border-radius: 50%; 
+}
+.checkbox.checkbox-inline {
+    margin-top: 0;
+}
+.checkbox.checkbox-single label {
+    height: 17px; 
+}
+.checkBoxContain .btn {
+    background-color: #efeee7;
+    border: 0 none;
+    height: 41px;
+    margin-top: 76px;
+    width: 142px;
+}
+.checkBoxContain p strong, .checkBoxContain .btn {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+input.error::-webkit-input-placeholder { /* WebKit browsers */
+    color: #fff !important;
+    opacity:  1;
+}
+input.error:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #fff!important;
+   opacity:  1;
+}
+input.error::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #fff !important;
+   opacity:  1;
+}
+input.error:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #fff !important;
+   opacity:  1;
+}
+.error::-webkit-input-placeholder {
+   color: #505050 !important;
+}
+
+.error:-moz-placeholder { /* Firefox 18- */
+    color: #505050 !important;
+}
+
+.error::-moz-placeholder {  /* Firefox 19+ */
+  color: #505050 !important;
+}
+
+.error:-ms-input-placeholder {  
+   color: #505050 !important;
+}
+.thankYou {
+    padding: 78px 0;
+    text-align: center;
+}
+.thankYouTitle {
+    font-size: 31px;
+}
+.thankYouTitle > p {
+    color: #fff;
+}
+.thankYouTitle strong {
+    display: block;
+    font-size: 38px;
+    font-weight: bold;
+    line-height: 40px;
+    color: #fff;
+}
+.visitBtn {
+    border: 2px solid;
+    border-radius: 30px;
+    clear: both;
+    color: #ed2724;
+    display: inline-block;
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 25px;
+    min-width: 100px;
+    padding: 10px 40px;
+    text-align: center;
+}
+.visitBtn:hover {
+    background-color: #ed2724;
+    color: #fff;
+}
+
+.footerFull {
+    background-color: #545454;
+    color: #fff;
+    padding: 40px 0;
+}
+.footerContain {
+    padding: 0;
+    width: 1280px;
+}
+.footerLeft {
+    font-size: 11px;
+    padding-right: 0;
+    width: 22%;
+}
+.footerLeft a:first-child {
+    padding-left: 0;
+}
+.footerLeft a {
+    color: #fff;
+    padding: 0 5px;
+}
+.footerLeft address {
+    font-size: 11px;
+    margin-top: 15px;
+}
+
+.footerRight {
+    font-size: 11px;
+    width: 78%;
+    padding-right: 15px;
+    float: right;
+}
+.footerRight strong {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+.footerRight a {
+    color: #ffd200;
+}
+.panel7Full .accordion-toggle {
+   
+    background-position: left top;
+    display: block;
+    height: 68px;
+    margin: -66px auto 0;
+    position: relative;
+    width: 77px;
+}
+.panel7Full .accordion-toggle.collapsed {
+    background-position: left -62px;
+    background-repeat: no-repeat;
+    margin-top: -61px;
+}
+#divImg2, #divImg7, #divImg8 {
+    display: none;
+}
+@media only screen and (max-width : 1279px) {
+    .headerContain, .bannerContain, .panel2Contain,  .panel3Contain, .panel4Contain, .panel5Contain, .panel6Contain, .panel7Contain, .footerContain {
+        width: 100%;
+    }
+    .panel2Title strong {
+        display: block;
+    }
+    .squareImage:after {
+        margin-left: -8px;
+    }
+}
+@media only screen and (min-width : 1280px) {
+    body {
+        padding-top: 70px;
+    }
+    .last:after {
+        background: none repeat scroll 0 0 #ed2724;
+        content: "";
+        height: 100%;
+        position: absolute;
+        right: -500px;
+        top: 0;
+        width: 500px;
+    }
+	
+    .standContain:before, .standContain:after {
+        content: "";
+        position: absolute;
+        left: -498px;
+        top: 0;
+        height: 235px;
+        width: 500px;
+        background-image: url(../images/shoe-stand.jpg);
+        background-repeat: repeat-x;
+        background-position: right 0px;
+        background-size: auto 100%;
+    }
+    .standContain:after {
+        left: auto;
+        right: -498px;
+        background-position: 0 0;
+        top: 0;
+    }
+    .squareImage:after {
+        margin-left: -25px;
+    }
+	
+    
+}
+
+@media only screen and (min-width : 1594px) {
+    .wrapper {
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        width: 1593px;
+    }
+    .wrapper header.affix {
+        width: 1594px;
+        left: 50%;
+        margin-left: -796px;
+        overflow: hidden;
+    }
+}
+@media only screen and (min-width : 1024px) and (max-width : 1025px) {
+    
+    .callDetail strong b.hidden-sm {
+        display: none !important;
+    }
+}
+@media only screen and (min-width : 1024px) {
+    .bannerFull {
+        overflow: hidden;
+    }
+    .headerContain {
+        padding-left: 20px;
+    }
+    .standContain {
+        height: 180px;
+    }
+    .standContain .grid .image {
+        bottom: 22px;
+    }
+    .panel4Contain {
+        padding-bottom: 85px;
+    }
+  .panel4Titile {
+        font-size: 36px;
+        line-height: 38px;   
+        top: 20px;
+    } 
+    
+    .panel5Contain {
+        padding: 0;
+    }
+    .squareImage {
+        margin-right: 0;
+        padding: 0 40px;
+        width: 33.33%;
+        z-index: 9;
+    }
+    .panel5Contain > p {
+        text-align: center;
+        padding: 0 185px;
+    }
+    .panel6Title {
+        font-size: 25px;
+    }
+    .panel7Text {
+/*        padding: 0 20px;   */
+    }
+    .fieldContain {
+/*        padding-left: 170px;*/
+    }
+}
+@media only screen and (max-width : 1024px) {
+    .panel2Image {
+        padding: 0 40px 0 0;
+    }
+    .panel2Content {
+        padding: 0 10px;
+    }
+    .panel2Content li {
+        padding: 0 20px 10px 40px;
+    }
+    .footerRight br {
+        display: none;
+    }
+    .roundContain {
+        display: inline-block;
+        width: 165px;
+        padding-right: 5px;
+    }
+    .roundContain > img {
+        border-width: 20px;
+    }
+    .bridgeContain {
+        left: 445px;
+        top: 120px;
+        width: 485px;
+    }
+    .chartContain {
+        left: 45px;
+        top: 265px;
+    }
+    .chartContain .roundContain {
+        display: inline-block;
+    }
+    .panel4Content {
+        text-align: left;
+    }
+    .shipContain {
+        left: 410px;
+    }
+    .shipContain .roundContain {
+        display: inline-block;
+        width: 165px;
+    }
+    .footerLeft {
+        width: 28%;
+    }
+    .footerRight {
+        width: 72%;
+    }
+    .panel7Text {
+        padding: 0 20px;
+    }
+    .fieldContain {
+        padding-left: 170px;
+    }
+    #t {
+        padding: 0 170px;
+    }
+}
+@media only screen and (min-width : 561px) and (max-width : 767px) {
+    .standContain {
+        height: 160px;
+    }
+    .standContain .grid .image {
+        bottom: 13px;
+    }
+}
+@media only screen and (max-width : 560px) {
+    .standContain {
+        height: 80px;
+    }
+    .standContain .grid .image {
+        bottom: 10px;
+    }
+}
+@media only screen and (min-width : 1025px) {
+    .callDetail strong b {
+        display: inline-block !important;
+    }
+    address b {
+        display: inline-block !important;
+        padding: 0 !important;
+        font-weight: normal;
+    }
+}
+@media only screen and (max-width : 1024px) {    
+    .callDetail strong a.hidden-md {
+        color: #ed2724;
+        display: inline-block !important;
+    }
+    address a {
+        display: inline-block !important;
+        padding: 0 !important;
+    }
+}
+@media only screen and (max-width : 1023px) {
+    .bannerContent {
+        bottom: 35px;
+        left: 0;
+        margin: 0;
+        top: auto;
+        width: 100%;
+    }
+    .bannerContent span br {
+        display: none;
+    }
+    .callDetail {
+        position: relative;
+    }
+    .nav li:last-child {
+        margin: 0;
+    }
+    .panel2Title {
+        font-size: 40px;
+    }
+    .panel2row, .panel2Image {
+        padding: 0;
+        width: 100%;
+    }
+    .panel2Contain {
+        padding: 0 20px;
+    }
+    .panel3Title {
+        font-size: 30px;
+        line-height: 36px;
+    }
+    .panel3Title strong {
+        font-size: 30px;
+    }
+    .panel2Content {
+        padding: 30px 0 0 10px;
+    }
+    .panel2Content br {
+        display: none;
+    }
+    .panel2Content strong {
+        display: block;
+    }
+    
+    .panel4Titile, .chartContain, .shipContain, .bridgeContain {
+        left: 0;
+        position: relative;
+        top: 0;
+        width: 100%;
+        text-align: left;
+    }
+    .roundContain, .chartContain .roundContain, .shipContain .roundContain {
+        padding: 15px 40px 15px 115px;
+        width: 340px;
+        display: inline-block;
+/*        display: table-cell;*/
+    }
+    .panel4Content, .chartContain .panel4Content, .shipContain .panel4Content {
+        padding: 0 45px 0 10px;
+        margin-top: 5px;
+        vertical-align: middle;
+        display: inline-block;
+/*        display: table-cell;*/
+        text-align: left;
+        width: 380px;
+    }
+    .panel4Contain {
+        padding: 30px 20px;
+    }
+    .panel4Titile {
+        padding-bottom: 15px;
+        text-align: center;
+    }
+    .panel5Title > strong {
+        display: block;
+    }
+    .panel5Contain {
+        padding: 0;
+    }
+    .squareImage {
+        margin-right: 0;
+        padding: 0 40px;
+        width: 33.33%;
+        z-index: 9;
+    }
+    .squareImage:after {
+        margin-left: -8px;
+    }
+    .panel5Contain > p {
+        padding: 0 35px;
+        text-align: center;
+    }
+    .redMenus {
+        font-size: 12px;   
+    }
+    .redMenus span {
+        line-height: 10px;   
+    }
+    .panel6Title {
+        font-size: 24px;
+        line-height: 28px;
+        padding: 0 100px;
+    }
+    .panel6Title strong {
+        line-height: 40px;
+        margin-bottom: 15px;
+		font-size:40px;
+    }
+    .panel7Text {
+        padding: 0 50px;
+    }
+    .fieldContain {
+        padding-left: 55px;
+    }
+    .checkBoxContain {
+        padding-left: 55px;
+    }
+    .footerLeft {
+        width: 40%;
+    }
+    .footerRight {
+        width: 55%;
+    }
+    .footerRight br {
+        display: none;
+    }
+    #t {
+        padding: 0 55px;
+        font-size: 15px;
+    }
+}
+@media only screen and (max-width : 767px) {
+    .wrapper header {
+        min-height: 60px;
+    }
+    .headerContain {
+        padding-left: 20px;   
+    }
+    .navContain {
+        padding: 7% 0;
+    }
+    .nav li {
+        margin: 0;
+    }
+    .nav > li > a {
+        font-size: 10px;
+        line-height: 14px;
+    }
+    .nav > li.last > a {
+        padding: 3px 20px 4px 12px;   
+    }
+    .bannerContent {
+        position: relative;
+        padding: 13px;
+        bottom: 0;
+    }
+    .bannerTitle {
+        font-size: 24px;
+        line-height: 26px;
+		margin-top:82px;
+    }
+    .bannerTitle span {
+        display: block;
+        font-size: 18px;
+        line-height: 20px;
+        margin-top: 15px;
+    }
+    .bannerContent .bannerText {
+        font-size: 10px;
+        line-height: 14px;
+    }
+    .callDetail {
+        font-size: 18px;
+        left: 0;
+        line-height: 20px;
+        margin: 0;
+        position: relative;
+        width: 100%;
+        padding: 20px 15px 25px;
+		 
+    }
+    
+    .callDetail strong:before {
+        width: 40px;
+        height: 30px;
+        margin: 0 auto 5px;
+        display: block;
+        position: relative;
+		background-image:url(../images/phone.png)
+    }
+    .callDetail strong {
+        display: block;
+        margin-bottom: 5px;
+    }
+    .panel2Full {
+        padding-bottom: 25px;
+    }
+    .panel2Contain {
+        padding: 0 15px;
+    }
+    .panel2Title {
+        font-size: 26px;
+        line-height: 28px;
+        margin-bottom: 25px;
+    }
+    .panel2Content {
+        font-size: 12px;
+        padding: 30px 0 5px;
+    }
+    .panel2Content p strong {
+        display: inline;
+    }
+    .panel2Content > p {
+        margin-bottom: 25px;
+    }
+    .panel2Content > p.text-uppercase {
+        margin-bottom: 10px;
+    }
+    .panel2Content li {
+        padding: 0 0 10px 20px;   
+    }
+    .panel2Content li::before {
+        font-size: 28px;
+    }
+    .panel3Title {
+        font-size: 20px;
+        line-height: 26px;
+    }
+    .panel3Title strong {
+        font-size: 25px;
+    }
+   .panel3Text {
+    font-size: 12px;
+    letter-spacing: -0.01em;
+    line-height: 17px;
+   
+}
+    .panel3Text br {
+        display: none;
+    }
+    .panel4Contain {
+        padding: 20px 10px;
+    }
+    .panel4Titile {
+        font-size: 18px;
+        line-height: 20px;
+        text-align: center;
+    }
+    .chartContain, .shipContain, .bridgeContain {
+        margin-bottom: 15px;
+        text-align: left;
+    }
+    .roundContain, .chartContain .roundContain, .shipContain .roundContain {
+        display: inline-block;
+        padding: 0;
+        width: 38%;
+    }
+    .panel4Content, .chartContain .panel4Content, .shipContain .panel4Content {
+        display: inline-block;
+        font-size: 10px;
+        padding-right: 0;
+        width: 60%;
+		position:relative;
+		top:-10px;
+    }
+    .bridgeContain .panel4Content {
+        position: relative;
+        top: 3px;
+        padding-left: 10px;
+    }
+    .roundContain > img {
+        border-width: 12px;
+    }
+    .squareImage, .squareImage.last {
+        float: none;
+        margin: 0 auto 30px;
+        padding: 0;
+        width: 230px;
+    }
+    .squareImage:before, .squareImage:after {
+        display: none;
+    }
+    .panel5Title {
+        font-size: 26px;
+        line-height: 30px;
+    }
+    .listImageContain {
+        padding: 30px 0 20px;
+    }
+    .panel5Contain > p {
+        font-size: 14px;
+        line-height: 20px;
+        padding: 0 20px;
+        text-align: center;
+    }
+    .partnerLogo {
+        float: left;
+        width: 30%;
+    }
+    .panel5Content {
+        float: left;
+        margin: 25px 0 0;
+        padding: 0 15px;
+    }
+    .partnerContent {
+        float: left;
+        padding: 0 15px;
+        width: 70%;
+    }
+    .partnerContent > p {
+        font-size: 16px;
+    }
+    .partnerContent li {
+        padding: 0 0 0 24px;
+        font-size: 12px;
+    }
+    .partnerContent li:before {
+        font-size: 22px;
+    }
+    .partnerLogo > img {
+        max-width: 100%;
+        border-width: 7px;
+    }
+    .panel6Title {
+        font-size: 13px;
+        line-height: 18px;
+        text-align: center;
+        padding: 0;
+    }
+    .panel6Title strong {
+        font-size: 22px;
+        line-height: 26px;
+    }
+	.panel3Full {
+    background-color: #ed2724;
+    padding: 25px 0 15px;
+    text-align: center;
+}
+    .redMenus span {
+        border: 0 none !important;
+        display: block;
+        padding: 0 0 10px;
+    }
+    .panel7Contain {
+        padding: 0;
+    }
+    .panel7Title {
+        font-size: 22px;
+        line-height: 26px;
+    }
+    .panel7Text {
+        font-size: 12px;
+        padding: 0 10px;
+        margin-bottom: 30px;
+    }
+    .fieldContain {
+        padding: 0 20px;
+    }
+    #t {
+        padding: 0 20px;
+        text-align: center;
+        font-size: 13px;
+    }
+	.navbar-fixed-top,
+.navbar-fixed-bottom {
+	position:fixed;
+}
+
+    .fieldContain .form-control {
+        font-size: 13px;
+        height: 35px;
+    }
+    .checkBoxContain {
+        padding: 15px 20px 0;
+    }
+    .checkbox {
+        padding-bottom: 10px;
+    }
+    .checkbox label {
+        font-size: 12px;
+    }
+    .checkbox label:before {
+        top: -3px;
+        width: 25px;
+        height: 25px;
+    }
+    .checkbox label::after {
+        font-size: 16px;
+        top: -2px;
+        left: 2px;
+    }
+    .checkBoxContain .btn {
+        font-size: 16px;
+        height: 30px;
+        line-height: 16px;
+        margin: 10px 0;
+        width: 100%;
+    }
+    .footerLeft, .footerRight {
+        font-size: 8.3px;
+        padding: 0 20px;
+        width: 100%;
+    }
+    .footerRight {
+        font-size: 8.3px;
+    }
+    .footerRight strong {
+        font-size: 8.3px;
+    }
+    .footerLeft > p, .footerRight > p {
+        margin: 0;
+    }
+    .footerLeft {
+        float: left;
+        margin-top: 10px;
+    }
+    .footerLeft address {
+        font-size: 8.3px;
+        margin: 0;
+    }
+    .thankYou {
+        padding: 20px 0;
+    }
+    .thankYouTitle {
+        font-size: 18px;
+    }
+	.thankYouTitle p { color:#fff;}
+    .thankYouTitle strong {
+        font-size: 20px;
+    }
+    .visitBtn {
+        font-size: 14px;
+        padding: 8px 18px;
+    }
+}
+@media only screen and (min-width : 561px) and (max-width : 767px) {
+	.bannerContent {
+    bottom: 0;
+    padding: 74px;
+    position: relative;
+}
+.standContain .grid .image {
+    bottom: 20px;
+}
+	
+	
+}

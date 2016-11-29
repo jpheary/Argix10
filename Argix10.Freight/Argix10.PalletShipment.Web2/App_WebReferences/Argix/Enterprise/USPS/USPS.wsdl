@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://Argix.Enterprise" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://Argix.Enterprise" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://Argix.Enterprise/Imports">
+      <xsd:import schemaLocation="http://rgxvmweb.argix.com/Argix10/Argix10.Enterprise.Services/USPS.svc?xsd=xsd0" namespace="http://Argix.Enterprise" />
+      <xsd:import schemaLocation="http://rgxvmweb.argix.com/Argix10/Argix10.Enterprise.Services/USPS.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Argix" />
+      <xsd:import schemaLocation="http://rgxvmweb.argix.com/Argix10/Argix10.Enterprise.Services/USPS.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://rgxvmweb.argix.com/Argix10/Argix10.Enterprise.Services/USPS.svc?xsd=xsd2" />
+      <xsd:import schemaLocation="http://rgxvmweb.argix.com/Argix10/Argix10.Enterprise.Services/USPS.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IUSPSService_TrackRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:TrackRequest" />
+  </wsdl:message>
+  <wsdl:message name="IUSPSService_TrackRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TrackRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUSPSService_TrackRequest_EnterpriseFaultFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/Argix" name="detail" element="q1:EnterpriseFault" />
+  </wsdl:message>
+  <wsdl:message name="IUSPSService_TrackFieldRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:TrackFieldRequest" />
+  </wsdl:message>
+  <wsdl:message name="IUSPSService_TrackFieldRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TrackFieldRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUSPSService_TrackFieldRequest_EnterpriseFaultFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/Argix" name="detail" element="q2:EnterpriseFault" />
+  </wsdl:message>
+  <wsdl:message name="IUSPSService_TrackFieldRequests_InputMessage">
+    <wsdl:part name="parameters" element="tns:TrackFieldRequests" />
+  </wsdl:message>
+  <wsdl:message name="IUSPSService_TrackFieldRequests_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TrackFieldRequestsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUSPSService_TrackFieldRequests_EnterpriseFaultFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/Argix" name="detail" element="q3:EnterpriseFault" />
+  </wsdl:message>
+  <wsdl:message name="IUSPSService_VerifyAddress_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyAddress" />
+  </wsdl:message>
+  <wsdl:message name="IUSPSService_VerifyAddress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUSPSService_VerifyAddress_EnterpriseFaultFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/Argix" name="detail" element="q4:EnterpriseFault" />
+  </wsdl:message>
+  <wsdl:message name="IUSPSService_LookupZipCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:LookupZipCode" />
+  </wsdl:message>
+  <wsdl:message name="IUSPSService_LookupZipCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LookupZipCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUSPSService_LookupZipCode_EnterpriseFaultFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/Argix" name="detail" element="q5:EnterpriseFault" />
+  </wsdl:message>
+  <wsdl:message name="IUSPSService_LookupCityState_InputMessage">
+    <wsdl:part name="parameters" element="tns:LookupCityState" />
+  </wsdl:message>
+  <wsdl:message name="IUSPSService_LookupCityState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LookupCityStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUSPSService_LookupCityState_EnterpriseFaultFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/Argix" name="detail" element="q6:EnterpriseFault" />
+  </wsdl:message>
+  <wsdl:portType name="IUSPSService">
+    <wsdl:operation name="TrackRequest">
+      <wsdl:input wsaw:Action="http://Argix.Enterprise/IUSPSService/TrackRequest" message="tns:IUSPSService_TrackRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Enterprise/IUSPSService/TrackRequestResponse" message="tns:IUSPSService_TrackRequest_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.EnterpriseFault" name="EnterpriseFaultFault" message="tns:IUSPSService_TrackRequest_EnterpriseFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TrackFieldRequest">
+      <wsdl:input wsaw:Action="http://Argix.Enterprise/IUSPSService/TrackFieldRequest" message="tns:IUSPSService_TrackFieldRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Enterprise/IUSPSService/TrackFieldRequestResponse" message="tns:IUSPSService_TrackFieldRequest_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.EnterpriseFault" name="EnterpriseFaultFault" message="tns:IUSPSService_TrackFieldRequest_EnterpriseFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TrackFieldRequests">
+      <wsdl:input wsaw:Action="http://Argix.Enterprise/IUSPSService/TrackFieldRequests" message="tns:IUSPSService_TrackFieldRequests_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Enterprise/IUSPSService/TrackFieldRequestsResponse" message="tns:IUSPSService_TrackFieldRequests_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.EnterpriseFault" name="EnterpriseFaultFault" message="tns:IUSPSService_TrackFieldRequests_EnterpriseFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyAddress">
+      <wsdl:input wsaw:Action="http://Argix.Enterprise/IUSPSService/VerifyAddress" message="tns:IUSPSService_VerifyAddress_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Enterprise/IUSPSService/VerifyAddressResponse" message="tns:IUSPSService_VerifyAddress_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.EnterpriseFault" name="EnterpriseFaultFault" message="tns:IUSPSService_VerifyAddress_EnterpriseFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LookupZipCode">
+      <wsdl:input wsaw:Action="http://Argix.Enterprise/IUSPSService/LookupZipCode" message="tns:IUSPSService_LookupZipCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Enterprise/IUSPSService/LookupZipCodeResponse" message="tns:IUSPSService_LookupZipCode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.EnterpriseFault" name="EnterpriseFaultFault" message="tns:IUSPSService_LookupZipCode_EnterpriseFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LookupCityState">
+      <wsdl:input wsaw:Action="http://Argix.Enterprise/IUSPSService/LookupCityState" message="tns:IUSPSService_LookupCityState_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Enterprise/IUSPSService/LookupCityStateResponse" message="tns:IUSPSService_LookupCityState_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.EnterpriseFault" name="EnterpriseFaultFault" message="tns:IUSPSService_LookupCityState_EnterpriseFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

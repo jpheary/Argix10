@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Argix.HR.PermitSearchService" CodeBehind="~/App_Code/HR/PermitSearchService.cs" %>

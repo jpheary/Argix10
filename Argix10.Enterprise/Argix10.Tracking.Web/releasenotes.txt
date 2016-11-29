@@ -1,0 +1,99 @@
+              --------------------------------------------------------
+								Tracking Readme File
+		                       		June, 2015
+              --------------------------------------------------------
+                         (c) Copyright Argix Logistics, 2004-2015
+
+This document provides late-breaking or other information that supplements the Enterprise Services documentation.
+
+------------------------
+How to Use This Document
+------------------------
+To view the Readme file on-screen in Windows Notepad, maximize the Notepad window and click Word 
+Wrap on the Edit menu. To print the Readme file, open it in Notepad or another word processor, 
+and then use the Print command on the File menu.
+
+==============
+CONTENTS
+==============
+NOTES
+   GENERAL
+   DEPENDENCIES
+   VERSION HISTORY
+==============
+
+
+NOTES
+==============
+GENERAL
+Tracking is an ASP.NET web application that provides tracking information for cartons, stores, 
+and cartons to Argix employees and clients.
+
+
+DEPENDENCIES
+Enterprise Tracking services (http://192.168.151.65/Argix10/Argix10.Enterprise.Services/Tracking.svc) for tracking data.
+Enterprise Imaging services (http://192.168.151.65/Argix10/Argix10.Enterprise.Services/Imaging.svc) for PODs.
+Enterprise SMTP services (http://192.168.151.65/Argix10/Argix10.Enterprise.Services/SMTP.svc) for email.
+
+
+VERSION HISTORY
+v4.0.0, 05/16/14 ---------------------------------------------------------------------------
+Requirements/features
+- none.
+Design
+- none.
+
+VERSION HISTORY
+v4.0.1, 06/30/14 ---------------------------------------------------------------------------
+Requirements/features
+- added tracking by BOL#.
+Design
+- added BOL tracking to TrackByShipment.aspx.
+
+VERSION HISTORY
+v4.0.2, 07/08/14 ---------------------------------------------------------------------------
+Requirements/features
+- none.
+Design
+- corrected problem with sub-store search (dataset issue).
+
+VERSION HISTORY
+v4.0.3, 08/14/14 ---------------------------------------------------------------------------
+Requirements/features
+- New feature to display all clients with same ARNumber.
+Design
+- added appSettings variables MatchClientByARNumber to web.config.
+- modified TrackingGateway::GetClients() to get clients by ARNumber match if configured to do so.
+
+VERSION HISTORY
+4.0.4, 10/30/14 ---------------------------------------------------------------------------
+Requirements/features
+- Changed password reset function to something more user friendly.
+Design
+- added appSettings variables ImagingDocClass, ImagingPropertyName to web.config for SharePoint Imaging Search configuration.
+- added Application variables ImagingDocClass, ImagingPropertyName to global.asax for SharePoint Imaging Search configuration.
+- replaced hard-coded SharePoint Imaging Search constants with new Application variables in CartonDetail.aspx.cs.
+- replaced method Membership.GeneratePassword() with custom MembershipServices.GeneratePassword() in ManageUsers.aspx.cs and RecoverPassword.aspx.cs.
+
+4.0.4.1, 12/04/14 ---------------------------------------------------------------------------
+Requirements/features
+- Modified feature to display all clients by ARNumber on ARNumber basis (i.e. get all client swith same ARNumber as login client).
+Design
+- modified appSettings variable MatchClientByARNumber from bool to string.
+- modified TrackingGateway::GetClients() to get clients by ARNumber match if ARNumber in MatchClientByARNumber.
+- added username validation (i.e. unique) in MembershipUserPage::OnCommand().
+
+4.0.4.2, 12/10/14 ---------------------------------------------------------------------------
+Requirements/features
+- none.
+Design
+- modified CartonDetail.aspx.cs per changes to finding POD Images with SharePoint 2013.
+
+4.0.5.0, 06/09/15, 06/17/15, ~07/07/15 ------------------------------------------------------
+Requirements/features
+- added support for store-level user accounts.
+Design
+- upgraded to HTML5.
+~ added <meta> tags to Default.master to prevent page caching.
+~ corrected <sessionState cookieles="false" /> to <sessionState cookieless="UseCookies" /> in web.config; 
+  "false" is invalid; "UseCookies" is required for AJAX-enabled sites. 

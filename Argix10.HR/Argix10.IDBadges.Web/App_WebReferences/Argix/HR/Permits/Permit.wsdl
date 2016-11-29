@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://Argix.HR" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://Argix.HR" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://Argix.HR/Imports">
+      <xsd:import schemaLocation="http://localhost:4027/Argix10.HR.Services/Permit.svc?xsd=xsd0" namespace="http://Argix.HR" />
+      <xsd:import schemaLocation="http://localhost:4027/Argix10.HR.Services/Permit.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Argix" />
+      <xsd:import schemaLocation="http://localhost:4027/Argix10.HR.Services/Permit.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:4027/Argix10.HR.Services/Permit.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:4027/Argix10.HR.Services/Permit.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Argix.HR" />
+      <xsd:import schemaLocation="http://localhost:4027/Argix10.HR.Services/Permit.svc?xsd=xsd4" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IPermitService_GetServiceInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetServiceInfo" />
+  </wsdl:message>
+  <wsdl:message name="IPermitService_GetServiceInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetServiceInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermitService_GetServiceInfo_ConfigurationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/Argix" name="detail" element="q1:ConfigurationFault" />
+  </wsdl:message>
+  <wsdl:message name="IPermitService_GetUserConfiguration_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserConfiguration" />
+  </wsdl:message>
+  <wsdl:message name="IPermitService_GetUserConfiguration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserConfigurationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermitService_GetUserConfiguration_ConfigurationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/Argix" name="detail" element="q2:ConfigurationFault" />
+  </wsdl:message>
+  <wsdl:message name="IPermitService_WriteLogEntry_InputMessage">
+    <wsdl:part name="parameters" element="tns:WriteLogEntry" />
+  </wsdl:message>
+  <wsdl:message name="IPermitAdminService_ViewPermits_InputMessage">
+    <wsdl:part name="parameters" element="tns:ViewPermits" />
+  </wsdl:message>
+  <wsdl:message name="IPermitAdminService_ViewPermits_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ViewPermitsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermitAdminService_ViewPermits_HRFaultFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/Argix.HR" name="detail" element="q3:HRFault" />
+  </wsdl:message>
+  <wsdl:message name="IPermitAdminService_ReadPermit_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadPermit" />
+  </wsdl:message>
+  <wsdl:message name="IPermitAdminService_ReadPermit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadPermitResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermitAdminService_ReadPermit_HRFaultFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/Argix.HR" name="detail" element="q4:HRFault" />
+  </wsdl:message>
+  <wsdl:message name="IPermitAdminService_RegisterPermit_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterPermit" />
+  </wsdl:message>
+  <wsdl:message name="IPermitAdminService_RegisterPermit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterPermitResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermitAdminService_RegisterPermit_HRFaultFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/Argix.HR" name="detail" element="q5:HRFault" />
+  </wsdl:message>
+  <wsdl:message name="IPermitAdminService_ReplacePermit_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReplacePermit" />
+  </wsdl:message>
+  <wsdl:message name="IPermitAdminService_ReplacePermit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReplacePermitResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermitAdminService_ReplacePermit_HRFaultFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/Argix.HR" name="detail" element="q6:HRFault" />
+  </wsdl:message>
+  <wsdl:message name="IPermitAdminService_RevokePermit_InputMessage">
+    <wsdl:part name="parameters" element="tns:RevokePermit" />
+  </wsdl:message>
+  <wsdl:message name="IPermitAdminService_RevokePermit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RevokePermitResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermitAdminService_RevokePermit_HRFaultFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/Argix.HR" name="detail" element="q7:HRFault" />
+  </wsdl:message>
+  <wsdl:message name="IPermitAdminService_ChangeVehicle_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeVehicle" />
+  </wsdl:message>
+  <wsdl:message name="IPermitAdminService_ChangeVehicle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeVehicleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermitAdminService_ChangeVehicle_HRFaultFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/Argix.HR" name="detail" element="q8:HRFault" />
+  </wsdl:message>
+  <wsdl:message name="IPermitAdminService_ValidatePermitNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidatePermitNumber" />
+  </wsdl:message>
+  <wsdl:message name="IPermitAdminService_ValidatePermitNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidatePermitNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermitAdminService_ValidatePermitNumber_HRFaultFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/Argix.HR" name="detail" element="q9:HRFault" />
+  </wsdl:message>
+  <wsdl:message name="IPermitAdminService_ValidateVehicle_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateVehicle" />
+  </wsdl:message>
+  <wsdl:message name="IPermitAdminService_ValidateVehicle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateVehicleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermitAdminService_ValidateVehicle_HRFaultFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/Argix.HR" name="detail" element="q10:HRFault" />
+  </wsdl:message>
+  <wsdl:message name="IPermitSearchService_FindPermitsByNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindPermitsByNumber" />
+  </wsdl:message>
+  <wsdl:message name="IPermitSearchService_FindPermitsByNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindPermitsByNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermitSearchService_FindPermitsByNumber_HRFaultFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/Argix.HR" name="detail" element="q11:HRFault" />
+  </wsdl:message>
+  <wsdl:message name="IPermitSearchService_FindPermitsByPlate_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindPermitsByPlate" />
+  </wsdl:message>
+  <wsdl:message name="IPermitSearchService_FindPermitsByPlate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindPermitsByPlateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermitSearchService_FindPermitsByPlate_HRFaultFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/Argix.HR" name="detail" element="q12:HRFault" />
+  </wsdl:message>
+  <wsdl:message name="IPermitSearchService_FindPermitsByVehicle_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindPermitsByVehicle" />
+  </wsdl:message>
+  <wsdl:message name="IPermitSearchService_FindPermitsByVehicle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindPermitsByVehicleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermitSearchService_FindPermitsByVehicle_HRFaultFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/Argix.HR" name="detail" element="q13:HRFault" />
+  </wsdl:message>
+  <wsdl:portType name="IPermitService">
+    <wsdl:operation name="GetServiceInfo">
+      <wsdl:input wsaw:Action="http://Argix.HR/IPermitService/GetServiceInfo" message="tns:IPermitService_GetServiceInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.HR/IPermitService/GetServiceInfoResponse" message="tns:IPermitService_GetServiceInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.ConfigurationFault" name="ConfigurationFaultFault" message="tns:IPermitService_GetServiceInfo_ConfigurationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserConfiguration">
+      <wsdl:input wsaw:Action="http://Argix.HR/IPermitService/GetUserConfiguration" message="tns:IPermitService_GetUserConfiguration_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.HR/IPermitService/GetUserConfigurationResponse" message="tns:IPermitService_GetUserConfiguration_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.ConfigurationFault" name="ConfigurationFaultFault" message="tns:IPermitService_GetUserConfiguration_ConfigurationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WriteLogEntry">
+      <wsdl:input wsaw:Action="http://Argix.HR/IPermitService/WriteLogEntry" message="tns:IPermitService_WriteLogEntry_InputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IPermitAdminService">
+    <wsdl:operation name="ViewPermits">
+      <wsdl:input wsaw:Action="http://Argix.HR/IPermitAdminService/ViewPermits" message="tns:IPermitAdminService_ViewPermits_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.HR/IPermitAdminService/ViewPermitsResponse" message="tns:IPermitAdminService_ViewPermits_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.HR.HRFault" name="HRFaultFault" message="tns:IPermitAdminService_ViewPermits_HRFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadPermit">
+      <wsdl:input wsaw:Action="http://Argix.HR/IPermitAdminService/ReadPermit" message="tns:IPermitAdminService_ReadPermit_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.HR/IPermitAdminService/ReadPermitResponse" message="tns:IPermitAdminService_ReadPermit_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.HR.HRFault" name="HRFaultFault" message="tns:IPermitAdminService_ReadPermit_HRFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterPermit">
+      <wsdl:input wsaw:Action="http://Argix.HR/IPermitAdminService/RegisterPermit" message="tns:IPermitAdminService_RegisterPermit_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.HR/IPermitAdminService/RegisterPermitResponse" message="tns:IPermitAdminService_RegisterPermit_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.HR.HRFault" name="HRFaultFault" message="tns:IPermitAdminService_RegisterPermit_HRFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReplacePermit">
+      <wsdl:input wsaw:Action="http://Argix.HR/IPermitAdminService/ReplacePermit" message="tns:IPermitAdminService_ReplacePermit_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.HR/IPermitAdminService/ReplacePermitResponse" message="tns:IPermitAdminService_ReplacePermit_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.HR.HRFault" name="HRFaultFault" message="tns:IPermitAdminService_ReplacePermit_HRFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RevokePermit">
+      <wsdl:input wsaw:Action="http://Argix.HR/IPermitAdminService/RevokePermit" message="tns:IPermitAdminService_RevokePermit_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.HR/IPermitAdminService/RevokePermitResponse" message="tns:IPermitAdminService_RevokePermit_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.HR.HRFault" name="HRFaultFault" message="tns:IPermitAdminService_RevokePermit_HRFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeVehicle">
+      <wsdl:input wsaw:Action="http://Argix.HR/IPermitAdminService/ChangeVehicle" message="tns:IPermitAdminService_ChangeVehicle_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.HR/IPermitAdminService/ChangeVehicleResponse" message="tns:IPermitAdminService_ChangeVehicle_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.HR.HRFault" name="HRFaultFault" message="tns:IPermitAdminService_ChangeVehicle_HRFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidatePermitNumber">
+      <wsdl:input wsaw:Action="http://Argix.HR/IPermitAdminService/ValidatePermitNumber" message="tns:IPermitAdminService_ValidatePermitNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.HR/IPermitAdminService/ValidatePermitNumberResponse" message="tns:IPermitAdminService_ValidatePermitNumber_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.HR.HRFault" name="HRFaultFault" message="tns:IPermitAdminService_ValidatePermitNumber_HRFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateVehicle">
+      <wsdl:input wsaw:Action="http://Argix.HR/IPermitAdminService/ValidateVehicle" message="tns:IPermitAdminService_ValidateVehicle_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.HR/IPermitAdminService/ValidateVehicleResponse" message="tns:IPermitAdminService_ValidateVehicle_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.HR.HRFault" name="HRFaultFault" message="tns:IPermitAdminService_ValidateVehicle_HRFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IPermitSearchService">
+    <wsdl:operation name="FindPermitsByNumber">
+      <wsdl:input wsaw:Action="http://Argix.HR/IPermitSearchService/FindPermitsByNumber" message="tns:IPermitSearchService_FindPermitsByNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.HR/IPermitSearchService/FindPermitsByNumberResponse" message="tns:IPermitSearchService_FindPermitsByNumber_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.HR.HRFault" name="HRFaultFault" message="tns:IPermitSearchService_FindPermitsByNumber_HRFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindPermitsByPlate">
+      <wsdl:input wsaw:Action="http://Argix.HR/IPermitSearchService/FindPermitsByPlate" message="tns:IPermitSearchService_FindPermitsByPlate_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.HR/IPermitSearchService/FindPermitsByPlateResponse" message="tns:IPermitSearchService_FindPermitsByPlate_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.HR.HRFault" name="HRFaultFault" message="tns:IPermitSearchService_FindPermitsByPlate_HRFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindPermitsByVehicle">
+      <wsdl:input wsaw:Action="http://Argix.HR/IPermitSearchService/FindPermitsByVehicle" message="tns:IPermitSearchService_FindPermitsByVehicle_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.HR/IPermitSearchService/FindPermitsByVehicleResponse" message="tns:IPermitSearchService_FindPermitsByVehicle_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.HR.HRFault" name="HRFaultFault" message="tns:IPermitSearchService_FindPermitsByVehicle_HRFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

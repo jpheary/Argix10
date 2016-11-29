@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="LTLPalletLabelDataset" targetNamespace="http://tempuri.org/LTLPalletLabelDataset.xsd" elementFormDefault="qualified" attributeFormDefault="qualified" xmlns="http://tempuri.org/LTLPalletLabelDataset.xsd" xmlns:mstns="http://tempuri.org/LTLPalletLabelDataset.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="LTLPalletLabelDataset" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="LTLPalletLabelTable">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ShipmentNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="TerminalCode" type="xs:string" minOccurs="0" />
+              <xs:element name="Terminal" type="xs:string" minOccurs="0" />
+              <xs:element name="ClientNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="ClientDivision" type="xs:string" minOccurs="0" />
+              <xs:element name="ClientName" type="xs:string" minOccurs="0" />
+              <xs:element name="ClientAddressLine1" type="xs:string" minOccurs="0" />
+              <xs:element name="ClientAddressLine2" type="xs:string" minOccurs="0" />
+              <xs:element name="ClientCity" type="xs:string" minOccurs="0" />
+              <xs:element name="ClientState" type="xs:string" minOccurs="0" />
+              <xs:element name="ClientZip" type="xs:string" minOccurs="0" />
+              <xs:element name="ClientPhone" type="xs:string" minOccurs="0" />
+              <xs:element name="VendorNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="VendorName" type="xs:string" minOccurs="0" />
+              <xs:element name="VendorAddressLine1" type="xs:string" minOccurs="0" />
+              <xs:element name="VendorAddressLine2" type="xs:string" minOccurs="0" />
+              <xs:element name="VendorCity" type="xs:string" minOccurs="0" />
+              <xs:element name="VendorState" type="xs:string" minOccurs="0" />
+              <xs:element name="VendorZip" type="xs:string" minOccurs="0" />
+              <xs:element name="VendorUserData" type="xs:string" minOccurs="0" />
+              <xs:element name="ConsigneeNumber" type="xs:int" minOccurs="0" />
+              <xs:element name="ConsigneeName" type="xs:string" minOccurs="0" />
+              <xs:element name="ConsigneeAddressLine1" type="xs:string" minOccurs="0" />
+              <xs:element name="ConsigneeAddressLine2" type="xs:string" minOccurs="0" />
+              <xs:element name="ConsigneeCity" type="xs:string" minOccurs="0" />
+              <xs:element name="ConsigneeState" type="xs:string" minOccurs="0" />
+              <xs:element name="ConsigneeZip" type="xs:string" minOccurs="0" />
+              <xs:element name="ConsigneePhone" type="xs:string" minOccurs="0" />
+              <xs:element name="ConsigneeUserData" type="xs:string" minOccurs="0" />
+              <xs:element name="SortCode1" type="xs:string" minOccurs="0" />
+              <xs:element name="SortCode2" type="xs:string" minOccurs="0" />
+              <xs:element name="Zone" type="xs:string" minOccurs="0" />
+              <xs:element name="LabelSequenceNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="Weight" type="xs:decimal" minOccurs="0" />
+              <xs:element name="InsuranceAmount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ItemNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="IsManifested" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<xs:schema id="TrackingDataSet" 
+                  targetNamespace="http://tempuri.org/TrackingDataSet.xsd"
+                  elementFormDefault="qualified"
+                  attributeFormDefault="qualified"
+                  xmlns="http://tempuri.org/TrackingDataSet.xsd"
+                  xmlns:mstns="http://tempuri.org/TrackingDataSet.xsd"
+                  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                  xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+                  xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+    <xs:element name="TrackingDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true">
+        <xs:complexType>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+              <xs:element name="ClientTable">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="ClientID" type="xs:string" minOccurs="0" />
+                    <xs:element name="VendorID" type="xs:string" minOccurs="0" />
+                    <xs:element name="CompanyName" type="xs:string" minOccurs="0" />
+                    <xs:element name="CompanyType" type="xs:string" minOccurs="0" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="StoreSummaryTable">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Store" type="xs:string" minOccurs="0" />
+                    <xs:element name="TL" type="xs:string" minOccurs="0" />
+                    <xs:element name="Cartons" type="xs:int" minOccurs="0" />
+                    <xs:element name="Weight" type="xs:decimal" minOccurs="0" />
+                    <xs:element name="CBOL" type="xs:string" minOccurs="0" />
+                    <xs:element name="OFD1" type="xs:date" minOccurs="0" />
+                    <xs:element name="PodDate" type="xs:date" minOccurs="0" />
+                    <xs:element name="AgentNumber" type="xs:string" minOccurs="0" />
+                    <xs:element name="AgentName" type="xs:string" minOccurs="0" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="CartonDetailForStoreTable">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Store" type="xs:string" minOccurs="0" />
+                    <xs:element name="TL" type="xs:string" minOccurs="0" />
+                    <xs:element name="CartonCount" type="xs:int" minOccurs="0" />
+                    <xs:element name="CBOL" type="xs:string" minOccurs="0" />
+                    <xs:element name="OFD1" type="xs:date" minOccurs="0" />
+                    <xs:element name="Terminal" type="xs:string" minOccurs="0" />
+                    <xs:element name="CartonNo" type="xs:string" minOccurs="0" />
+                    <xs:element name="LBLNo" type="xs:decimal" minOccurs="0" />
+                    <xs:element name="Pudt" type="xs:dateTime" minOccurs="0" />
+                    <xs:element name="Weight" type="xs:decimal" minOccurs="0" />
+                    <xs:element name="ShpName" type="xs:string" minOccurs="0" />
+                    <xs:element name="ShpCity" type="xs:string" minOccurs="0" />
+                    <xs:element name="ShpState" type="xs:string" minOccurs="0" />
+                    <xs:element name="ShpZip" type="xs:string" minOccurs="0" />
+                    <xs:element name="CtnSts" type="xs:string" minOccurs="0" />
+                    <xs:element name="ScnSts" type="xs:string" minOccurs="0" />
+                    <xs:element name="PodDate" type="xs:date" minOccurs="0" />
+                    <xs:element name="PodTime" type="xs:dateTime" minOccurs="0" />
+                    <xs:element name="AG" type="xs:string" minOccurs="0" />
+                    <xs:element name="AgName" type="xs:string" minOccurs="0" />
+                    <xs:element name="Trf" type="xs:string" minOccurs="0" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

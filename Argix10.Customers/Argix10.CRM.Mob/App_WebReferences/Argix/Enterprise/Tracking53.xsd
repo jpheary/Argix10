@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://Argix.Customers" elementFormDefault="qualified" targetNamespace="http://Argix.Customers" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://rgxvmweb.argix.com/Argix10/Argix10.Enterprise.Services/Tracking.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://rgxvmweb.argix.com/Argix10/Argix10.Enterprise.Services/Tracking.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Argix" />
+  <xs:element name="GetClients">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="vendorID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetClientsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetClientsResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TrackCartonsForStoreByPickupDate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="clientNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="store" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fromDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="toDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="vendorNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TrackCartonsForStoreByPickupDateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TrackCartonsForStoreByPickupDateResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TrackCartonsForStoreByDeliveryDate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="clientNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="store" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fromDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="toDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="vendorNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TrackCartonsForStoreByDeliveryDateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TrackCartonsForStoreByDeliveryDateResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TrackCartonsByCartonNumber">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="itemNumbers" nillable="true" type="q1:ArrayOfstring" />
+        <xs:element minOccurs="0" name="clientNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vendorNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TrackCartonsByCartonNumberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Argix" minOccurs="0" name="TrackCartonsByCartonNumberResult" nillable="true" type="q2:TrackingItems" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TrackCartonsByLabelNumber">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="itemNumbers" nillable="true" type="q3:ArrayOfstring" />
+        <xs:element minOccurs="0" name="clientNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vendorNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TrackCartonsByLabelNumberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Argix" minOccurs="0" name="TrackCartonsByLabelNumberResult" nillable="true" type="q4:TrackingItems" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

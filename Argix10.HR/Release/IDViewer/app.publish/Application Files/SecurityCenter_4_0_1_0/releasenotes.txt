@@ -1,0 +1,111 @@
+              --------------------------------------------------------
+							Security Center Application Readme File
+		                       			July, 2014
+              --------------------------------------------------------
+                         (c) Copyright Argix Logistics, 2005-2014
+
+This document provides late-breaking or other information that supplements the Security Center documentation.
+
+------------------------
+How to Use This Document
+------------------------
+To view the Readme file on-screen in Windows Notepad, maximize the Notepad window and click Word 
+Wrap on the Edit menu. To print the Readme file, open it in Notepad or another word processor, 
+and then use the Print command on the File menu.
+
+==============
+CONTENTS
+==============
+INSTALLATION
+   DEPLOYMENT
+   CONFIGURATION
+
+NOTES
+   GENERAL
+   DEPENDENCIES
+   OPERATION
+   VERSION HISTORY
+==============
+
+
+INSTALLATION
+==============
+DEPLOYMENT
+Security Center is installed into a Click-Once deployment folder visible from an IIS web service as follows:
+1.	Create a virtual folder c:\inetpub\wwwroot\Argix10\Apps\HR\SecurityCenter on a web server like rgxvmweb using 
+	Windows explorer. 
+2.	Create a sub-folder called Application Files. 
+3.	Copy the new versioned Click-Once deployment folder (i.e SecurityCenter_4_0_0_2) into the Application Files folder; this folder 
+	contains the following:
+		Argix10.Windows.Lib.dll
+		Infragistics4.Shared.v12.1.dll
+		Infragistics4.Win.UltraWinGrid.v12.1.dll
+		Infragistics4.Win.v12.1.dll
+		releasenotes.txt
+		SecurityCenter.application
+		SecurityCenter.exe
+		SecurityCenter.exe.config
+		SecurityCenter.exe.manifest
+4.	Copy the deployment manifest, SecurityCenter.application, into the SecurityCenter folder. This manifest points to
+	tha application manifest (i.e. \SecurityCenter_4_0_0_2\SecurityCenter.exe.manifest)
+5.	Launch the Internet Information Services snap-in and validate that the virtual folder allows
+	anonymous access. A web application does not need to be created for deployment.
+6.	Verify http access from Internet Explorer to the following url: 
+		http://rgxvmweb/Argix10/Apps/HR/SecurityCenter/SecurityCenter.application
+7.	The Click-Once deployment is installed on the client machine in the C:\Users\<username>\AppData\Local\Apps\2.0 folder.
+8.	Version rollbacks are accomplished by simply copying the deployment manifest (i.e. SecurityCenter.application) from 
+	a previous Click-Once deployment folder (i.e SecurityCenter_4_0_0_1) into the SecurityCenter root folder
+
+CONFIGURATION
+Open the gloabal database (i.e. TSort on rgxvmsql), goto the Configuration table, and add/edit the 
+values below. Individual users can have overrides from the default values.
+	Application     PCName          Key                       Value                     Security 
+	--------------- --------------- ------------------------- ------------------------- -------- 
+    Security Center Default         TraceLevel                4                         1        
+
+
+NOTES
+==============
+GENERAL
+The Security Center Application (SecurityCenter.exe) is a Windows based application used to manage Argix 
+Logistics security concerns including employee/driver/vendor badges, driver routes, and building access.
+
+
+DEPENDENCIES
+The Ship Schedule application is dependent upon the following web services: 
+- http://rgxvmweb/Argix10/Argix10.Membership.Services/RoleService.svc
+- http://rgxvmweb/Argix10/Argix10.AgentLineHaul.Services/ShipScheduleService.svc
+
+
+ROLE MANAGEMENT
+The following roles are used in this application:
+Security Director
+- can do everything
+
+
+Use the following link to access the role manager to create and edit role assignments for Argix employees: 
+http://rgxvmweb/Argix10/Apps/IT/Membership/Membership.application
+
+
+OPERATION
+Normal:
+The Security Center Application (SecurityCenter.exe) operates by launching from a web server deployment url 
+(i.e. http://rgxvmweb/Argix10/Apps/HR/SecurityCenter/SecurityCenter.application). After a brief splash screen, a sizeable window 
+appears and  displays a split window. The taskbar displays the operating location and connection status. 
+Additional operating steps can be found in the on-line documentation provided by the Help/Contents menu item.
+
+
+VERSION HISTORY
+v4.0.0, 12/18/12 ---------------------------------------------------------------------------
+Requirements/features
+- Initial release.
+Design/deployment
+- Initial release.
+
+
+v4.0.1, 07/10/14 ---------------------------------------------------------------------------
+Requirements/features
+- None.
+Design/deployment
+- upgraded to Infragistics NetAdvantage 2012 third party control suite (required: Infragistics4.Win.v12.1.dll, Infragistics2.Shared.v12.1.dll, Infragistics2.Win.UltraWinGrid.v12.1.dll)
+- added role-based security using web service http://rgxvmweb/Argix10/Argix10.Membership.Services/RoleService.svc.

@@ -1,0 +1,253 @@
+/* GRAY USED IN SITE #c5c7c9  */
+/* RED USED IN SITE #ee2a24  */
+
+body {
+	font-family: Verdana;
+	font-size: 10px;
+	color: #000000;
+	background-color: #ffffff;
+    text-align: center;
+}
+
+#page {
+    position: relative;
+	width: 320px;
+    height: 460px;
+	margin: auto;
+	text-align: left;
+	background-color: #ffffff;
+}
+#header {
+    width: 310px;
+    height: 48px;
+    padding: 0px 0px 6px 0px;
+}
+#headline {
+    display: block;
+    position: relative;
+    width: 310px;
+    height: 2px;
+    margin: 0px;
+    padding: 0px;
+    background: #c5c7c9;
+}
+#content {
+    width: 310px;
+    height: auto;
+}
+.menu {
+    display: block;
+    position: relative;
+    width: 310px;
+    height: 25px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px;
+    background: #ffffff;
+}
+.menuItem {
+    float: left;
+    width: 75px;
+    margin: 0px;
+    padding: 2px 0px;
+    border: 0px solid #000000;
+	font-size: 10px;
+    text-align: center;
+}
+.menuItem input {
+	font-size: 10px;
+    color: #ee2a24;
+    background: #ffffff;
+    border-style: none;
+    text-decoration: none;
+	text-transform: uppercase;
+}
+.menuItem a {
+	font-size: 10px;
+    color: #ee2a24;
+    text-decoration: none;
+	text-transform: uppercase;
+}
+#mainMenu {
+    display: none;
+    float: left;
+    width: 310px;
+    height: 50px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 2px;
+    border: 0px solid #000000;
+    background-color: #c5c7c9;
+	text-align: center;
+    vertical-align: middle;
+}
+#mainMenu ul{ margin: 0px 0px; padding: 0px; list-style-type: none; overflow: hidden; }
+#mainMenu ul li { 
+	float: left;
+    display: block;
+    width: 73px;
+    height: 43px;
+    margin: 0px 1px 0px 1px;
+    padding: 3px 0px 3px 0px;
+    border: 1px solid #000000; 
+}
+#mainMenu ul li input { 
+    height: 24px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+#copyright {
+    display: block;
+	width: 310px;
+	height: 7px;
+	margin: 3px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	text-align: center;
+    vertical-align: middle;
+	font-size: 8px;
+}
+#logo {
+    float: left;
+    width: auto;
+    margin: 6px 0px 0px 0px;
+}
+#title {
+    float: right;
+    width: auto;
+    margin: 16px 16px 0px 0px;
+	font-family: 'Michroma';
+	font-weight: bold;
+	font-size: 16px;
+}
+.pageHeader {
+    width: 310px;
+    height: 50px;
+	margin: 0px 0px 5px 0px;
+	padding: 6px 0px 0px 0px;
+}
+.pageBody {
+    width: 307px;
+    height: auto;
+	margin: 0px 0px 0px 0px;
+	padding: 6px 0px 0px 0px;
+    border: 1px solid #000000;
+    border-top-style: none;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    white-space:nowrap;
+	font-size: 10px;
+}
+.issueHeader {
+    width: 310px;
+    height: 75px;
+	margin: 0px 0px 0px 0px;
+	padding: 6px 0px 0px 0px;
+}
+.issuetitle {
+    float: right;
+    width: 200px;
+    height: 20px;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 10px 0px 0px;
+	font-size: 14px;
+    font-weight: bold;
+    text-align: right;
+}
+.issuesubtitle {
+    width: 310px;
+    height: 40px;
+	margin: 0px 0px 0px 0px;
+	padding: 10px 0px 0px 0px;
+	font-size: 12px;
+}
+.issueBody {
+    width: 307px;
+    height: auto;
+    border: 1px solid #000000;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    white-space:nowrap;
+	font-size: 10px;
+}
+.addMenu {
+    display: block;
+    width: 290px;
+    margin: 2px 2px 5px 2px;
+    padding: 5px 5px 5px 5px;
+    background: #c5c7c9;
+    color: #ffffff;
+    font-size: 10px;
+    text-decoration: none;
+}
+#addaction {
+    width: 290px;
+    height: 125px;
+	margin: 0px 0px 0px 0px;
+	padding: 2px 2px 2px 2px;
+}
+.trackingtitle {
+    width: 310px;
+    height: 20px;
+	margin: 0px 0px 0px 0px;
+	padding: 10px 0px 0px 0px;
+	font-size: 12px;
+}
+.trackingBody {
+    width: 307px;
+    height: auto;
+    border: 1px solid #000000;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    white-space:nowrap;
+	font-size: 10px;
+}
+.label {
+    width: 75px;
+    height: 20px;
+	margin: 2px 0px 2px 0px;
+	padding: 0px 5px 0px 0px;
+	text-align: right;
+}
+.text {
+    width: 200px;
+    height: 20px;
+	margin: 2px 0px 2px 0px;
+	padding: 0px 0px 0px 0px;
+}
+.submit {
+    height: 20px;
+	margin: 0px 20px 0px 5px;
+	padding: 0px 10px 0px 10px;
+    border: 1px solid #000000;
+	background-color:#ee2a24;
+	color: #ffffff;
+    text-align: center;
+    font-size: 10px;
+}
+.aspNetDisabled {
+	background-color:#c5c7c9;
+	color: #000000;
+}
+
+a {
+    color: #000000;
+    font-size: 10px;
+    text-decoration: none;
+	text-align: left;
+	text-transform: uppercase;
+}
+a:hover { color: #ee2a24; }
+input {
+    font-size: 10px;
+}
+select {
+    font-size: 10px;
+}
+option {
+    font-size: 10px;
+}
+
+.bold { font-weight: bold; }
+.clear { clear: both;  }
+.clearRight { clear: right; }
+.clearLeft { clear: left; }
+.hidden { display: none; }
+.unhidden { display: block; }

@@ -1,0 +1,143 @@
+body {
+    font-size: 11px;
+    color: #000;
+    font-family: Arial;
+    background: #c5c7c9;
+}
+.container {
+	width: 900px;
+	margin-left:auto;
+	margin-right:auto;
+	background-color:#ffffff;		
+    height: 960px;
+} 
+#topBannerDiv {
+	float: none;
+	width: 900px;
+	height: 100px;
+	background-color: #000000;
+	margin-bottom: 10px;
+}
+#topLine {
+    position: relative;
+    width: 900px;
+    height: 3px;
+    padding: 0px;
+    background: #c5c7c9;
+}
+.content  {
+	float: left;
+	width: 800px;
+	padding: 24px 0 0 48px;
+}
+
+#detailHeadContainer  {
+	float:left;
+	width:785px;
+	height:100px;
+	margin-top:5px;
+	margin-bottom: 10px;
+	padding-left:5px;
+	border-style:solid;
+	border-width:2px;
+	border-color:#B5AAA8;
+	background-color:white;
+}
+.detailGridContainer  {
+	float:left;
+	width:785px;
+	padding-left:5px;
+	border-style:solid;
+	border-width:2px;
+	border-color:#B5AAA8;
+	margin-bottom: 10px;
+	background-color:#EEE;		
+}
+.detailShipmentContainer  {
+	float:left;
+	width:790px;
+ 	border-style:solid;		
+	border-width:2px;			    
+	border-color:#B5AAA8;	
+}
+.detailShipmentTable
+{
+	background-color:#ffffff;
+    width: 790px;
+}
+	
+#buttonContainer  {
+	float:right;
+	width:160px;
+	height:25px;
+	margin-top:15px;
+	margin-right: 10px;
+}
+#buttonContainerLeft  {
+	float:left;
+	width:160px;
+	height:25px;
+	margin-top:15px;
+	margin-left:15px;
+}
+#labelContainer  {
+	float:left;
+	clear:both;
+	width:400px;
+	height:25px;
+	margin-top:15px;
+}
+
+Table.default {
+	background-color:#EEE;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #B5AAA8;
+    padding-left:10px;
+}
+Table.detail {
+	border-style:solid;
+	border-width: 1px;
+}
+tr.rowHeader {
+    background-color:#999999;
+}
+td {
+    font-size: 11px;
+    color: #000;
+    font-family: Arial
+}
+td.detailCell {
+	height: 97px; 
+	padding-left:5px; 
+	background-color: #ffffff;
+}
+td.detailHeader {
+	font-weight:bold;
+	width: 210px;
+	padding-left:5px; 
+}
+td.headerBlock {
+    font-size: 18px;
+    font-family: Verdana;
+    height:25px;
+    background-color:#eeeeee;
+}
+
+.label {
+    padding-left: 0px; 
+    font-size: 14px;
+    font-weight: normal;
+    color: #000;
+    font-family: Arial;
+    height: 25px;
+}
+.lineBreak { white-space:pre; }
+.bold { font-weight:bold; }
+
+.linkButton {
+	text-decoration:none;
+	font-size:12px;
+	font-weight:bold;
+	color:#CC3333;
+}

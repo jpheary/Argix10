@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="29bab9a8-9b19-4607-901c-c71ddca0207b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:25765/Argix10.Freight.Services/TLViewerService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TLViewerService.xsd" MetadataType="Schema" ID="1cdc4057-af4d-4b8a-8dac-7e3b7b73dbcd" SourceId="1" SourceUrl="http://localhost:25765/Argix10.Freight.Services/TLViewerService.svc?xsd=xsd5" />
+    <MetadataFile FileName="TLViewerService.wsdl" MetadataType="Wsdl" ID="eb0ac3e9-816f-4c70-8fc7-40fbeae85fce" SourceId="1" SourceUrl="http://localhost:25765/Argix10.Freight.Services/TLViewerService.svc?wsdl" />
+    <MetadataFile FileName="TLViewerService.disco" MetadataType="Disco" ID="6fac1938-6975-4510-8a61-843d59035191" SourceId="1" SourceUrl="http://localhost:25765/Argix10.Freight.Services/TLViewerService.svc?disco" />
+    <MetadataFile FileName="TLViewerService1.wsdl" MetadataType="Wsdl" ID="68ecfea4-2a4b-4884-83f3-ecc7424cdcad" SourceId="1" SourceUrl="http://localhost:25765/Argix10.Freight.Services/TLViewerService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="TLViewerService1.xsd" MetadataType="Schema" ID="7e39aa5e-ba4d-4255-8cf6-f4b203437680" SourceId="1" SourceUrl="http://localhost:25765/Argix10.Freight.Services/TLViewerService.svc?xsd=xsd4" />
+    <MetadataFile FileName="TLViewerService2.xsd" MetadataType="Schema" ID="39e187aa-11dc-411b-8ba6-adfa4e57e0b6" SourceId="1" SourceUrl="http://localhost:25765/Argix10.Freight.Services/TLViewerService.svc?xsd=xsd3" />
+    <MetadataFile FileName="TLViewerService3.xsd" MetadataType="Schema" ID="d4bb6c88-faa2-4e5c-827b-32e0713e58d8" SourceId="1" SourceUrl="http://localhost:25765/Argix10.Freight.Services/TLViewerService.svc?xsd=xsd1" />
+    <MetadataFile FileName="TLViewerService4.xsd" MetadataType="Schema" ID="3ee977f1-5c61-4194-ae80-3db987e0f80b" SourceId="1" SourceUrl="http://localhost:25765/Argix10.Freight.Services/TLViewerService.svc?xsd=xsd0" />
+    <MetadataFile FileName="TLViewerService5.xsd" MetadataType="Schema" ID="1d1011e7-4175-48ba-8b1f-6bc4a99816ed" SourceId="1" SourceUrl="http://localhost:25765/Argix10.Freight.Services/TLViewerService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

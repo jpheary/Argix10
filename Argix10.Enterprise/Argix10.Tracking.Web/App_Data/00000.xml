@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<reports Text="Argix Logistics">
+  <department Text="Delivery Window" ToolTip="">
+    <report Text="Detail By Store" Value="DeliveryWindowDetailByStore" NavigateUrl="~/Reports/DeliveryWindowDetailByStore.aspx" ToolTip="" />
+    <report Text="Summary By Store" Value="DeliveryWindowSummaryByStore" NavigateUrl="~/Reports/DeliveryWindowSummaryByStore.aspx" ToolTip="" />
+  </department>
+  <department Text="Scanning" ToolTip="">
+    <report Text="Detail By Store" Value="ScanningDetailByStore" NavigateUrl="~/Reports/ScanningDetailByStore.aspx" ToolTip="" />
+    <report Text="Summary By Store" Value="ScanningSummaryByStore" NavigateUrl="~/Reports/ScanningSummaryByStore.aspx" ToolTip="" />
+  </department>
+  <department Text="Ecko" ToolTip="">
+    <report Text="Delivery Info By Pickup" Value="CartonInfo" NavigateUrl="~/Reports/DeliveryInfoByPickup.aspx" ToolTip="" />
+    <report Text="Ecko Carton Info" Value="CartonInfo" NavigateUrl="~/Reports/EckoCartonInfo.aspx" ToolTip="" />
+  </department>
+  <department Text="Good Earth Products" ToolTip="">
+    <report Text="Inbound Shipment Tracking" Value="InboundShipmentTracking" NavigateUrl="~/Reports/InboundShipmentTracking.aspx" ToolTip="" />
+  </department>
+  <department Text="L'Occitane" ToolTip="">
+    <report Text="L'Occitane Carton Info" Value="CartonInfo" NavigateUrl="~/Reports/LOccitaneCartonInfo.aspx" ToolTip="" />
+    <report Text="L'Occitane Wholesale Carton Info" Value="CartonInfo" NavigateUrl="~/Reports/LOccitaneWholesaleCartonInfo.aspx" ToolTip="" />
+    <report Text="L'Occitane Holiday Carton Info" Value="CartonInfo" NavigateUrl="~/Reports/LOccitaneHolidayCartonInfo.aspx" ToolTip="" />
+  </department>
+  <department Text="Pacific Sunwear" ToolTip="">
+    <report Text="PacSun Summary" Value="PacSunSummary" NavigateUrl="~/Reports/PacSunSummary.aspx" ToolTip="" />
+    <report Text="PacSun Delivery" Value="PacSunDelivery" NavigateUrl="~/Reports/PacSunDelivery.aspx" ToolTip="" />
+  </department>
+  <department Text="Random House" ToolTip="">
+    <report Text="Requested Delivery Date" Value="RequestedDeliveryDate" NavigateUrl="~/Reports/RequestedDeliveryDate.aspx" ToolTip="" />
+  </department>
+  <department Text="Retail Group of America" ToolTip="">
+    <report Text="Inbound Shipment Tracking" Value="InboundShipmentTracking" NavigateUrl="~/Reports/InboundShipmentTracking.aspx" ToolTip="" />
+  </department>
+</reports>

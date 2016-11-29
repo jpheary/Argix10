@@ -1,0 +1,177 @@
+You are now setup within SMC³ DEMO RateWareXL Web Service. 
+Use the Authentication Tokens and WSDL info below to access SMC3 RateWareXL WebService.
+
+Our SDK is provided in the FTP link below. The SDK provides samples in various coding language and includes 
+our latest user guides.
+	ftp site (ftp://sdk:sdkpass@prod3.smc3.com).
+	If you are using IE 7 or higher, please follow the instruction below:
+		1. Open My Computer
+		2.Copy/paste the link provided into the My Computer address bar
+		3.Press Enter, our FTP site should open
+
+If you have any implementation questions contact SMC³ Integration Support at integrationsupport@smc3.com or 800-272-3425.
+
+Rateware XL – LTL:
+	WSDL:	http://demo.smc3.com/AdminManager/services/RateWareXL?WSDL
+
+	This Authentication Token below is required for use with the RatewareXL-LTL webmethods:
+	<web:AuthenticationToken>
+		<web:licenseKey> 70Ra5385TF30</web:licenseKey>
+		<web:password>[Enter Emailed Password Here]</web:password>
+		<web:username>[Enter Your Email Address Here]</web:username>
+	</web:AuthenticationToken>
+
+	Available Tariffs (Rateware XL modules for use with LTL webmethods):
+		DESCRIPTION					FILENAME	EFFECTIVE DATE
+		------------------------------------------------------
+		RatewareXL Density Demo		DEMODENA	20070703
+		Rateware XL LTL Demo		DEMOLTLA	20070703
+
+SMC3 Account:
+UserID:		RateWareXL@argixlogistics.com
+Password:	LN533rfO
+
+UserID:		nino@argixlogistics.com
+Password:	ur5h3Qr5
+
+
+LTLRateShipmentMultipleResponse (* indicates passed in the request)
+-----------------------------------------------------------------------------------------------------------------------------------
+shipmentID 					* Shipment ID; Use any combination of letters and numbers to identify the shipment. (Maximum of 20 ascii characters)
+tariffName 					* Tariff name (8 characters)
+shipmentDateCCYYMMDD 		* Shipment Date (CCYYMMDD). This field is used to select the desired tariff module for rating. If the actual shipment date is passed in this field, RateWareXL will select the appropriate tariff module in effect based on the shipment date and Tariff name passed. If the user wants to specify a specific tariff module for rating (regardless the of actual shipment date), passing the effective date of the tariff module will rate the shipment based on that effective date.
+originCity 					* Origin City (Maximum of 60 ascii characters)
+originState 				* Origin State (maximum of 2 ascii characters; must comply with associated postal code)
+originPostalCode 			* Origin Postal Code
+originCountry 				* Origin Country: USA, MEX, CAN (3 alpha)
+destinationCity 			* Destination City (Maximum of 60 ascii characters)
+destinationState 			* Destination State (maximum of 2 ascii characters; must comply with associated postal code)
+destinationPostalCode 		* Destination Postal Code
+destinationCountry 			* Destination Country: USA, MEX, CAN (3 alpha)
+useSingleShipmentCharges 	* (Y/N); “N” indicates the system should rate the bill as a multiple shipment. "Y" indicates the system should rate the bill as a single shipment. This field is only applicable when the shipment uses a tariff that uses single shipment charges. The default for this field is “N”.
+rateAdjustmentFactor 		* A factor that increases or decreases rates by a specific percentage. The factor is applied to the rates and uses the adjusted rates in calculating charges. 1.5000 would increase rates 50%, 0.7500 would decrease rates 25%. The rate adjustment factor alters all of the rates in the dataset of a tariff including tariff minimum charge (MC). Default is 1.0000
+useDiscounts 				* (Y/N); "N" indicates that discounts should not be applied. "Y" indicates that discounts should be applied. The default for this field is “N”.
+discountApplication 		* R=Rates, C=Charges. "R" means apply discount to the rates. "C" means apply discounts to the Charges. Default is “C”.
+mcDiscount 					* Minimum Charge Discount (2 decimal places)
+surchargeApplication 		* G=Gross, N=Net. "G" means a surcharge applied to gross charges; "N" means a surcharge applied to net charges
+userMinimumChargeFloor 		* Minimum floor charge entered by user. (Maximum value of 99999.99)
+LTL_Surcharge 				* LTL surcharge percentage (Maximum value 99.99)
+TL_Surcharge 				* TL Surcharge percentage (Maximum value 99.99)
+stopAlternationWeight 		* Maximum weight to stop the rating alternation. (Maximum value of 999999)
+details.nmfcClass 			* The NMFC Class of the specified shipment line.
+details.weight				* The weight for the specified shipment line (whole number)
+
+discountAmount 				A dollar and cents amount of the calculated Discount (2 decimal places)
+surchargePercentUsed 		Surcharge Percent Used (2 decimal places)
+surchargeAmount 			Surcharge Amount (2 decimal places)
+errorCode 					Returns code only if error exists.
+tblno 						The table number from the applicable tariff for the origin/destination postal code pair.
+RBNO 						The rate basis number from the applicable tariff for the origin/destination postal code pair.
+suffix 						The rbno suffix from the applicable tariff for the origin/destination postal code pair.
+actualWgt 					The real weight of the shipment, not including any applicable deficit weight (whole number)
+billedWgt 					The weight at which the shipment is rated; Actual Weight or Actual Weight plus Deficit Weight (whole number)
+LHGrossCharge 				Line Haul Gross Charge Amount for the shipment (no discounts or accessorials) (2 decimal places)
+minimumCharge 				Minimum Charge Amount for the shipment (2 decimal places)
+absoluteMCFloor 			Absolute Minimum Charge amount for the shipment (2 decimal places)
+deficitWeight 				The amount of additional weight necessary for the use of lower rates (whole number)
+deficitRate 				The rate for the deficit weight/class (2 decimal places)
+deficitCharge 				The charge for deficit weight (2 decimal places)
+totalCharge 				The NET charge for the shipment - Gross charge plus accessorial charges and applied discounts (2 decimal places)
+discountPctUsed 			The percentage used in the rating processes based on the Billed Weight (2 decimal places)
+effectiveDate 				Tariff Effective Date (CCYYMMDD)
+rateApplication 			R = rated; M = minimum charge applied; F = Floor applied
+weightBreak_Discount_1 		Weightbreak Discount 1 (Maximum value of 99.99)
+weightBreak_Discount_2 		Weightbreak Discount 2 (Maximum value of 99.99)
+weightBreak_Discount_3 		Weightbreak Discount 3 (Maximum value of 99.99)
+weightBreak_Discount_4 		Weightbreak Discount 4 (Maximum value of 99.99)
+weightBreak_Discount_5 		Weightbreak Discount 5 (Maximum value of 99.99)
+weightBreak_Discount_6 		Weightbreak Discount 6 (Maximum value of 99.99)
+weightBreak_Discount_7 		Weightbreak Discount 7 (Maximum value of 99.99)
+weightBreak_Discount_8		Weightbreak Discount 8 (Maximum value of 99.99)
+weightBreak_Discount_9 		Weightbreak Discount 9 (Maximum value of 99.99)
+weightBreak_Discount_10 	Weightbreak Discount 10 (Maximum value of 99.99)
+weightBreak_Discount_11 	Weightbreak Discount 11 (Maximum value of 99.99)
+orgDestToGateWayPointFlag 	Internal Use Only
+details.rate 				The rate for the specified shipment line (2 decimal places)
+details.charge 				The charge for the shipment line (2 decimal places)
+details.error 				Conditional Returns code only if error exists.
+
+
+
+DensityRateShipmentMultipleResponse (* indicates passed in the request)
+-----------------------------------------------------------------------------------------------------------------------------------
+shipmentID  				* Shipment ID; Use any combination of letters and numbers to identify the shipment. (Maximum of 20 ascii characters)
+tariffName  				* Tariff name (8 characters)
+shipmentDateCCYYMMDD  		* Shipment Date (CCYYMMDD). This field is used to select the desired tariff module for rating. If the actual shipment date is passed in this field, RateWareXL will select the appropriate tariff module in effect based on the shipment date and Tariff name passed. If the user wants to specify a specific tariff module for rating (regardless the of actual shipment date), passing the effective date of the tariff module will rate the shipment based on that effective date.
+originCity  				* Origin City (Maximum of 60 ascii characters)
+originState  				* Origin State (maximum of 2 ascii characters; must comply with associated postal code)
+originPostalCode  			* Origin Postal Code; USA = 3 or 5 numeric characters; MEX = 5 numeric characters; CAN = 3, 5, or 6 alpha numeric characters. No dashes or spaces allowed.
+originCountry  				* Origin Country: USA, MEX, CAN (3 alpha)
+destinationCity  			* Destination City (Maximum of 60 ascii characters)
+destinationState  			* Destination State (maximum of 2 ascii characters; must comply with associated postal code)
+destinationPostalCode  		* Destination Postal Code; USA = 3 or 5 numeric characters; MEX = 5 numeric characters; CAN = 3, 5, or 6 alpha numeric characters.
+destinationCountry  		* Destination Country: USA, MEX, CAN (3 alpha)
+detailType  				* ”DENSITY" = density and weight line item, "CUBE" = cube and weight line item, "LWH" = length, width, height and weight line item.
+dimFactor  					* If DimFactorUnits = “L” or “K”, then the required DimFactor attribute value must be set to a value of 1 thru 9999.99. If DimFactorUnits = “I” or “C”, then the required DimFactor attribute value must be set to a value of 1 thru 99999.9
+dimFactorUnits  			* L=pounds/feet3, K=kilograms/meters3 I=inches³/pound;C=centimeters³/kilogram
+useDimMC  					* (Y/N); “Y”=consider minimum charge during dimming application. “N”=do not use minimum charge during dimming application. Default value is “N”.
+useSingleShipmentCharges  	* (Y/N); “N” indicates the system should rate the bill as a multiple shipment. "Y" indicates the system should rate the bill as a single shipment. This field is only applicable when the shipment uses a tariff that uses single shipment charges. The default for this field is “N”.
+rateAdjustmentFactor  		* A factor that increases or decreases rates by a specific percentage. The factor is applied to the rates and uses the adjusted rates in calculating charges. 1.5000 would increase rates 50%, 0.7500 would decrease rates 25%. The rate adjustment factor alters all of the rates in the dataset of a tariff including tariff minimum charge (MC). Default is 1.0000 (Maximum value of 9.999)
+useDiscounts  				* (Y/N); "N" indicates that discounts should not be applied. "Y" indicates that discounts should be applied. The default for this field is “N”.
+discountApplication  		* R=Rates, C=Charges. "R" means apply discount to the rates. "C" means apply discounts to the Charges. Default is “C”.
+mcDiscount  				* Minimum Charge Discount (Maximum value of 99.99)
+surchargeApplication  		* G=Gross, N=Net. "G" means a surcharge applied to gross charges; "N" means a surcharge applied to net charges
+userMinimumChargeFloor  	* Minimum floor charge entered by user. (Maximum value of 99999.99)
+LTL_Surcharge  				* LTL surcharge percentage (Maximum value 99.99)
+TL_Surcharge  				* TL Surcharge percentage (Maximum value 99.99)
+stopAlternationWeight  		* Maximum weight to stop the rating alternation. (Maximum value of 999999)
+details.pieces  			* Number of Pieces; Default is 1 (Maximum value of 999999)
+details.weight  			* (Minimum value 1, Maximum value 999999) NOTE: If Detail Type=LWH or Detail Type=CUBE, this must be the total line item weight of ALL Pieces. For 3 pieces, each weighing 100 pounds, the weight would be 300 pounds. This is done so the pallet weight can be used.
+details.weightUnits  		* L=pounds; K=kilograms
+details.density  			* Required if Detail Type=DENSITY (Maximum value of 9999.99)
+details.densityUnits  		* Required if Detail Type=DENSITY L=pounds/feet³; K=kilograms/meters³
+details.cube  				* Required if Detail Type=CUBE (Maximum value 999999999999.9)
+details.cubeUnits  			* Required if Detail Type=CUBE F=feet³; M=meters³; I=inches³;C=centimeters³
+details.length  			* Required if Detail type=LWH (Maximum value of 9999.99)
+details.width  				* Required if Detail type=LWH (Maximum value of 9999.99)
+details.height  			* Required if Detail type=LWH (Maximum value of 9999.99)
+details.dimensionUnits  	* Required if Detail Type=LWH F=feet, M=meters, I=inches, C=Centimeters
+
+discountAmount  			A dollar and cents amount of the calculated Discount (2 decimal places)
+surchargePercentUsed  		Surcharge Percent Used (2 decimal places)
+surchargeAmount  			Surcharge Amount (2 decimal places)
+errorCode  					Returns code only if error exists.
+tblno  						The table number from the applicable tariff for the origin/destination postal code pair.
+RBNO  						The rate basis number from the applicable tariff for the origin/destination postal code pair.
+suffix  					The suffix from the applicable tariff for the origin/destination postal code pair.
+actualWgt  					The real weight of the shipment, not including any applicable deficit weight (whole number)
+billedWgt  					The weight at which the shipment is rated; either Actual Weight or Actual Weight plus Deficit Weight (whole number)
+LHGrossCharge  				Line Haul Gross Charge for the shipment (no discounts or accessorials) (2 decimal places)
+minimumCharge  				Minimum Charge Amount for the shipment (2 decimal places)
+absoluteMCFloor  			Absolute Minimum Charge Floor amount for the shipment (2 decimal places)
+deficitWeight  				The amount of additional weight necessary for the use of lower rates (whole number)
+deficitRate  				The rate for the deficit weight/density (2 decimal places)
+deficitCharge  				The charge for deficit weight (2 decimal places)
+deficitCube  				The cube for the deficit weight (1 decimal place)
+totalCharge  				The NET charge for the shipment - Gross charge plus accessorial charges and applied discounts; 2 decimal places
+discountPctUsed  			The percentage used in the rating processes based on the Billed Weight (2 decimal places)
+effectiveDate  				Tariff Effective Date (CCYYMMDD)
+rateApplication  			R = Rated; M = Minimum charge applied; F = Floor applied; D = Dim charge applied
+weightBreak_Discount_1  	Weightbreak Discount 1 (Maximum value of 99.99)
+weightBreak_Discount_2  	Weightbreak Discount 2 (Maximum value of 99.99)
+weightBreak_Discount_3  	Weightbreak Discount 3 (Maximum value of 99.99)
+weightBreak_Discount_4  	Weightbreak Discount 4 (Maximum value of 99.99)
+weightBreak_Discount_5  	Weightbreak Discount 5 (Maximum value of 99.99)
+weightBreak_Discount_6  	Weightbreak Discount 6 (Maximum value of 99.99)
+weightBreak_Discount_7  	Weightbreak Discount 7 (Maximum value of 99.99)
+weightBreak_Discount_8  	Weightbreak Discount 8 (Maximum value of 99.99)
+weightBreak_Discount_9  	Weightbreak Discount 9 (Maximum value of 99.99)
+weightBreak_Discount_10  	Weightbreak Discount 10 (Maximum value of 99.99)
+weightBreak_Discount_11  	Weightbreak Discount 11 (Maximum value of 99.99)
+orgDestToGateWayPointFlag	Internal Use Only
+details.rate  				The rate for the specified shipment line (2 decimal places)
+details.charge  			The undiscounted charge for the shipment line (2 decimal places)
+details.error  				Returns code only if error exists.
+details.usedDensity  		The density for the specified shipment line (2 decimal places)
+details.usedCube  			The cube dimension for the specified shipment line (1 decimal place)
+details.usedWeight  		The weight for the specified shipment line (whole number)

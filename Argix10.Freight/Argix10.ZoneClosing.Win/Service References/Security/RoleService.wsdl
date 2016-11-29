@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://asp.net/ApplicationServices/v200" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="RoleService" targetNamespace="http://asp.net/ApplicationServices/v200" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="BasicHttpBinding_RoleService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <http:NegotiateAuthentication xmlns:http="http://schemas.microsoft.com/ws/06/2004/policy/http" />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://asp.net/ApplicationServices/v200/Imports">
+      <xsd:import schemaLocation="http://rgxvmweb.argix.com/Argix10/Argix10.Membership.Services/RoleService.svc?xsd=xsd0" namespace="http://asp.net/ApplicationServices/v200" />
+      <xsd:import schemaLocation="http://rgxvmweb.argix.com/Argix10/Argix10.Membership.Services/RoleService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://rgxvmweb.argix.com/Argix10/Argix10.Membership.Services/RoleService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="RoleService_GetRolesForCurrentUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRolesForCurrentUser" />
+  </wsdl:message>
+  <wsdl:message name="RoleService_GetRolesForCurrentUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRolesForCurrentUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="RoleService_IsCurrentUserInRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsCurrentUserInRole" />
+  </wsdl:message>
+  <wsdl:message name="RoleService_IsCurrentUserInRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsCurrentUserInRoleResponse" />
+  </wsdl:message>
+  <wsdl:portType name="RoleService">
+    <wsdl:operation name="GetRolesForCurrentUser">
+      <wsdl:input wsaw:Action="http://asp.net/ApplicationServices/v200/RoleService/GetRolesForCurrentUser" message="tns:RoleService_GetRolesForCurrentUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://asp.net/ApplicationServices/v200/RoleService/GetRolesForCurrentUserResponse" message="tns:RoleService_GetRolesForCurrentUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsCurrentUserInRole">
+      <wsdl:input wsaw:Action="http://asp.net/ApplicationServices/v200/RoleService/IsCurrentUserInRole" message="tns:RoleService_IsCurrentUserInRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://asp.net/ApplicationServices/v200/RoleService/IsCurrentUserInRoleResponse" message="tns:RoleService_IsCurrentUserInRole_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_RoleService" type="tns:RoleService">
+    <wsp:PolicyReference URI="#BasicHttpBinding_RoleService_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetRolesForCurrentUser">
+      <soap:operation soapAction="http://asp.net/ApplicationServices/v200/RoleService/GetRolesForCurrentUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsCurrentUserInRole">
+      <soap:operation soapAction="http://asp.net/ApplicationServices/v200/RoleService/IsCurrentUserInRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RoleService">
+    <wsdl:port name="BasicHttpBinding_RoleService" binding="tns:BasicHttpBinding_RoleService">
+      <soap:address location="http://rgxvmweb.argix.com/Argix10/Argix10.Membership.Services/RoleService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

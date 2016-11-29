@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="34a33b06-d83f-47d8-b711-90987a6e8d0d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:5026/Argix10.AgentLineHaul.Services/ShipScheduleService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ShipScheduleService.xsd" MetadataType="Schema" ID="0546536e-6328-4582-ad08-cc08bdf51993" SourceId="1" SourceUrl="http://localhost:5026/Argix10.AgentLineHaul.Services/ShipScheduleService.svc?xsd=xsd3" />
+    <MetadataFile FileName="ShipScheduleService.disco" MetadataType="Disco" ID="edbf5f4f-d937-41c0-b7fb-933527a1f554" SourceId="1" SourceUrl="http://localhost:5026/Argix10.AgentLineHaul.Services/ShipScheduleService.svc?disco" />
+    <MetadataFile FileName="ShipScheduleService.wsdl" MetadataType="Wsdl" ID="8914d5bf-36f4-44a5-8279-212398225a77" SourceId="1" SourceUrl="http://localhost:5026/Argix10.AgentLineHaul.Services/ShipScheduleService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="ShipScheduleService2.wsdl" MetadataType="Wsdl" ID="b326994b-d58f-4f09-9570-81ae5724ad1a" SourceId="1" SourceUrl="http://localhost:5026/Argix10.AgentLineHaul.Services/ShipScheduleService.svc?wsdl=wsdl1" />
+    <MetadataFile FileName="ShipScheduleService1.wsdl" MetadataType="Wsdl" ID="0e3cdcbc-3419-4f83-9bbf-118983d7ea50" SourceId="1" SourceUrl="http://localhost:5026/Argix10.AgentLineHaul.Services/ShipScheduleService.svc?wsdl" />
+    <MetadataFile FileName="ShipScheduleService1.xsd" MetadataType="Schema" ID="7bb39cfe-7989-4cae-b55d-d34228bbe59f" SourceId="1" SourceUrl="http://localhost:5026/Argix10.AgentLineHaul.Services/ShipScheduleService.svc?xsd=xsd4" />
+    <MetadataFile FileName="ShipScheduleService2.xsd" MetadataType="Schema" ID="eb179eb4-8a92-45d5-aaf4-3a3b60ff107f" SourceId="1" SourceUrl="http://localhost:5026/Argix10.AgentLineHaul.Services/ShipScheduleService.svc?xsd=xsd5" />
+    <MetadataFile FileName="ShipScheduleService6.xsd" MetadataType="Schema" ID="6af4c28f-a87f-4ae6-91bc-e3945c87f9f1" SourceId="1" SourceUrl="http://localhost:5026/Argix10.AgentLineHaul.Services/ShipScheduleService.svc?xsd=xsd6" />
+    <MetadataFile FileName="ShipScheduleService61.xsd" MetadataType="Schema" ID="39f970a5-e31b-44fa-a548-fd4ccbf5a129" SourceId="1" SourceUrl="http://localhost:5026/Argix10.AgentLineHaul.Services/ShipScheduleService.svc?xsd=xsd7" />
+    <MetadataFile FileName="ShipScheduleService3.xsd" MetadataType="Schema" ID="cae7a890-6e37-4b0c-92d4-b012bd7c7e19" SourceId="1" SourceUrl="http://localhost:5026/Argix10.AgentLineHaul.Services/ShipScheduleService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ShipScheduleService4.xsd" MetadataType="Schema" ID="053c97eb-f0d3-4411-a3ce-9b88057224f7" SourceId="1" SourceUrl="http://localhost:5026/Argix10.AgentLineHaul.Services/ShipScheduleService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ShipScheduleService5.xsd" MetadataType="Schema" ID="610c80b1-fef4-499a-a08e-7a2553b01800" SourceId="1" SourceUrl="http://localhost:5026/Argix10.AgentLineHaul.Services/ShipScheduleService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

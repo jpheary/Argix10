@@ -1,0 +1,63 @@
+              --------------------------------------------------------
+							Customer Services Readme File
+		                       	  September, 2014
+              --------------------------------------------------------
+                         (c) Copyright Argix Logistics, 2009-2014
+
+This document provides late-breaking or other information that supplements the Customer Services documentation.
+
+------------------------
+How to Use This Document
+------------------------
+To view the Readme file on-screen in Windows Notepad, maximize the Notepad window and click Word 
+Wrap on the Edit menu. To print the Readme file, open it in Notepad or another word processor, 
+and then use the Print command on the File menu.
+
+==============
+CONTENTS
+==============
+NOTES
+   GENERAL
+   DEPENDENCIES
+   VERSION HISTORY
+==============
+
+
+NOTES
+==============
+GENERAL
+The Customers Service (Argix10.Customers.Services) is a WCF web application that provides Customer 
+business services related to Argix Logistics business activities.
+
+
+DEPENDENCIES
+SMTP Services (http://rgxvmweb/Argix10/Argix10.Enterprise.Services/SMTP.svc).
+
+
+VERSION HISTORY
+v4.0.0, 10/12/12 ---------------------------------------------------------------------------
+Requirements/features
+- new release.
+Design
+- new release.
+
+v4.0.1, 05/21/13 ---------------------------------------------------------------------------
+Requirements/features
+- none.
+Design
+- none.
+
+v4.0.2, 11/05/13 ---------------------------------------------------------------------------
+Requirements/features
+- none.
+Design
+- none.
+
+v4.0.3, 09/22/14 ---------------------------------------------------------------------------
+Requirements/features
+- none.
+Design
+- added imIssueType::IsActive column.
+- updated CRMGateway to use uspCRMIssueGetList2, uspCRMIssueTypeGetList2; added uspCRMIssueTypeNew, 
+  uspCRMIssueTypeUpdate.
+- added ICRMService::CreateIssueType() and ICRMService::UpdateIssueType() methods.

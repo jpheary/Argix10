@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="DeliveryPointsDataset" targetNamespace="http://tempuri.org/DeliveryPointsDataset.xsd" elementFormDefault="qualified" attributeFormDefault="qualified" xmlns="http://tempuri.org/DeliveryPointsDataset.xsd" xmlns:mstns="http://tempuri.org/DeliveryPointsDataset.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+  <xs:element name="DeliveryPointsDataset" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DeliveryPointTable">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Command" type="xs:string" minOccurs="0" />
+              <xs:element name="Account" type="xs:string" minOccurs="0" />
+              <xs:element name="NickName" type="xs:string" minOccurs="0" />
+              <xs:element name="Name" type="xs:string" minOccurs="0" />
+              <xs:element name="Building" type="xs:string" minOccurs="0" />
+              <xs:element name="Route" type="xs:string" minOccurs="0" />
+              <xs:element name="Phone" type="xs:string" minOccurs="0" />
+              <xs:element name="OpenDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="OpenTimeMonday" type="xs:string" minOccurs="0" />
+              <xs:element name="CloseTimeMonday" type="xs:string" minOccurs="0" />
+              <xs:element name="MondayWindow" type="xs:string" minOccurs="0" />
+              <xs:element name="OpenTimeTuesday" type="xs:string" minOccurs="0" />
+              <xs:element name="CloseTimeTuesday" type="xs:string" minOccurs="0" />
+              <xs:element name="TuesdayWindow" type="xs:string" minOccurs="0" />
+              <xs:element name="OpenTimeWednesday" type="xs:string" minOccurs="0" />
+              <xs:element name="CloseTimeWednesday" type="xs:string" minOccurs="0" />
+              <xs:element name="WednesdayWindow" type="xs:string" minOccurs="0" />
+              <xs:element name="OpenTimeThursday" type="xs:string" minOccurs="0" />
+              <xs:element name="CloseTimeThursday" type="xs:string" minOccurs="0" />
+              <xs:element name="ThursdayWindow" type="xs:string" minOccurs="0" />
+              <xs:element name="OpenTimeFriday" type="xs:string" minOccurs="0" />
+              <xs:element name="CloseTimeFriday" type="xs:string" minOccurs="0" />
+              <xs:element name="FridayWindow" type="xs:string" minOccurs="0" />
+              <xs:element name="OpenTimeSaturday" type="xs:string" minOccurs="0" />
+              <xs:element name="CloseTimeSaturday" type="xs:string" minOccurs="0" />
+              <xs:element name="SaturdayWindow" type="xs:string" minOccurs="0" />
+              <xs:element name="OpenTimeSunday" type="xs:string" minOccurs="0" />
+              <xs:element name="CloseTimeSunday" type="xs:string" minOccurs="0" />
+              <xs:element name="SundayWindow" type="xs:string" minOccurs="0" />
+              <xs:element name="ServiceTimeFactor" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Unit" type="xs:string" minOccurs="0" />
+              <xs:element name="SetupTime" type="xs:int" minOccurs="0" />
+              <xs:element name="Appt" type="xs:string" minOccurs="0" />
+              <xs:element name="StopName" type="xs:string" minOccurs="0" />
+              <xs:element name="StopNickName" type="xs:string" minOccurs="0" />
+              <xs:element name="StopPhone" type="xs:string" minOccurs="0" />
+              <xs:element name="Address" type="xs:string" minOccurs="0" />
+              <xs:element name="City" type="xs:string" minOccurs="0" />
+              <xs:element name="State" type="xs:string" minOccurs="0" />
+              <xs:element name="Zip" type="xs:string" minOccurs="0" />
+              <xs:element name="StopOpenTimeMonday" type="xs:string" minOccurs="0" />
+              <xs:element name="StopCloseTimeMonday" type="xs:string" minOccurs="0" />
+              <xs:element name="StopMondayWindow" type="xs:string" minOccurs="0" />
+              <xs:element name="StopOpenTimeTuesday" type="xs:string" minOccurs="0" />
+              <xs:element name="StopCloseTimeTuesday" type="xs:string" minOccurs="0" />
+              <xs:element name="StopTuesdayWindow" type="xs:string" minOccurs="0" />
+              <xs:element name="StopOpenTimeWednesday" type="xs:string" minOccurs="0" />
+              <xs:element name="StopCloseTimeWednesday" type="xs:string" minOccurs="0" />
+              <xs:element name="StopWednesdayWindow" type="xs:string" minOccurs="0" />
+              <xs:element name="StopOpenTimeThursday" type="xs:string" minOccurs="0" />
+              <xs:element name="StopCloseTimeThursday" type="xs:string" minOccurs="0" />
+              <xs:element name="StopThursdayWindow" type="xs:string" minOccurs="0" />
+              <xs:element name="StopOpenTimeFriday" type="xs:string" minOccurs="0" />
+              <xs:element name="StopCloseTimeFriday" type="xs:string" minOccurs="0" />
+              <xs:element name="StopFridayWindow" type="xs:string" minOccurs="0" />
+              <xs:element name="StopOpenTimeSaturday" type="xs:string" minOccurs="0" />
+              <xs:element name="StopCloseTimeSaturday" type="xs:string" minOccurs="0" />
+              <xs:element name="StopSaturdayWindow" type="xs:string" minOccurs="0" />
+              <xs:element name="StopOpenTimeSunday" type="xs:string" minOccurs="0" />
+              <xs:element name="StopCloseTimeSunday" type="xs:string" minOccurs="0" />
+              <xs:element name="StopSundayWindow" type="xs:string" minOccurs="0" />
+              <xs:element name="StopComment" type="xs:string" minOccurs="0" />
+              <xs:element name="LastUpdated" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CustomerTable">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CustomerID" type="xs:int" minOccurs="0" />
+              <xs:element name="AccountID" type="xs:string" minOccurs="0" />
+              <xs:element name="CustomerName" type="xs:string" minOccurs="0" />
+              <xs:element name="CustomerAddress" type="xs:string" minOccurs="0" />
+              <xs:element name="StopName" type="xs:string" minOccurs="0" />
+              <xs:element name="StopAddress" type="xs:string" minOccurs="0" />
+              <xs:element name="StopCity" type="xs:string" minOccurs="0" />
+              <xs:element name="StopState" type="xs:string" minOccurs="0" />
+              <xs:element name="StopZip" type="xs:string" minOccurs="0" />
+              <xs:element name="Phone" type="xs:string" minOccurs="0" />
+              <xs:element name="CustomerWindowOpenMonday" type="xs:short" minOccurs="0" />
+              <xs:element name="CustomerWindowCloseMonday" type="xs:short" minOccurs="0" />
+              <xs:element name="CustomerWindowOpenTuesday" type="xs:short" minOccurs="0" />
+              <xs:element name="CustomerWindowCloseTuesday" type="xs:short" minOccurs="0" />
+              <xs:element name="CustomerWindowOpenWednesday" type="xs:short" minOccurs="0" />
+              <xs:element name="CustomerWindowCloseWednesday" type="xs:short" minOccurs="0" />
+              <xs:element name="CustomerWindowOpenThursday" type="xs:short" minOccurs="0" />
+              <xs:element name="CustomerWindowCloseThursday" type="xs:short" minOccurs="0" />
+              <xs:element name="CustomerWindowOpenFriday" type="xs:short" minOccurs="0" />
+              <xs:element name="CustomerWindowCloseFriday" type="xs:short" minOccurs="0" />
+              <xs:element name="CustomerWindowOpenSaturday" type="xs:short" minOccurs="0" />
+              <xs:element name="CustomerWindowCloseSaturday" type="xs:short" minOccurs="0" />
+              <xs:element name="CustomerWindowOpenSunday" type="xs:short" minOccurs="0" />
+              <xs:element name="CustomerWindowCloseSunday" type="xs:short" minOccurs="0" />
+              <xs:element name="StopWindowOpenMonday" type="xs:short" minOccurs="0" />
+              <xs:element name="StopWindowCloseMonday" type="xs:short" minOccurs="0" />
+              <xs:element name="StopWindowOpenTuesday" type="xs:short" minOccurs="0" />
+              <xs:element name="StopWindowCloseTuesday" type="xs:short" minOccurs="0" />
+              <xs:element name="StopWindowOpenWednesday" type="xs:short" minOccurs="0" />
+              <xs:element name="StopWindowCloseWednesday" type="xs:short" minOccurs="0" />
+              <xs:element name="StopWindowOpenThursday" type="xs:short" minOccurs="0" />
+              <xs:element name="StopWindowCloseThursday" type="xs:short" minOccurs="0" />
+              <xs:element name="StopWindowOpenFriday" type="xs:short" minOccurs="0" />
+              <xs:element name="StopWindowCloseFriday" type="xs:short" minOccurs="0" />
+              <xs:element name="StopWindowOpenSaturday" type="xs:short" minOccurs="0" />
+              <xs:element name="StopWindowCloseSaturday" type="xs:short" minOccurs="0" />
+              <xs:element name="StopWindowOpenSunday" type="xs:short" minOccurs="0" />
+              <xs:element name="StopWindowCloseSunday" type="xs:short" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

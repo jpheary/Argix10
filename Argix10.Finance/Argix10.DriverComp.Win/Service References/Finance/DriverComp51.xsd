@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Argix.Finance" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Argix.Finance" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:34780/Argix10.Finance.Services/DriverComp.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="DriverCompensationFault">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DriverCompensationFault" nillable="true" type="tns:DriverCompensationFault" />
+  <xs:complexType name="DriverRoute">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AdjustmentAmount1" type="xs:decimal" />
+      <xs:element minOccurs="0" name="AdjustmentAmount1TypeID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AdjustmentAmount2" type="xs:decimal" />
+      <xs:element minOccurs="0" name="AdjustmentAmount2TypeID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AdminCharge" type="xs:decimal" />
+      <xs:element minOccurs="0" name="AgentNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ArgixRtType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cartons" type="xs:int" />
+      <xs:element minOccurs="0" name="CartonsAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CartonsRate" type="xs:decimal" />
+      <xs:element minOccurs="0" name="DayAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="DayRate" type="xs:decimal" />
+      <xs:element minOccurs="0" name="EquipmentTypeID" type="xs:int" />
+      <xs:element minOccurs="0" name="Exported" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FSC" type="xs:decimal" />
+      <xs:element minOccurs="0" name="FSCBaseRate" type="xs:decimal" />
+      <xs:element minOccurs="0" name="FSCGal" type="xs:decimal" />
+      <xs:element minOccurs="0" name="FSCMiles" type="xs:decimal" />
+      <xs:element minOccurs="0" name="FinanceVendorID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FuelCost" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ID" type="xs:long" />
+      <xs:element minOccurs="0" name="Imported" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IsAdjust" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsCombo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsNew" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastUpdated" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Miles" type="xs:decimal" />
+      <xs:element minOccurs="0" name="MilesAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="MilesBaseRate" type="xs:decimal" />
+      <xs:element minOccurs="0" name="MilesRate" type="xs:decimal" />
+      <xs:element minOccurs="0" name="MinimunAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Operator" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pallets" type="xs:int" />
+      <xs:element minOccurs="0" name="PalletsAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PalletsRate" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Payee" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PickupCartons" type="xs:int" />
+      <xs:element minOccurs="0" name="PickupCartonsAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PickupCartonsRate" type="xs:decimal" />
+      <xs:element minOccurs="0" name="RateTypeID" type="xs:int" />
+      <xs:element minOccurs="0" name="RouteDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="RouteIndex" type="xs:int" />
+      <xs:element minOccurs="0" name="RouteName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Stops" type="xs:int" />
+      <xs:element minOccurs="0" name="StopsAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="StopsRate" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TotalAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Trip" type="xs:int" />
+      <xs:element minOccurs="0" name="TripAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TripRate" type="xs:decimal" />
+      <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DriverRoute" nillable="true" type="tns:DriverRoute" />
+  <xs:complexType name="TerminalConfiguration">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AdminFee" type="xs:decimal" />
+      <xs:element minOccurs="0" name="AdminGLNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AgentName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AgentNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BonusRate" type="xs:decimal" />
+      <xs:element minOccurs="0" name="FSBase" type="xs:decimal" />
+      <xs:element minOccurs="0" name="GLNumber" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TerminalConfiguration" nillable="true" type="tns:TerminalConfiguration" />
+  <xs:complexType name="PayPeriod">
+    <xs:annotation>
+      <xs:appinfo>
+        <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Month" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Year" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PayPeriod" nillable="true" type="tns:PayPeriod" />
+</xs:schema>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://Argix.Freight" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://Argix.Freight" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://Argix.Freight/Imports">
+      <xsd:import schemaLocation="http://localhost:25765/Argix10.Freight.Services/TLViewerService.svc?xsd=xsd0" namespace="http://Argix.Freight" />
+      <xsd:import schemaLocation="http://localhost:25765/Argix10.Freight.Services/TLViewerService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Argix" />
+      <xsd:import schemaLocation="http://localhost:25765/Argix10.Freight.Services/TLViewerService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:25765/Argix10.Freight.Services/TLViewerService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:25765/Argix10.Freight.Services/TLViewerService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Argix.Enterprise" />
+      <xsd:import schemaLocation="http://localhost:25765/Argix10.Freight.Services/TLViewerService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Argix.Freight" />
+      <xsd:import schemaLocation="http://localhost:25765/Argix10.Freight.Services/TLViewerService.svc?xsd=xsd6" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ITLViewerService_GetServiceInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetServiceInfo" />
+  </wsdl:message>
+  <wsdl:message name="ITLViewerService_GetServiceInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetServiceInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITLViewerService_GetServiceInfo_ConfigurationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/Argix" name="detail" element="q1:ConfigurationFault" />
+  </wsdl:message>
+  <wsdl:message name="ITLViewerService_GetUserConfiguration_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserConfiguration" />
+  </wsdl:message>
+  <wsdl:message name="ITLViewerService_GetUserConfiguration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserConfigurationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITLViewerService_GetUserConfiguration_ConfigurationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/Argix" name="detail" element="q2:ConfigurationFault" />
+  </wsdl:message>
+  <wsdl:message name="ITLViewerService_WriteLogEntry_InputMessage">
+    <wsdl:part name="parameters" element="tns:WriteLogEntry" />
+  </wsdl:message>
+  <wsdl:message name="ITLViewerService_GetTerminals_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTerminals" />
+  </wsdl:message>
+  <wsdl:message name="ITLViewerService_GetTerminals_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTerminalsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITLViewerService_GetTLView_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTLView" />
+  </wsdl:message>
+  <wsdl:message name="ITLViewerService_GetTLView_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTLViewResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITLViewerService_GetTLDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTLDetail" />
+  </wsdl:message>
+  <wsdl:message name="ITLViewerService_GetTLDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTLDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITLViewerService_GetAgentSummary_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgentSummary" />
+  </wsdl:message>
+  <wsdl:message name="ITLViewerService_GetAgentSummary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgentSummaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITLViewerService2_GetTerminals2_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTerminals2" />
+  </wsdl:message>
+  <wsdl:message name="ITLViewerService2_GetTerminals2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTerminals2Response" />
+  </wsdl:message>
+  <wsdl:message name="ITLViewerService2_GetTerminals2_TLViewerFaultFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q3:TLViewerFault" />
+  </wsdl:message>
+  <wsdl:message name="ITLViewerService2_GetTLView2_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTLView2" />
+  </wsdl:message>
+  <wsdl:message name="ITLViewerService2_GetTLView2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTLView2Response" />
+  </wsdl:message>
+  <wsdl:message name="ITLViewerService2_GetTLView2_TLViewerFaultFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q4:TLViewerFault" />
+  </wsdl:message>
+  <wsdl:message name="ITLViewerService2_GetTLDetail2_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTLDetail2" />
+  </wsdl:message>
+  <wsdl:message name="ITLViewerService2_GetTLDetail2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTLDetail2Response" />
+  </wsdl:message>
+  <wsdl:message name="ITLViewerService2_GetTLDetail2_TLViewerFaultFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q5:TLViewerFault" />
+  </wsdl:message>
+  <wsdl:message name="ITLViewerService2_GetAgentSummary2_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgentSummary2" />
+  </wsdl:message>
+  <wsdl:message name="ITLViewerService2_GetAgentSummary2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgentSummary2Response" />
+  </wsdl:message>
+  <wsdl:message name="ITLViewerService2_GetAgentSummary2_TLViewerFaultFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q6:TLViewerFault" />
+  </wsdl:message>
+  <wsdl:portType name="ITLViewerService">
+    <wsdl:operation name="GetServiceInfo">
+      <wsdl:input wsaw:Action="http://Argix.Freight/ITLViewerService/GetServiceInfo" message="tns:ITLViewerService_GetServiceInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/ITLViewerService/GetServiceInfoResponse" message="tns:ITLViewerService_GetServiceInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.ConfigurationFault" name="ConfigurationFaultFault" message="tns:ITLViewerService_GetServiceInfo_ConfigurationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserConfiguration">
+      <wsdl:input wsaw:Action="http://Argix.Freight/ITLViewerService/GetUserConfiguration" message="tns:ITLViewerService_GetUserConfiguration_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/ITLViewerService/GetUserConfigurationResponse" message="tns:ITLViewerService_GetUserConfiguration_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.ConfigurationFault" name="ConfigurationFaultFault" message="tns:ITLViewerService_GetUserConfiguration_ConfigurationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WriteLogEntry">
+      <wsdl:input wsaw:Action="http://Argix.Freight/ITLViewerService/WriteLogEntry" message="tns:ITLViewerService_WriteLogEntry_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTerminals">
+      <wsdl:input wsaw:Action="http://Argix.Freight/ITLViewerService/GetTerminals" message="tns:ITLViewerService_GetTerminals_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/ITLViewerService/GetTerminalsResponse" message="tns:ITLViewerService_GetTerminals_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTLView">
+      <wsdl:input wsaw:Action="http://Argix.Freight/ITLViewerService/GetTLView" message="tns:ITLViewerService_GetTLView_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/ITLViewerService/GetTLViewResponse" message="tns:ITLViewerService_GetTLView_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTLDetail">
+      <wsdl:input wsaw:Action="http://Argix.Freight/ITLViewerService/GetTLDetail" message="tns:ITLViewerService_GetTLDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/ITLViewerService/GetTLDetailResponse" message="tns:ITLViewerService_GetTLDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAgentSummary">
+      <wsdl:input wsaw:Action="http://Argix.Freight/ITLViewerService/GetAgentSummary" message="tns:ITLViewerService_GetAgentSummary_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/ITLViewerService/GetAgentSummaryResponse" message="tns:ITLViewerService_GetAgentSummary_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ITLViewerService2">
+    <wsdl:operation name="GetTerminals2">
+      <wsdl:input wsaw:Action="http://Argix.Freight/ITLViewerService2/GetTerminals2" message="tns:ITLViewerService2_GetTerminals2_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/ITLViewerService2/GetTerminals2Response" message="tns:ITLViewerService2_GetTerminals2_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.TLViewerFault" name="TLViewerFaultFault" message="tns:ITLViewerService2_GetTerminals2_TLViewerFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTLView2">
+      <wsdl:input wsaw:Action="http://Argix.Freight/ITLViewerService2/GetTLView2" message="tns:ITLViewerService2_GetTLView2_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/ITLViewerService2/GetTLView2Response" message="tns:ITLViewerService2_GetTLView2_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.TLViewerFault" name="TLViewerFaultFault" message="tns:ITLViewerService2_GetTLView2_TLViewerFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTLDetail2">
+      <wsdl:input wsaw:Action="http://Argix.Freight/ITLViewerService2/GetTLDetail2" message="tns:ITLViewerService2_GetTLDetail2_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/ITLViewerService2/GetTLDetail2Response" message="tns:ITLViewerService2_GetTLDetail2_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.TLViewerFault" name="TLViewerFaultFault" message="tns:ITLViewerService2_GetTLDetail2_TLViewerFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAgentSummary2">
+      <wsdl:input wsaw:Action="http://Argix.Freight/ITLViewerService2/GetAgentSummary2" message="tns:ITLViewerService2_GetAgentSummary2_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/ITLViewerService2/GetAgentSummary2Response" message="tns:ITLViewerService2_GetAgentSummary2_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.TLViewerFault" name="TLViewerFaultFault" message="tns:ITLViewerService2_GetAgentSummary2_TLViewerFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

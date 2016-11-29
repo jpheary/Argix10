@@ -1,0 +1,49 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Default.master.cs" Inherits="DefaultMaster" ClassName="DefaultMaster" %>
+<%@ Register Assembly="System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Namespace="System.Web.UI.WebControls" TagPrefix="asp" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1" runat="server">
+    <title>Freight Assignment</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <asp:ContentPlaceHolder ID="cpMeta" runat="server" />
+    <link href='http://fonts.googleapis.com/css?family=Michroma' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,300italic' rel='stylesheet' type='text/css'>
+    <link runat="server" href="~/App_Themes/Argix/Argix.css" rel="stylesheet" type="text/css" />
+</head>
+<body id="idBody" runat="server" style=" position:relative; margin-top:0; " >
+<form id="idForm" runat="server" >
+    <asp:ScriptManager ID="smPage" runat="server" EnablePartialRendering="true" AsyncPostBackTimeout="600" ScriptMode="Auto" LoadScriptsBeforeUI="false"></asp:ScriptManager>
+        <div id="page">
+            <div id="header">
+                <div id="logo"><a href="http://www.argixlogistics.com" target="_self"><img runat="server" src="~/App_Themes/Argix/Images/argix-logo.gif" alt="Argix logo" style="border: 0;" /></a></div>
+                <div id="superMenu">
+		            <ul>
+			            <li>
+                            <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                                <AnonymousTemplate><a href="Login.aspx">[Login]</a></AnonymousTemplate>
+                                <LoggedInTemplate>
+                                    Welcome <span class="bold"><asp:LoginName ID="HeadLoginName" runat="server" /></span>
+                                    <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutText="Log Out" LogoutAction="Redirect" LogoutPageUrl="http://www.argixlogistics.com" OnLoggedOut="OnLogout" />
+                                </LoggedInTemplate>
+                            </asp:LoginView>
+                        </li>
+		            </ul>
+                    <asp:Label ID="lblStatus" runat="server" Text="" />
+                </div>
+                <div class="clearRight"></div>
+                <div id="mainMenu">
+		            <ul>
+			            <li><asp:HyperLink ID="lnkStations" runat="server" NavigateUrl="~/Stations.aspx" Text="Stations" /></li>
+			            <li><asp:HyperLink ID="lnkFreight" runat="server" NavigateUrl="~/Default.aspx" Text="Freight" /></li>
+		            </ul>
+	            </div>
+            </div>
+            <div id="head"></div>
+            <div id="title">Freight Assignment</div>
+            <div id="body"><asp:contentplaceholder id="cpBody" runat="server"></asp:contentplaceholder></div>
+            <div id="footer">Copyright 2013 Argix Logistics, Inc. v10112013</div>
+        </div>
+</form>
+</body>
+</html>

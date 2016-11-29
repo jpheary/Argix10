@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ISDExportDataset" targetNamespace="http://tempuri.org/ISDExportDataset.xsd" xmlns:mstns="http://tempuri.org/ISDExportDataset.xsd" xmlns="http://tempuri.org/ISDExportDataset.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="ISDExportDataset" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PickupTable">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ClientNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="DivisionNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="ClientName" type="xs:string" minOccurs="0" />
+              <xs:element name="ShipperNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="ShipperName" type="xs:string" minOccurs="0" />
+              <xs:element name="PickUpDate" type="xs:string" minOccurs="0" />
+              <xs:element name="PickupNumber" type="xs:int" minOccurs="0" />
+              <xs:element name="FreightType" type="xs:string" minOccurs="0" />
+              <xs:element name="TDSNumber" type="xs:int" minOccurs="0" />
+              <xs:element name="VendorKey" type="xs:string" minOccurs="0" />
+              <xs:element name="ID" type="xs:string" minOccurs="0" />
+              <xs:element name="TrailerNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="SealNumber" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SortedItemTable">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="LABEL_SEQ_NUMBER" type="xs:string" minOccurs="0" />
+              <xs:element name="CLIENT_NUMBER" type="xs:string" minOccurs="0" />
+              <xs:element name="CLIENT_DIV_NUM" type="xs:string" minOccurs="0" />
+              <xs:element name="AGENT_NUMBER" type="xs:string" minOccurs="0" />
+              <xs:element name="VENDOR_NUMBER" type="xs:string" minOccurs="0" />
+              <xs:element name="SORTED_LOCATION" type="xs:string" minOccurs="0" />
+              <xs:element name="DAMAGE_CODE" type="xs:string" minOccurs="0" />
+              <xs:element name="PICKUP_DATE" type="xs:dateTime" />
+              <xs:element name="PICKUP_NUMBER" type="xs:int" />
+              <xs:element name="STORE" type="xs:int" minOccurs="0" />
+              <xs:element name="ZONE_CODE" type="xs:string" minOccurs="0" />
+              <xs:element name="TRAILER_LOAD_NUM" type="xs:string" minOccurs="0" />
+              <xs:element name="ITEM_TYPE" type="xs:string" minOccurs="0" />
+              <xs:element name="ITEM_WEIGHT" type="xs:int" minOccurs="0" />
+              <xs:element name="VENDOR_KEY" type="xs:string" minOccurs="0" />
+              <xs:element name="VENDOR_ITEM_NUMBER" type="xs:string" minOccurs="0" />
+              <xs:element name="RETURN_FLAG" type="xs:string" minOccurs="0" />
+              <xs:element name="RETURN_NUMBER" type="xs:string" minOccurs="0" />
+              <xs:element name="SHIFT_NUMBER" type="xs:string" minOccurs="0" />
+              <xs:element name="SHIFT_DATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="END_TIME" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ARC_DATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="STATION" type="xs:string" minOccurs="0" />
+              <xs:element name="ITEM_CUBE" type="xs:int" minOccurs="0" />
+              <xs:element name="SORT_DATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SAN_NUMBER" type="xs:string" minOccurs="0" />
+              <xs:element name="ELAPSED_SECONDS" type="xs:int" minOccurs="0" />
+              <xs:element name="DOWN_SECONDS" type="xs:int" minOccurs="0" />
+              <xs:element name="PO_NUMBER" type="xs:string" minOccurs="0" />
+              <xs:element name="OS_TRACKING_NUMBER" type="xs:string" minOccurs="0" />
+              <xs:element name="SHIPPING_METHOD" type="xs:string" minOccurs="0" />
+              <xs:element name="SAMPLE_DATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ScanString" type="xs:string" minOccurs="0" />
+              <xs:element name="InboundLabelID" type="xs:int" minOccurs="0" />
+              <xs:element name="FreightType" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ClientTable" >
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CLID" type="xs:string" minOccurs="0" />
+              <xs:element name="ExportFormat" type="xs:string" default="RDS4" minOccurs="0" />
+              <xs:element name="ExportPath" type="xs:string" minOccurs="0" />
+              <xs:element name="CounterKey" type="xs:string" default="BWARE" minOccurs="0" />
+              <xs:element name="Client" type="xs:string" minOccurs="0" />
+              <xs:element name="Scanner" type="xs:string" minOccurs="0" />
+              <xs:element name="UserID" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ExportTable" >
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CLID" type="xs:string" minOccurs="0" />
+              <xs:element name="ExportFormat" type="xs:string" default="RDS4" minOccurs="0" />
+              <xs:element name="ExportPath" type="xs:string" minOccurs="0" />
+              <xs:element name="CounterKey" type="xs:string" default="BWARE" minOccurs="0" />
+              <xs:element name="Client" type="xs:string" minOccurs="0" />
+              <xs:element name="Scanner" type="xs:string" minOccurs="0" />
+              <xs:element name="UserID" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

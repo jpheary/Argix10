@@ -1,0 +1,148 @@
+              --------------------------------------------------------
+                    Ship Schedule Templates Application Readme File
+		                       		July, 2014
+              --------------------------------------------------------
+                         (c) Copyright Argix Logistics, 2005-2014
+
+This document provides late-breaking or other information that supplements the Ship Schedule 
+Templates documentation.
+
+------------------------
+How to Use This Document
+------------------------
+To view the Readme file on-screen in Windows Notepad, maximize the Notepad window and click Word 
+Wrap on the Edit menu. To print the Readme file, open it in Notepad or another word processor, 
+and then use the Print command on the File menu.
+
+==============
+CONTENTS
+==============
+INSTALLATION
+   DEPLOYMENT
+   CONFIGURATION
+
+NOTES
+   GENERAL
+   DEPENDENCIES
+   OPERATION
+   VERSION HISTORY
+==============
+
+
+INSTALLATION
+==============
+DEPLOYMENT
+Ship Schedule Templates is installed into a Click-Once deployment folder visible from an IIS web service as follows:
+1.	Create a virtual folder c:\inetpub\wwwroot\Argix10\Apps\AgentLineHaul\ShipScheduleTemplates on a web server like 
+rgxvmweb using Windows explorer. 
+2.	Create a sub-folder called Application Files.
+3.	Copy the new versioned Click-Once deployment folder (i.e ShipScheduleTemplates_4_0_0_2) into the Application Files 
+	folder; this folder contains the following:
+		Argix10.Export.dll
+		Argix10.Windows.dll
+		Infragistics4.Shared.v12.1.dll
+		Infragistics4.Win.UltraWinGrid.v12.1.dll
+		Infragistics4.Win.v12.1.dll
+		releasenotes.txt
+		ShipScheduleTemplates.application
+		ShipScheduleTemplates.exe
+		ShipScheduleTemplates.exe.config
+		ShipScheduleTemplates.exe.manifest
+4.	Copy the deployment manifest, ShipScheduleTemplates.application, into the ShipScheduleTemplates folder. This manifest points to
+	tha application manifest (i.e. \ShipScheduleTemplates_4_0_0_2\ShipScheduleTemplates.exe.manifest)
+5.	Launch the Internet Information Services snap-in and validate that the virtual folder allows
+	anonymous access. A web application does not need to be created for deployment.
+6.	Verify http access from Internet Explorer to the following url: 
+		http://rgxvmweb/Argix10/Apps/AgentLineHaul/ShipScheduleTemplates/ShipScheduleTemplates.application
+7.	The Click-Once deployment is installed on the client machine in the C:\Users\<username>\AppData\Local\Apps\2.0 folder.
+8.	Version rollbacks are accomplished by simply copying the deployment manifest (i.e. ShipScheduleTemplates.application) from 
+	a previous Click-Once deployment folder (i.e ShipScheduleTemplates_4_0_0_1) into the ShipScheduleTemplates root folder
+
+
+CONFIGURATION
+Open the local sort database, goto the Configuration table, and add/edit the values below:
+	Application              PCName          Key                       Value                     Security 
+	------------------------ --------------- ------------------------- ------------------------- -------- 
+	Ship Schedule Templates   Default         TraceLevel                4                         1        
+
+
+NOTES
+==============
+GENERAL
+The Ship Schedule Templates Application (ShipScheduleTemplates.exe) is a Windows based application used 
+to manage ship schedule template trips. These templates are used by the Ship Schedule application to add 
+pre-defined trips to a ship schedule.
+
+
+DEPENDENCIES
+The Ship Schedule Templates application is dependent upon the following web services: 
+- http://rgxvmweb/Argix10/Argix10.Membership.Services/RoleService.svc
+- http://rgxvmweb/Argix10/Argix10.AgentLineHaul.Services/ShipScheduleTemplatesService.svc
+
+
+ROLE MANAGEMENT
+The following roles are used in this application:
+LineHaul Templator
+- can do everything.
+
+Use the following link to access the role manager to create and edit role assignments for Argix employees: 
+http://rgxvmweb/Argix10/Apps/IT/Membership/Membership.application
+
+
+OPERATION
+Normal:
+The Ship Schedule Templates Application (ShipScheduleTemplates.exe) operates by launching from a web server deployment url 
+(i.e. http://rgxvmweb/Argix10/Apps/ShipScheduleTemplates/ShipScheduleTemplates.application). After a brief splash screen, 
+a sizeable window appears and displays a grid loaded with ship schedule templates for all Argix terminals. The taskbar 
+displays the operating terminal and connection status. Additional operating steps can be found in the on-line documentation 
+provided by the Help/Contents menu item.
+
+
+VERSION HISTORY
+v2.7.0, 08/28/07 ---------------------------------------------------------------------------
+Requirements/features
+- Initial release.
+Design/deployment
+- Initial release.
+
+v2.8.0, 01/05/08 ---------------------------------------------------------------------------
+Requirements/features
+- None.
+Design/deployment
+- Application ported to .NET Framework 2.0 using Visual Studio 2005.
+
+v2.8.1, 04/22/09 ---------------------------------------------------------------------------
+Requirements/features
+- None.
+Design/deployment
+- Bug fixes.
+
+v3.0.0, 09/16/09 ---------------------------------------------------------------------------
+Requirements/features
+- None.
+Design/deployment
+- Application ported to .NET Framework 3.5 using Visual Studio 2008.
+
+v3.5.0, 09/21/11, 10/11/11 -----------------------------------------------------------------
+Requirements/features
+- None.
+Design/deployment
+- Moved businesss logic/data access into Argix08.GlobalServices WCF service
+- Upgraded to Infragistics NetAdvantage 2010 third party control suite (required: Infragistics2.Win.v10.1.dll, Infragistics2.Shared.v10.1.dll, Infragistics2.Win.UltraWinGrid.v10.1.dll)
+- Other minor design changes
+- restored grid updates on RowChangedOrLostFocus
+
+v4.0.0, 01/15/13 ---------------------------------------------------------------------------
+Requirements/features
+- None.
+Design/deployment
+- Application ported to .NET Framework 4.0 using Visual Studio 2010.
+- Moved businesss logic/data access into Argix10.AgentLineHaul.Services WCF service
+
+v4.0.1, 10/10/13, 03/30/14, 06/18/14, 07/15/14 ---------------------------------------------
+Requirements/features
+- None.
+Design/deployment
+- upgraded to Infragistics NetAdvantage 2012 third party control suite (required: Infragistics4.Win.v12.1.dll, Infragistics2.Shared.v12.1.dll, Infragistics2.Win.UltraWinGrid.v12.1.dll)
+- added role-based security using web service http://rgxvmweb/Argix10/Argix10.Membership.Services/RoleService.svc.
+- restored context menu and missing grid masks for time fields

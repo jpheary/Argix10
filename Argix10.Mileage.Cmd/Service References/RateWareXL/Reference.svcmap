@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9c0e7936-0cd9-4180-b177-31902776ff4a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:34780/Argix10.Finance.Services/RateQuoteService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="RateQuoteService.wsdl" MetadataType="Wsdl" ID="84853457-9d67-492d-9183-9937cbf2c38a" SourceId="1" SourceUrl="http://localhost:34780/Argix10.Finance.Services/RateQuoteService.svc?wsdl" />
+    <MetadataFile FileName="RateQuoteService.xsd" MetadataType="Schema" ID="7f423be0-177e-4256-940f-a1929c8a2172" SourceId="1" SourceUrl="http://localhost:34780/Argix10.Finance.Services/RateQuoteService.svc?xsd=xsd8" />
+    <MetadataFile FileName="RateQuoteService1.wsdl" MetadataType="Wsdl" ID="72aae995-d293-4594-aa2b-f1af6bfbd580" SourceId="1" SourceUrl="http://localhost:34780/Argix10.Finance.Services/RateQuoteService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="RateQuoteService.disco" MetadataType="Disco" ID="0c19e8f8-8dc7-4f0c-a9f6-ea5ab74e241c" SourceId="1" SourceUrl="http://localhost:34780/Argix10.Finance.Services/RateQuoteService.svc?disco" />
+    <MetadataFile FileName="RateQuoteService1.xsd" MetadataType="Schema" ID="7f7855d6-a194-4784-aad1-1dfd243e0794" SourceId="1" SourceUrl="http://localhost:34780/Argix10.Finance.Services/RateQuoteService.svc?xsd=xsd4" />
+    <MetadataFile FileName="RateQuoteService2.xsd" MetadataType="Schema" ID="ee8e0062-b201-4880-bc51-79db87b0864b" SourceId="1" SourceUrl="http://localhost:34780/Argix10.Finance.Services/RateQuoteService.svc?xsd=xsd5" />
+    <MetadataFile FileName="RateQuoteService3.xsd" MetadataType="Schema" ID="84860d47-b164-456c-ac22-1f86c0721745" SourceId="1" SourceUrl="http://localhost:34780/Argix10.Finance.Services/RateQuoteService.svc?xsd=xsd6" />
+    <MetadataFile FileName="RateQuoteService4.xsd" MetadataType="Schema" ID="721a08a4-8f04-4cff-85ba-e5b091417203" SourceId="1" SourceUrl="http://localhost:34780/Argix10.Finance.Services/RateQuoteService.svc?xsd=xsd7" />
+    <MetadataFile FileName="RateQuoteService5.xsd" MetadataType="Schema" ID="7906ef57-dcc9-44ed-ad4f-224ac128daa9" SourceId="1" SourceUrl="http://localhost:34780/Argix10.Finance.Services/RateQuoteService.svc?xsd=xsd0" />
+    <MetadataFile FileName="RateQuoteService6.xsd" MetadataType="Schema" ID="df8857b7-7cd5-48b9-8605-0187af11df67" SourceId="1" SourceUrl="http://localhost:34780/Argix10.Finance.Services/RateQuoteService.svc?xsd=xsd1" />
+    <MetadataFile FileName="RateQuoteService7.xsd" MetadataType="Schema" ID="1bdddc1d-60ad-4e4f-8800-7e350035f759" SourceId="1" SourceUrl="http://localhost:34780/Argix10.Finance.Services/RateQuoteService.svc?xsd=xsd2" />
+    <MetadataFile FileName="RateQuoteService8.xsd" MetadataType="Schema" ID="50ba50dd-6f92-4891-9337-68733e6579a6" SourceId="1" SourceUrl="http://localhost:34780/Argix10.Finance.Services/RateQuoteService.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

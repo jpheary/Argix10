@@ -1,0 +1,43 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Default.master.cs"  Inherits="DefaultMaster" %>
+<%@ Register Assembly="System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Namespace="System.Web.UI.WebControls" TagPrefix="asp" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1" runat="server">
+    <title>Argix Logistics CRM</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <asp:ContentPlaceHolder id="cpHead" runat="server"></asp:ContentPlaceHolder>
+    <link href='http://fonts.googleapis.com/css?family=Michroma' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,300italic' rel='stylesheet' type='text/css'>
+    <link id="Link1" runat="server" href="~/App_Themes/Argix/Argix.css" rel="stylesheet" type="text/css" />
+    <script type="text/jscript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script type="text/jscript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+</head>
+<body id="body1" onunload="javascript:document.body.style.cursor='wait';">
+<form id="form1" runat="server">
+<div id="page">
+    <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePartialRendering="true" ScriptMode="Auto" LoadScriptsBeforeUI="false"></asp:ScriptManager>
+    <div id="header">
+        <div id="logo">
+            <asp:Image ID="imgTitle" runat="server" ImageUrl="~/App_Themes/Argix/Images/app.gif" ImageAlign="Middle" />
+            &nbsp;<asp:Label id="lblTitle" runat="server" CssClass="title" Text="Argix Logistics CRM" />
+        </div>
+        <div id="superMenu"><ul><li><asp:Label id="lblUser" runat="server" Text="" /></li></ul></div>
+        <div class="clearRight"></div>
+        <div id="mainMenu">
+            <ul>
+	            <li><asp:LinkButton ID="lnkReports" runat="server" PostBackUrl="" OnClientClick="javascript:window.open('http://rgxvmweb/argix10/reports'); return false;" ToolTip="Opens the Argix Reports application">Reports</asp:LinkButton></li>
+	            <li><asp:LinkButton ID="lnkTracking" runat="server" PostBackUrl="" OnClientClick="javascript:window.open('http://rgxvmweb/argix10/tracking/login.aspx'); return false;" ToolTip="Opens the Carton Tracking application">Carton Tracking</asp:LinkButton></li>
+            </ul>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="body">
+        <asp:ContentPlaceHolder id="cpBody" runat="server"></asp:ContentPlaceHolder>
+    </div>
+</div>
+<div class="clear"></div>
+<div id="footer">Copyright 2009-2013 Argix Logistics, Inc. v20131105</div>
+</form>
+</body>
+</html>

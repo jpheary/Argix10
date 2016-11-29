@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="0de73d60-fe21-4f4f-8949-519f12af209b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:4027/Argix10.HR.Services/PermitSearch.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PermitSearch.xsd" MetadataType="Schema" ID="76c9462b-bcde-408d-8ad0-3c8b4cc3e1b5" SourceId="1" SourceUrl="http://localhost:4027/Argix10.HR.Services/PermitSearch.svc?xsd=xsd2" />
+    <MetadataFile FileName="PermitSearch.disco" MetadataType="Disco" ID="48c694b2-9d2a-4c8a-b58b-e483138d3402" SourceId="1" SourceUrl="http://localhost:4027/Argix10.HR.Services/PermitSearch.svc?disco" />
+    <MetadataFile FileName="PermitSearchService.wsdl" MetadataType="Wsdl" ID="b77c628c-cc9f-4cb7-bebd-5d1a7b71cf8f" SourceId="1" SourceUrl="http://localhost:4027/Argix10.HR.Services/PermitSearch.svc?wsdl" />
+    <MetadataFile FileName="PermitSearch1.xsd" MetadataType="Schema" ID="e035293e-1250-4352-bb2d-da8e1b0e1c65" SourceId="1" SourceUrl="http://localhost:4027/Argix10.HR.Services/PermitSearch.svc?xsd=xsd3" />
+    <MetadataFile FileName="PermitSearch.wsdl" MetadataType="Wsdl" ID="ed3c6e7a-be4a-4869-a90b-e44c9658eefc" SourceId="1" SourceUrl="http://localhost:4027/Argix10.HR.Services/PermitSearch.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="PermitSearch2.xsd" MetadataType="Schema" ID="1209a73d-eed5-43d2-abb3-6b934ed7f6d6" SourceId="1" SourceUrl="http://localhost:4027/Argix10.HR.Services/PermitSearch.svc?xsd=xsd1" />
+    <MetadataFile FileName="PermitSearch3.xsd" MetadataType="Schema" ID="c47090bd-f42c-4ec8-a9cc-f6b0f2545874" SourceId="1" SourceUrl="http://localhost:4027/Argix10.HR.Services/PermitSearch.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

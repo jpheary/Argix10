@@ -1,0 +1,37 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="viewport" content="user-scalable=no, width=device-width" />
+    <link href="<%= Url.Content("~/Content/Mobile.css") %>" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        function unhide(divID) {
+            var item = document.getElementById(divID);
+            if (item) item.className = (item.className == 'hidden') ? 'unhidden' : 'hidden';
+        }
+    </script>
+</head>
+<body>
+    <div id="header">
+        <div id="logo">
+            <a href="<%: Url.Action("Index", "Home")%>">
+                <img src="<%= Url.Content("~/Content/Images/logo.jpg") %>" height="40px" alt="Argix logo" style="border: 0;" />
+            </a>
+        </div>
+    </div>
+    <div id="menu">
+        <div class="menuItem"><a href="<%: Url.Action("AboutUs", "Home")%>">About Us</a></div>
+        <div class="menuItem"><a href="<%: Url.Action("Services", "Home")%>">Services</a></div>
+        <div class="menuItem"><a href="<%: Url.Action("WhyArgix", "Home")%>">Why Argix</a></div>
+        <div class="menuItem"><a href="<%: Url.Action("ContactUs", "Home")%>">Contact</a></div>
+    </div>
+    <div id="content">
+        <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+    </div>
+</body>
+</html>

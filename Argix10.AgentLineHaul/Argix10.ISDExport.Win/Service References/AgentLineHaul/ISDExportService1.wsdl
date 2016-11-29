@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://Argix.AgentLineHaul" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://Argix.AgentLineHaul" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://Argix.AgentLineHaul/Imports">
+      <xsd:import schemaLocation="http://localhost:55732/Argix10.AgentLineHaul.Services/ISDExportService.svc?xsd=xsd0" namespace="http://Argix.AgentLineHaul" />
+      <xsd:import schemaLocation="http://localhost:55732/Argix10.AgentLineHaul.Services/ISDExportService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Argix" />
+      <xsd:import schemaLocation="http://localhost:55732/Argix10.AgentLineHaul.Services/ISDExportService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:55732/Argix10.AgentLineHaul.Services/ISDExportService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:55732/Argix10.AgentLineHaul.Services/ISDExportService.svc?xsd=xsd4" />
+      <xsd:import schemaLocation="http://localhost:55732/Argix10.AgentLineHaul.Services/ISDExportService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Argix.AgentLineHaul" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IISDExportService_GetServiceInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetServiceInfo" />
+  </wsdl:message>
+  <wsdl:message name="IISDExportService_GetServiceInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetServiceInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IISDExportService_GetServiceInfo_ConfigurationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/Argix" name="detail" element="q1:ConfigurationFault" />
+  </wsdl:message>
+  <wsdl:message name="IISDExportService_GetUserConfiguration_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserConfiguration" />
+  </wsdl:message>
+  <wsdl:message name="IISDExportService_GetUserConfiguration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserConfigurationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IISDExportService_GetUserConfiguration_ConfigurationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/Argix" name="detail" element="q2:ConfigurationFault" />
+  </wsdl:message>
+  <wsdl:message name="IISDExportService_WriteLogEntry_InputMessage">
+    <wsdl:part name="parameters" element="tns:WriteLogEntry" />
+  </wsdl:message>
+  <wsdl:message name="IISDExportService_GetPickups_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPickups" />
+  </wsdl:message>
+  <wsdl:message name="IISDExportService_GetPickups_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPickupsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IISDExportService_GetSortedItems_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSortedItems" />
+  </wsdl:message>
+  <wsdl:message name="IISDExportService_GetSortedItems_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSortedItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IISDExportService_GetExportFilename_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExportFilename" />
+  </wsdl:message>
+  <wsdl:message name="IISDExportService_GetExportFilename_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExportFilenameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IISDExportService_GetISDClients_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetISDClients" />
+  </wsdl:message>
+  <wsdl:message name="IISDExportService_GetISDClients_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetISDClientsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IISDExportService_CreateISDClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateISDClient" />
+  </wsdl:message>
+  <wsdl:message name="IISDExportService_CreateISDClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateISDClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IISDExportService_CreateISDClient_AgentLineHaulFaultFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/Argix.AgentLineHaul" name="detail" element="q3:AgentLineHaulFault" />
+  </wsdl:message>
+  <wsdl:message name="IISDExportService_UpdateISDClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateISDClient" />
+  </wsdl:message>
+  <wsdl:message name="IISDExportService_UpdateISDClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateISDClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IISDExportService_UpdateISDClient_AgentLineHaulFaultFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/Argix.AgentLineHaul" name="detail" element="q4:AgentLineHaulFault" />
+  </wsdl:message>
+  <wsdl:message name="IISDExportService_DeleteISDClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteISDClient" />
+  </wsdl:message>
+  <wsdl:message name="IISDExportService_DeleteISDClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteISDClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IISDExportService_DeleteISDClient_AgentLineHaulFaultFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/Argix.AgentLineHaul" name="detail" element="q5:AgentLineHaulFault" />
+  </wsdl:message>
+  <wsdl:portType name="IISDExportService">
+    <wsdl:operation name="GetServiceInfo">
+      <wsdl:input wsaw:Action="http://Argix.AgentLineHaul/IISDExportService/GetServiceInfo" message="tns:IISDExportService_GetServiceInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.AgentLineHaul/IISDExportService/GetServiceInfoResponse" message="tns:IISDExportService_GetServiceInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.ConfigurationFault" name="ConfigurationFaultFault" message="tns:IISDExportService_GetServiceInfo_ConfigurationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserConfiguration">
+      <wsdl:input wsaw:Action="http://Argix.AgentLineHaul/IISDExportService/GetUserConfiguration" message="tns:IISDExportService_GetUserConfiguration_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.AgentLineHaul/IISDExportService/GetUserConfigurationResponse" message="tns:IISDExportService_GetUserConfiguration_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.ConfigurationFault" name="ConfigurationFaultFault" message="tns:IISDExportService_GetUserConfiguration_ConfigurationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WriteLogEntry">
+      <wsdl:input wsaw:Action="http://Argix.AgentLineHaul/IISDExportService/WriteLogEntry" message="tns:IISDExportService_WriteLogEntry_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPickups">
+      <wsdl:input wsaw:Action="http://Argix.AgentLineHaul/IISDExportService/GetPickups" message="tns:IISDExportService_GetPickups_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.AgentLineHaul/IISDExportService/GetPickupsResponse" message="tns:IISDExportService_GetPickups_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSortedItems">
+      <wsdl:input wsaw:Action="http://Argix.AgentLineHaul/IISDExportService/GetSortedItems" message="tns:IISDExportService_GetSortedItems_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.AgentLineHaul/IISDExportService/GetSortedItemsResponse" message="tns:IISDExportService_GetSortedItems_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExportFilename">
+      <wsdl:input wsaw:Action="http://Argix.AgentLineHaul/IISDExportService/GetExportFilename" message="tns:IISDExportService_GetExportFilename_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.AgentLineHaul/IISDExportService/GetExportFilenameResponse" message="tns:IISDExportService_GetExportFilename_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetISDClients">
+      <wsdl:input wsaw:Action="http://Argix.AgentLineHaul/IISDExportService/GetISDClients" message="tns:IISDExportService_GetISDClients_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.AgentLineHaul/IISDExportService/GetISDClientsResponse" message="tns:IISDExportService_GetISDClients_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateISDClient">
+      <wsdl:input wsaw:Action="http://Argix.AgentLineHaul/IISDExportService/CreateISDClient" message="tns:IISDExportService_CreateISDClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.AgentLineHaul/IISDExportService/CreateISDClientResponse" message="tns:IISDExportService_CreateISDClient_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.AgentLineHaul.AgentLineHaulFault" name="AgentLineHaulFaultFault" message="tns:IISDExportService_CreateISDClient_AgentLineHaulFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateISDClient">
+      <wsdl:input wsaw:Action="http://Argix.AgentLineHaul/IISDExportService/UpdateISDClient" message="tns:IISDExportService_UpdateISDClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.AgentLineHaul/IISDExportService/UpdateISDClientResponse" message="tns:IISDExportService_UpdateISDClient_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.AgentLineHaul.AgentLineHaulFault" name="AgentLineHaulFaultFault" message="tns:IISDExportService_UpdateISDClient_AgentLineHaulFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteISDClient">
+      <wsdl:input wsaw:Action="http://Argix.AgentLineHaul/IISDExportService/DeleteISDClient" message="tns:IISDExportService_DeleteISDClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.AgentLineHaul/IISDExportService/DeleteISDClientResponse" message="tns:IISDExportService_DeleteISDClient_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.AgentLineHaul.AgentLineHaulFault" name="AgentLineHaulFaultFault" message="tns:IISDExportService_DeleteISDClient_AgentLineHaulFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

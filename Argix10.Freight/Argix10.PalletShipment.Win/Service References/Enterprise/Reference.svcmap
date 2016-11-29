@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5e5a8887-e2b8-499a-83bd-db85ab73ba57" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://rgxvmweb/Argix10/Argix10.Enterprise.Services/LTLTracking.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="LTLTracking.wsdl" MetadataType="Wsdl" ID="57b6e09e-2d8d-440e-93fe-e1b0c5e4d235" SourceId="1" SourceUrl="http://rgxvmweb.argix.com/Argix10/Argix10.Enterprise.Services/LTLTracking.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="LTLTracking.xsd" MetadataType="Schema" ID="4905f6d9-b3d7-4ffe-9aae-252604e07e23" SourceId="1" SourceUrl="http://rgxvmweb.argix.com/Argix10/Argix10.Enterprise.Services/LTLTracking.svc?xsd=xsd2" />
+    <MetadataFile FileName="LTLTracking1.xsd" MetadataType="Schema" ID="f900b519-e031-45d8-92bc-0f77a3a35843" SourceId="1" SourceUrl="http://rgxvmweb.argix.com/Argix10/Argix10.Enterprise.Services/LTLTracking.svc?xsd=xsd0" />
+    <MetadataFile FileName="LTLTracking2.xsd" MetadataType="Schema" ID="c13820f7-d072-48c9-9b62-571723dc5905" SourceId="1" SourceUrl="http://rgxvmweb.argix.com/Argix10/Argix10.Enterprise.Services/LTLTracking.svc?xsd=xsd1" />
+    <MetadataFile FileName="LTLTrackingService.wsdl" MetadataType="Wsdl" ID="c83a6b85-6ed3-4c0a-8f9b-149c59dde226" SourceId="1" SourceUrl="http://rgxvmweb.argix.com/Argix10/Argix10.Enterprise.Services/LTLTracking.svc?wsdl" />
+    <MetadataFile FileName="LTLTracking.disco" MetadataType="Disco" ID="9f4b856e-1cb1-4cfa-89b3-33c34eee8aa0" SourceId="1" SourceUrl="http://rgxvmweb.argix.com/Argix10/Argix10.Enterprise.Services/LTLTracking.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

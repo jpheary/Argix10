@@ -1,0 +1,238 @@
+﻿ .imgFloatRight {
+	float:right;
+	margin-top:30px;
+	margin-right:10px;
+}
+.textContainer {
+	float: left;
+	margin: 20px 20px 20px 20px;
+    text-align: left;
+}
+.textContainer_Contact {
+	float:left;
+	width:300px;
+	margin: 20px 20px 0px 20px;
+    text-align: left;
+}
+
+.formContainer_Contact {
+	float:right;
+	width:200px;
+	margin: 20px 0px 0px 10px;
+    text-align: left;
+}
+.redBoldLink {
+	color:#D23059;
+	font-style:italic;
+	font-weight:bold;
+	text-decoration:underline;
+}
+.redText {
+	color:#D23059;
+}
+.testimonial {
+	float:left;
+	width:450px;
+	margin-top:30px;
+	margin-left: 20px;
+	margin-bottom: 30px;
+}
+
+body {
+    font-size: .80em;
+    font-family: "Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
+    margin: 0px;
+    padding: 0px;
+	background-color:#333333;
+}
+
+#page {
+    position: relative;
+	width: 900px;
+	margin: auto;
+	text-align: center;
+}
+#header {
+    height: 90px;
+    background: #cc3333;
+    
+}
+#left {
+    float: left;
+    position: relative;
+    width: 240px;
+    height: 477px;
+    border-top: 3px solid #a9a9a9;
+    background: #cc3333;
+}
+#right {
+    float: right;
+    position: relative;
+    width: 660px;
+    height: 480px;
+    padding: 0px;       /* >0 causes right to float off */
+    /* background: #a9a9a9; */
+	background-image: url(../styles/images/canvas.jpg);
+}
+#footer {
+	width: 900px;
+	height: 48px;
+	margin-top: 12px;
+	text-align: center;
+    vertical-align: middle;
+	color: #ffffff;
+}
+
+#logo {
+    float: left;
+    width: 268px;
+    height: 56px;
+    margin: 14px 6px 6px 6px;
+}
+
+#superMenu {
+    float: right;
+    width: 300px;
+    height: 24px;
+    margin: 6px 6px;
+    padding: 0;
+	background: #cc3333;
+    border: 0px solid #000000;
+}
+#superMenu ul { list-style-type: none; overflow: hidden; }
+#superMenu ul li { 
+    display: block;
+	float: right;
+    margin: 2px;
+    border: 0px solid #000000; 
+}
+#superMenu ul li a {
+	width: 100px;
+	padding: 3px 12px 3px 12px;
+	color: #ffffff;	
+	font: 400 Helvetica, Verdana, Arial, sans-serif;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+#superMenu ul li a:hover { color: #000000; }
+
+#mainMenu {
+    float: right;
+    width: 600px;
+    height: 24px;
+    margin: 30px 1px;
+    padding: 0;
+	background: #cc3333;
+    border: 0px solid #000000;
+}
+#mainMenu ul{ list-style-type: none; overflow: hidden; }
+#mainMenu ul li { 
+	float: right;
+    display: block;
+    margin: 2px 0;
+    border: 0px solid #000000; 
+}
+#mainMenu ul li a {
+	padding: 3px 24px 3px 24px;
+	background: #a9a9a9;
+	border-left: 1px solid #ffffff;
+	color: #ffffff;	
+	font: 400 Helvetica, Verdana, Arial, sans-serif;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+#mainMenu ul li a:hover { color: #000000; }
+
+
+#title {
+    height: 36px;
+    padding: 0px 0 0 36px;
+    background: #000000;
+    color: #ffffff;
+    font-size: 1.8em;
+    font-weight: 600;
+    font-style: italic;
+    text-align: left;
+	text-transform: uppercase;
+}
+
+#submenu {
+    float: left;
+    display: block;
+    padding: 0px 0px 0px 0px;
+    margin: 6px 6px 6px 6px;
+    border-top: 0px solid #000000;
+    color: #ffffff;
+    text-align: center;
+}
+#submenu ul{
+    list-style-type: none; 
+    overflow: hidden; 
+}
+#submenu ul li { }
+#submenu ul li a {
+    float: left;
+    display: block;
+	width: 170px;
+    margin: 0;
+    padding: 6px;
+    border-bottom: 1px solid #000000;
+    color: #ffffff;
+    text-decoration: none;
+	text-align: left;
+	text-transform: uppercase;
+}
+#submenu ul li a:hover { color: #000000; }
+
+#address {
+    float: left;
+    width: 200px;
+    margin: 20px 20px;
+    background: #cc3333;
+    border: 2px solid #000000;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 1.5em;
+    color: #000000;
+    font-variant: small-caps;
+    text-transform: none;
+    font-weight: 600;
+    margin-bottom: 0px;
+}
+h1 { font-size: 1.6em; padding-bottom: 0px; margin-bottom: 0px; }
+h2 { font-size: 1.5em; font-weight: 800; }
+h3 { font-size: 1.2em; }
+h4 { font-size: 1.1em; }
+h5, h6 { font-size: 1em; }
+
+p {
+    margin-bottom: 10px;
+    line-height: 1.6em;
+}
+
+
+fieldset { margin: 1em 0px; padding: 1em; border: 1px solid #ccc; }
+fieldset p { margin: 2px 12px 10px 10px; }
+fieldset.login label, fieldset.register label, fieldset.changePassword label { display: block; }
+fieldset label.inline { display: inline; }
+
+legend {
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 2px 4px 8px 4px;
+}
+
+input.textEntry { width: 320px; border: 1px solid #ccc; }
+input.passwordEntry  { width: 320px; border: 1px solid #ccc; }
+
+div.accountInfo { width: 42%; }
+.failureNotification { font-size: 1.2em; color: Red; }
+.bold { font-weight: bold; }
+.submitButton { text-align: right; padding-right: 10px; }
+
+.clear { clear: both; }
+.clearRight { clear: right; }
+.clearLeft { clear: left; }

@@ -1,0 +1,80 @@
+http://rgxvmweb/argix10/argixlogistics
+http://rgxvmweb/Argix10/PalletShipment
+http://rgxvmweb/Argix10/Apps/Freight/Palletshipment/Palletshipment.application
+http://rgxvmweb/Argix10/Apps/Freight/DispatchTest/Dispatch.application?terminal=
+
+http://rgxvmweb/Argix10/Argix10.FreightBeta.Services/LTLService.svc
+http://rgxvmweb/Argix10/Argix10.FreightBeta.Services/DispatchClient.svc
+
+Create a new Client
+Guest
+Argix Logistics... Pallet Shipment... Quick Quote
+Quick Quote
+	18017- no pickup
+	07657 to 99999- no delivery
+	07657 to 18017
+Verify Quote
+Enroll
+	Verify Emails: 
+		New Client: Finance
+		Welcome: Client 
+Login New Client- Verify Account Under Review
+Logout
+
+CEO
+Pallet Shipment... Client Tab
+	Approve Client (Tsort Number)
+	Verify Email:	
+		Approved: Client 
+
+Client
+Argix Logistics... Login... Pallet Shipment
+Login Approved Client
+View Pickup Log... New
+Create New Pickup
+	Verify Email: New Pickup
+View Pickup Log
+
+Dispatch Clerk
+View Pickup Log
+Assign Terminal
+Arrive
+
+Client
+View Pickup Log
+	Verify Pickup
+
+
+Create a new Sales Rep
+Guest
+Enroll
+	Verify Emails: 
+		New Client: Finance
+		Welcome: Client 
+Login New Client- Verify Account Under Review
+Logout
+
+CEO
+Pallet Shipment... Client Tab
+	Approve Client (Tsort Number)
+	Verify Email:	
+		Approved: Client 
+
+IT
+Change role from Client to SalesRep
+
+Client
+Login
+View Pickup Log... New
+Create New Pickup
+	Verify Email: New Pickup
+View Pickup Log
+
+Enroll
+	Verify Emails: 
+		New Client: Finance
+		Welcome: Client, SalesRep
+	Verify new CLient in Client list
+	Select new Client
+	Verify Client Account Under Review
+

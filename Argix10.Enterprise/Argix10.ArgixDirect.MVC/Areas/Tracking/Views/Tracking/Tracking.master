@@ -1,0 +1,19 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Areas/Tracking/Views/Shared/Site.Master" AutoEventWireup="true" CodeBehind="Tracking.master.cs" Inherits="Argix.Views.Services.Services" %>
+<%@ MasterType VirtualPath="~/Areas/Tracking/Views/Shared/Site.master" %>
+
+<asp:Content ID="cMeta" runat="server" ContentPlaceHolderID="MetaContent">
+    <asp:ContentPlaceHolder ID="MetaContent" runat="server" />
+</asp:Content>
+<asp:Content ID="cLeft" runat="server" ContentPlaceHolderID="LeftContent">
+    <div id="title">Tracking</div>
+    <div id="submenu">
+		<ul>
+            <li><%: Html.ActionLink("Track By Carton","TrackByCarton","Tracking")%></li>
+            <li><%: Html.ActionLink("Track By Store","TrackByStore","Tracking")%></li>
+            <li><%: Html.ActionLink("Track By Contract","TrackByContract","Tracking")%></li>
+		</ul>
+	</div>
+</asp:Content>
+<asp:Content ID="cRight" runat="server" ContentPlaceHolderID="RightContent">
+    <asp:ContentPlaceHolder ID="PageContent" runat="server"/>
+</asp:Content>

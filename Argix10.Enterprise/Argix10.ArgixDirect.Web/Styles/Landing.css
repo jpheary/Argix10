@@ -1,0 +1,308 @@
+
+body {
+	background-color: #E8E8E8;
+	font-family:Arial, Helvetica, sans-serif;
+	background-color: #f0f0f0;
+}
+
+#container {
+	width: 780px;
+	height:100%;
+	margin-left:auto;
+	margin-right:auto;
+	background-color:white;		
+}
+
+#contentTop  {
+	width:760px;
+	height:220px;
+	background-color:#FFF;
+	padding-left:10px;
+	padding-right:10px;
+}
+
+#contentTopTour  {
+	width:760px;
+	height:280px;
+	background-color:#FFF;
+	padding-left:10px;
+	padding-right:10px;
+}
+
+#contentMid  {
+	/*float:right;*/
+	width:760px;
+	height:300px;
+	background-color:#CCC;
+	padding-left:10px;
+	padding-right:10px;
+	/*background-image:url(../images/canvasGrad-1.jpg);*/
+}
+
+#contentForm 
+{
+	position:absolute;  /* fix to show & hide divs  */
+	width:340px;
+	height:290px;
+	background-color:#CCC;
+}
+
+#contentThanks 
+{
+	position:absolute;  /* fix to show & hide divs  */
+	width:340px;
+	height:290px;
+	background-color:#CCC;
+	/*padding:10px;*/
+}
+
+
+#submit {
+	clear:both;
+	width:160px;
+	height:20px;
+	/*background-color:#FFF;*/
+	padding-left:100px;	
+	padding-top: 15px;
+}
+
+#contentBot  {
+	clear:both;
+	/*float:right;*/
+	width:760px;
+	height:150px;
+	background-color:#FFF;
+	padding:10px;
+	/*background-image:url(../images/canvasGrad-1.jpg);*/
+}
+
+#topBorder {
+	width:780px;
+	height:20px;
+	background-color:#CCC;
+	margin-top:-5px;
+}
+
+#topBanner {
+	width:750px;
+	height:56px;
+	padding:10px 15px 10px;				/*top, sides, bottom*/
+	background-color: #EFEFEF;
+	/*#CC3333;*/
+	/*margin-top:15px;*/
+}
+
+#sectionGap_Black {
+	width:780px;
+	height:5px;
+	background-color:#000000;
+	margin:0;
+}
+
+#sectionGap_Grey {
+	width:780px;
+	height: 10px;
+	background-color:#666;
+	margin:0;
+}
+
+#sectionGap_thinGrey {
+	clear:both;
+	width:780px;
+	height:5px;
+	background-color:#666;
+	margin:0;
+}
+
+#imageRight {
+	float:right;
+	width:150px;
+	height:150px;
+	/*background-color:#CCC;*/
+	padding-top:5px;
+	padding-right:10px;
+}	
+
+#leftContentBot{
+	float:left;
+	width:560px;
+	height:150px;
+	background-color:#E1E1E1;
+	padding-left:15px;
+	padding-right:5px;
+}	
+
+#bulletsRight {
+	float:right;
+	width:350px;
+	height:230px;
+	background-color:#E1E1E1;
+	padding-left:5px;
+	margin-top:20px;
+}	
+
+#graphicMidRight {
+	float:right;
+	width:415px;
+	height:280px;
+	background-color:#E1E1E1;
+	padding-left:5px;
+	margin-top:10px;
+}	
+
+#footDiv {
+	/*float:right;*/
+	width: 780px;
+	height:20px;
+	text-align:right;
+	margin-left:auto;
+	margin-right:auto;
+	background-color:#000000;
+	padding-top:2px;
+}
+
+#copyrightDiv {
+	/*float:none;*/
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	margin-top:5px;
+	width: 580px;
+	height:22px;
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 7pt; 
+	color: #000;
+}
+
+p {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11pt;
+}
+p.content14bold {
+	font-size:14px;
+	font-weight: bold;
+	margin-top:-5px;
+}
+p.content16bold {
+	font-size:16px;
+	font-weight: bold;
+}
+p.footnote {
+	margin-left:30px;
+}
+.boldText  {
+	font-weight:bold;
+}
+h2.contentTop {
+	font-weight: bold;
+	font-size:24px;
+	text-transform:uppercase;
+	margin-top:0px;
+}
+h3.contentForm {
+	font-weight: bold;
+	margin-top:0px;
+}
+.redBoldLink {
+	color:#CC3333;
+	font-weight:bold;
+}
+.redBoldCaps{
+	color:#CC3333;
+	font-weight:bold;
+	text-transform:uppercase;
+}
+.contactInput{
+	width:210px;
+}
+.contactLabel {
+	font-weight: bold;
+	font-size:12px;
+}
+ul {
+	font-weight: bold;
+	font-size:16px;
+}
+li {
+	list-style:none;
+	text-indent:-30px;
+	line-height:160%;
+}
+#infoForm label.error {
+	font-size:0.7em;
+	color:red;	
+	text-transform:uppercase;
+}
+
+#mapContainer {
+	width: 940px;
+	height:	640px;	
+	/*margin-left:auto;
+	margin-right:auto;
+	padding:5px;*/
+}
+
+
+#topBorder {
+	width:960px;
+	height:20px;
+	background-color:#CCC;
+	margin-top:-5px;
+}
+
+#topBanner {
+	width:930px;
+	height:56px;
+	padding:10px 15px 10px;				/*top, sides, bottom*/
+	background-color: #EFEFEF;
+	/*#CC3333;*/
+	/*margin-top:15px;*/
+}
+
+#sectionGap_Black {
+	width:960px;
+	height:5px;
+	background-color:#000000;
+	margin:0;
+}
+
+#sectionGap_Grey {
+	width:960px;
+	height: 10px;
+	background-color:#666;
+	margin:0;
+}
+
+#sectionGap_thinGrey {
+	clear:both;
+	width:960px;
+	height:5px;
+	background-color:#666;
+	margin:0;
+}
+
+
+
+#footDiv {
+	/*float:right;*/
+	width: 960px;
+	height:20px;
+	text-align:right;
+	margin-left:auto;
+	margin-right:auto;
+	background-color:#000000;
+	padding-top:2px;
+}
+
+#copyrightDiv {
+	/*float:none;*/
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	margin-top:5px;
+	width: 580px;
+	height:22px;
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 7pt; 
+	color: #000;
+}

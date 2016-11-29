@@ -1,0 +1,21 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Views/Shared/Site.Master" AutoEventWireup="true" CodeBehind="WhyArgix.master.cs" Inherits="Argix.Views.WhyArgix.WhyArgix" %>
+<%@ MasterType VirtualPath="~/Views/Shared/Site.master" %>
+
+<asp:Content ID="cMeta" runat="server" ContentPlaceHolderID="MetaContent">
+    <asp:ContentPlaceHolder ID="MetaContent" runat="server" />
+</asp:Content>
+<asp:Content ID="cLeft" runat="server" ContentPlaceHolderID="LeftContent">
+    <div id="title">Why Argix</div>
+    <div id="submenu">
+		<ul>
+            <li><%: Html.ActionLink("Customer Service", "CustomerService", "WhyArgix")%></li>
+            <li><%: Html.ActionLink("Shipment Integrity", "ShipmentIntegrity", "WhyArgix")%></li>
+            <li><%: Html.ActionLink("Customized Solutions", "CustomizedSolutions", "WhyArgix")%></li>
+            <li><%: Html.ActionLink("Transit Times", "TransitTimes", "WhyArgix")%></li>
+            <li><%: Html.ActionLink("Volume Totals", "VolumeTotals", "WhyArgix")%></li>
+        </ul>
+	</div>
+</asp:Content>
+<asp:Content ID="cRight" runat="server" ContentPlaceHolderID="RightContent">
+    <asp:ContentPlaceHolder ID="PageContent" runat="server"/>
+</asp:Content>

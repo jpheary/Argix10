@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21107</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1E7C11E1-0B1D-4860-9564-5D23386F58D5}</ProjectGuid>
+    <ProjectTypeGuids>{EF7E3281-CD33-11D4-8326-00C04FA0CE8D};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>library</OutputType>
+    <GenericProcessing>true</GenericProcessing>
+    <RootNamespace>Argix</RootNamespace>
+    <AssemblyName>Argix10.BizTalk.Freight</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <BpelCompliance>True</BpelCompliance>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>BizTalkFreightKey.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <Name>System.Configuration</Name>
+    </Reference>
+    <Reference Include="Microsoft.BizTalk.Pipeline">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.BizTalk.DefaultPipelines">
+      <Name>Microsoft.BizTalk.DefaultPipelines</Name>
+    </Reference>
+    <Reference Include="Microsoft.BizTalk.GlobalPropertySchemas">
+      <Name>Microsoft.BizTalk.GlobalPropertySchemas</Name>
+    </Reference>
+    <Reference Include="Microsoft.BizTalk.TestTools">
+      <Name>Microsoft.BizTalk.TestTools</Name>
+    </Reference>
+    <Reference Include="Microsoft.XLANGs.BaseTypes">
+      <Name>Microsoft.XLANGs.BaseTypes</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="BizTalkFreightKey.snk" />
+    <Schema Include="Serialization.xsd">
+      <TypeName>Serialization</TypeName>
+      <Namespace>Argix</Namespace>
+    </Schema>
+    <Schema Include="CRMSystemServiceSchemas.xsd">
+      <TypeName>CRMSystemServiceSchemas</TypeName>
+      <Namespace>Argix</Namespace>
+    </Schema>
+    <Schema Include="CustomersSchemas.xsd">
+      <TypeName>CustomersSchemas</TypeName>
+      <Namespace>Argix</Namespace>
+    </Schema>
+    <Schema Include="FreightSystemServiceSchemas.xsd">
+      <TypeName>FreightSystemServiceSchemas</TypeName>
+      <Namespace>Argix.Freight</Namespace>
+    </Schema>
+    <Schema Include="FreightSchemas.xsd">
+      <TypeName>FreightSchemas</TypeName>
+      <Namespace>Argix.Freight</Namespace>
+    </Schema>
+    <Schema Include="FreightProperties.xsd">
+      <TypeName>FreightProperties</TypeName>
+      <Namespace>Argix</Namespace>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="LTLShipmentToPickupMap.btm">
+      <TypeName>LTLShipmentToPickupMap</TypeName>
+      <Namespace>Argix</Namespace>
+    </Map>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TODO.txt" />
+    <Map Include="LTLShipmentToCRMIssueMap.btm">
+      <TypeName>LTLShipmentToCRMIssueMap</TypeName>
+      <Namespace>Argix</Namespace>
+    </Map>
+    <Content Include="Bindings\CRMSystemService.BindingInfo.xml" />
+    <Content Include="Bindings\FreightSystemService.BindingInfo.xml" />
+    <Map Include="PickupRequestToLTLShipmentMap.btm">
+      <TypeName>PickupRequestToLTLShipmentMap</TypeName>
+      <Namespace>Argix</Namespace>
+    </Map>
+    <Map Include="LTLShipmentToLTLShipmentRequestMap.btm">
+      <TypeName>LTLShipmentToLTLShipmentRequestMap</TypeName>
+      <Namespace>Argix</Namespace>
+    </Map>
+    <XLang Include="ManageLTLPickup.odx">
+      <TypeName>FreightSystemService</TypeName>
+      <Namespace>Argix</Namespace>
+    </XLang>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\BizTalk\BizTalkC.targets" />
+</Project>

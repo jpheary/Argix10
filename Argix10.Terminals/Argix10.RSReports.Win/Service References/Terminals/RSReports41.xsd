@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Argix.Terminals" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Argix.Terminals" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="RoadshowFault">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RoadshowFault" nillable="true" type="tns:RoadshowFault" />
+  <xs:complexType name="Pickup">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActualCommodity" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ActualOrderSize" type="xs:float" />
+      <xs:element minOccurs="0" name="ActualOrderWeight" type="xs:float" />
+      <xs:element minOccurs="0" name="Comments" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerCity" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerState" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerZip" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Depot" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Driver" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PlannedCommodity" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PlannedOrderCube" type="xs:float" />
+      <xs:element minOccurs="0" name="PlannedOrderSize" type="xs:float" />
+      <xs:element minOccurs="0" name="PlannedOrderWeight" type="xs:float" />
+      <xs:element minOccurs="0" name="RecordID" type="xs:int" />
+      <xs:element minOccurs="0" name="ReturnTime" type="xs:short" />
+      <xs:element minOccurs="0" name="RouteDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="RouteName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UnscheduledPickup" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Pickup" nillable="true" type="tns:Pickup" />
+  <xs:complexType name="Pickups">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Pickup" nillable="true" type="tns:Pickup" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Pickups" nillable="true" type="tns:Pickups" />
+  <xs:complexType name="ScanAudits">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ScanAudit" nillable="true" type="tns:ScanAudit" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ScanAudits" nillable="true" type="tns:ScanAudits" />
+  <xs:complexType name="ScanAudit">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AdditionalComments" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Arrive" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Bell" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CRGResolution" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CRGStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CartonsScanned" type="xs:int" />
+      <xs:element minOccurs="0" name="CommodityClass" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CommodityDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerAccount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeliveryEnd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeliveryStart" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Departure" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Driver" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EntryBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MallBuilding" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OnTimeIssue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderClose" type="xs:short" />
+      <xs:element minOccurs="0" name="OrderID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderOpen" type="xs:short" />
+      <xs:element minOccurs="0" name="OrderType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Payee" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pieces" type="xs:float" />
+      <xs:element minOccurs="0" name="PlannedArrival" type="xs:short" />
+      <xs:element minOccurs="0" name="PlannedDeparture" type="xs:short" />
+      <xs:element minOccurs="0" name="RecordID" type="xs:int" />
+      <xs:element minOccurs="0" name="RouteClass" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RouteDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="RouteName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RouteSequence" type="xs:int" />
+      <xs:element minOccurs="0" name="RouteSet" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ScanIssue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ScanUser" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TimeEntryBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Trip" type="xs:short" />
+      <xs:element minOccurs="0" name="TripStop" type="xs:short" />
+      <xs:element minOccurs="0" name="Updated" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="WaitMinimum" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ScanAudit" nillable="true" type="tns:ScanAudit" />
+</xs:schema>

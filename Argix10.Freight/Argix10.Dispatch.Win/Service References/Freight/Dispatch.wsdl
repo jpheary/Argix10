@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://Prototypes.Freight" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://Prototypes.Freight" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://Prototypes.Freight/Imports">
+      <xsd:import schemaLocation="http://localhost:8302/Prototypes.Dispatch.Services/Dispatch.svc?xsd=xsd0" namespace="http://Prototypes.Freight" />
+      <xsd:import schemaLocation="http://localhost:8302/Prototypes.Dispatch.Services/Dispatch.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8302/Prototypes.Dispatch.Services/Dispatch.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Prototypes.Enterprise" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDispatchService_GetAgents_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgents" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_GetAgents_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_GetClients_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetClients" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_GetClients_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetClientsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_GetTerminals_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTerminals" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_GetTerminals_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTerminalsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_GetVendors_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVendors" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_GetVendors_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVendorsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IDispatchService">
+    <wsdl:operation name="GetAgents">
+      <wsdl:input wsaw:Action="http://Prototypes.Freight/IDispatchService/GetAgents" message="tns:IDispatchService_GetAgents_InputMessage" />
+      <wsdl:output wsaw:Action="http://Prototypes.Freight/IDispatchService/GetAgentsResponse" message="tns:IDispatchService_GetAgents_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClients">
+      <wsdl:input wsaw:Action="http://Prototypes.Freight/IDispatchService/GetClients" message="tns:IDispatchService_GetClients_InputMessage" />
+      <wsdl:output wsaw:Action="http://Prototypes.Freight/IDispatchService/GetClientsResponse" message="tns:IDispatchService_GetClients_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTerminals">
+      <wsdl:input wsaw:Action="http://Prototypes.Freight/IDispatchService/GetTerminals" message="tns:IDispatchService_GetTerminals_InputMessage" />
+      <wsdl:output wsaw:Action="http://Prototypes.Freight/IDispatchService/GetTerminalsResponse" message="tns:IDispatchService_GetTerminals_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVendors">
+      <wsdl:input wsaw:Action="http://Prototypes.Freight/IDispatchService/GetVendors" message="tns:IDispatchService_GetVendors_InputMessage" />
+      <wsdl:output wsaw:Action="http://Prototypes.Freight/IDispatchService/GetVendorsResponse" message="tns:IDispatchService_GetVendors_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

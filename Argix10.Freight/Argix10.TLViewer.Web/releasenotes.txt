@@ -1,0 +1,41 @@
+              --------------------------------------------------------
+							Argix10.TLViewer.Web Readme File
+		                       			May, 2014
+              --------------------------------------------------------
+                         (c) Copyright Argix Logistics, 2013-2014
+
+This document provides late-breaking or other information that supplements the PalletShipment documentation.
+
+------------------------
+How to Use This Document
+------------------------
+To view the Readme file on-screen in Windows Notepad, maximize the Notepad window and click Word 
+Wrap on the Edit menu. To print the Readme file, open it in Notepad or another word processor, 
+and then use the Print command on the File menu.
+
+==============
+CONTENTS
+==============
+NOTES
+   GENERAL
+   DEPENDENCIES
+   VERSION HISTORY
+==============
+
+
+NOTES
+==============
+GENERAL
+TLViewer is an ASP.NET web application that...
+
+
+DEPENDENCIES
+Argix10.Freight.Services
+
+
+VERSION HISTORY
+v4.0.0, 05/16/14 ---------------------------------------------------------------------------
+Requirements/features
+- initial release.
+Design
+- initial release.

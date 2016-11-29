@@ -1,0 +1,121 @@
+              --------------------------------------------------------
+                    Invoicing Application Readme File
+		                       	  July, 2013
+              --------------------------------------------------------
+                         (c) Copyright Argix Logistics, 2004-2013
+
+This document provides late-breaking or other information that supplements the Invoicing documentation.
+
+------------------------
+How to Use This Document
+------------------------
+To view the Readme file on-screen in Windows Notepad, maximize the Notepad window and click Word 
+Wrap on the Edit menu. To print the Readme file, open it in Notepad or another word processor, 
+and then use the Print command on the File menu.
+
+==============
+CONTENTS
+==============
+INSTALLATION
+   DEPLOYMENT
+   CONFIGURATION
+
+NOTES
+   GENERAL
+   DEPENDENCIES
+   OPERATION
+   VERSION HISTORY
+==============
+
+
+INSTALLATION
+==============
+DEPLOYMENT
+Invoicing is installed into a Click-Once deployment folder visible from an IIS web service as follows:
+1.	Create a virtual folder c:\inetpub\wwwroot\Argix10\Apps\Finance\Invoicing on a web server like rgxvmweb using 
+	Windows explorer. 
+2.	Create a sub-folder called Application Files.
+3.	Copy the new versioned Click-Once deployment folder (i.e Invoicing_4_0_0_2) into the Application Files folder; this folder 
+	contains the following:
+		Argix10.Export.Lib.dll
+		Argix10.Windows.Lib.dll
+		Invoicing.application
+		Invoicing.exe
+		Invoicing.exe.config
+		Invoicing.exe.manifest
+		Infragistics2.Shared.v10.1.dll
+		Infragistics2.Win.UltraWinGrid.v10.1.dll
+		Infragistics2.Win.v10.1.dll
+		releasenotes.txt
+4.	Copy the deployment manifest, Invoicing.application, into the Invoicing folder. This manifest points to
+	tha application manifest (i.e. \Invoicing_4_0_0_2\Invoicing.exe.manifest)
+5.	Launch the Internet Information Services snap-in and validate that the virtual folder allows
+	anonymous access. A web application does not need to be created for deployment.
+6.	Verify http access from Internet Explorer to the following url: 
+		http://rgxvmweb/Argix10/Apps/Finance/Invoicing/Invoicing.application
+7.	The Click-Once deployment is installed on the client machine in the C:\Users\<username>\AppData\Local\Apps\2.0 folder.
+8.	Version rollbacks are accomplished by simply copying the deployment manifest (i.e. Invoicing.application) from 
+	a previous Click-Once deployment folder (i.e Invoicing_4_0_0_1) into the Invoicing root folder
+
+
+CONFIGURATION	
+Open the local sort database (i.e. TSORT on rgxvmsql), goto the Configuration table, and add/edit the 
+values below. Individual users can have overrides from the default values.
+	Application               PCName          Key                       Value                     Security 
+	------------------------- --------------- ------------------------- ------------------------- -------- 
+    Invoicing				  Default         TraceLevel                4                         1        
+
+
+NOTES
+==============
+GENERAL
+The Invoicing Application (Invoicing.exe) is a Windows based application used to create an 
+Excel file of an existing client or vendor invoice from the AS/400.
+
+
+DEPENDENCIES
+The Invoicing application is dependent upon the following web services: 
+- http://rgxvmweb/Argix10/Argix10.Finance.Services/Invoicing.svc
+- http://rgxvmweb/Argix10/Argix10.Membership.Services/RoleService.svc
+
+OPERATION
+The Invoicing Application (Invoicing.exe) operates by launching from a web server deployment url 
+(i.e. http://rgxvmweb/Argix10/Apps/Finance/Invoicing/Invoicing.application). After a brief splash screen, a 
+sizeable window appears that allows selection of a client and shows a list of invoices for that client. Open 
+an invoice selection and an Excel spreadshet is downloaded with the invoice data.
+Additional operating steps can be found in the on-line documentation provided by the Help/Contents menu item.
+
+ROLE MANAGEMENT
+The following roles are used in this application:
+Billing Clerk- can create Excel invoices.
+Billing Supervisor- can do everything a Billing Clerk can do.
+
+Use the following link to access the role manager to create and edit role assignments for Argix employees: 
+http://rgxvmweb/Argix10/Apps/IT/Membership/Membership.application
+
+
+VERSION HISTORY
+v3.5.0, 11/15/10 ---------------------------------------------------------------------------
+Requirements/features
+- new release.
+Design
+- new release.
+
+v4.0.0, 11/07/11 ---------------------------------------------------------------------------
+Requirements/features
+- none.
+Design
+- Application ported to .NET Framework 4.0 using Visual Studio 2010.
+
+v4.0.1, 03/08/12 ---------------------------------------------------------------------------
+Requirements/features
+- none.
+Design
+- re-designed to use Argix10.Finance.Services/Invoicing.svc web service
+
+v4.0.2, 07/11/13 ---------------------------------------------------------------------------
+Requirements/features
+- added feature to allow user selected application font
+Design
+- updated user interfaces to new standards.
+- added role-based security using web service http://rgxvmweb/Argix10/Argix10.Membership.Services/RoleService.svc.

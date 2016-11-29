@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="3db4e769-75ca-4422-b798-34043b80d315" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:55732/Argix10.AgentLineHaul.Services/AgentLineHaulService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AgentLineHaulService.xsd" MetadataType="Schema" ID="73f7ca7f-1974-4623-9786-cc9f9b43a3e3" SourceId="1" SourceUrl="http://localhost:55732/Argix10.AgentLineHaul.Services/AgentLineHaulService.svc?xsd=xsd0" />
+    <MetadataFile FileName="AgentLineHaulService1.xsd" MetadataType="Schema" ID="d6b43c23-f289-4b84-bf67-938aecaac0d9" SourceId="1" SourceUrl="http://localhost:55732/Argix10.AgentLineHaul.Services/AgentLineHaulService.svc?xsd=xsd2" />
+    <MetadataFile FileName="AgentLineHaulService2.xsd" MetadataType="Schema" ID="be22e5f0-473c-4682-89f6-6cf536e0d16c" SourceId="1" SourceUrl="http://localhost:55732/Argix10.AgentLineHaul.Services/AgentLineHaulService.svc?xsd=xsd3" />
+    <MetadataFile FileName="AgentLineHaulService.disco" MetadataType="Disco" ID="8dad7185-6639-4660-b7b7-a34e8647fbce" SourceId="1" SourceUrl="http://localhost:55732/Argix10.AgentLineHaul.Services/AgentLineHaulService.svc?disco" />
+    <MetadataFile FileName="AgentLineHaulService.wsdl" MetadataType="Wsdl" ID="56b7d443-221c-40e4-969d-3d0ceec628d0" SourceId="1" SourceUrl="http://localhost:55732/Argix10.AgentLineHaul.Services/AgentLineHaulService.svc?wsdl" />
+    <MetadataFile FileName="AgentLineHaulService1.wsdl" MetadataType="Wsdl" ID="4275b06c-2bf8-489f-bdf2-06a9746188ce" SourceId="1" SourceUrl="http://localhost:55732/Argix10.AgentLineHaul.Services/AgentLineHaulService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="AgentLineHaulService3.xsd" MetadataType="Schema" ID="93d8d161-d675-420e-95a7-c517ca1651bd" SourceId="1" SourceUrl="http://localhost:55732/Argix10.AgentLineHaul.Services/AgentLineHaulService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

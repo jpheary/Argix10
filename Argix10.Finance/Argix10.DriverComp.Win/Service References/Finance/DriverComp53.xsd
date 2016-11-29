@@ -1,0 +1,658 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://Argix.Finance" elementFormDefault="qualified" targetNamespace="http://Argix.Finance" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:34780/Argix10.Finance.Services/DriverComp.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Argix" />
+  <xs:import schemaLocation="http://localhost:34780/Argix10.Finance.Services/DriverComp.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://localhost:34780/Argix10.Finance.Services/DriverComp.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Argix.Finance" />
+  <xs:element name="GetServiceInfo">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServiceInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Argix" minOccurs="0" name="GetServiceInfoResult" nillable="true" type="q1:ServiceInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserConfiguration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="application" nillable="true" type="xs:string" />
+        <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="usernames" nillable="true" type="q2:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserConfigurationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Argix" minOccurs="0" name="GetUserConfigurationResult" nillable="true" type="q3:UserConfiguration" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WriteLogEntry">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Argix" minOccurs="0" name="m" nillable="true" type="q4:TraceMessage" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadRoadshowRoutes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="agentNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="startDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="endDate" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadRoadshowRoutesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ReadRoadshowRoutesResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadDriverRoutes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="agentNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="startDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="endDate" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadDriverRoutesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ReadDriverRoutesResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateDriverRoute">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Argix.Finance" minOccurs="0" name="route" nillable="true" type="q5:DriverRoute" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateDriverRouteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateDriverRouteResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDriverRoute">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Argix.Finance" minOccurs="0" name="route" nillable="true" type="q6:DriverRoute" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDriverRouteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateDriverRouteResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteDriverRoute">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="routeID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteDriverRouteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteDriverRouteResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadTerminalConfigurations">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="agentNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadTerminalConfigurationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ReadTerminalConfigurationsResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTerminalConfiguration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="agentNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTerminalConfigurationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Argix.Finance" minOccurs="0" name="GetTerminalConfigurationResult" nillable="true" type="q7:TerminalConfiguration" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadDriverEquipment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="financeVendorID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="operatorName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadDriverEquipmentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ReadDriverEquipmentResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateDriverEquipment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="financeVendorID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="operatorName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="equipmentID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateDriverEquipmentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateDriverEquipmentResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDriverEquipment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="financeVendorID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="operatorName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="equipmentID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDriverEquipmentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateDriverEquipmentResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadVehicleMileageRates">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="date" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="terminalAgent" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="equipmentTypeID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadVehicleMileageRatesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ReadVehicleMileageRatesResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateVehicleMileageRate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="agentNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="equipmentID" type="xs:int" />
+        <xs:element minOccurs="0" name="effectiveDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="mile" type="xs:double" />
+        <xs:element minOccurs="0" name="baseRate" type="xs:decimal" />
+        <xs:element minOccurs="0" name="rate" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateVehicleMileageRateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateVehicleMileageRateResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateVehicleMileageRate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+        <xs:element minOccurs="0" name="equipmentID" type="xs:int" />
+        <xs:element minOccurs="0" name="mile" type="xs:double" />
+        <xs:element minOccurs="0" name="baseRate" type="xs:decimal" />
+        <xs:element minOccurs="0" name="rate" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateVehicleMileageRateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateVehicleMileageRateResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadVehicleUnitRates">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="date" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="terminalAgent" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="equipmentTypeID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadVehicleUnitRatesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ReadVehicleUnitRatesResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateVehicleUnitRate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="agentNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="equipmentID" type="xs:int" />
+        <xs:element minOccurs="0" name="effectiveDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="dayRate" type="xs:decimal" />
+        <xs:element minOccurs="0" name="tripRate" type="xs:decimal" />
+        <xs:element minOccurs="0" name="stopRate" type="xs:decimal" />
+        <xs:element minOccurs="0" name="cartonRate" type="xs:decimal" />
+        <xs:element minOccurs="0" name="palletRate" type="xs:decimal" />
+        <xs:element minOccurs="0" name="returnRate" type="xs:decimal" />
+        <xs:element minOccurs="0" name="minAmount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="maxAmt" type="xs:decimal" />
+        <xs:element minOccurs="0" name="maxTrigFld" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="maxTrigVal" type="xs:int" />
+        <xs:element minOccurs="0" name="fsBase" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateVehicleUnitRateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateVehicleUnitRateResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateVehicleUnitRate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+        <xs:element minOccurs="0" name="equipmentID" type="xs:int" />
+        <xs:element minOccurs="0" name="dayRate" type="xs:decimal" />
+        <xs:element minOccurs="0" name="tripRate" type="xs:decimal" />
+        <xs:element minOccurs="0" name="stopRate" type="xs:decimal" />
+        <xs:element minOccurs="0" name="cartonRate" type="xs:decimal" />
+        <xs:element minOccurs="0" name="palletRate" type="xs:decimal" />
+        <xs:element minOccurs="0" name="returnRate" type="xs:decimal" />
+        <xs:element minOccurs="0" name="minAmount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="maxAmt" type="xs:decimal" />
+        <xs:element minOccurs="0" name="maxTrigFld" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="maxTrigVal" type="xs:int" />
+        <xs:element minOccurs="0" name="fsBase" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateVehicleUnitRateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateVehicleUnitRateResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadRouteMileageRates">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="date" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="terminalAgent" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="route" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadRouteMileageRatesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ReadRouteMileageRatesResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateRouteMileageRate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="agentNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="route" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="effectiveDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="mile" type="xs:double" />
+        <xs:element minOccurs="0" name="baseRate" type="xs:decimal" />
+        <xs:element minOccurs="0" name="rate" type="xs:decimal" />
+        <xs:element minOccurs="0" name="status" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateRouteMileageRateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateRouteMileageRateResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateRouteMileageRate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+        <xs:element minOccurs="0" name="route" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="mile" type="xs:double" />
+        <xs:element minOccurs="0" name="baseRate" type="xs:decimal" />
+        <xs:element minOccurs="0" name="rate" type="xs:decimal" />
+        <xs:element minOccurs="0" name="status" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateRouteMileageRateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateRouteMileageRateResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadRouteUnitRates">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="date" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="terminalAgent" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="route" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadRouteUnitRatesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ReadRouteUnitRatesResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateRouteUnitRate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="agentNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="route" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="effectiveDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="dayRate" type="xs:decimal" />
+        <xs:element minOccurs="0" name="tripRate" type="xs:decimal" />
+        <xs:element minOccurs="0" name="stopRate" type="xs:decimal" />
+        <xs:element minOccurs="0" name="cartonRate" type="xs:decimal" />
+        <xs:element minOccurs="0" name="palletRate" type="xs:decimal" />
+        <xs:element minOccurs="0" name="returnRate" type="xs:decimal" />
+        <xs:element minOccurs="0" name="minAmount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="maxAmt" type="xs:decimal" />
+        <xs:element minOccurs="0" name="maxTrigFld" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="maxTrigVal" type="xs:int" />
+        <xs:element minOccurs="0" name="fsBase" type="xs:decimal" />
+        <xs:element minOccurs="0" name="status" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateRouteUnitRateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateRouteUnitRateResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateRouteUnitRate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+        <xs:element minOccurs="0" name="route" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dayRate" type="xs:decimal" />
+        <xs:element minOccurs="0" name="tripRate" type="xs:decimal" />
+        <xs:element minOccurs="0" name="stopRate" type="xs:decimal" />
+        <xs:element minOccurs="0" name="cartonRate" type="xs:decimal" />
+        <xs:element minOccurs="0" name="palletRate" type="xs:decimal" />
+        <xs:element minOccurs="0" name="returnRate" type="xs:decimal" />
+        <xs:element minOccurs="0" name="minAmount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="maxAmt" type="xs:decimal" />
+        <xs:element minOccurs="0" name="maxTrigFld" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="maxTrigVal" type="xs:int" />
+        <xs:element minOccurs="0" name="fsBase" type="xs:decimal" />
+        <xs:element minOccurs="0" name="status" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateRouteUnitRateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateRouteUnitRateResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLocalTerminals">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLocalTerminalsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetLocalTerminalsResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAdjustmentTypes">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAdjustmentTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAdjustmentTypesResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDriverEquipmentTypes">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDriverEquipmentTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDriverEquipmentTypesResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRateTypes">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRateTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetRateTypesResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPayPeriod">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="date" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPayPeriodResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Argix.Finance" minOccurs="0" name="GetPayPeriodResult" type="q8:PayPeriod" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFuelCost">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="date" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="agentNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFuelCostResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetFuelCostResult" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://Argix.Freight" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://Argix.Freight" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://Argix.Freight/Imports">
+      <xsd:import schemaLocation="http://localhost:25765/Argix10.Freight.Services/TsortService.svc?xsd=xsd0" namespace="http://Argix.Freight" />
+      <xsd:import schemaLocation="http://localhost:25765/Argix10.Freight.Services/TsortService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Argix" />
+      <xsd:import schemaLocation="http://localhost:25765/Argix10.Freight.Services/TsortService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:25765/Argix10.Freight.Services/TsortService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:25765/Argix10.Freight.Services/TsortService.svc?xsd=xsd4" />
+      <xsd:import schemaLocation="http://localhost:25765/Argix10.Freight.Services/TsortService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Argix.Freight" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ITsortService_GetServiceInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetServiceInfo" />
+  </wsdl:message>
+  <wsdl:message name="ITsortService_GetServiceInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetServiceInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITsortService_GetServiceInfo_ConfigurationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/Argix" name="detail" element="q1:ConfigurationFault" />
+  </wsdl:message>
+  <wsdl:message name="ITsortService_GetUserConfiguration_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserConfiguration" />
+  </wsdl:message>
+  <wsdl:message name="ITsortService_GetUserConfiguration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserConfigurationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITsortService_GetUserConfiguration_ConfigurationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/Argix" name="detail" element="q2:ConfigurationFault" />
+  </wsdl:message>
+  <wsdl:message name="ITsortService_WriteLogEntry_InputMessage">
+    <wsdl:part name="parameters" element="tns:WriteLogEntry" />
+  </wsdl:message>
+  <wsdl:message name="IFreightAssignService_GetTerminals_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTerminals" />
+  </wsdl:message>
+  <wsdl:message name="IFreightAssignService_GetTerminals_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTerminalsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFreightAssignService_GetInboundFreight_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInboundFreight" />
+  </wsdl:message>
+  <wsdl:message name="IFreightAssignService_GetInboundFreight_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInboundFreightResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFreightAssignService_GetInboundFreight_TsortFaultFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q3:TsortFault" />
+  </wsdl:message>
+  <wsdl:message name="IFreightAssignService_GetInboundShipment_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInboundShipment" />
+  </wsdl:message>
+  <wsdl:message name="IFreightAssignService_GetInboundShipment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInboundShipmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFreightAssignService_GetInboundShipment_TsortFaultFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q4:TsortFault" />
+  </wsdl:message>
+  <wsdl:message name="IFreightAssignService_StartSort_InputMessage">
+    <wsdl:part name="parameters" element="tns:StartSort" />
+  </wsdl:message>
+  <wsdl:message name="IFreightAssignService_StartSort_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StartSortResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFreightAssignService_StartSort_TsortFaultFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q5:TsortFault" />
+  </wsdl:message>
+  <wsdl:message name="IFreightAssignService_StopSort_InputMessage">
+    <wsdl:part name="parameters" element="tns:StopSort" />
+  </wsdl:message>
+  <wsdl:message name="IFreightAssignService_StopSort_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StopSortResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFreightAssignService_StopSort_TsortFaultFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q6:TsortFault" />
+  </wsdl:message>
+  <wsdl:message name="IFreightAssignService_GetStationAssignments_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStationAssignments" />
+  </wsdl:message>
+  <wsdl:message name="IFreightAssignService_GetStationAssignments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStationAssignmentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFreightAssignService_GetStationAssignments_TsortFaultFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q7:TsortFault" />
+  </wsdl:message>
+  <wsdl:message name="IFreightAssignService_CreateStationAssignment_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateStationAssignment" />
+  </wsdl:message>
+  <wsdl:message name="IFreightAssignService_CreateStationAssignment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateStationAssignmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFreightAssignService_CreateStationAssignment_TsortFaultFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q8:TsortFault" />
+  </wsdl:message>
+  <wsdl:message name="IFreightAssignService_DeleteStationAssignment_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteStationAssignment" />
+  </wsdl:message>
+  <wsdl:message name="IFreightAssignService_DeleteStationAssignment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteStationAssignmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFreightAssignService_DeleteStationAssignment_TsortFaultFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q9:TsortFault" />
+  </wsdl:message>
+  <wsdl:message name="IFreightAssignService_GetFreightSortTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFreightSortTypes" />
+  </wsdl:message>
+  <wsdl:message name="IFreightAssignService_GetFreightSortTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFreightSortTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFreightAssignService_GetFreightSortTypes_TsortFaultFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q10:TsortFault" />
+  </wsdl:message>
+  <wsdl:message name="IFreightAssignService_GetAssignableSortStations_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssignableSortStations" />
+  </wsdl:message>
+  <wsdl:message name="IFreightAssignService_GetAssignableSortStations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssignableSortStationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFreightAssignService_GetAssignableSortStations_TsortFaultFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q11:TsortFault" />
+  </wsdl:message>
+  <wsdl:message name="IZoneClosingService_GetTLs_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTLs" />
+  </wsdl:message>
+  <wsdl:message name="IZoneClosingService_GetTLs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTLsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZoneClosingService_GetTLs_TsortFaultFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q12:TsortFault" />
+  </wsdl:message>
+  <wsdl:message name="IZoneClosingService_GetUnassignedTLs_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUnassignedTLs" />
+  </wsdl:message>
+  <wsdl:message name="IZoneClosingService_GetUnassignedTLs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUnassignedTLsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZoneClosingService_GetUnassignedTLs_TsortFaultFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q13:TsortFault" />
+  </wsdl:message>
+  <wsdl:message name="IZoneClosingService_GetUnassignedClosedTLs_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUnassignedClosedTLs" />
+  </wsdl:message>
+  <wsdl:message name="IZoneClosingService_GetUnassignedClosedTLs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUnassignedClosedTLsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZoneClosingService_GetUnassignedClosedTLs_TsortFaultFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q14:TsortFault" />
+  </wsdl:message>
+  <wsdl:message name="IZoneClosingService_GetLanes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLanes" />
+  </wsdl:message>
+  <wsdl:message name="IZoneClosingService_GetLanes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLanesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZoneClosingService_GetLanes_TsortFaultFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q15:TsortFault" />
+  </wsdl:message>
+  <wsdl:message name="IZoneClosingService_ChangeLanes_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeLanes" />
+  </wsdl:message>
+  <wsdl:message name="IZoneClosingService_ChangeLanes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeLanesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZoneClosingService_ChangeLanes_TsortFaultFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q16:TsortFault" />
+  </wsdl:message>
+  <wsdl:message name="IZoneClosingService_CloseZone_InputMessage">
+    <wsdl:part name="parameters" element="tns:CloseZone" />
+  </wsdl:message>
+  <wsdl:message name="IZoneClosingService_CloseZone_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CloseZoneResponse" />
+  </wsdl:message>
+  <wsdl:message name="IZoneClosingService_CloseZone_TsortFaultFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q17:TsortFault" />
+  </wsdl:message>
+  <wsdl:portType name="ITsortService">
+    <wsdl:operation name="GetServiceInfo">
+      <wsdl:input wsaw:Action="http://Argix.Freight/ITsortService/GetServiceInfo" message="tns:ITsortService_GetServiceInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/ITsortService/GetServiceInfoResponse" message="tns:ITsortService_GetServiceInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.ConfigurationFault" name="ConfigurationFaultFault" message="tns:ITsortService_GetServiceInfo_ConfigurationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserConfiguration">
+      <wsdl:input wsaw:Action="http://Argix.Freight/ITsortService/GetUserConfiguration" message="tns:ITsortService_GetUserConfiguration_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/ITsortService/GetUserConfigurationResponse" message="tns:ITsortService_GetUserConfiguration_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.ConfigurationFault" name="ConfigurationFaultFault" message="tns:ITsortService_GetUserConfiguration_ConfigurationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WriteLogEntry">
+      <wsdl:input wsaw:Action="http://Argix.Freight/ITsortService/WriteLogEntry" message="tns:ITsortService_WriteLogEntry_InputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IFreightAssignService">
+    <wsdl:operation name="GetTerminals">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IFreightAssignService/GetTerminals" message="tns:IFreightAssignService_GetTerminals_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IFreightAssignService/GetTerminalsResponse" message="tns:IFreightAssignService_GetTerminals_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInboundFreight">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IFreightAssignService/GetInboundFreight" message="tns:IFreightAssignService_GetInboundFreight_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IFreightAssignService/GetInboundFreightResponse" message="tns:IFreightAssignService_GetInboundFreight_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.TsortFault" name="TsortFaultFault" message="tns:IFreightAssignService_GetInboundFreight_TsortFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInboundShipment">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IFreightAssignService/GetInboundShipment" message="tns:IFreightAssignService_GetInboundShipment_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IFreightAssignService/GetInboundShipmentResponse" message="tns:IFreightAssignService_GetInboundShipment_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.TsortFault" name="TsortFaultFault" message="tns:IFreightAssignService_GetInboundShipment_TsortFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StartSort">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IFreightAssignService/StartSort" message="tns:IFreightAssignService_StartSort_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IFreightAssignService/StartSortResponse" message="tns:IFreightAssignService_StartSort_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.TsortFault" name="TsortFaultFault" message="tns:IFreightAssignService_StartSort_TsortFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StopSort">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IFreightAssignService/StopSort" message="tns:IFreightAssignService_StopSort_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IFreightAssignService/StopSortResponse" message="tns:IFreightAssignService_StopSort_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.TsortFault" name="TsortFaultFault" message="tns:IFreightAssignService_StopSort_TsortFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStationAssignments">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IFreightAssignService/GetStationAssignments" message="tns:IFreightAssignService_GetStationAssignments_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IFreightAssignService/GetStationAssignmentsResponse" message="tns:IFreightAssignService_GetStationAssignments_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.TsortFault" name="TsortFaultFault" message="tns:IFreightAssignService_GetStationAssignments_TsortFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateStationAssignment">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IFreightAssignService/CreateStationAssignment" message="tns:IFreightAssignService_CreateStationAssignment_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IFreightAssignService/CreateStationAssignmentResponse" message="tns:IFreightAssignService_CreateStationAssignment_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.TsortFault" name="TsortFaultFault" message="tns:IFreightAssignService_CreateStationAssignment_TsortFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteStationAssignment">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IFreightAssignService/DeleteStationAssignment" message="tns:IFreightAssignService_DeleteStationAssignment_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IFreightAssignService/DeleteStationAssignmentResponse" message="tns:IFreightAssignService_DeleteStationAssignment_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.TsortFault" name="TsortFaultFault" message="tns:IFreightAssignService_DeleteStationAssignment_TsortFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFreightSortTypes">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IFreightAssignService/GetFreightSortTypes" message="tns:IFreightAssignService_GetFreightSortTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IFreightAssignService/GetFreightSortTypesResponse" message="tns:IFreightAssignService_GetFreightSortTypes_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.TsortFault" name="TsortFaultFault" message="tns:IFreightAssignService_GetFreightSortTypes_TsortFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssignableSortStations">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IFreightAssignService/GetAssignableSortStations" message="tns:IFreightAssignService_GetAssignableSortStations_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IFreightAssignService/GetAssignableSortStationsResponse" message="tns:IFreightAssignService_GetAssignableSortStations_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.TsortFault" name="TsortFaultFault" message="tns:IFreightAssignService_GetAssignableSortStations_TsortFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IZoneClosingService">
+    <wsdl:operation name="GetTLs">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IZoneClosingService/GetTLs" message="tns:IZoneClosingService_GetTLs_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IZoneClosingService/GetTLsResponse" message="tns:IZoneClosingService_GetTLs_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.TsortFault" name="TsortFaultFault" message="tns:IZoneClosingService_GetTLs_TsortFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUnassignedTLs">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IZoneClosingService/GetUnassignedTLs" message="tns:IZoneClosingService_GetUnassignedTLs_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IZoneClosingService/GetUnassignedTLsResponse" message="tns:IZoneClosingService_GetUnassignedTLs_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.TsortFault" name="TsortFaultFault" message="tns:IZoneClosingService_GetUnassignedTLs_TsortFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUnassignedClosedTLs">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IZoneClosingService/GetUnassignedClosedTLs" message="tns:IZoneClosingService_GetUnassignedClosedTLs_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IZoneClosingService/GetUnassignedClosedTLsResponse" message="tns:IZoneClosingService_GetUnassignedClosedTLs_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.TsortFault" name="TsortFaultFault" message="tns:IZoneClosingService_GetUnassignedClosedTLs_TsortFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLanes">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IZoneClosingService/GetLanes" message="tns:IZoneClosingService_GetLanes_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IZoneClosingService/GetLanesResponse" message="tns:IZoneClosingService_GetLanes_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.TsortFault" name="TsortFaultFault" message="tns:IZoneClosingService_GetLanes_TsortFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeLanes">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IZoneClosingService/ChangeLanes" message="tns:IZoneClosingService_ChangeLanes_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IZoneClosingService/ChangeLanesResponse" message="tns:IZoneClosingService_ChangeLanes_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.TsortFault" name="TsortFaultFault" message="tns:IZoneClosingService_ChangeLanes_TsortFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CloseZone">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IZoneClosingService/CloseZone" message="tns:IZoneClosingService_CloseZone_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IZoneClosingService/CloseZoneResponse" message="tns:IZoneClosingService_CloseZone_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.TsortFault" name="TsortFaultFault" message="tns:IZoneClosingService_CloseZone_TsortFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

@@ -1,0 +1,20 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Areas/Tracking/Views/Shared/Site.Master" AutoEventWireup="true" CodeBehind="Administration.master.cs" Inherits="Argix.Views.Services.Services" %>
+<%@ MasterType VirtualPath="~/Areas/Tracking/Views/Shared/Site.master" %>
+
+<asp:Content ID="cMeta" runat="server" ContentPlaceHolderID="MetaContent">
+    <asp:ContentPlaceHolder ID="MetaContent" runat="server" />
+</asp:Content>
+<asp:Content ID="cLeft" runat="server" ContentPlaceHolderID="LeftContent">
+    <div id="title">Administration</div>
+    <div id="submenu">
+		<ul>
+            <li><%: Html.ActionLink("Change Password","ChangePassword","Administration")%></li>
+            <li><%: Html.ActionLink("Manage Guests","ManageGuests","Administration")%></li>
+            <li><%: Html.ActionLink("Manage Users","ManageUsers","Administration")%></li>
+            <li><%: Html.ActionLink("Manage Membership","ManageMembership","Administration")%></li>
+		</ul>
+	</div>
+</asp:Content>
+<asp:Content ID="cRight" runat="server" ContentPlaceHolderID="RightContent">
+    <asp:ContentPlaceHolder ID="PageContent" runat="server"/>
+</asp:Content>

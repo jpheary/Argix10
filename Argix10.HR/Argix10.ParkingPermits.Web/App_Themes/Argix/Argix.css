@@ -1,0 +1,249 @@
+/* 
+#c5c7c9     gray
+#ee2a24     red
+#ffffff     white
+#000000     black
+*/
+
+body {
+	font-family: Calibri, Arial, sans-serif;
+	font-size: 0.8em;
+	color: #000000;
+	background-color: #ffffff;
+    text-align: left;
+}
+
+/* Structure and Behavior ------------------------------------------ */
+.gridbox {
+    border: 0px solid grey;
+}
+.gridcontainer {
+    position: relative;
+	width: 98%;
+	margin: auto;
+	padding: 0% 1%;
+	background-color: #ffffff;
+}
+.gridheader {
+    position: relative;
+	width: 100%;
+    height: 48px;
+	margin: 0px;
+	padding: 0px;
+    border-bottom: 3px solid #c5c7c9;
+}
+.gridbody {
+    position: relative;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+.gridfooter {
+    position: relative;
+	width: 100%;
+	height: 25px;
+	margin: 0px;
+	padding: 0px;
+}
+@media only screen and (max-width: 340px) {
+    .gridcontainer {
+        position: relative;
+	    width: 320px;
+        height: 460px;
+	    margin: 0px;
+	    padding: 0px;
+	    background-color: #ffffff;
+    }
+    .gridheader {
+        position: relative;
+        height: 48px;
+        width: 320px;
+	    margin: 0px;
+	    padding: 0px;
+        border-bottom: 2px solid #c5c7c9;
+    }
+    .gridbody {
+        position: relative;
+        width: 320px;
+	    margin: 0px;
+	    padding: 0px;
+    }
+    .gridfooter {
+        position: relative;
+        width: 320px;
+	    height: 25px;
+	    margin: 0px;
+	    padding: 0px;
+    }
+}
+
+/* Content formatting ---------------------------------------------- */
+.header {
+    margin: 0px 0px;
+    padding: 0px 0px;
+}
+.logo {
+    float: left;
+    width: auto;
+    margin: 5px 0px 0px 0px;
+}
+.title {
+    float: right;
+    width: auto;
+    margin: 15px 15px 0px 0px;
+	font-size: 1.2em;
+    font-weight: bold;
+}
+.subtitle {
+    margin: 10px 0px 10px 0px;
+    padding: 0px 0px 0px 5px;
+	color: #c5c7c9;
+    font-size: 1.3em;
+    font-weight: 600;
+    text-align: left;
+}
+.body {
+    width: 1000px;
+    margin: 0px auto;
+    padding: 0px;
+    min-height: 450px;
+}
+.footer {
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+    vertical-align: middle;
+	font-size: 0.8em;
+}
+@media only screen and (max-width: 340px) {
+    .body {
+        width: 320px;
+        min-height: 390px;
+    }
+}
+
+.account {
+    width: 800px;
+    margin: 0px auto;
+}
+.account p {
+    margin: 10px 30px;
+}
+.account fieldset {
+    width: 400px;
+    margin: 20px auto;
+    padding: 25px 5px 5px 0px;
+}
+.account fieldset legend {
+    margin: 0px 0px 20px 0px;
+    padding: 0px 5px;
+    color: #c5c7c9;
+}
+.account label {
+    display: inline-block;
+    width: 100px;
+    padding-right: 5px;
+    text-align: right;
+    vertical-align: top;
+    font-weight: bold;
+}
+.account input[type="text"] {
+    margin: 2px 0px;
+}
+.account input[type="password"] {
+    margin: 2px 0px;
+}
+@media only screen and (max-width: 340px) {
+    .account {
+        width: 320px;
+        margin: 0px auto;
+    }
+    .account fieldset {
+        width: 300px;
+        margin: 20px auto;
+        padding: 25px 5px 5px 0px;
+    }
+}
+
+.permits {
+    width: 100%;
+    margin: 0px;
+}
+.permits p {
+    margin: 10px 30px;
+}
+.permits fieldset {
+    width: 100%;
+    margin: 10px auto;
+    padding: 15px 5px 5px 0px;
+}
+.permits fieldset legend {
+    margin: 0px 0px 20px 0px;
+    padding: 0px 5px;
+    color: #c5c7c9;
+}
+.permits label {
+    display: inline-block;
+    width: 50px;
+    padding: 5px 5px 0px 0px;
+    text-align: right;
+    vertical-align: top;
+    font-weight: bold;
+}
+.permits input[type="text"] {
+    margin: 2px 0px;
+}
+.permits select {
+    margin: 2px 0px;
+}
+@media only screen and (max-width: 340px) {
+    .permits fieldset {
+        width: 300px;
+    }
+}
+
+.services {
+    margin: 25px 0px;
+    padding: 0px 50px;
+    text-align:right;
+}
+
+.listviewtitle {
+    height:18px;
+    margin: 3px 0px;
+    padding: 2px 10px;
+    background-color:#eeeeee;
+    font-size: 1.0em;
+    font-weight: bold;
+}
+.listviewbody {
+    display: none;
+    margin:0px;
+    padding:0px;
+    overflow-x:hidden;
+    overflow-y:auto;
+    white-space:nowrap;
+}
+.gridviewbody {
+    display: block;
+    height: 350px;
+    margin:0px;
+    padding:0px;
+    border-bottom: 1px solid #c5c7c9;
+    overflow-x:auto;
+    overflow-y:auto;
+    white-space:nowrap;
+}
+@media only screen and (max-width: 340px) {
+    .listviewbody {
+        display: block;
+    }
+    .gridviewbody {
+        display: none;
+    }
+}
+
+.clear { clear: both;  }
+.clearright { clear: right; }
+.clearleft { clear: left; }
+

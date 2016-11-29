@@ -1,0 +1,37 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <asp:ContentPlaceHolder ID="cpMeta" runat="server" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="viewport" content="user-scalable=yes, width=device-width" />
+    <link href="<%= Url.Content("~/Content/Tracking.css") %>" rel="stylesheet" type="text/css" />
+    <title>Argix Logistics</title>
+    <script type="text/javascript">
+        function unhide(divID) {
+            var item = document.getElementById(divID);
+            if (item) item.className = (item.className == 'hidden') ? 'unhidden' : 'hidden';
+        }
+    </script>
+</head>
+<body>
+    <div id="page">
+        <div id="header">
+            <div id="logo">
+                <a href="<%: Url.Action("Index", "Home")%>">
+                    <img src="<%= Url.Content("~/Content/Images/argix-logom.gif") %>" height="40px" alt="Argix logo" style="border: 0;" />
+                </a>
+            </div>
+        </div>
+        <div id="headline"></div>
+        <div id="content">
+            <asp:ContentPlaceHolder ID="cpContent" runat="server" />
+        </div>
+        <div id="copyright">2012 Argix Logistics, Inc.</div>
+    </div>
+</body>
+</html>

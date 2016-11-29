@@ -1,0 +1,53 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head id="Head2" runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <asp:ContentPlaceHolder ID="MetaContent" runat="server" />
+    <link href="<%= Url.Content("~/content/tracking.css") %>" rel="stylesheet" type="text/css" />
+    <link href="<%= Url.Content("~/content/account.css") %>" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="Form1" runat="server">
+        <div id="page">
+            <div id="header">
+                <div id="logo"><a href="<%: Url.Action("Index", "Home",new { area="" },null)%>"><img src="<%= Url.Content("~/Content/Images/logo.jpg") %>" alt="Argix logo" style="border: 0;" /></a></div>
+                <div id="superMenu">
+		            <ul>
+			            <li>
+                            <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                                <AnonymousTemplate>
+                                    <%: Html.ActionLink("Client Login","Tracking","Tracking",new { area="Tracking" },null)%>
+                                </AnonymousTemplate>
+                                <LoggedInTemplate>
+                                    Welcome <span class="bold"><asp:LoginName ID="HeadLoginName" runat="server" /></span>
+                                    <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out" LogoutPageUrl="~/Views/Home/Index.aspx"/>
+                                </LoggedInTemplate>
+                            </asp:LoginView>
+                        </li>
+		            </ul>
+                </div>
+                <div class="clearRight"></div>
+                <div id="mainMenu">
+		            <ul>
+			            <li><%: Html.ActionLink("Tracking","Tracking","Tracking",new { area="Tracking" },null)%></li>
+			            <li><%: Html.ActionLink("Reports","Reports","Reports",new { area="Tracking" },null)%></li>
+			            <li><%: Html.ActionLink("Administration","Administration","Administration",new { area="Tracking" },null)%></li>
+		            </ul>
+	            </div>
+            </div>
+            <div id="left">
+                <asp:ContentPlaceHolder ID="LeftContent" runat="server"/>
+            </div>
+            <div id="right">
+                <asp:ContentPlaceHolder ID="RightContent" runat="server"/>
+            </div>
+            <div id="footer">
+                Copyright 2012 Argix Direct, Inc.
+            </div>
+        </div>
+    </form>
+</body>
+</html>

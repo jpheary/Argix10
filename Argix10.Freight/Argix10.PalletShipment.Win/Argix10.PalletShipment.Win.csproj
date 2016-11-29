@@ -1,0 +1,676 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{16B90A0C-37A5-42DA-95C0-F78A96966782}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Argix</RootNamespace>
+    <AssemblyName>PalletShipment</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <PublishUrl>C:\inetpub\wwwroot\Argix10\Apps\Freight\PalletShipment\</PublishUrl>
+    <Install>false</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>false</MapFileExtensions>
+    <UpdateUrl>http://localhost/PalletShipment/</UpdateUrl>
+    <ProductName>Pallet Shipment</ProductName>
+    <PublisherName>Argix Logistics, Inc.</PublisherName>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>12</ApplicationRevision>
+    <ApplicationVersion>4.0.5.12</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>false</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Argix.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>080D630E2CFA0B3BF9BB3D2E9682B6754E791868</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\app.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Argix10.Export.Lib">
+      <HintPath>..\..\Build\Argix10.Export.Lib.dll</HintPath>
+    </Reference>
+    <Reference Include="Argix10.Reminders.Lib">
+      <HintPath>..\..\Build\Argix10.Reminders.Lib.dll</HintPath>
+    </Reference>
+    <Reference Include="Argix10.Windows.Lib">
+      <HintPath>..\..\Build\Argix10.Windows.Lib.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Shared.v12.1, Version=12.1.20121.2135, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinGrid.v12.1, Version=12.1.20121.2135, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.v12.1, Version=12.1.20121.2135, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddressValidateResponse.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AddressValidateResponse.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SearchTool.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SearchTool.Designer.cs">
+      <DependentUpon>SearchTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TrackingTool.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TrackingTool.Designer.cs">
+      <DependentUpon>TrackingTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dlgVerifyAddress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgVerifyAddress.Designer.cs">
+      <DependentUpon>dlgVerifyAddress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnterpriseUSPSGateway.cs" />
+    <Compile Include="dlgLoadTenderQuote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgLoadTenderQuote.Designer.cs">
+      <DependentUpon>dlgLoadTenderQuote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IToolbar.cs" />
+    <Compile Include="LoadTenderQuoteDataset.Designer.cs">
+      <DependentUpon>LoadTenderQuoteDataset.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="dlgLTLConsignee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgLTLConsignee.Designer.cs">
+      <DependentUpon>dlgLTLConsignee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dlgLTLShipper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgLTLShipper.Designer.cs">
+      <DependentUpon>dlgLTLShipper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dlgLTLShipment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgLTLShipment.Designer.cs">
+      <DependentUpon>dlgLTLShipment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dlgPaperwork.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgPaperwork.Designer.cs">
+      <DependentUpon>dlgPaperwork.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dlgConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgLabels.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgLabels.Designer.cs">
+      <DependentUpon>dlgLabels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dlgLTLClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgLTLClient.Designer.cs">
+      <DependentUpon>dlgLTLClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FreightDataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FreightDataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FreightGateway.cs" />
+    <Compile Include="globals.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="QuickQuoteTool.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QuickQuoteTool.Designer.cs">
+      <DependentUpon>QuickQuoteTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RoleServiceGateway.cs" />
+    <Compile Include="Service References\Enterprise.USPS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Freight\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Security\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Enterprise\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="EnterpriseGateway.cs" />
+    <Compile Include="ultragridsvcs.cs" />
+    <Compile Include="winConsignees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="winConsignees.Designer.cs">
+      <DependentUpon>winConsignees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="winClients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="winClients.Designer.cs">
+      <DependentUpon>winClients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="winMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="winMain.Designer.cs">
+      <DependentUpon>winMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="winQuotes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="winQuotes.Designer.cs">
+      <DependentUpon>winQuotes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="winReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="winReports.Designer.cs">
+      <DependentUpon>winReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="winShipments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="winShipments.Designer.cs">
+      <DependentUpon>winShipments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="winShippers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="winShippers.Designer.cs">
+      <DependentUpon>winShippers.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TrackingTool.resx">
+      <DependentUpon>TrackingTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgLoadTenderQuote.resx">
+      <DependentUpon>dlgLoadTenderQuote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgLTLConsignee.resx">
+      <DependentUpon>dlgLTLConsignee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgLTLShipper.resx">
+      <DependentUpon>dlgLTLShipper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgLTLShipment.resx">
+      <DependentUpon>dlgLTLShipment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgPaperwork.resx">
+      <DependentUpon>dlgPaperwork.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgConfig.resx">
+      <DependentUpon>dlgConfig.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgLabels.resx">
+      <DependentUpon>dlgLabels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgLTLClient.resx">
+      <DependentUpon>dlgLTLClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgVerifyAddress.resx">
+      <DependentUpon>dlgVerifyAddress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuickQuoteTool.resx">
+      <DependentUpon>QuickQuoteTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="winConsignees.resx">
+      <DependentUpon>winConsignees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="winClients.resx">
+      <DependentUpon>winClients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="winMain.resx">
+      <DependentUpon>winMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="winQuotes.resx">
+      <DependentUpon>winQuotes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="winReports.resx">
+      <DependentUpon>winReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="winShipments.resx">
+      <DependentUpon>winShipments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="winShippers.resx">
+      <DependentUpon>winShippers.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AddressValidateResponse.xsc">
+      <DependentUpon>AddressValidateResponse.xsd</DependentUpon>
+    </None>
+    <None Include="AddressValidateResponse.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AddressValidateResponse.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="AddressValidateResponse.xss">
+      <DependentUpon>AddressValidateResponse.xsd</DependentUpon>
+    </None>
+    <None Include="app.config" />
+    <None Include="LoadTenderQuoteDataset.xsc">
+      <DependentUpon>LoadTenderQuoteDataset.xsd</DependentUpon>
+    </None>
+    <None Include="LoadTenderQuoteDataset.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LoadTenderQuoteDataset.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="LoadTenderQuoteDataset.xss">
+      <DependentUpon>LoadTenderQuoteDataset.xsd</DependentUpon>
+    </None>
+    <None Include="FreightDataset.xsc">
+      <DependentUpon>FreightDataset.xsd</DependentUpon>
+    </None>
+    <None Include="FreightDataset.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FreightDataset.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="FreightDataset.xss">
+      <DependentUpon>FreightDataset.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\DataSources\Argix.Freight.LTLPallets2.datasource" />
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\Enterprise.USPS\USPS1.wsdl" />
+    <None Include="Service References\Enterprise.USPS\USPS5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Enterprise.USPS\USPS51.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Enterprise.USPS\USPS52.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Enterprise.USPS\USPS53.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Enterprise.USPS\USPS54.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Enterprise.USPS\USPSService1.wsdl" />
+    <None Include="Service References\Enterprise\Argix.Enterprise.TrackingItems.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Enterprise\LTLTracking.wsdl" />
+    <None Include="Service References\Enterprise\LTLTracking.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Enterprise\LTLTracking1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Enterprise\LTLTracking2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Enterprise\LTLTrackingService.wsdl" />
+    <None Include="Service References\Freight\Argix.Freight.LoadTender.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Freight\Argix.Freight.LTLClient2.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Freight\Argix.Freight.LTLConsignee2.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Freight\Argix.Freight.LTLLoadTenderQuote.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Freight\Argix.Freight.LTLQuote2.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Freight\Argix.Freight.LTLShipment2.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Freight\Argix.Freight.LTLShipper2.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Freight\Argix.Freight.ServiceInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Freight\Argix.Freight.ServiceLocation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Freight\Argix.Freight.ServiceLocations.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Freight\Argix.Freight.UserConfiguration.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Freight\LTLService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Freight\LTLService21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Freight\LTLService22.wsdl" />
+    <None Include="Service References\Freight\LTLService22.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Freight\LTLService23.wsdl" />
+    <None Include="Service References\Freight\LTLService23.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Freight\LTLService24.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Freight\LTLService25.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Security\RoleService.wsdl" />
+    <None Include="Service References\Security\RoleService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Security\RoleService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Security\RoleService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\app.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="releasenotes.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Service References\Freight\LTLService2.disco" />
+    <None Include="Service References\Enterprise\LTLTracking.disco" />
+    <None Include="Service References\Enterprise.USPS\USPS1.disco" />
+    <None Include="Service References\Enterprise.USPS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\Enterprise.USPS\configuration.svcinfo" />
+    <None Include="Service References\Enterprise.USPS\configuration91.svcinfo" />
+    <None Include="Service References\Enterprise\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\Enterprise\configuration.svcinfo" />
+    <None Include="Service References\Enterprise\configuration91.svcinfo" />
+    <None Include="Service References\Security\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\Security\configuration.svcinfo" />
+    <None Include="Service References\Security\configuration91.svcinfo" />
+    <None Include="Service References\Security\RoleService.disco" />
+    <None Include="Service References\Freight\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\Freight\configuration.svcinfo" />
+    <None Include="Service References\Freight\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\Enterprise.USPS\" />
+    <WCFMetadataStorage Include="Service References\Freight\" />
+    <WCFMetadataStorage Include="Service References\Security\" />
+    <WCFMetadataStorage Include="Service References\Enterprise\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="Infragistics4.Shared.v12.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Infragistics4.Win.Misc.v12.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Infragistics4.Win.UltraWinGrid.v12.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Infragistics4.Win.v12.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.Office.Interop.Excel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.Common">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.DataVisualization">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.ProcessingObjectModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.WinForms">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.Vbe.Interop">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="office">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="stdole">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="LoadTenderQuoteDataset" targetNamespace="http://tempuri.org/LoadTenderQuoteDataset.xsd" xmlns:mstns="http://tempuri.org/LoadTenderQuoteDataset.xsd" xmlns="http://tempuri.org/LoadTenderQuoteDataset.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="LoadTenderQuoteDataset" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" >
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="LoadTenderQuoteTable" >
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" type="xs:int" minOccurs="0" />
+              <xs:element name="Owner" type="xs:string" minOccurs="0" />
+              <xs:element name="BrokerName" type="xs:string" minOccurs="0" />
+              <xs:element name="ContactName" type="xs:string" minOccurs="0" />
+              <xs:element name="ContactPhone" type="xs:string" minOccurs="0" />
+              <xs:element name="ContactEmail" type="xs:string" minOccurs="0" />
+              <xs:element name="Description" type="xs:string" minOccurs="0" />
+              <xs:element name="Comments" type="xs:string" minOccurs="0" />
+              <xs:element name="ShipDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="OriginCity" type="xs:string" minOccurs="0" />
+              <xs:element name="OriginState" type="xs:string" minOccurs="0" />
+              <xs:element name="OriginZip" type="xs:string" minOccurs="0" />
+              <xs:element name="InsidePickup" type="xs:boolean" minOccurs="0" />
+              <xs:element name="LiftGateOrigin" type="xs:boolean" minOccurs="0" />
+              <xs:element name="AppointmentOrigin" type="xs:boolean" minOccurs="0" />
+              <xs:element name="SameDayPickup" type="xs:boolean" minOccurs="0" />
+              <xs:element name="DestinationCity" type="xs:string" minOccurs="0" />
+              <xs:element name="DestinationState" type="xs:string" minOccurs="0" />
+              <xs:element name="DestinationZip" type="xs:string" minOccurs="0" />
+              <xs:element name="InsideDelivery" type="xs:boolean" minOccurs="0" />
+              <xs:element name="LiftGateDestination" type="xs:boolean" minOccurs="0" />
+              <xs:element name="AppointmentDestination" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Pallet1Weight" type="xs:int" minOccurs="0" />
+              <xs:element name="Pallet1Class" type="xs:string" minOccurs="0" />
+              <xs:element name="Pallet1InsuranceValue" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Pallet2Weight" type="xs:int" minOccurs="0" />
+              <xs:element name="Pallet2Class" type="xs:string" minOccurs="0" />
+              <xs:element name="Pallet2InsuranceValue" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Pallet3Weight" type="xs:int" minOccurs="0" />
+              <xs:element name="Pallet3Class" type="xs:string" minOccurs="0" />
+              <xs:element name="Pallet3InsuranceValue" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Pallet4Weight" type="xs:int" minOccurs="0" />
+              <xs:element name="Pallet4Class" type="xs:string" minOccurs="0" />
+              <xs:element name="Pallet4InsuranceValue" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Pallet5Weight" type="xs:int" minOccurs="0" />
+              <xs:element name="Pallet5Class" type="xs:string" minOccurs="0" />
+              <xs:element name="Pallet5InsuranceValue" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Pallets" type="xs:int" minOccurs="0" />
+              <xs:element name="Weight" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PalletRate" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FuelSurcharge" type="xs:decimal" minOccurs="0" />
+              <xs:element name="AccessorialCharge" type="xs:decimal" minOccurs="0" />
+              <xs:element name="InsuranceCharge" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TollCharge" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalCharge" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalChargeMin" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Logged" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LoggedBy" type="xs:string" minOccurs="0" />
+              <xs:element name="Approved" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ApprovedBy" type="xs:string" minOccurs="0" />
+              <xs:element name="LoadTenderNumber" type="xs:int" minOccurs="0" />
+              <xs:element name="ShipmentNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="Cancelled" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CancelledBy" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f457e5b1-8142-489c-b592-d4775df799cf" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:53791/Argix10.Enterprise.Services/Tracking.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Tracking.xsd" MetadataType="Schema" ID="d7865f4a-fa6e-4a80-9e61-1a443470e7b9" SourceId="1" SourceUrl="http://localhost:53791/Argix10.Enterprise.Services/Tracking.svc?xsd=xsd2" />
+    <MetadataFile FileName="Tracking1.xsd" MetadataType="Schema" ID="7178066d-4caf-4a77-9084-131b95c8d51e" SourceId="1" SourceUrl="http://localhost:53791/Argix10.Enterprise.Services/Tracking.svc?xsd=xsd1" />
+    <MetadataFile FileName="Tracking.disco" MetadataType="Disco" ID="fc3b0d44-2436-4b4f-8a07-14439b675bfd" SourceId="1" SourceUrl="http://localhost:53791/Argix10.Enterprise.Services/Tracking.svc?disco" />
+    <MetadataFile FileName="Tracking2.xsd" MetadataType="Schema" ID="fac7813d-ac29-49b2-a484-a0478642ec02" SourceId="1" SourceUrl="http://localhost:53791/Argix10.Enterprise.Services/Tracking.svc?xsd=xsd3" />
+    <MetadataFile FileName="Tracking3.xsd" MetadataType="Schema" ID="0a68ade9-51f6-4bac-b4cf-9f802991ab96" SourceId="1" SourceUrl="http://localhost:53791/Argix10.Enterprise.Services/Tracking.svc?xsd=xsd4" />
+    <MetadataFile FileName="Tracking.wsdl" MetadataType="Wsdl" ID="5354288f-f141-452f-97e1-9cbca79cc67c" SourceId="1" SourceUrl="http://localhost:53791/Argix10.Enterprise.Services/Tracking.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="TrackingService.wsdl" MetadataType="Wsdl" ID="f1b3f5b7-9977-463c-964c-b47c335c8dc0" SourceId="1" SourceUrl="http://localhost:53791/Argix10.Enterprise.Services/Tracking.svc?wsdl" />
+    <MetadataFile FileName="Tracking4.xsd" MetadataType="Schema" ID="eb242a4d-0ee0-473f-90a6-9031957e5dd7" SourceId="1" SourceUrl="http://localhost:53791/Argix10.Enterprise.Services/Tracking.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

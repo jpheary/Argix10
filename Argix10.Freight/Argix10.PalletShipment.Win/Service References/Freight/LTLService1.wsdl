@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://Argix.Freight" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://Argix.Freight" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://Argix.Freight/Imports">
+      <xsd:import schemaLocation="http://localhost:51117/Argix10.FreightBeta.Services/LTLService.svc?xsd=xsd0" namespace="http://Argix.Freight" />
+      <xsd:import schemaLocation="http://localhost:51117/Argix10.FreightBeta.Services/LTLService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Argix" />
+      <xsd:import schemaLocation="http://localhost:51117/Argix10.FreightBeta.Services/LTLService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:51117/Argix10.FreightBeta.Services/LTLService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:51117/Argix10.FreightBeta.Services/LTLService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Argix.Freight" />
+      <xsd:import schemaLocation="http://localhost:51117/Argix10.FreightBeta.Services/LTLService.svc?xsd=xsd4" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ILTLService_GetServiceInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetServiceInfo" />
+  </wsdl:message>
+  <wsdl:message name="ILTLService_GetServiceInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetServiceInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILTLService_GetServiceInfo_ConfigurationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/Argix" name="detail" element="q1:ConfigurationFault" />
+  </wsdl:message>
+  <wsdl:message name="ILTLService_GetUserConfiguration_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserConfiguration" />
+  </wsdl:message>
+  <wsdl:message name="ILTLService_GetUserConfiguration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserConfigurationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILTLService_GetUserConfiguration_ConfigurationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/Argix" name="detail" element="q2:ConfigurationFault" />
+  </wsdl:message>
+  <wsdl:message name="ILTLService_WriteLogEntry_InputMessage">
+    <wsdl:part name="parameters" element="tns:WriteLogEntry" />
+  </wsdl:message>
+  <wsdl:message name="ILTLAdminService_ViewLTLClients_InputMessage">
+    <wsdl:part name="parameters" element="tns:ViewLTLClients" />
+  </wsdl:message>
+  <wsdl:message name="ILTLAdminService_ViewLTLClients_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ViewLTLClientsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILTLAdminService_ViewLTLClients_LTLFaultFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q3:LTLFault" />
+  </wsdl:message>
+  <wsdl:message name="ILTLAdminService_ApproveLTLClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:ApproveLTLClient" />
+  </wsdl:message>
+  <wsdl:message name="ILTLAdminService_ApproveLTLClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ApproveLTLClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILTLAdminService_ApproveLTLClient_LTLFaultFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q4:LTLFault" />
+  </wsdl:message>
+  <wsdl:message name="ILTLAdminService_ViewLTLShipmentsRequested_InputMessage">
+    <wsdl:part name="parameters" element="tns:ViewLTLShipmentsRequested" />
+  </wsdl:message>
+  <wsdl:message name="ILTLAdminService_ViewLTLShipmentsRequested_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ViewLTLShipmentsRequestedResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILTLAdminService_ViewLTLShipmentsRequested_LTLFaultFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q5:LTLFault" />
+  </wsdl:message>
+  <wsdl:message name="ILTLAdminService_ViewLTLShipmentsApproved_InputMessage">
+    <wsdl:part name="parameters" element="tns:ViewLTLShipmentsApproved" />
+  </wsdl:message>
+  <wsdl:message name="ILTLAdminService_ViewLTLShipmentsApproved_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ViewLTLShipmentsApprovedResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILTLAdminService_ViewLTLShipmentsApproved_LTLFaultFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q6:LTLFault" />
+  </wsdl:message>
+  <wsdl:message name="ILTLAdminService_ApproveLTLShipment_InputMessage">
+    <wsdl:part name="parameters" element="tns:ApproveLTLShipment" />
+  </wsdl:message>
+  <wsdl:message name="ILTLAdminService_ApproveLTLShipment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ApproveLTLShipmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILTLAdminService_ApproveLTLShipment_LTLFaultFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q7:LTLFault" />
+  </wsdl:message>
+  <wsdl:message name="ILTLAdminService_ReadPalletLabels_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadPalletLabels" />
+  </wsdl:message>
+  <wsdl:message name="ILTLAdminService_ReadPalletLabels_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadPalletLabelsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILTLAdminService_ReadPalletLabels_LTLFaultFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q8:LTLFault" />
+  </wsdl:message>
+  <wsdl:message name="ILTLAdminService_ViewLTLShippers_InputMessage">
+    <wsdl:part name="parameters" element="tns:ViewLTLShippers" />
+  </wsdl:message>
+  <wsdl:message name="ILTLAdminService_ViewLTLShippers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ViewLTLShippersResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILTLAdminService_ViewLTLShippers_LTLFaultFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q9:LTLFault" />
+  </wsdl:message>
+  <wsdl:message name="ILTLAdminService_ViewLTLConsignees_InputMessage">
+    <wsdl:part name="parameters" element="tns:ViewLTLConsignees" />
+  </wsdl:message>
+  <wsdl:message name="ILTLAdminService_ViewLTLConsignees_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ViewLTLConsigneesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILTLAdminService_ViewLTLConsignees_LTLFaultFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q10:LTLFault" />
+  </wsdl:message>
+  <wsdl:message name="ILTLAdminService_ViewServiceLocations_InputMessage">
+    <wsdl:part name="parameters" element="tns:ViewServiceLocations" />
+  </wsdl:message>
+  <wsdl:message name="ILTLAdminService_ViewServiceLocations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ViewServiceLocationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILTLAdminService_ViewServiceLocations_LTLFaultFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q11:LTLFault" />
+  </wsdl:message>
+  <wsdl:message name="ILTLAdminService_CreateServiceLocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateServiceLocation" />
+  </wsdl:message>
+  <wsdl:message name="ILTLAdminService_CreateServiceLocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateServiceLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILTLAdminService_CreateServiceLocation_LTLFaultFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q12:LTLFault" />
+  </wsdl:message>
+  <wsdl:message name="ILTLAdminService_ViewTariffRates_InputMessage">
+    <wsdl:part name="parameters" element="tns:ViewTariffRates" />
+  </wsdl:message>
+  <wsdl:message name="ILTLAdminService_ViewTariffRates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ViewTariffRatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILTLAdminService_ViewTariffRates_LTLFaultFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q13:LTLFault" />
+  </wsdl:message>
+  <wsdl:message name="ILTLAdminService_CreateTariffRate_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateTariffRate" />
+  </wsdl:message>
+  <wsdl:message name="ILTLAdminService_CreateTariffRate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateTariffRateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILTLAdminService_CreateTariffRate_LTLFaultFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q14:LTLFault" />
+  </wsdl:message>
+  <wsdl:message name="ILTLAdminService_ViewFuelSurcharges_InputMessage">
+    <wsdl:part name="parameters" element="tns:ViewFuelSurcharges" />
+  </wsdl:message>
+  <wsdl:message name="ILTLAdminService_ViewFuelSurcharges_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ViewFuelSurchargesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILTLAdminService_ViewFuelSurcharges_LTLFaultFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q15:LTLFault" />
+  </wsdl:message>
+  <wsdl:message name="ILTLAdminService_ViewAccessorialCharges_InputMessage">
+    <wsdl:part name="parameters" element="tns:ViewAccessorialCharges" />
+  </wsdl:message>
+  <wsdl:message name="ILTLAdminService_ViewAccessorialCharges_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ViewAccessorialChargesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILTLAdminService_ViewAccessorialCharges_LTLFaultFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q16:LTLFault" />
+  </wsdl:message>
+  <wsdl:message name="ILTLClientService_CreateQuote_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateQuote" />
+  </wsdl:message>
+  <wsdl:message name="ILTLClientService_CreateQuote_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateQuoteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILTLClientService_CreateQuote_LTLFaultFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q17:LTLFault" />
+  </wsdl:message>
+  <wsdl:message name="ILTLClientService_CreateLTLClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateLTLClient" />
+  </wsdl:message>
+  <wsdl:message name="ILTLClientService_CreateLTLClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateLTLClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILTLClientService_CreateLTLClient_LTLFaultFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q18:LTLFault" />
+  </wsdl:message>
+  <wsdl:message name="ILTLClientService_ReadLTLClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadLTLClient" />
+  </wsdl:message>
+  <wsdl:message name="ILTLClientService_ReadLTLClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadLTLClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILTLClientService_ReadLTLClient_LTLFaultFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q19:LTLFault" />
+  </wsdl:message>
+  <wsdl:message name="ILTLClientService_UpdateLTLClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateLTLClient" />
+  </wsdl:message>
+  <wsdl:message name="ILTLClientService_UpdateLTLClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateLTLClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILTLClientService_UpdateLTLClient_LTLFaultFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q20:LTLFault" />
+  </wsdl:message>
+  <wsdl:message name="ILTLClientService_ViewLTLShippersForClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:ViewLTLShippersForClient" />
+  </wsdl:message>
+  <wsdl:message name="ILTLClientService_ViewLTLShippersForClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ViewLTLShippersForClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILTLClientService_ViewLTLShippersForClient_LTLFaultFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q21:LTLFault" />
+  </wsdl:message>
+  <wsdl:message name="ILTLClientService_CreateLTLShipper_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateLTLShipper" />
+  </wsdl:message>
+  <wsdl:message name="ILTLClientService_CreateLTLShipper_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateLTLShipperResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILTLClientService_CreateLTLShipper_LTLFaultFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q22:LTLFault" />
+  </wsdl:message>
+  <wsdl:message name="ILTLClientService_ReadLTLShippersList_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadLTLShippersList" />
+  </wsdl:message>
+  <wsdl:message name="ILTLClientService_ReadLTLShippersList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadLTLShippersListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILTLClientService_ReadLTLShippersList_LTLFaultFault_FaultMessage">
+    <wsdl:part xmlns:q23="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q23:LTLFault" />
+  </wsdl:message>
+  <wsdl:message name="ILTLClientService_ReadLTLShipper_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadLTLShipper" />
+  </wsdl:message>
+  <wsdl:message name="ILTLClientService_ReadLTLShipper_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadLTLShipperResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILTLClientService_ReadLTLShipper_LTLFaultFault_FaultMessage">
+    <wsdl:part xmlns:q24="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q24:LTLFault" />
+  </wsdl:message>
+  <wsdl:message name="ILTLClientService_UpdateLTLShipper_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateLTLShipper" />
+  </wsdl:message>
+  <wsdl:message name="ILTLClientService_UpdateLTLShipper_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateLTLShipperResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILTLClientService_UpdateLTLShipper_LTLFaultFault_FaultMessage">
+    <wsdl:part xmlns:q25="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q25:LTLFault" />
+  </wsdl:message>
+  <wsdl:message name="ILTLClientService_ViewLTLConsigneesForClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:ViewLTLConsigneesForClient" />
+  </wsdl:message>
+  <wsdl:message name="ILTLClientService_ViewLTLConsigneesForClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ViewLTLConsigneesForClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILTLClientService_ViewLTLConsigneesForClient_LTLFaultFault_FaultMessage">
+    <wsdl:part xmlns:q26="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q26:LTLFault" />
+  </wsdl:message>
+  <wsdl:message name="ILTLClientService_CreateLTLConsignee_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateLTLConsignee" />
+  </wsdl:message>
+  <wsdl:message name="ILTLClientService_CreateLTLConsignee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateLTLConsigneeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILTLClientService_CreateLTLConsignee_LTLFaultFault_FaultMessage">
+    <wsdl:part xmlns:q27="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q27:LTLFault" />
+  </wsdl:message>
+  <wsdl:message name="ILTLClientService_ReadLTLConsigneesList_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadLTLConsigneesList" />
+  </wsdl:message>
+  <wsdl:message name="ILTLClientService_ReadLTLConsigneesList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadLTLConsigneesListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILTLClientService_ReadLTLConsigneesList_LTLFaultFault_FaultMessage">
+    <wsdl:part xmlns:q28="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q28:LTLFault" />
+  </wsdl:message>
+  <wsdl:message name="ILTLClientService_ReadLTLConsignee_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadLTLConsignee" />
+  </wsdl:message>
+  <wsdl:message name="ILTLClientService_ReadLTLConsignee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadLTLConsigneeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILTLClientService_ReadLTLConsignee_LTLFaultFault_FaultMessage">
+    <wsdl:part xmlns:q29="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q29:LTLFault" />
+  </wsdl:message>
+  <wsdl:message name="ILTLClientService_UpdateLTLConsignee_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateLTLConsignee" />
+  </wsdl:message>
+  <wsdl:message name="ILTLClientService_UpdateLTLConsignee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateLTLConsigneeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILTLClientService_UpdateLTLConsignee_LTLFaultFault_FaultMessage">
+    <wsdl:part xmlns:q30="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q30:LTLFault" />
+  </wsdl:message>
+  <wsdl:message name="ILTLClientService_ViewLTLShipments_InputMessage">
+    <wsdl:part name="parameters" element="tns:ViewLTLShipments" />
+  </wsdl:message>
+  <wsdl:message name="ILTLClientService_ViewLTLShipments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ViewLTLShipmentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILTLClientService_ViewLTLShipments_LTLFaultFault_FaultMessage">
+    <wsdl:part xmlns:q31="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q31:LTLFault" />
+  </wsdl:message>
+  <wsdl:message name="ILTLClientService_CreateLTLShipment_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateLTLShipment" />
+  </wsdl:message>
+  <wsdl:message name="ILTLClientService_CreateLTLShipment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateLTLShipmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILTLClientService_CreateLTLShipment_LTLFaultFault_FaultMessage">
+    <wsdl:part xmlns:q32="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q32:LTLFault" />
+  </wsdl:message>
+  <wsdl:message name="ILTLClientService_ReadLTLShipment_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadLTLShipment" />
+  </wsdl:message>
+  <wsdl:message name="ILTLClientService_ReadLTLShipment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadLTLShipmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILTLClientService_ReadLTLShipment_LTLFaultFault_FaultMessage">
+    <wsdl:part xmlns:q33="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q33:LTLFault" />
+  </wsdl:message>
+  <wsdl:message name="ILTLClientService_ReadServiceLocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadServiceLocation" />
+  </wsdl:message>
+  <wsdl:message name="ILTLClientService_ReadServiceLocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadServiceLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILTLClientService_ReadServiceLocation_LTLFaultFault_FaultMessage">
+    <wsdl:part xmlns:q34="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q34:LTLFault" />
+  </wsdl:message>
+  <wsdl:message name="ILTLClientService_ReadPickupLocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadPickupLocation" />
+  </wsdl:message>
+  <wsdl:message name="ILTLClientService_ReadPickupLocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadPickupLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILTLClientService_ReadPickupLocation_LTLFaultFault_FaultMessage">
+    <wsdl:part xmlns:q35="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q35:LTLFault" />
+  </wsdl:message>
+  <wsdl:portType name="ILTLService">
+    <wsdl:operation name="GetServiceInfo">
+      <wsdl:input wsaw:Action="http://Argix.Freight/ILTLService/GetServiceInfo" message="tns:ILTLService_GetServiceInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/ILTLService/GetServiceInfoResponse" message="tns:ILTLService_GetServiceInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.ConfigurationFault" name="ConfigurationFaultFault" message="tns:ILTLService_GetServiceInfo_ConfigurationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserConfiguration">
+      <wsdl:input wsaw:Action="http://Argix.Freight/ILTLService/GetUserConfiguration" message="tns:ILTLService_GetUserConfiguration_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/ILTLService/GetUserConfigurationResponse" message="tns:ILTLService_GetUserConfiguration_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.ConfigurationFault" name="ConfigurationFaultFault" message="tns:ILTLService_GetUserConfiguration_ConfigurationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WriteLogEntry">
+      <wsdl:input wsaw:Action="http://Argix.Freight/ILTLService/WriteLogEntry" message="tns:ILTLService_WriteLogEntry_InputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ILTLAdminService">
+    <wsdl:operation name="ViewLTLClients">
+      <wsdl:input wsaw:Action="http://Argix.Freight/ILTLAdminService/ViewLTLClients" message="tns:ILTLAdminService_ViewLTLClients_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/ILTLAdminService/ViewLTLClientsResponse" message="tns:ILTLAdminService_ViewLTLClients_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.LTLFault" name="LTLFaultFault" message="tns:ILTLAdminService_ViewLTLClients_LTLFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ApproveLTLClient">
+      <wsdl:input wsaw:Action="http://Argix.Freight/ILTLAdminService/ApproveLTLClient" message="tns:ILTLAdminService_ApproveLTLClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/ILTLAdminService/ApproveLTLClientResponse" message="tns:ILTLAdminService_ApproveLTLClient_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.LTLFault" name="LTLFaultFault" message="tns:ILTLAdminService_ApproveLTLClient_LTLFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ViewLTLShipmentsRequested">
+      <wsdl:input wsaw:Action="http://Argix.Freight/ILTLAdminService/ViewLTLShipmentsRequested" message="tns:ILTLAdminService_ViewLTLShipmentsRequested_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/ILTLAdminService/ViewLTLShipmentsRequestedResponse" message="tns:ILTLAdminService_ViewLTLShipmentsRequested_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.LTLFault" name="LTLFaultFault" message="tns:ILTLAdminService_ViewLTLShipmentsRequested_LTLFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ViewLTLShipmentsApproved">
+      <wsdl:input wsaw:Action="http://Argix.Freight/ILTLAdminService/ViewLTLShipmentsApproved" message="tns:ILTLAdminService_ViewLTLShipmentsApproved_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/ILTLAdminService/ViewLTLShipmentsApprovedResponse" message="tns:ILTLAdminService_ViewLTLShipmentsApproved_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.LTLFault" name="LTLFaultFault" message="tns:ILTLAdminService_ViewLTLShipmentsApproved_LTLFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ApproveLTLShipment">
+      <wsdl:input wsaw:Action="http://Argix.Freight/ILTLAdminService/ApproveLTLShipment" message="tns:ILTLAdminService_ApproveLTLShipment_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/ILTLAdminService/ApproveLTLShipmentResponse" message="tns:ILTLAdminService_ApproveLTLShipment_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.LTLFault" name="LTLFaultFault" message="tns:ILTLAdminService_ApproveLTLShipment_LTLFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadPalletLabels">
+      <wsdl:input wsaw:Action="http://Argix.Freight/ILTLAdminService/ReadPalletLabels" message="tns:ILTLAdminService_ReadPalletLabels_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/ILTLAdminService/ReadPalletLabelsResponse" message="tns:ILTLAdminService_ReadPalletLabels_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.LTLFault" name="LTLFaultFault" message="tns:ILTLAdminService_ReadPalletLabels_LTLFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ViewLTLShippers">
+      <wsdl:input wsaw:Action="http://Argix.Freight/ILTLAdminService/ViewLTLShippers" message="tns:ILTLAdminService_ViewLTLShippers_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/ILTLAdminService/ViewLTLShippersResponse" message="tns:ILTLAdminService_ViewLTLShippers_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.LTLFault" name="LTLFaultFault" message="tns:ILTLAdminService_ViewLTLShippers_LTLFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ViewLTLConsignees">
+      <wsdl:input wsaw:Action="http://Argix.Freight/ILTLAdminService/ViewLTLConsignees" message="tns:ILTLAdminService_ViewLTLConsignees_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/ILTLAdminService/ViewLTLConsigneesResponse" message="tns:ILTLAdminService_ViewLTLConsignees_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.LTLFault" name="LTLFaultFault" message="tns:ILTLAdminService_ViewLTLConsignees_LTLFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ViewServiceLocations">
+      <wsdl:input wsaw:Action="http://Argix.Freight/ILTLAdminService/ViewServiceLocations" message="tns:ILTLAdminService_ViewServiceLocations_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/ILTLAdminService/ViewServiceLocationsResponse" message="tns:ILTLAdminService_ViewServiceLocations_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.LTLFault" name="LTLFaultFault" message="tns:ILTLAdminService_ViewServiceLocations_LTLFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateServiceLocation">
+      <wsdl:input wsaw:Action="http://Argix.Freight/ILTLAdminService/CreateServiceLocation" message="tns:ILTLAdminService_CreateServiceLocation_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/ILTLAdminService/CreateServiceLocationResponse" message="tns:ILTLAdminService_CreateServiceLocation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.LTLFault" name="LTLFaultFault" message="tns:ILTLAdminService_CreateServiceLocation_LTLFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ViewTariffRates">
+      <wsdl:input wsaw:Action="http://Argix.Freight/ILTLAdminService/ViewTariffRates" message="tns:ILTLAdminService_ViewTariffRates_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/ILTLAdminService/ViewTariffRatesResponse" message="tns:ILTLAdminService_ViewTariffRates_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.LTLFault" name="LTLFaultFault" message="tns:ILTLAdminService_ViewTariffRates_LTLFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateTariffRate">
+      <wsdl:input wsaw:Action="http://Argix.Freight/ILTLAdminService/CreateTariffRate" message="tns:ILTLAdminService_CreateTariffRate_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/ILTLAdminService/CreateTariffRateResponse" message="tns:ILTLAdminService_CreateTariffRate_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.LTLFault" name="LTLFaultFault" message="tns:ILTLAdminService_CreateTariffRate_LTLFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ViewFuelSurcharges">
+      <wsdl:input wsaw:Action="http://Argix.Freight/ILTLAdminService/ViewFuelSurcharges" message="tns:ILTLAdminService_ViewFuelSurcharges_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/ILTLAdminService/ViewFuelSurchargesResponse" message="tns:ILTLAdminService_ViewFuelSurcharges_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.LTLFault" name="LTLFaultFault" message="tns:ILTLAdminService_ViewFuelSurcharges_LTLFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ViewAccessorialCharges">
+      <wsdl:input wsaw:Action="http://Argix.Freight/ILTLAdminService/ViewAccessorialCharges" message="tns:ILTLAdminService_ViewAccessorialCharges_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/ILTLAdminService/ViewAccessorialChargesResponse" message="tns:ILTLAdminService_ViewAccessorialCharges_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.LTLFault" name="LTLFaultFault" message="tns:ILTLAdminService_ViewAccessorialCharges_LTLFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ILTLClientService">
+    <wsdl:operation name="CreateQuote">
+      <wsdl:input wsaw:Action="http://Argix.Freight/ILTLClientService/CreateQuote" message="tns:ILTLClientService_CreateQuote_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/ILTLClientService/CreateQuoteResponse" message="tns:ILTLClientService_CreateQuote_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.LTLFault" name="LTLFaultFault" message="tns:ILTLClientService_CreateQuote_LTLFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateLTLClient">
+      <wsdl:input wsaw:Action="http://Argix.Freight/ILTLClientService/CreateLTLClient" message="tns:ILTLClientService_CreateLTLClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/ILTLClientService/CreateLTLClientResponse" message="tns:ILTLClientService_CreateLTLClient_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.LTLFault" name="LTLFaultFault" message="tns:ILTLClientService_CreateLTLClient_LTLFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadLTLClient">
+      <wsdl:input wsaw:Action="http://Argix.Freight/ILTLClientService/ReadLTLClient" message="tns:ILTLClientService_ReadLTLClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/ILTLClientService/ReadLTLClientResponse" message="tns:ILTLClientService_ReadLTLClient_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.LTLFault" name="LTLFaultFault" message="tns:ILTLClientService_ReadLTLClient_LTLFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLTLClient">
+      <wsdl:input wsaw:Action="http://Argix.Freight/ILTLClientService/UpdateLTLClient" message="tns:ILTLClientService_UpdateLTLClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/ILTLClientService/UpdateLTLClientResponse" message="tns:ILTLClientService_UpdateLTLClient_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.LTLFault" name="LTLFaultFault" message="tns:ILTLClientService_UpdateLTLClient_LTLFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ViewLTLShippersForClient">
+      <wsdl:input wsaw:Action="http://Argix.Freight/ILTLClientService/ViewLTLShippersForClient" message="tns:ILTLClientService_ViewLTLShippersForClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/ILTLClientService/ViewLTLShippersForClientResponse" message="tns:ILTLClientService_ViewLTLShippersForClient_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.LTLFault" name="LTLFaultFault" message="tns:ILTLClientService_ViewLTLShippersForClient_LTLFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateLTLShipper">
+      <wsdl:input wsaw:Action="http://Argix.Freight/ILTLClientService/CreateLTLShipper" message="tns:ILTLClientService_CreateLTLShipper_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/ILTLClientService/CreateLTLShipperResponse" message="tns:ILTLClientService_CreateLTLShipper_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.LTLFault" name="LTLFaultFault" message="tns:ILTLClientService_CreateLTLShipper_LTLFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadLTLShippersList">
+      <wsdl:input wsaw:Action="http://Argix.Freight/ILTLClientService/ReadLTLShippersList" message="tns:ILTLClientService_ReadLTLShippersList_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/ILTLClientService/ReadLTLShippersListResponse" message="tns:ILTLClientService_ReadLTLShippersList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.LTLFault" name="LTLFaultFault" message="tns:ILTLClientService_ReadLTLShippersList_LTLFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadLTLShipper">
+      <wsdl:input wsaw:Action="http://Argix.Freight/ILTLClientService/ReadLTLShipper" message="tns:ILTLClientService_ReadLTLShipper_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/ILTLClientService/ReadLTLShipperResponse" message="tns:ILTLClientService_ReadLTLShipper_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.LTLFault" name="LTLFaultFault" message="tns:ILTLClientService_ReadLTLShipper_LTLFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLTLShipper">
+      <wsdl:input wsaw:Action="http://Argix.Freight/ILTLClientService/UpdateLTLShipper" message="tns:ILTLClientService_UpdateLTLShipper_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/ILTLClientService/UpdateLTLShipperResponse" message="tns:ILTLClientService_UpdateLTLShipper_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.LTLFault" name="LTLFaultFault" message="tns:ILTLClientService_UpdateLTLShipper_LTLFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ViewLTLConsigneesForClient">
+      <wsdl:input wsaw:Action="http://Argix.Freight/ILTLClientService/ViewLTLConsigneesForClient" message="tns:ILTLClientService_ViewLTLConsigneesForClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/ILTLClientService/ViewLTLConsigneesForClientResponse" message="tns:ILTLClientService_ViewLTLConsigneesForClient_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.LTLFault" name="LTLFaultFault" message="tns:ILTLClientService_ViewLTLConsigneesForClient_LTLFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateLTLConsignee">
+      <wsdl:input wsaw:Action="http://Argix.Freight/ILTLClientService/CreateLTLConsignee" message="tns:ILTLClientService_CreateLTLConsignee_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/ILTLClientService/CreateLTLConsigneeResponse" message="tns:ILTLClientService_CreateLTLConsignee_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.LTLFault" name="LTLFaultFault" message="tns:ILTLClientService_CreateLTLConsignee_LTLFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadLTLConsigneesList">
+      <wsdl:input wsaw:Action="http://Argix.Freight/ILTLClientService/ReadLTLConsigneesList" message="tns:ILTLClientService_ReadLTLConsigneesList_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/ILTLClientService/ReadLTLConsigneesListResponse" message="tns:ILTLClientService_ReadLTLConsigneesList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.LTLFault" name="LTLFaultFault" message="tns:ILTLClientService_ReadLTLConsigneesList_LTLFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadLTLConsignee">
+      <wsdl:input wsaw:Action="http://Argix.Freight/ILTLClientService/ReadLTLConsignee" message="tns:ILTLClientService_ReadLTLConsignee_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/ILTLClientService/ReadLTLConsigneeResponse" message="tns:ILTLClientService_ReadLTLConsignee_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.LTLFault" name="LTLFaultFault" message="tns:ILTLClientService_ReadLTLConsignee_LTLFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLTLConsignee">
+      <wsdl:input wsaw:Action="http://Argix.Freight/ILTLClientService/UpdateLTLConsignee" message="tns:ILTLClientService_UpdateLTLConsignee_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/ILTLClientService/UpdateLTLConsigneeResponse" message="tns:ILTLClientService_UpdateLTLConsignee_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.LTLFault" name="LTLFaultFault" message="tns:ILTLClientService_UpdateLTLConsignee_LTLFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ViewLTLShipments">
+      <wsdl:input wsaw:Action="http://Argix.Freight/ILTLClientService/ViewLTLShipments" message="tns:ILTLClientService_ViewLTLShipments_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/ILTLClientService/ViewLTLShipmentsResponse" message="tns:ILTLClientService_ViewLTLShipments_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.LTLFault" name="LTLFaultFault" message="tns:ILTLClientService_ViewLTLShipments_LTLFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateLTLShipment">
+      <wsdl:input wsaw:Action="http://Argix.Freight/ILTLClientService/CreateLTLShipment" message="tns:ILTLClientService_CreateLTLShipment_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/ILTLClientService/CreateLTLShipmentResponse" message="tns:ILTLClientService_CreateLTLShipment_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.LTLFault" name="LTLFaultFault" message="tns:ILTLClientService_CreateLTLShipment_LTLFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadLTLShipment">
+      <wsdl:input wsaw:Action="http://Argix.Freight/ILTLClientService/ReadLTLShipment" message="tns:ILTLClientService_ReadLTLShipment_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/ILTLClientService/ReadLTLShipmentResponse" message="tns:ILTLClientService_ReadLTLShipment_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.LTLFault" name="LTLFaultFault" message="tns:ILTLClientService_ReadLTLShipment_LTLFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadServiceLocation">
+      <wsdl:input wsaw:Action="http://Argix.Freight/ILTLClientService/ReadServiceLocation" message="tns:ILTLClientService_ReadServiceLocation_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/ILTLClientService/ReadServiceLocationResponse" message="tns:ILTLClientService_ReadServiceLocation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.LTLFault" name="LTLFaultFault" message="tns:ILTLClientService_ReadServiceLocation_LTLFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadPickupLocation">
+      <wsdl:input wsaw:Action="http://Argix.Freight/ILTLClientService/ReadPickupLocation" message="tns:ILTLClientService_ReadPickupLocation_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/ILTLClientService/ReadPickupLocationResponse" message="tns:ILTLClientService_ReadPickupLocation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.LTLFault" name="LTLFaultFault" message="tns:ILTLClientService_ReadPickupLocation_LTLFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

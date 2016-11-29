@@ -1,0 +1,31 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Imaging.master.cs" Inherits="ImagingMaster" %>
+<%@ Register Assembly="System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Namespace="System.Web.UI.WebControls" TagPrefix="asp" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Imaging Search</title>
+    <asp:ContentPlaceHolder id="head" runat="server" />
+    <link href='https://fonts.googleapis.com/css?family=Michroma' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,300italic' rel='stylesheet' type='text/css'>
+    <link id="Link1" runat="server" href="~/App_Themes/Argix/Argix.css" rel="stylesheet" type="text/css" />
+</head>
+<body id="idBody" runat="server" style=" position:relative; margin-top:0; " >
+<form id="idForm" runat="server" >
+    <asp:ScriptManager ID="smPage" runat="server" EnablePartialRendering="true" ScriptMode="Auto" LoadScriptsBeforeUI="false"></asp:ScriptManager>
+    <div id="page">
+        <div id="header">
+            <div id="logo">
+                <asp:Image ID="imgApp" runat="server" ImageUrl="~/App_Themes/Argix/Images/app.gif" ImageAlign="Middle" /><asp:Label ID="lblMsg" runat="server" Text="" />
+                &nbsp;<asp:Label id="lblAppTitle" runat="server" CssClass="title" Text="Argix Logistics Imaging Services" />
+            </div>
+            <div id="mainMenu"></div>
+        </div>
+        <div id="body">
+            <asp:contentplaceholder id="cpBody" runat="server" />
+        </div>
+    </div>
+    <div id="footer">Copyright 2013 Argix Logistics, Inc. v20131209</div>
+</form>
+</body>
+</html>

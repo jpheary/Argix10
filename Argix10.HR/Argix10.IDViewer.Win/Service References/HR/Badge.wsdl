@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://Argix.HR" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://Argix.HR" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://Argix.HR/Imports">
+      <xsd:import schemaLocation="http://localhost:4027/Argix10.HR.Services/Badge.svc?xsd=xsd0" namespace="http://Argix.HR" />
+      <xsd:import schemaLocation="http://localhost:4027/Argix10.HR.Services/Badge.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Argix" />
+      <xsd:import schemaLocation="http://localhost:4027/Argix10.HR.Services/Badge.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:4027/Argix10.HR.Services/Badge.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:4027/Argix10.HR.Services/Badge.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Argix.HR" />
+      <xsd:import schemaLocation="http://localhost:4027/Argix10.HR.Services/Badge.svc?xsd=xsd4" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IBadgeService_GetServiceInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetServiceInfo" />
+  </wsdl:message>
+  <wsdl:message name="IBadgeService_GetServiceInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetServiceInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBadgeService_GetServiceInfo_ConfigurationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/Argix" name="detail" element="q1:ConfigurationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBadgeService_GetUserConfiguration_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserConfiguration" />
+  </wsdl:message>
+  <wsdl:message name="IBadgeService_GetUserConfiguration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserConfigurationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBadgeService_GetUserConfiguration_ConfigurationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/Argix" name="detail" element="q2:ConfigurationFault" />
+  </wsdl:message>
+  <wsdl:message name="IBadgeService_WriteLogEntry_InputMessage">
+    <wsdl:part name="parameters" element="tns:WriteLogEntry" />
+  </wsdl:message>
+  <wsdl:message name="IAccessControlBadgeService_ViewAccessControlBadges_InputMessage">
+    <wsdl:part name="parameters" element="tns:ViewAccessControlBadges" />
+  </wsdl:message>
+  <wsdl:message name="IAccessControlBadgeService_ViewAccessControlBadges_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ViewAccessControlBadgesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccessControlBadgeService_ViewAccessControlBadges_HRFaultFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/Argix.HR" name="detail" element="q3:HRFault" />
+  </wsdl:message>
+  <wsdl:message name="IDriverBadgeService_ViewDriverBadges_InputMessage">
+    <wsdl:part name="parameters" element="tns:ViewDriverBadges" />
+  </wsdl:message>
+  <wsdl:message name="IDriverBadgeService_ViewDriverBadges_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ViewDriverBadgesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDriverBadgeService_ViewDriverBadges_HRFaultFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/Argix.HR" name="detail" element="q4:HRFault" />
+  </wsdl:message>
+  <wsdl:message name="IDriverBadgeService_ViewDriverBadgesSummary_InputMessage">
+    <wsdl:part name="parameters" element="tns:ViewDriverBadgesSummary" />
+  </wsdl:message>
+  <wsdl:message name="IDriverBadgeService_ViewDriverBadgesSummary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ViewDriverBadgesSummaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDriverBadgeService_ViewDriverBadgesSummary_HRFaultFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/Argix.HR" name="detail" element="q5:HRFault" />
+  </wsdl:message>
+  <wsdl:message name="IDriverBadgeService_GetDriverBadge_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDriverBadge" />
+  </wsdl:message>
+  <wsdl:message name="IDriverBadgeService_GetDriverBadge_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDriverBadgeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDriverBadgeService_GetDriverBadge_HRFaultFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/Argix.HR" name="detail" element="q6:HRFault" />
+  </wsdl:message>
+  <wsdl:message name="IDriverBadgeService_SearchDriverBadges_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchDriverBadges" />
+  </wsdl:message>
+  <wsdl:message name="IDriverBadgeService_SearchDriverBadges_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchDriverBadgesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDriverBadgeService_SearchDriverBadges_HRFaultFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/Argix.HR" name="detail" element="q7:HRFault" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeBadgeService_ViewEmployeeBadges_InputMessage">
+    <wsdl:part name="parameters" element="tns:ViewEmployeeBadges" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeBadgeService_ViewEmployeeBadges_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ViewEmployeeBadgesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeBadgeService_ViewEmployeeBadges_HRFaultFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/Argix.HR" name="detail" element="q8:HRFault" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeBadgeService_ViewEmployeeBadgesSummary_InputMessage">
+    <wsdl:part name="parameters" element="tns:ViewEmployeeBadgesSummary" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeBadgeService_ViewEmployeeBadgesSummary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ViewEmployeeBadgesSummaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeBadgeService_ViewEmployeeBadgesSummary_HRFaultFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/Argix.HR" name="detail" element="q9:HRFault" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeBadgeService_GetEmployeeBadge_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeBadge" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeBadgeService_GetEmployeeBadge_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeBadgeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeBadgeService_GetEmployeeBadge_HRFaultFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/Argix.HR" name="detail" element="q10:HRFault" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeBadgeService_AddEmployeeBadge_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddEmployeeBadge" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeBadgeService_AddEmployeeBadge_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddEmployeeBadgeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeBadgeService_AddEmployeeBadge_HRFaultFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/Argix.HR" name="detail" element="q11:HRFault" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeBadgeService_UpdateEmployeeBadge_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEmployeeBadge" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeBadgeService_UpdateEmployeeBadge_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEmployeeBadgeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeBadgeService_UpdateEmployeeBadge_HRFaultFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/Argix.HR" name="detail" element="q12:HRFault" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeBadgeService_SearchEmployeeBadges_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchEmployeeBadges" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeBadgeService_SearchEmployeeBadges_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchEmployeeBadgesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeBadgeService_SearchEmployeeBadges_HRFaultFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/Argix.HR" name="detail" element="q13:HRFault" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeBadgeService_GetEmployeeDepartmentList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeDepartmentList" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeBadgeService_GetEmployeeDepartmentList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeDepartmentListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeBadgeService_GetEmployeeDepartmentList_HRFaultFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/Argix.HR" name="detail" element="q14:HRFault" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeBadgeService_GetEmployeeLocationList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeLocationList" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeBadgeService_GetEmployeeLocationList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeLocationListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeBadgeService_GetEmployeeLocationList_HRFaultFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/Argix.HR" name="detail" element="q15:HRFault" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeBadgeService_GetEmployeeSubLocationList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeSubLocationList" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeBadgeService_GetEmployeeSubLocationList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeSubLocationListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeBadgeService_GetEmployeeSubLocationList_HRFaultFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/Argix.HR" name="detail" element="q16:HRFault" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeBadgeService_GetEmployeeStatusList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeStatusList" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeBadgeService_GetEmployeeStatusList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeStatusListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeBadgeService_GetEmployeeStatusList_HRFaultFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://schemas.datacontract.org/2004/07/Argix.HR" name="detail" element="q17:HRFault" />
+  </wsdl:message>
+  <wsdl:message name="IVendorBadgeService_ViewVendorBadges_InputMessage">
+    <wsdl:part name="parameters" element="tns:ViewVendorBadges" />
+  </wsdl:message>
+  <wsdl:message name="IVendorBadgeService_ViewVendorBadges_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ViewVendorBadgesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVendorBadgeService_ViewVendorBadges_HRFaultFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.datacontract.org/2004/07/Argix.HR" name="detail" element="q18:HRFault" />
+  </wsdl:message>
+  <wsdl:message name="IVendorBadgeService_ViewVendorBadgesSummary_InputMessage">
+    <wsdl:part name="parameters" element="tns:ViewVendorBadgesSummary" />
+  </wsdl:message>
+  <wsdl:message name="IVendorBadgeService_ViewVendorBadgesSummary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ViewVendorBadgesSummaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVendorBadgeService_ViewVendorBadgesSummary_HRFaultFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://schemas.datacontract.org/2004/07/Argix.HR" name="detail" element="q19:HRFault" />
+  </wsdl:message>
+  <wsdl:message name="IVendorBadgeService_GetVendorBadge_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVendorBadge" />
+  </wsdl:message>
+  <wsdl:message name="IVendorBadgeService_GetVendorBadge_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVendorBadgeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVendorBadgeService_GetVendorBadge_HRFaultFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://schemas.datacontract.org/2004/07/Argix.HR" name="detail" element="q20:HRFault" />
+  </wsdl:message>
+  <wsdl:message name="IVendorBadgeService_AddVendorBadge_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddVendorBadge" />
+  </wsdl:message>
+  <wsdl:message name="IVendorBadgeService_AddVendorBadge_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddVendorBadgeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVendorBadgeService_AddVendorBadge_HRFaultFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://schemas.datacontract.org/2004/07/Argix.HR" name="detail" element="q21:HRFault" />
+  </wsdl:message>
+  <wsdl:message name="IVendorBadgeService_UpdateVendorBadge_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateVendorBadge" />
+  </wsdl:message>
+  <wsdl:message name="IVendorBadgeService_UpdateVendorBadge_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateVendorBadgeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVendorBadgeService_UpdateVendorBadge_HRFaultFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://schemas.datacontract.org/2004/07/Argix.HR" name="detail" element="q22:HRFault" />
+  </wsdl:message>
+  <wsdl:message name="IVendorBadgeService_SearchVendorBadges_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchVendorBadges" />
+  </wsdl:message>
+  <wsdl:message name="IVendorBadgeService_SearchVendorBadges_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchVendorBadgesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVendorBadgeService_SearchVendorBadges_HRFaultFault_FaultMessage">
+    <wsdl:part xmlns:q23="http://schemas.datacontract.org/2004/07/Argix.HR" name="detail" element="q23:HRFault" />
+  </wsdl:message>
+  <wsdl:message name="IVendorBadgeService_GetVendorDepartmentList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVendorDepartmentList" />
+  </wsdl:message>
+  <wsdl:message name="IVendorBadgeService_GetVendorDepartmentList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVendorDepartmentListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVendorBadgeService_GetVendorDepartmentList_HRFaultFault_FaultMessage">
+    <wsdl:part xmlns:q24="http://schemas.datacontract.org/2004/07/Argix.HR" name="detail" element="q24:HRFault" />
+  </wsdl:message>
+  <wsdl:message name="IVendorBadgeService_GetVendorLocationList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVendorLocationList" />
+  </wsdl:message>
+  <wsdl:message name="IVendorBadgeService_GetVendorLocationList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVendorLocationListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVendorBadgeService_GetVendorLocationList_HRFaultFault_FaultMessage">
+    <wsdl:part xmlns:q25="http://schemas.datacontract.org/2004/07/Argix.HR" name="detail" element="q25:HRFault" />
+  </wsdl:message>
+  <wsdl:message name="IVendorBadgeService_GetVendorStatusList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVendorStatusList" />
+  </wsdl:message>
+  <wsdl:message name="IVendorBadgeService_GetVendorStatusList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVendorStatusListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVendorBadgeService_GetVendorStatusList_HRFaultFault_FaultMessage">
+    <wsdl:part xmlns:q26="http://schemas.datacontract.org/2004/07/Argix.HR" name="detail" element="q26:HRFault" />
+  </wsdl:message>
+  <wsdl:portType name="IBadgeService">
+    <wsdl:operation name="GetServiceInfo">
+      <wsdl:input wsaw:Action="http://Argix.HR/IBadgeService/GetServiceInfo" message="tns:IBadgeService_GetServiceInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.HR/IBadgeService/GetServiceInfoResponse" message="tns:IBadgeService_GetServiceInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.ConfigurationFault" name="ConfigurationFaultFault" message="tns:IBadgeService_GetServiceInfo_ConfigurationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserConfiguration">
+      <wsdl:input wsaw:Action="http://Argix.HR/IBadgeService/GetUserConfiguration" message="tns:IBadgeService_GetUserConfiguration_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.HR/IBadgeService/GetUserConfigurationResponse" message="tns:IBadgeService_GetUserConfiguration_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.ConfigurationFault" name="ConfigurationFaultFault" message="tns:IBadgeService_GetUserConfiguration_ConfigurationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WriteLogEntry">
+      <wsdl:input wsaw:Action="http://Argix.HR/IBadgeService/WriteLogEntry" message="tns:IBadgeService_WriteLogEntry_InputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IAccessControlBadgeService">
+    <wsdl:operation name="ViewAccessControlBadges">
+      <wsdl:input wsaw:Action="http://Argix.HR/IAccessControlBadgeService/ViewAccessControlBadges" message="tns:IAccessControlBadgeService_ViewAccessControlBadges_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.HR/IAccessControlBadgeService/ViewAccessControlBadgesResponse" message="tns:IAccessControlBadgeService_ViewAccessControlBadges_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.HR.HRFault" name="HRFaultFault" message="tns:IAccessControlBadgeService_ViewAccessControlBadges_HRFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IDriverBadgeService">
+    <wsdl:operation name="ViewDriverBadges">
+      <wsdl:input wsaw:Action="http://Argix.HR/IDriverBadgeService/ViewDriverBadges" message="tns:IDriverBadgeService_ViewDriverBadges_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.HR/IDriverBadgeService/ViewDriverBadgesResponse" message="tns:IDriverBadgeService_ViewDriverBadges_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.HR.HRFault" name="HRFaultFault" message="tns:IDriverBadgeService_ViewDriverBadges_HRFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ViewDriverBadgesSummary">
+      <wsdl:input wsaw:Action="http://Argix.HR/IDriverBadgeService/ViewDriverBadgesSummary" message="tns:IDriverBadgeService_ViewDriverBadgesSummary_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.HR/IDriverBadgeService/ViewDriverBadgesSummaryResponse" message="tns:IDriverBadgeService_ViewDriverBadgesSummary_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.HR.HRFault" name="HRFaultFault" message="tns:IDriverBadgeService_ViewDriverBadgesSummary_HRFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDriverBadge">
+      <wsdl:input wsaw:Action="http://Argix.HR/IDriverBadgeService/GetDriverBadge" message="tns:IDriverBadgeService_GetDriverBadge_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.HR/IDriverBadgeService/GetDriverBadgeResponse" message="tns:IDriverBadgeService_GetDriverBadge_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.HR.HRFault" name="HRFaultFault" message="tns:IDriverBadgeService_GetDriverBadge_HRFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchDriverBadges">
+      <wsdl:input wsaw:Action="http://Argix.HR/IDriverBadgeService/SearchDriverBadges" message="tns:IDriverBadgeService_SearchDriverBadges_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.HR/IDriverBadgeService/SearchDriverBadgesResponse" message="tns:IDriverBadgeService_SearchDriverBadges_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.HR.HRFault" name="HRFaultFault" message="tns:IDriverBadgeService_SearchDriverBadges_HRFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IEmployeeBadgeService">
+    <wsdl:operation name="ViewEmployeeBadges">
+      <wsdl:input wsaw:Action="http://Argix.HR/IEmployeeBadgeService/ViewEmployeeBadges" message="tns:IEmployeeBadgeService_ViewEmployeeBadges_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.HR/IEmployeeBadgeService/ViewEmployeeBadgesResponse" message="tns:IEmployeeBadgeService_ViewEmployeeBadges_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.HR.HRFault" name="HRFaultFault" message="tns:IEmployeeBadgeService_ViewEmployeeBadges_HRFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ViewEmployeeBadgesSummary">
+      <wsdl:input wsaw:Action="http://Argix.HR/IEmployeeBadgeService/ViewEmployeeBadgesSummary" message="tns:IEmployeeBadgeService_ViewEmployeeBadgesSummary_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.HR/IEmployeeBadgeService/ViewEmployeeBadgesSummaryResponse" message="tns:IEmployeeBadgeService_ViewEmployeeBadgesSummary_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.HR.HRFault" name="HRFaultFault" message="tns:IEmployeeBadgeService_ViewEmployeeBadgesSummary_HRFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeBadge">
+      <wsdl:input wsaw:Action="http://Argix.HR/IEmployeeBadgeService/GetEmployeeBadge" message="tns:IEmployeeBadgeService_GetEmployeeBadge_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.HR/IEmployeeBadgeService/GetEmployeeBadgeResponse" message="tns:IEmployeeBadgeService_GetEmployeeBadge_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.HR.HRFault" name="HRFaultFault" message="tns:IEmployeeBadgeService_GetEmployeeBadge_HRFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddEmployeeBadge">
+      <wsdl:input wsaw:Action="http://Argix.HR/IEmployeeBadgeService/AddEmployeeBadge" message="tns:IEmployeeBadgeService_AddEmployeeBadge_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.HR/IEmployeeBadgeService/AddEmployeeBadgeResponse" message="tns:IEmployeeBadgeService_AddEmployeeBadge_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.HR.HRFault" name="HRFaultFault" message="tns:IEmployeeBadgeService_AddEmployeeBadge_HRFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEmployeeBadge">
+      <wsdl:input wsaw:Action="http://Argix.HR/IEmployeeBadgeService/UpdateEmployeeBadge" message="tns:IEmployeeBadgeService_UpdateEmployeeBadge_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.HR/IEmployeeBadgeService/UpdateEmployeeBadgeResponse" message="tns:IEmployeeBadgeService_UpdateEmployeeBadge_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.HR.HRFault" name="HRFaultFault" message="tns:IEmployeeBadgeService_UpdateEmployeeBadge_HRFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchEmployeeBadges">
+      <wsdl:input wsaw:Action="http://Argix.HR/IEmployeeBadgeService/SearchEmployeeBadges" message="tns:IEmployeeBadgeService_SearchEmployeeBadges_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.HR/IEmployeeBadgeService/SearchEmployeeBadgesResponse" message="tns:IEmployeeBadgeService_SearchEmployeeBadges_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.HR.HRFault" name="HRFaultFault" message="tns:IEmployeeBadgeService_SearchEmployeeBadges_HRFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeDepartmentList">
+      <wsdl:input wsaw:Action="http://Argix.HR/IEmployeeBadgeService/GetEmployeeDepartmentList" message="tns:IEmployeeBadgeService_GetEmployeeDepartmentList_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.HR/IEmployeeBadgeService/GetEmployeeDepartmentListResponse" message="tns:IEmployeeBadgeService_GetEmployeeDepartmentList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.HR.HRFault" name="HRFaultFault" message="tns:IEmployeeBadgeService_GetEmployeeDepartmentList_HRFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeLocationList">
+      <wsdl:input wsaw:Action="http://Argix.HR/IEmployeeBadgeService/GetEmployeeLocationList" message="tns:IEmployeeBadgeService_GetEmployeeLocationList_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.HR/IEmployeeBadgeService/GetEmployeeLocationListResponse" message="tns:IEmployeeBadgeService_GetEmployeeLocationList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.HR.HRFault" name="HRFaultFault" message="tns:IEmployeeBadgeService_GetEmployeeLocationList_HRFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeSubLocationList">
+      <wsdl:input wsaw:Action="http://Argix.HR/IEmployeeBadgeService/GetEmployeeSubLocationList" message="tns:IEmployeeBadgeService_GetEmployeeSubLocationList_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.HR/IEmployeeBadgeService/GetEmployeeSubLocationListResponse" message="tns:IEmployeeBadgeService_GetEmployeeSubLocationList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.HR.HRFault" name="HRFaultFault" message="tns:IEmployeeBadgeService_GetEmployeeSubLocationList_HRFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeStatusList">
+      <wsdl:input wsaw:Action="http://Argix.HR/IEmployeeBadgeService/GetEmployeeStatusList" message="tns:IEmployeeBadgeService_GetEmployeeStatusList_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.HR/IEmployeeBadgeService/GetEmployeeStatusListResponse" message="tns:IEmployeeBadgeService_GetEmployeeStatusList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.HR.HRFault" name="HRFaultFault" message="tns:IEmployeeBadgeService_GetEmployeeStatusList_HRFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IVendorBadgeService">
+    <wsdl:operation name="ViewVendorBadges">
+      <wsdl:input wsaw:Action="http://Argix.HR/IVendorBadgeService/ViewVendorBadges" message="tns:IVendorBadgeService_ViewVendorBadges_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.HR/IVendorBadgeService/ViewVendorBadgesResponse" message="tns:IVendorBadgeService_ViewVendorBadges_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.HR.HRFault" name="HRFaultFault" message="tns:IVendorBadgeService_ViewVendorBadges_HRFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ViewVendorBadgesSummary">
+      <wsdl:input wsaw:Action="http://Argix.HR/IVendorBadgeService/ViewVendorBadgesSummary" message="tns:IVendorBadgeService_ViewVendorBadgesSummary_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.HR/IVendorBadgeService/ViewVendorBadgesSummaryResponse" message="tns:IVendorBadgeService_ViewVendorBadgesSummary_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.HR.HRFault" name="HRFaultFault" message="tns:IVendorBadgeService_ViewVendorBadgesSummary_HRFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVendorBadge">
+      <wsdl:input wsaw:Action="http://Argix.HR/IVendorBadgeService/GetVendorBadge" message="tns:IVendorBadgeService_GetVendorBadge_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.HR/IVendorBadgeService/GetVendorBadgeResponse" message="tns:IVendorBadgeService_GetVendorBadge_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.HR.HRFault" name="HRFaultFault" message="tns:IVendorBadgeService_GetVendorBadge_HRFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddVendorBadge">
+      <wsdl:input wsaw:Action="http://Argix.HR/IVendorBadgeService/AddVendorBadge" message="tns:IVendorBadgeService_AddVendorBadge_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.HR/IVendorBadgeService/AddVendorBadgeResponse" message="tns:IVendorBadgeService_AddVendorBadge_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.HR.HRFault" name="HRFaultFault" message="tns:IVendorBadgeService_AddVendorBadge_HRFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVendorBadge">
+      <wsdl:input wsaw:Action="http://Argix.HR/IVendorBadgeService/UpdateVendorBadge" message="tns:IVendorBadgeService_UpdateVendorBadge_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.HR/IVendorBadgeService/UpdateVendorBadgeResponse" message="tns:IVendorBadgeService_UpdateVendorBadge_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.HR.HRFault" name="HRFaultFault" message="tns:IVendorBadgeService_UpdateVendorBadge_HRFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchVendorBadges">
+      <wsdl:input wsaw:Action="http://Argix.HR/IVendorBadgeService/SearchVendorBadges" message="tns:IVendorBadgeService_SearchVendorBadges_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.HR/IVendorBadgeService/SearchVendorBadgesResponse" message="tns:IVendorBadgeService_SearchVendorBadges_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.HR.HRFault" name="HRFaultFault" message="tns:IVendorBadgeService_SearchVendorBadges_HRFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVendorDepartmentList">
+      <wsdl:input wsaw:Action="http://Argix.HR/IVendorBadgeService/GetVendorDepartmentList" message="tns:IVendorBadgeService_GetVendorDepartmentList_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.HR/IVendorBadgeService/GetVendorDepartmentListResponse" message="tns:IVendorBadgeService_GetVendorDepartmentList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.HR.HRFault" name="HRFaultFault" message="tns:IVendorBadgeService_GetVendorDepartmentList_HRFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVendorLocationList">
+      <wsdl:input wsaw:Action="http://Argix.HR/IVendorBadgeService/GetVendorLocationList" message="tns:IVendorBadgeService_GetVendorLocationList_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.HR/IVendorBadgeService/GetVendorLocationListResponse" message="tns:IVendorBadgeService_GetVendorLocationList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.HR.HRFault" name="HRFaultFault" message="tns:IVendorBadgeService_GetVendorLocationList_HRFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVendorStatusList">
+      <wsdl:input wsaw:Action="http://Argix.HR/IVendorBadgeService/GetVendorStatusList" message="tns:IVendorBadgeService_GetVendorStatusList_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.HR/IVendorBadgeService/GetVendorStatusListResponse" message="tns:IVendorBadgeService_GetVendorStatusList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.HR.HRFault" name="HRFaultFault" message="tns:IVendorBadgeService_GetVendorStatusList_HRFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

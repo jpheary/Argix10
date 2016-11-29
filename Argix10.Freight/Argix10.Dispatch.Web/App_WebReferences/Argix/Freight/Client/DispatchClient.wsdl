@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://Argix.Freight" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://Argix.Freight" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://Argix.Freight/Imports">
+      <xsd:import schemaLocation="http://localhost:33220/Argix10.FreightBeta.Services/DispatchClient.svc?xsd=xsd0" namespace="http://Argix.Freight" />
+      <xsd:import schemaLocation="http://localhost:33220/Argix10.FreightBeta.Services/DispatchClient.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Argix.Freight" />
+      <xsd:import schemaLocation="http://localhost:33220/Argix10.FreightBeta.Services/DispatchClient.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:33220/Argix10.FreightBeta.Services/DispatchClient.svc?xsd=xsd2" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDispatchClientService_ViewPickupLog_InputMessage">
+    <wsdl:part name="parameters" element="tns:ViewPickupLog" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchClientService_ViewPickupLog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ViewPickupLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchClientService_ViewPickupLog_DispatchFaultFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q1:DispatchFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchClientService_RequestPickup_InputMessage">
+    <wsdl:part name="parameters" element="tns:RequestPickup" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchClientService_RequestPickup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RequestPickupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchClientService_RequestPickup_DispatchFaultFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q2:DispatchFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchClientService_ReschedulePickup_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReschedulePickup" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchClientService_ReschedulePickup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReschedulePickupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchClientService_ReschedulePickup_DispatchFaultFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q3:DispatchFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchClientService_CancelPickup_InputMessage">
+    <wsdl:part name="parameters" element="tns:CancelPickup" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchClientService_CancelPickup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CancelPickupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchClientService_CancelPickup_DispatchFaultFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q4:DispatchFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchClientService_ViewClientPickups_InputMessage">
+    <wsdl:part name="parameters" element="tns:ViewClientPickups" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchClientService_ViewClientPickups_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ViewClientPickupsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchClientService_ViewClientPickups_DispatchFaultFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q5:DispatchFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchClientService_RequestClientPickup_InputMessage">
+    <wsdl:part name="parameters" element="tns:RequestClientPickup" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchClientService_RequestClientPickup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RequestClientPickupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchClientService_RequestClientPickup_DispatchFaultFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q6:DispatchFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchClientService_CancelClientPickup_InputMessage">
+    <wsdl:part name="parameters" element="tns:CancelClientPickup" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchClientService_CancelClientPickup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CancelClientPickupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchClientService_CancelClientPickup_DispatchFaultFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q7:DispatchFault" />
+  </wsdl:message>
+  <wsdl:portType name="IDispatchClientService">
+    <wsdl:operation name="ViewPickupLog">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchClientService/ViewPickupLog" message="tns:IDispatchClientService_ViewPickupLog_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchClientService/ViewPickupLogResponse" message="tns:IDispatchClientService_ViewPickupLog_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.DispatchFault" name="DispatchFaultFault" message="tns:IDispatchClientService_ViewPickupLog_DispatchFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RequestPickup">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchClientService/RequestPickup" message="tns:IDispatchClientService_RequestPickup_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchClientService/RequestPickupResponse" message="tns:IDispatchClientService_RequestPickup_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.DispatchFault" name="DispatchFaultFault" message="tns:IDispatchClientService_RequestPickup_DispatchFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReschedulePickup">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchClientService/ReschedulePickup" message="tns:IDispatchClientService_ReschedulePickup_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchClientService/ReschedulePickupResponse" message="tns:IDispatchClientService_ReschedulePickup_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.DispatchFault" name="DispatchFaultFault" message="tns:IDispatchClientService_ReschedulePickup_DispatchFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelPickup">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchClientService/CancelPickup" message="tns:IDispatchClientService_CancelPickup_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchClientService/CancelPickupResponse" message="tns:IDispatchClientService_CancelPickup_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.DispatchFault" name="DispatchFaultFault" message="tns:IDispatchClientService_CancelPickup_DispatchFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ViewClientPickups">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchClientService/ViewClientPickups" message="tns:IDispatchClientService_ViewClientPickups_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchClientService/ViewClientPickupsResponse" message="tns:IDispatchClientService_ViewClientPickups_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.DispatchFault" name="DispatchFaultFault" message="tns:IDispatchClientService_ViewClientPickups_DispatchFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RequestClientPickup">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchClientService/RequestClientPickup" message="tns:IDispatchClientService_RequestClientPickup_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchClientService/RequestClientPickupResponse" message="tns:IDispatchClientService_RequestClientPickup_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.DispatchFault" name="DispatchFaultFault" message="tns:IDispatchClientService_RequestClientPickup_DispatchFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelClientPickup">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchClientService/CancelClientPickup" message="tns:IDispatchClientService_CancelClientPickup_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchClientService/CancelClientPickupResponse" message="tns:IDispatchClientService_CancelClientPickup_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.DispatchFault" name="DispatchFaultFault" message="tns:IDispatchClientService_CancelClientPickup_DispatchFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

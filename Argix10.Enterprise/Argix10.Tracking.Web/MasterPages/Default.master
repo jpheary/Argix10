@@ -1,0 +1,75 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Default.master.cs" Inherits="DefaultMaster" ClassName="DefaultMaster" %>
+<%@ Register Assembly="System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Namespace="System.Web.UI.WebControls" TagPrefix="asp" %>
+<!DOCTYPE HTML>
+
+<html>
+<head id="Head1" runat="server">
+    <title>Carton Tracking</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <asp:ContentPlaceHolder ID="cpMeta" runat="server" />
+    <link href='https://fonts.googleapis.com/css?family=Michroma' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,300italic' rel='stylesheet' type='text/css'>
+    <link runat="server" href="~/App_Themes/Argix/Argix.css?v=1.2" rel="stylesheet" type="text/css" />
+    <link runat="server" rel="shortcut icon" href="~/favicon.ico">
+</head>
+<body id="idBody" runat="server" style="position:relative; margin-top:0; " >
+<form id="idForm" runat="server" >
+    <asp:ScriptManager ID="smPage" runat="server" EnableCdn="false" EnablePartialRendering="true" AsyncPostBackTimeout="600" ScriptMode="Auto" LoadScriptsBeforeUI="true">
+        <Scripts>
+            <asp:ScriptReference Path="~/Scripts/jquery-1.10.2.js" />
+            <asp:ScriptReference Path="~/Scripts/jquery-globalize-1.10.2.js" />
+            <asp:ScriptReference Path="~/Scripts/jquery-ui-1.10.3.js" />
+            <asp:ScriptReference Path="~/Scripts/jquery.inputmask.js" />
+            <asp:ScriptReference Path="~/App_Themes/Argix/jquery-ui-blitzer.css" />
+        </Scripts>
+    </asp:ScriptManager>
+    <script type="text/javascript">
+        Sys.WebForms.PageRequestManager.getInstance().add_beginRequest(beginRequest);
+        Sys.WebForms.PageRequestManager.getInstance().add_pageLoaded(pageLoaded);
+        function beginRequest(sender, args) { window.status = "..."; document.body.style.cursor = "wait"; }
+        function pageLoaded(sender, args) { window.status = ""; document.body.style.cursor = "default"; }
+	</script>
+    <asp:ContentPlaceHolder ID="cpScript" runat="server" />
+    <div class="gridcontainer">
+        <div class="gridbox gridheader">
+            <div class="logo">
+                <a href="https://www.argixlogistics.com" target="_self"><img runat="server" src="~/App_Themes/Argix/Images/argix-logo.gif" alt="Argix logo" style="border: 0;" /></a>
+                <asp:UpdatePanel runat="server" ID="pnlMsg" UpdateMode="Always"><ContentTemplate><asp:Label ID="lblMsg" runat="server" Text="" /></ContentTemplate></asp:UpdatePanel>
+            </div>
+            <div class="supermenu">
+		        <ul>
+			        <li>
+                        <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                            <AnonymousTemplate><asp:HyperLink ID="lnkLogin" runat="server" NavigateUrl="~/Account/Login.aspx">[ Login ]</asp:HyperLink></AnonymousTemplate>
+                            <LoggedInTemplate>
+                                Welcome <span class="bold"><asp:LoginName ID="HeadLoginName" runat="server" /></span>
+                                <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutText="[ Log Out ]" LogoutAction="Redirect" LogoutPageUrl="https://www.argixlogistics.com" OnLoggedOut="OnLogout" />
+                            </LoggedInTemplate>
+                        </asp:LoginView>
+                    </li>
+		        </ul>
+            </div>
+            <div class="clearright"></div>
+            <div class="mainmenu">
+		        <ul>
+			        <li><asp:HyperLink ID="lnkProfile" runat="server" NavigateUrl="~/Members/Profile.aspx" Text="Profile" /></li>
+			        <li><asp:HyperLink ID="lnkReports" runat="server" NavigateUrl="~/Members/Reports.aspx" Text="Reports" /></li>
+                    <li><asp:HyperLink ID="lnkTracking" runat="server" NavigateUrl="~/Members/Tracking.aspx" Text="Tracking" /></li>
+		        </ul>
+	        </div>
+        </div>
+        <div class="clear"></div>
+        <div class="gridbox gridtitle">
+            <div class="title">Carton Tracking</div>
+            <div class="clear"></div>
+        </div>
+        <div class="gridbox gridbody"><div class="body"><asp:ContentPlaceHolder id="cpBody" runat="server" /></div></div>
+        <div class="clear"></div>
+        <div class="gridbox gridfooter"><div class="footer">Copyright 2004-2015 Argix Logistics, Inc. v4.0.5.20150619</div></div>
+    </div>
+</form>
+</body>
+</html>

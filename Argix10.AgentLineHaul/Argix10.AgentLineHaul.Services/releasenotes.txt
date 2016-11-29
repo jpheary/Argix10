@@ -1,0 +1,59 @@
+              --------------------------------------------------------
+                    AgentLineHaul Services Readme File
+		                       	  July, 2015
+              --------------------------------------------------------
+                         (c) Copyright Argix Logistics, 2011-2015
+
+This document provides late-breaking or other information that supplements the AgentLineHaul Services documentation.
+
+------------------------
+How to Use This Document
+------------------------
+To view the Readme file on-screen in Windows Notepad, maximize the Notepad window and click Word 
+Wrap on the Edit menu. To print the Readme file, open it in Notepad or another word processor, 
+and then use the Print command on the File menu.
+
+==============
+CONTENTS
+==============
+NOTES
+   GENERAL
+   DEPENDENCIES
+   VERSION HISTORY
+==============
+
+
+NOTES
+==============
+GENERAL
+The AgentLineHaul Service (Invoicing.exe) is a WCF web service that provides AgentLineHaul 
+business services related to Argix Logistics business activities.
+
+
+DEPENDENCIES
+SMTP Services (http://rgxvmweb/Argix10/Argix10.Enterprise.Services/SMTP.svc).
+
+
+VERSION HISTORY
+v4.0.0, 06/16/14 ---------------------------------------------------------------------------
+Requirements/features
+- new release.
+Design
+- new release.
+
+
+VERSION HISTORY
+v4.0.1, 07/01/15, ~07/20/15 ---------------------------------------------------------------
+Requirements/features
+- none.
+Design
+- added new service AgentLineHaulService.svc for general AgentLineHaul services.
+~ changed to revised uspShipScdeScheduleGetList2 in TsortGateway- returns TL count for each trip.
+
+
+VERSION HISTORY
+v4.0.2, 07/20/15 --------------------------------------------------------------------------
+Requirements/features
+- none.
+Design
+- changed to revised uspShipScdeScheduleGetList2 in TsortGateway- returns TL count for each trip.

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5e0140af-2c4e-47ea-bc85-ca6c4c8cbaa2" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:53791/Argix10.Enterprise.Services/FastTracking.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="FastTracking.wsdl" MetadataType="Wsdl" ID="3b9c6d84-1e50-4148-9f7f-87bd9fa30baa" SourceId="1" SourceUrl="http://localhost:53791/Argix10.Enterprise.Services/FastTracking.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="FastTracking.xsd" MetadataType="Schema" ID="f4de711a-f10f-4ff0-a26f-5f28dd19d178" SourceId="1" SourceUrl="http://localhost:53791/Argix10.Enterprise.Services/FastTracking.svc?xsd=xsd0" />
+    <MetadataFile FileName="FastTracking1.xsd" MetadataType="Schema" ID="e699b8ab-c950-46dc-b042-ab83b00e82bf" SourceId="1" SourceUrl="http://localhost:53791/Argix10.Enterprise.Services/FastTracking.svc?xsd=xsd3" />
+    <MetadataFile FileName="FastTracking2.xsd" MetadataType="Schema" ID="6f0a2b67-93ad-4e56-913b-cb5f606e1477" SourceId="1" SourceUrl="http://localhost:53791/Argix10.Enterprise.Services/FastTracking.svc?xsd=xsd1" />
+    <MetadataFile FileName="FastTracking.disco" MetadataType="Disco" ID="9972491c-91f9-48fb-9281-61f3805a48cf" SourceId="1" SourceUrl="http://localhost:53791/Argix10.Enterprise.Services/FastTracking.svc?disco" />
+    <MetadataFile FileName="FastTrackingService.wsdl" MetadataType="Wsdl" ID="bd4c5f98-4fb0-4636-96e2-01bce3c2074b" SourceId="1" SourceUrl="http://localhost:53791/Argix10.Enterprise.Services/FastTracking.svc?wsdl" />
+    <MetadataFile FileName="FastTracking3.xsd" MetadataType="Schema" ID="503d579e-7f1d-4fc8-97c6-1aaf3d14635f" SourceId="1" SourceUrl="http://localhost:53791/Argix10.Enterprise.Services/FastTracking.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

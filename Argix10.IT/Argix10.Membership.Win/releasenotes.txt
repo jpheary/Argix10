@@ -1,0 +1,86 @@
+                         --------------------------------------------------
+                    	     Role Manager Application Readme File
+											March, 2013
+                         --------------------------------------------------
+                         		(c) Copyright Argix Logistics, 2013
+
+This document provides late-breaking or other information that supplements the Membership 
+documentation.
+
+------------------------
+How to Use This Document
+------------------------
+To view the Readme file on-screen in Windows Notepad, maximize the Notepad window and click Word 
+Wrap on the Edit menu. To print the Readme file, open it in Notepad or another word processor, 
+and then use the Print command on the File menu.
+
+==============
+CONTENTS
+==============
+INSTALLATION
+   DEPLOYMENT
+   CONFIGURATION
+
+NOTES
+   GENERAL
+   DEPENDENCIES
+   OPERATION
+   VERSION HISTORY
+==============
+
+
+INSTALLATION
+==============
+DEPLOYMENT
+Membership is installed into a Click-Once deployment folder visible from an IIS web service as follows:
+1.	Create a virtual folder c:\inetpub\wwwroot\Argix10\Apps\IT\Membership on a web server like rgxvmweb using 
+	Windows explorer. 
+2.	Create a sub-folder called Application Files.
+3.	Copy the new versioned Click-Once deployment folder (i.e Membership_4_0_0_2) into the Application Files folder; this folder 
+	contains the following:
+		Argix10.Windows.Lib.dll
+		Infragistics2.Shared.v10.1.dll
+		Infragistics2.Win.UltraWinGrid.v10.1.dll
+		Infragistics2.Win.v10.1.dll
+		Membership.application
+		Membership.exe
+		Membership.exe.config
+		Membership.exe.manifest
+		releasenotes.txt
+4.	Copy the deployment manifest, Membership.application, into the Membership folder. This manifest points to
+	tha application manifest (i.e. \Membership_4_0_0_2\Membership.exe.manifest)
+5.	Launch the Internet Information Services snap-in and validate that the virtual folder allows
+	anonymous access. A web application does not need to be created for deployment.
+6.	Verify http access from Internet Explorer to the following url: 
+		http://rgxvmweb/Argix10/Apps/IT/Membership/Membership.application
+7.	The Click-Once deployment is installed on the client machine in the C:\Users\<username>\AppData\Local\Apps\2.0 folder.
+8.	Version rollbacks are accomplished by simply copying the deployment manifest (i.e. Membership.application) from 
+	a previous Click-Once deployment folder (i.e Membership_4_0_0_1) into the Membership root folder
+
+
+CONFIGURATION	
+None
+
+
+NOTES
+==============
+GENERAL
+The Membership Application (Membership.exe) is a Windows based application used to:
+- manage 
+
+
+DEPENDENCIES
+- None
+
+OPERATION
+The Membership Application (Membership.exe) operates by launching from a web server deployment url 
+(i.e. http://rgxweb/Argix10/Apps/IT/Membership/Membership.application).
+
+
+VERSION HISTORY
+v4.0.0 02/22/13, 03/01/13 ------------------------------------------------------------------
+Requirements/features
+- new application.
+Design/deployment
+- none.
+- re-directed to rgxsql400/ArgixMembership database

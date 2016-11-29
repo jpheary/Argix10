@@ -1,0 +1,43 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Default.master.cs" Inherits="_Default" %>
+<%@ Register Assembly="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Namespace="System.Web.UI.WebControls" TagPrefix="asp" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Dispatch</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <asp:ContentPlaceHolder ID="cphMeta" runat="server" />
+    <link id="Link1" runat="server" href="~/App_Themes/Argix/Argix.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="smPage" runat="server" EnablePartialRendering="true" ScriptMode="Auto" />
+    <div id="page">
+        <div id="header">
+            <div id="logo"><img id="imgLogo" runat="server" src="~/App_Themes/Argix/Images/app.jpg" alt="Argix logo" style="border: 0;" /></div>
+            <div id="title">Argix Logistics Dispatch</div>
+        </div>
+        <div id="headline"></div>
+        <div class="clear"></div>
+        <div id="body">
+            <table><tr>
+                <td>
+                    <div id="navbar">
+                        <div class="navitem"><a href="ClientInboundSheet.aspx" target="_parent">Client<br />Inbound</a></div>
+                        <div class="navitem"><a href="InboundSchedule.aspx" target="_parent">Inbound<br />Schedule</a></div>
+                        <div class="navitem"><a href="OutboundSchedule.aspx" target="_parent">Outbound<br />Schedule</a></div>
+                        <div class="navitem"><a href="PickupLog.aspx" target="_parent">Pickup<br />Log</a></div>
+                    </div>
+                </td>
+                <td>
+                    <div id="content">
+                        <asp:ContentPlaceHolder id="cphBody" runat="server"></asp:ContentPlaceHolder>
+                    </div>
+               </td>
+            </tr></table>
+        </div>
+        <div id="copyright">2013 Argix Logistics, Inc. v4.0.0.030713</div>
+    </div>
+    </form>
+</body>
+</html>

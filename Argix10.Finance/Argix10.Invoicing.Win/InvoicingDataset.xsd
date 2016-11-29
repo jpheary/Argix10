@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="InvoicingDataset" targetNamespace="http://tempuri.org/InvoicingDataset.xsd" elementFormDefault="qualified" xmlns="http://tempuri.org/InvoicingDataset.xsd" xmlns:mstns="http://tempuri.org/InvoicingDataset.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="ClientInvoiceTable">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="InvoiceNumber" type="xs:string" minOccurs="0" />
+        <xs:element name="InvoiceDate" type="xs:dateTime" minOccurs="0" />
+        <xs:element name="PostToARDate" type="xs:dateTime" minOccurs="0" />
+        <xs:element name="Cartons" type="xs:int" minOccurs="0" />
+        <xs:element name="Pallets" type="xs:int" minOccurs="0" />
+        <xs:element name="Weight" type="xs:int" minOccurs="0" />
+        <xs:element name="Amount" type="xs:decimal" minOccurs="0" />
+        <xs:element name="ReleaseDate" type="xs:dateTime" minOccurs="0" />
+        <xs:element name="InvoiceTypeCode" type="xs:string" minOccurs="0" />
+        <xs:element name="InvoiceTypeDescription" type="xs:string" minOccurs="0" />
+        <xs:element name="InvoiceTypeTarget" type="xs:string" minOccurs="0" />
+        <xs:element name="BillTo" type="xs:string" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ClientTable">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="ClientNumber" type="xs:string" minOccurs="0" />
+        <xs:element name="DivisionNumber" type="xs:string" minOccurs="0" />
+        <xs:element name="ClientName" type="xs:string" minOccurs="0" />
+        <xs:element name="TerminalCode" type="xs:string" minOccurs="0" />
+        <xs:element name="TerminalName" type="xs:string" minOccurs="0" />
+        <xs:element name="ARNumber" type="xs:string" minOccurs="0" />
+        <xs:element name="Status" type="xs:string" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

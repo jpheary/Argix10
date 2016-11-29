@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a5ff2cbc-26a3-4bc6-942d-c025b1c681c8" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://rgxvmweb/Argix10/Argix10.Enterprise.Services/USPS.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="USPS5.xsd" MetadataType="Schema" ID="7094a1e2-d376-4d55-9cd1-c5c68adc54b9" SourceId="1" SourceUrl="http://rgxvmweb.argix.com/Argix10/Argix10.Enterprise.Services/USPS.svc?xsd=xsd4" />
+    <MetadataFile FileName="USPS51.xsd" MetadataType="Schema" ID="b7088275-61ac-46cf-9f36-1a8247116d07" SourceId="1" SourceUrl="http://rgxvmweb.argix.com/Argix10/Argix10.Enterprise.Services/USPS.svc?xsd=xsd2" />
+    <MetadataFile FileName="USPSService1.wsdl" MetadataType="Wsdl" ID="498fb263-e754-44c5-93ef-d5546977e753" SourceId="1" SourceUrl="http://rgxvmweb.argix.com/Argix10/Argix10.Enterprise.Services/USPS.svc?wsdl" />
+    <MetadataFile FileName="USPS52.xsd" MetadataType="Schema" ID="1b9335c7-a314-40e4-b24e-03c38a994b11" SourceId="1" SourceUrl="http://rgxvmweb.argix.com/Argix10/Argix10.Enterprise.Services/USPS.svc?xsd=xsd0" />
+    <MetadataFile FileName="USPS1.disco" MetadataType="Disco" ID="8a4896ae-6077-4dcc-8563-006315e8b11e" SourceId="1" SourceUrl="http://rgxvmweb.argix.com/Argix10/Argix10.Enterprise.Services/USPS.svc?disco" />
+    <MetadataFile FileName="USPS53.xsd" MetadataType="Schema" ID="744e61f5-24d4-4c3a-81ed-33084c409179" SourceId="1" SourceUrl="http://rgxvmweb.argix.com/Argix10/Argix10.Enterprise.Services/USPS.svc?xsd=xsd3" />
+    <MetadataFile FileName="USPS1.wsdl" MetadataType="Wsdl" ID="cdedb44f-f219-4cea-afb2-89fe3b33006e" SourceId="1" SourceUrl="http://rgxvmweb.argix.com/Argix10/Argix10.Enterprise.Services/USPS.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="USPS54.xsd" MetadataType="Schema" ID="d70eec75-ad76-4fc1-86d5-bea0e6b2d147" SourceId="1" SourceUrl="http://rgxvmweb.argix.com/Argix10/Argix10.Enterprise.Services/USPS.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

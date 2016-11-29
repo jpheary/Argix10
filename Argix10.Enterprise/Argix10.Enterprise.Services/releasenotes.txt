@@ -1,0 +1,82 @@
+              --------------------------------------------------------
+							Enterprise Services Readme File
+		                       		July, 2015
+              --------------------------------------------------------
+                         (c) Copyright Argix Logistics, 2011-2015
+
+This document provides late-breaking or other information that supplements the Enterprise Services documentation.
+
+------------------------
+How to Use This Document
+------------------------
+To view the Readme file on-screen in Windows Notepad, maximize the Notepad window and click Word 
+Wrap on the Edit menu. To print the Readme file, open it in Notepad or another word processor, 
+and then use the Print command on the File menu.
+
+==============
+CONTENTS
+==============
+NOTES
+   GENERAL
+   DEPENDENCIES
+   VERSION HISTORY
+==============
+
+
+NOTES
+==============
+GENERAL
+The Enterprise Service is a WCF web application that provides Enterprise 
+business services related to Argix Logistics business activities for Tracking,
+Barcoding, Imaging, SMTP, Bing Maps, etc.
+
+
+DEPENDENCIES
+SharePoint Portal search services (http://rgxvmsp:9000/_vti_bin/search.asmx) for document images.
+SMTP services (smtp.argix.com) for SMTP mail services.
+Bing Map services (http://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=6.3&mkt=en-us) for web maps.
+USPS Tracking services (http://Production.shippingapis.com/ShippingAPI.dll) for postal tracking.
+
+
+VERSION HISTORY
+v4.0.0, 05/16/14 ---------------------------------------------------------------------------
+Requirements/features
+- none.
+Design
+- none.
+
+VERSION HISTORY
+v4.0.1, 06/30/14 ---------------------------------------------------------------------------
+Requirements/features
+- added tracking by BOL#.
+Design
+- added method ITrackingService::TrackCartonsForBOL().
+
+v4.0.2, 07/08/14 ---------------------------------------------------------------------------
+Requirements/features
+- none.
+Design
+- turned-off ASP.Net compatability mode on all services.
+- updated store tracking stored procedures (uspTrackingPickupCartonsGetListForStore2, uspTrackingDeliveryCartonsGetListForStore2) in EnterpriseRGateway. 
+
+v4.0.3, 07/15/14 ---------------------------------------------------------------------------
+Requirements/features
+- none.
+Design
+- EOFD added to store tracking stored procedures; propagated through service implementations.
+
+v4.0.4, 10/01/14 ---------------------------------------------------------------------------
+Requirements/features
+- none.
+Design
+- created new Wcf service USPSService.
+- modified USPSGateway class interface (i.e. changed return types from WebResponse to DataSet).
+- renamed WebSvcUrl and UserID in web.config.
+
+v4.0.5, 12/08/14, 02/10/15, ~07/21/15 ------------------------------------------------------
+Requirements/features
+- removed Imaging.svc; using new Imaging Service in Argix13.Enterprise.Services.
+Design
+- removed method EnterpriseRGateway::getUniqueRows(); removed usage from methods GetCartonsByCartonNumber(), 
+  GetCartonsByLabelNumber(), GetCartonsByPlateNumber(), GetCartonsForPO(), GetCartonsForPRO().
+~ added HttpUtility.UrlEncode(HttpUtility.HtmlEncode(firmname/addressline1/addressline2)) to USPS web calls in USPSGateway.

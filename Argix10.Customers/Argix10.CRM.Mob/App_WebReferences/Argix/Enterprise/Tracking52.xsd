@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Argix" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Argix" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="TrackingFault">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TrackingFault" nillable="true" type="tns:TrackingFault" />
+  <xs:complexType name="TrackingItems">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TrackingItem" nillable="true" type="tns:TrackingItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TrackingItems" nillable="true" type="tns:TrackingItems" />
+  <xs:complexType name="TrackingItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActualArrivalDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ActualArrivalLocation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ActualArrivalStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ActualDepartureDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ActualDepartureLocation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ActualDepartureStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ActualStoreDeliveryDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ActualStoreDeliveryLocation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ActualStoreDeliveryStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AgentCity" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AgentName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AgentState" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AgentZip" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BOLNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CBOL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CartonNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Client" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ClientName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DateTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsManualEntry" type="xs:int" />
+      <xs:element minOccurs="0" name="ItemNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LabelNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Location" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PODScanDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PODScanLocation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PODScanStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PONumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PVNO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PickupDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ScanType" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ShipmentNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Shipper" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Signer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SortFacilityArrivalDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SortFacilityArrivalStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SortFacilityLocation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StoreAddress1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StoreAddress2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StoreCity" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StoreName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StoreNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StoreState" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StoreZip" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SubAgentCity" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="SubAgentName" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="SubAgentState" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="SubAgentZip" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="TLNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TrackingNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Vendor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VendorCity" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VendorKey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VendorName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VendorState" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VendorZip" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Weight" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TrackingItem" nillable="true" type="tns:TrackingItem" />
+  <xs:complexType name="TrackingStoreItems">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TrackingStoreItem" nillable="true" type="tns:TrackingStoreItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TrackingStoreItems" nillable="true" type="tns:TrackingStoreItems" />
+  <xs:complexType name="TrackingStoreItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AgentName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AgentNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CBOL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CartonCount" type="xs:int" />
+      <xs:element minOccurs="0" name="CartonNumber" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="CartonStatus" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="LabelNumber" type="xs:decimal">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="OFD1" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PODDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PODTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PickupDate" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ScanStatus" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ShipperCity" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ShipperName" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ShipperState" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ShipperZip" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Store" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Terminal" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Transfer" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Weight" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TrackingStoreItem" nillable="true" type="tns:TrackingStoreItem" />
+</xs:schema>

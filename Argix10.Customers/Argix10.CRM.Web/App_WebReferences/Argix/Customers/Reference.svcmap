@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ba4b4c75-79e6-4f6f-986b-9c0a1f842603" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:2421/Argix10.Customers.Services/CRMService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CRMService.wsdl" MetadataType="Wsdl" ID="af16aa8c-26a0-41d7-8874-61909e7d0cfc" SourceId="1" SourceUrl="http://localhost:2421/Argix10.Customers.Services/CRMService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="CRMService.xsd" MetadataType="Schema" ID="21e8b045-812f-4577-9dba-fd132142d981" SourceId="1" SourceUrl="http://localhost:2421/Argix10.Customers.Services/CRMService.svc?xsd=xsd0" />
+    <MetadataFile FileName="CRMService1.xsd" MetadataType="Schema" ID="8f2dc808-9f13-4f2b-91cc-8a206577802f" SourceId="1" SourceUrl="http://localhost:2421/Argix10.Customers.Services/CRMService.svc?xsd=xsd6" />
+    <MetadataFile FileName="CRMService2.xsd" MetadataType="Schema" ID="03ca9bb3-ba79-4722-bba2-97338b62553d" SourceId="1" SourceUrl="http://localhost:2421/Argix10.Customers.Services/CRMService.svc?xsd=xsd4" />
+    <MetadataFile FileName="CRMService1.wsdl" MetadataType="Wsdl" ID="a82ea2f6-e889-47da-a9d1-db79e62ec9e6" SourceId="1" SourceUrl="http://localhost:2421/Argix10.Customers.Services/CRMService.svc?wsdl" />
+    <MetadataFile FileName="CRMService3.xsd" MetadataType="Schema" ID="3df49c8c-5a51-4480-94ac-72163fbab2ca" SourceId="1" SourceUrl="http://localhost:2421/Argix10.Customers.Services/CRMService.svc?xsd=xsd2" />
+    <MetadataFile FileName="CRMService4.xsd" MetadataType="Schema" ID="f4306961-56ab-446a-a7e8-96aaf2425707" SourceId="1" SourceUrl="http://localhost:2421/Argix10.Customers.Services/CRMService.svc?xsd=xsd3" />
+    <MetadataFile FileName="CRMService.disco" MetadataType="Disco" ID="28aff847-25ca-4782-9a0d-d15922430afb" SourceId="1" SourceUrl="http://localhost:2421/Argix10.Customers.Services/CRMService.svc?disco" />
+    <MetadataFile FileName="CRMService5.xsd" MetadataType="Schema" ID="39b11c58-f32a-4804-ab08-414ec9e9427b" SourceId="1" SourceUrl="http://localhost:2421/Argix10.Customers.Services/CRMService.svc?xsd=xsd1" />
+    <MetadataFile FileName="CRMService6.xsd" MetadataType="Schema" ID="bceae8d3-b952-4eb4-b9b1-8b2e9dec8dbc" SourceId="1" SourceUrl="http://localhost:2421/Argix10.Customers.Services/CRMService.svc?xsd=xsd5" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

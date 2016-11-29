@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://Argix.HR" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://Argix.HR" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://Argix.HR/Imports">
+      <xsd:import schemaLocation="http://localhost:4027/Argix10.HR.Services/PermitSearch.svc?xsd=xsd0" namespace="http://Argix.HR" />
+      <xsd:import schemaLocation="http://localhost:4027/Argix10.HR.Services/PermitSearch.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Argix.HR" />
+      <xsd:import schemaLocation="http://localhost:4027/Argix10.HR.Services/PermitSearch.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:4027/Argix10.HR.Services/PermitSearch.svc?xsd=xsd2" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IPermitSearchService_FindPermitsByNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindPermitsByNumber" />
+  </wsdl:message>
+  <wsdl:message name="IPermitSearchService_FindPermitsByNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindPermitsByNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermitSearchService_FindPermitsByNumber_HRFaultFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/Argix.HR" name="detail" element="q1:HRFault" />
+  </wsdl:message>
+  <wsdl:message name="IPermitSearchService_FindPermitsByPlate_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindPermitsByPlate" />
+  </wsdl:message>
+  <wsdl:message name="IPermitSearchService_FindPermitsByPlate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindPermitsByPlateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermitSearchService_FindPermitsByPlate_HRFaultFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/Argix.HR" name="detail" element="q2:HRFault" />
+  </wsdl:message>
+  <wsdl:message name="IPermitSearchService_FindPermitsByVehicle_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindPermitsByVehicle" />
+  </wsdl:message>
+  <wsdl:message name="IPermitSearchService_FindPermitsByVehicle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindPermitsByVehicleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPermitSearchService_FindPermitsByVehicle_HRFaultFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/Argix.HR" name="detail" element="q3:HRFault" />
+  </wsdl:message>
+  <wsdl:portType name="IPermitSearchService">
+    <wsdl:operation name="FindPermitsByNumber">
+      <wsdl:input wsaw:Action="http://Argix.HR/IPermitSearchService/FindPermitsByNumber" message="tns:IPermitSearchService_FindPermitsByNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.HR/IPermitSearchService/FindPermitsByNumberResponse" message="tns:IPermitSearchService_FindPermitsByNumber_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.HR.HRFault" name="HRFaultFault" message="tns:IPermitSearchService_FindPermitsByNumber_HRFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindPermitsByPlate">
+      <wsdl:input wsaw:Action="http://Argix.HR/IPermitSearchService/FindPermitsByPlate" message="tns:IPermitSearchService_FindPermitsByPlate_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.HR/IPermitSearchService/FindPermitsByPlateResponse" message="tns:IPermitSearchService_FindPermitsByPlate_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.HR.HRFault" name="HRFaultFault" message="tns:IPermitSearchService_FindPermitsByPlate_HRFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindPermitsByVehicle">
+      <wsdl:input wsaw:Action="http://Argix.HR/IPermitSearchService/FindPermitsByVehicle" message="tns:IPermitSearchService_FindPermitsByVehicle_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.HR/IPermitSearchService/FindPermitsByVehicleResponse" message="tns:IPermitSearchService_FindPermitsByVehicle_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.HR.HRFault" name="HRFaultFault" message="tns:IPermitSearchService_FindPermitsByVehicle_HRFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

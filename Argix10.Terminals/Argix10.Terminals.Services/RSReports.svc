@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Argix.Terminals.RSReportsService" CodeBehind="~/App_Code/Terminals/RSReportsService.cs" %>

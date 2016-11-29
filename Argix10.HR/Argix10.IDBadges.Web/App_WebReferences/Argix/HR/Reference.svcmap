@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f1b257f7-948e-44cb-a3d1-ed2a61558b6a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:4027/Argix10.HR.Services/Badge.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Badge42.xsd" MetadataType="Schema" ID="4f8566c7-755e-4fcd-8290-24791adf4a73" SourceId="1" SourceUrl="http://localhost:4027/Argix10.HR.Services/Badge.svc?xsd=xsd5" />
+    <MetadataFile FileName="Badge.xsd" MetadataType="Schema" ID="84328b04-b6a9-4445-91d4-d53608ad87b6" SourceId="1" SourceUrl="http://localhost:4027/Argix10.HR.Services/Badge.svc?xsd=xsd2" />
+    <MetadataFile FileName="Badge1.xsd" MetadataType="Schema" ID="0aec12b9-61ce-4cd1-8bbc-cb9bca9fc332" SourceId="1" SourceUrl="http://localhost:4027/Argix10.HR.Services/Badge.svc?xsd=xsd0" />
+    <MetadataFile FileName="Badge.wsdl" MetadataType="Wsdl" ID="b1e351a3-5805-456f-bf11-0e998a8ca46b" SourceId="1" SourceUrl="http://localhost:4027/Argix10.HR.Services/Badge.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="Badge4.xsd" MetadataType="Schema" ID="94378b30-7f76-45fe-9633-2412586a6ca4" SourceId="1" SourceUrl="http://localhost:4027/Argix10.HR.Services/Badge.svc?xsd=xsd4" />
+    <MetadataFile FileName="Badge3.xsd" MetadataType="Schema" ID="0f748f05-f71a-41f1-84fd-7b415f408ef0" SourceId="1" SourceUrl="http://localhost:4027/Argix10.HR.Services/Badge.svc?xsd=xsd3" />
+    <MetadataFile FileName="Badge.disco" MetadataType="Disco" ID="51d6ed19-b625-460d-80d8-9b9d44070620" SourceId="1" SourceUrl="http://localhost:4027/Argix10.HR.Services/Badge.svc?disco" />
+    <MetadataFile FileName="Badge2.xsd" MetadataType="Schema" ID="52b796f1-f14d-44c7-99e0-57be7f994781" SourceId="1" SourceUrl="http://localhost:4027/Argix10.HR.Services/Badge.svc?xsd=xsd1" />
+    <MetadataFile FileName="BadgeService.wsdl" MetadataType="Wsdl" ID="d601abfc-a3f5-4c39-beaa-5259ccc45a8c" SourceId="1" SourceUrl="http://localhost:4027/Argix10.HR.Services/Badge.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

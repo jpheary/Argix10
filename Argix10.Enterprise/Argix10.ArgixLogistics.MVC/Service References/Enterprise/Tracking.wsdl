@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://Argix" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://Argix" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://Argix/Imports">
+      <xsd:import schemaLocation="http://localhost:53791/Argix10.Enterprise.Services/Tracking.svc?xsd=xsd0" namespace="http://Argix" />
+      <xsd:import schemaLocation="http://localhost:53791/Argix10.Enterprise.Services/Tracking.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:53791/Argix10.Enterprise.Services/Tracking.svc?xsd=xsd2" />
+      <xsd:import schemaLocation="http://localhost:53791/Argix10.Enterprise.Services/Tracking.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Argix" />
+      <xsd:import schemaLocation="http://localhost:53791/Argix10.Enterprise.Services/Tracking.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ITrackingService_GetCustomers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomers" />
+  </wsdl:message>
+  <wsdl:message name="ITrackingService_GetCustomers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomersResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrackingService_GetClients_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetClients" />
+  </wsdl:message>
+  <wsdl:message name="ITrackingService_GetClients_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetClientsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrackingService_GetStoresForSubStore_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStoresForSubStore" />
+  </wsdl:message>
+  <wsdl:message name="ITrackingService_GetStoresForSubStore_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStoresForSubStoreResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrackingService_TrackCartonsForStoreByPickupDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:TrackCartonsForStoreByPickupDate" />
+  </wsdl:message>
+  <wsdl:message name="ITrackingService_TrackCartonsForStoreByPickupDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TrackCartonsForStoreByPickupDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrackingService_TrackCartonsForStoreByPickupDate_TrackingFaultFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/Argix" name="detail" element="q1:TrackingFault" />
+  </wsdl:message>
+  <wsdl:message name="ITrackingService_TrackCartonsForStoreByDeliveryDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:TrackCartonsForStoreByDeliveryDate" />
+  </wsdl:message>
+  <wsdl:message name="ITrackingService_TrackCartonsForStoreByDeliveryDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TrackCartonsForStoreByDeliveryDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrackingService_TrackCartonsForStoreByDeliveryDate_TrackingFaultFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/Argix" name="detail" element="q2:TrackingFault" />
+  </wsdl:message>
+  <wsdl:message name="ITrackingService_TrackCartonsByCartonNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:TrackCartonsByCartonNumber" />
+  </wsdl:message>
+  <wsdl:message name="ITrackingService_TrackCartonsByCartonNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TrackCartonsByCartonNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrackingService_TrackCartonsByCartonNumber_TrackingFaultFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/Argix" name="detail" element="q3:TrackingFault" />
+  </wsdl:message>
+  <wsdl:message name="ITrackingService_TrackCartonsByLabelNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:TrackCartonsByLabelNumber" />
+  </wsdl:message>
+  <wsdl:message name="ITrackingService_TrackCartonsByLabelNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TrackCartonsByLabelNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrackingService_TrackCartonsByLabelNumber_TrackingFaultFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/Argix" name="detail" element="q4:TrackingFault" />
+  </wsdl:message>
+  <wsdl:message name="ITrackingService_TrackCartonsByPlateNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:TrackCartonsByPlateNumber" />
+  </wsdl:message>
+  <wsdl:message name="ITrackingService_TrackCartonsByPlateNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TrackCartonsByPlateNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrackingService_TrackCartonsByPlateNumber_TrackingFaultFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/Argix" name="detail" element="q5:TrackingFault" />
+  </wsdl:message>
+  <wsdl:message name="ITrackingService_TrackCartonsForPO_InputMessage">
+    <wsdl:part name="parameters" element="tns:TrackCartonsForPO" />
+  </wsdl:message>
+  <wsdl:message name="ITrackingService_TrackCartonsForPO_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TrackCartonsForPOResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrackingService_TrackCartonsForPO_TrackingFaultFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/Argix" name="detail" element="q6:TrackingFault" />
+  </wsdl:message>
+  <wsdl:message name="ITrackingService_TrackCartonsForPRO_InputMessage">
+    <wsdl:part name="parameters" element="tns:TrackCartonsForPRO" />
+  </wsdl:message>
+  <wsdl:message name="ITrackingService_TrackCartonsForPRO_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TrackCartonsForPROResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrackingService_TrackCartonsForPRO_TrackingFaultFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/Argix" name="detail" element="q7:TrackingFault" />
+  </wsdl:message>
+  <wsdl:message name="ITrackingService_TrackCartonsForStoreSummary_InputMessage">
+    <wsdl:part name="parameters" element="tns:TrackCartonsForStoreSummary" />
+  </wsdl:message>
+  <wsdl:message name="ITrackingService_TrackCartonsForStoreSummary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TrackCartonsForStoreSummaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrackingService_TrackCartonsForStoreSummary_TrackingFaultFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/Argix" name="detail" element="q8:TrackingFault" />
+  </wsdl:message>
+  <wsdl:message name="ITrackingService_TrackCartonsForStoreDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:TrackCartonsForStoreDetail" />
+  </wsdl:message>
+  <wsdl:message name="ITrackingService_TrackCartonsForStoreDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TrackCartonsForStoreDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrackingService_TrackCartonsForStoreDetail_TrackingFaultFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/Argix" name="detail" element="q9:TrackingFault" />
+  </wsdl:message>
+  <wsdl:portType name="ITrackingService">
+    <wsdl:operation name="GetCustomers">
+      <wsdl:input wsaw:Action="http://Argix/ITrackingService/GetCustomers" message="tns:ITrackingService_GetCustomers_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix/ITrackingService/GetCustomersResponse" message="tns:ITrackingService_GetCustomers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClients">
+      <wsdl:input wsaw:Action="http://Argix/ITrackingService/GetClients" message="tns:ITrackingService_GetClients_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix/ITrackingService/GetClientsResponse" message="tns:ITrackingService_GetClients_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStoresForSubStore">
+      <wsdl:input wsaw:Action="http://Argix/ITrackingService/GetStoresForSubStore" message="tns:ITrackingService_GetStoresForSubStore_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix/ITrackingService/GetStoresForSubStoreResponse" message="tns:ITrackingService_GetStoresForSubStore_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TrackCartonsForStoreByPickupDate">
+      <wsdl:input wsaw:Action="http://Argix/ITrackingService/TrackCartonsForStoreByPickupDate" message="tns:ITrackingService_TrackCartonsForStoreByPickupDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix/ITrackingService/TrackCartonsForStoreByPickupDateResponse" message="tns:ITrackingService_TrackCartonsForStoreByPickupDate_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.TrackingFault" name="TrackingFaultFault" message="tns:ITrackingService_TrackCartonsForStoreByPickupDate_TrackingFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TrackCartonsForStoreByDeliveryDate">
+      <wsdl:input wsaw:Action="http://Argix/ITrackingService/TrackCartonsForStoreByDeliveryDate" message="tns:ITrackingService_TrackCartonsForStoreByDeliveryDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix/ITrackingService/TrackCartonsForStoreByDeliveryDateResponse" message="tns:ITrackingService_TrackCartonsForStoreByDeliveryDate_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.TrackingFault" name="TrackingFaultFault" message="tns:ITrackingService_TrackCartonsForStoreByDeliveryDate_TrackingFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TrackCartonsByCartonNumber">
+      <wsdl:input wsaw:Action="http://Argix/ITrackingService/TrackCartonsByCartonNumber" message="tns:ITrackingService_TrackCartonsByCartonNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix/ITrackingService/TrackCartonsByCartonNumberResponse" message="tns:ITrackingService_TrackCartonsByCartonNumber_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.TrackingFault" name="TrackingFaultFault" message="tns:ITrackingService_TrackCartonsByCartonNumber_TrackingFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TrackCartonsByLabelNumber">
+      <wsdl:input wsaw:Action="http://Argix/ITrackingService/TrackCartonsByLabelNumber" message="tns:ITrackingService_TrackCartonsByLabelNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix/ITrackingService/TrackCartonsByLabelNumberResponse" message="tns:ITrackingService_TrackCartonsByLabelNumber_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.TrackingFault" name="TrackingFaultFault" message="tns:ITrackingService_TrackCartonsByLabelNumber_TrackingFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TrackCartonsByPlateNumber">
+      <wsdl:input wsaw:Action="http://Argix/ITrackingService/TrackCartonsByPlateNumber" message="tns:ITrackingService_TrackCartonsByPlateNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix/ITrackingService/TrackCartonsByPlateNumberResponse" message="tns:ITrackingService_TrackCartonsByPlateNumber_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.TrackingFault" name="TrackingFaultFault" message="tns:ITrackingService_TrackCartonsByPlateNumber_TrackingFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TrackCartonsForPO">
+      <wsdl:input wsaw:Action="http://Argix/ITrackingService/TrackCartonsForPO" message="tns:ITrackingService_TrackCartonsForPO_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix/ITrackingService/TrackCartonsForPOResponse" message="tns:ITrackingService_TrackCartonsForPO_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.TrackingFault" name="TrackingFaultFault" message="tns:ITrackingService_TrackCartonsForPO_TrackingFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TrackCartonsForPRO">
+      <wsdl:input wsaw:Action="http://Argix/ITrackingService/TrackCartonsForPRO" message="tns:ITrackingService_TrackCartonsForPRO_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix/ITrackingService/TrackCartonsForPROResponse" message="tns:ITrackingService_TrackCartonsForPRO_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.TrackingFault" name="TrackingFaultFault" message="tns:ITrackingService_TrackCartonsForPRO_TrackingFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TrackCartonsForStoreSummary">
+      <wsdl:input wsaw:Action="http://Argix/ITrackingService/TrackCartonsForStoreSummary" message="tns:ITrackingService_TrackCartonsForStoreSummary_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix/ITrackingService/TrackCartonsForStoreSummaryResponse" message="tns:ITrackingService_TrackCartonsForStoreSummary_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.TrackingFault" name="TrackingFaultFault" message="tns:ITrackingService_TrackCartonsForStoreSummary_TrackingFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TrackCartonsForStoreDetail">
+      <wsdl:input wsaw:Action="http://Argix/ITrackingService/TrackCartonsForStoreDetail" message="tns:ITrackingService_TrackCartonsForStoreDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix/ITrackingService/TrackCartonsForStoreDetailResponse" message="tns:ITrackingService_TrackCartonsForStoreDetail_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.TrackingFault" name="TrackingFaultFault" message="tns:ITrackingService_TrackCartonsForStoreDetail_TrackingFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

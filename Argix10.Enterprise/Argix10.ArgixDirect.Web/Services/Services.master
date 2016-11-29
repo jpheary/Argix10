@@ -1,0 +1,21 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="Services.master.cs" Inherits="ServicesMaster" %>
+
+<asp:Content ID="cLeft" runat="server" ContentPlaceHolderID="LeftContent">
+    <div id="title">Services</div>
+    <div id="submenu">
+		<ul>
+			<li><a runat="server" href="~/Services/StoreDelivery.aspx">Store Delivery</a></li>
+			<li><a runat="server" href="~/Services/ConsumerDirect.aspx">Consumer Direct</a></li>
+			<li><a runat="server" href="~/Services/DCBypass.aspx">DC Bypass</a></li>
+			<li><a runat="server" href="~/Services/FreightPickup.aspx">Freight Pickup</a></li>
+			<li><a runat="server" href="~/Services/ImportDeconsolidation.aspx">Import Deconsolidation</a></li>
+			<li><a runat="server" href="~/Services/Consolidation.aspx">Consolidation</a></li>
+			<li><a runat="server" href="~/Services/LineHaul.aspx">Line Haul</a></li>
+			<li><a runat="server" href="~/Services/Warehousing.aspx">Warehousing</a></li>
+		</ul>
+	</div>
+</asp:Content>
+<asp:Content ID="cRight" runat="server" ContentPlaceHolderID="RightContent">
+    <asp:ContentPlaceHolder ID="PageContent" runat="server"/>
+</asp:Content>
+

@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="DispatchDataset" targetNamespace="http://tempuri.org/DispatchDataset.xsd" elementFormDefault="qualified" attributeFormDefault="qualified" xmlns="http://tempuri.org/DispatchDataset.xsd" xmlns:mstns="http://tempuri.org/DispatchDataset.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+  <xs:element name="DispatchDataset" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PickupLogTable">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RequestID" type="xs:int" minOccurs="0" />
+              <xs:element name="Created" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CreateUserID" type="xs:string" minOccurs="0" />
+              <xs:element name="ScheduleDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CallerName" type="xs:string" minOccurs="0" />
+              <xs:element name="ClientNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="Client" type="xs:string" minOccurs="0" />
+              <xs:element name="ShipperNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="Shipper" type="xs:string" minOccurs="0" />
+              <xs:element name="ShipperAddress" type="xs:string" minOccurs="0" />
+              <xs:element name="ShipperPhone" type="xs:string" minOccurs="0" />
+              <xs:element name="WindowOpen" type="xs:short" minOccurs="0" />
+              <xs:element name="WindowClose" type="xs:short" minOccurs="0" />
+              <xs:element name="TerminalNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="Terminal" type="xs:string" minOccurs="0" />
+              <xs:element name="DriverName" type="xs:string" minOccurs="0" />
+              <xs:element name="ActualPickup" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="OrderType" type="xs:string" minOccurs="0" default="R" />
+              <xs:element name="Amount" type="xs:int" minOccurs="0" />
+              <xs:element name="AmountType" type="xs:string" minOccurs="0" />
+              <xs:element name="FreightType" type="xs:string" minOccurs="0" />
+              <xs:element name="Weight" type="xs:int" minOccurs="0" />
+              <xs:element name="Comments" type="xs:string" minOccurs="0" />
+              <xs:element name="IsTemplate" type="xs:boolean" minOccurs="0" />
+              <xs:element name="CancelledUserID" type="xs:string" minOccurs="0" />
+              <xs:element name="Cancelled" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LastUpdated" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="UserID" type="xs:string" minOccurs="0" />
+              <xs:element name="RowVersion" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ClientInboundScheduleTable">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" type="xs:int" minOccurs="0" />
+              <xs:element name="Created" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CreateUserID" type="xs:string" minOccurs="0" />
+              <xs:element name="ScheduleDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="VendorName" type="xs:string" minOccurs="0" />
+              <xs:element name="ConsigneeName" type="xs:string" minOccurs="0" />
+              <xs:element name="CarrierName" type="xs:string" minOccurs="0" />
+              <xs:element name="DriverName" type="xs:string" minOccurs="0" />
+              <xs:element name="TrailerNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="ScheduledArrival" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ActualArrival" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Amount" type="xs:int" minOccurs="0" />
+              <xs:element name="AmountType" type="xs:string" minOccurs="0" />
+              <xs:element name="FreightType" type="xs:string" minOccurs="0" />
+              <xs:element name="IsLiveUnload" type="xs:boolean" minOccurs="0" />
+              <xs:element name="SortDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TDSNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="TDSCreateUserID" type="xs:string" minOccurs="0" />
+              <xs:element name="Comments" type="xs:string" minOccurs="0" />
+              <xs:element name="IsTemplate" type="xs:boolean" minOccurs="0" />
+              <xs:element name="CancelledUserID" type="xs:string" minOccurs="0" />
+              <xs:element name="Cancelled" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LastUpdated" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="UserID" type="xs:string" minOccurs="0" />
+              <xs:element name="RowVersion" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="InboundScheduleTable">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" type="xs:int" minOccurs="0" />
+              <xs:element name="Created" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CreateUserID" type="xs:string" minOccurs="0" />
+              <xs:element name="ScheduleDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Origin" type="xs:string" minOccurs="0" />
+              <xs:element name="OriginLocation" type="xs:string" minOccurs="0" />
+              <xs:element name="Destination" type="xs:string" minOccurs="0" />
+              <xs:element name="DestinationLocation" type="xs:string" minOccurs="0" />
+              <xs:element name="CarrierName" type="xs:string" minOccurs="0" />
+              <xs:element name="DriverName" type="xs:string" minOccurs="0" />
+              <xs:element name="TrailerNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="DropEmptyTrailerNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="ScheduledDeparture" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ActualDeparture" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ScheduledArrival" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ActualArrival" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Confirmed" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Amount" type="xs:int" minOccurs="0" />
+              <xs:element name="AmountType" type="xs:string" minOccurs="0" />
+              <xs:element name="FreightType" type="xs:string" minOccurs="0" />
+              <xs:element name="Comments" type="xs:string" minOccurs="0" />
+              <xs:element name="IsTemplate" type="xs:boolean" minOccurs="0" />
+              <xs:element name="CancelledUserID" type="xs:string" minOccurs="0" />
+              <xs:element name="Cancelled" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LastUpdated" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="UserID" type="xs:string" minOccurs="0" />
+              <xs:element name="RowVersion" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="OutboundScheduleTable">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" type="xs:int" minOccurs="0" />
+              <xs:element name="Created" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CreateUserID" type="xs:string" minOccurs="0" />
+              <xs:element name="ScheduleDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Origin" type="xs:string" minOccurs="0" />
+              <xs:element name="OriginLocation" type="xs:string" minOccurs="0" />
+              <xs:element name="Destination" type="xs:string" minOccurs="0" />
+              <xs:element name="DestinationLocation" type="xs:string" minOccurs="0" />
+              <xs:element name="CarrierName" type="xs:string" minOccurs="0" />
+              <xs:element name="DriverName" type="xs:string" minOccurs="0" />
+              <xs:element name="TrailerNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="DropEmptyTrailerNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="ScheduledDeparture" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ActualDeparture" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ScheduledArrival" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ActualArrival" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Confirmed" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Amount" type="xs:int" minOccurs="0" />
+              <xs:element name="AmountType" type="xs:string" minOccurs="0" />
+              <xs:element name="FreightType" type="xs:string" minOccurs="0" />
+              <xs:element name="Comments" type="xs:string" minOccurs="0" />
+              <xs:element name="IsTemplate" type="xs:boolean" minOccurs="0" />
+              <xs:element name="CancelledUserID" type="xs:string" minOccurs="0" />
+              <xs:element name="Cancelled" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LastUpdated" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="UserID" type="xs:string" minOccurs="0" />
+              <xs:element name="RowVersion" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TrailerLogTable">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" type="xs:int" minOccurs="0" />
+              <xs:element name="Created" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CreateUserID" type="xs:string" minOccurs="0" />
+              <xs:element name="ScheduleDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TrailerNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="InboundDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="InboundCarrier" type="xs:string" minOccurs="0" />
+              <xs:element name="InboundSeal" type="xs:string" minOccurs="0" />
+              <xs:element name="InboundDriverName" type="xs:string" minOccurs="0" />
+              <xs:element name="InitialYardLocation" type="xs:string" minOccurs="0" />
+              <xs:element name="TDSNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="OutboundDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="OutboundCarrier" type="xs:string" minOccurs="0" />
+              <xs:element name="OutboundSeal" type="xs:string" minOccurs="0" />
+              <xs:element name="OutboundDriverName" type="xs:string" minOccurs="0" />
+              <xs:element name="BOLNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="Comments" type="xs:string" minOccurs="0" />
+              <xs:element name="IsTemplate" type="xs:boolean" minOccurs="0" />
+              <xs:element name="CancelledUserID" type="xs:string" minOccurs="0" />
+              <xs:element name="Cancelled" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LastUpdated" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="UserID" type="xs:string" minOccurs="0" />
+              <xs:element name="RowVersion" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="BlogTable">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Comment" type="xs:string" minOccurs="0" />
+              <xs:element name="UserID" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

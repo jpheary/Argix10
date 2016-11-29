@@ -1,0 +1,126 @@
+              --------------------------------------------------------
+							Freight Services Readme File
+		                       	  September, 2015
+              --------------------------------------------------------
+                         (c) Copyright Argix Logistics, 2011-2015
+
+This document provides late-breaking or other information that supplements the Freight Services documentation.
+
+------------------------
+How to Use This Document
+------------------------
+To view the Readme file on-screen in Windows Notepad, maximize the Notepad window and click Word 
+Wrap on the Edit menu. To print the Readme file, open it in Notepad or another word processor, 
+and then use the Print command on the File menu.
+
+==============
+CONTENTS
+==============
+NOTES
+   GENERAL
+   DEPENDENCIES
+   VERSION HISTORY
+==============
+
+
+NOTES
+==============
+GENERAL
+The Freight Service is a WCF web application that provides Freight business services 
+related to Argix Logistics business activities for Dispatch, TLViewer, Freight Assignment, 
+Zone Closing, and Pallet Shipment.
+
+
+DEPENDENCIES
+SMTP Services (http://rgxvmweb/Argix10/Argix10.Enterprise.Services/SMTP.svc).
+
+
+VERSION HISTORY
+v4.0.0, 04/10/14 ---------------------------------------------------------------------------
+Requirements/features
+- revised for Pallet Shipment services.
+Design
+- added Pallet Shipment services.
+- updated Microsoft.Practices.EnterpriseLibrary.Common.dll and Microsoft.Practices.EnterpriseLibrary.Data.dll 
+  to version 5.0.
+
+v4.0.1, 05/09/14 ---------------------------------------------------------------------------
+Requirements/features
+- none.
+Design
+- revised ITLViewerService2 and TLViewerService to throw ITLViewerFault on exceptions.
+
+v4.0.2, 05/28/14 ---------------------------------------------------------------------------
+Requirements/features
+- none.
+Design
+- revised LTLService2::CreateLTLShipment() to modifiy formula for shipper accountID to append
+  a 'VE' suffix instead of a 'V' suffix.
+
+v4.0.3, 07/28/14 ---------------------------------------------------------------------------
+Requirements/features
+- implementatiin changes that support new quote engine.
+Design
+- replaced stored procedures in LTLGateway2 with uspLTLQuoteCreate3, uspLTLShipmentCreate3, and uspLTLShipmentUpdate3.
+
+v4.0.4, 08/28/14 ---------------------------------------------------------------------------
+Requirements/features
+- implemented changes to support new requirements for PSP administrative services.
+Design
+- modified ILTLService2 to add administative support.
+- replaced stored procedures in LTLGateway2 with uspLTLShipmentView3, and uspLTLShipmentRead3.
+- revised DispatchService::ChangePickupRequest() to arrive LTL shipments using LTLGateway2().ArriveLTLShipment().
+
+v4.0.5, 10/22/14 ---------------------------------------------------------------------------
+Requirements/features
+- implemented changes to support new requirements for DAT Load Board entries.
+Design
+- added new stored procedures uspLTLShipperCityStateRead, uspLTLConsigneeCityStateRead.
+- added ILTLAdminService2::ReadPickupLocations(city,state) and ILTLAdminService2::ReadServiceLocations(city,state)
+  and associated inmpmnetations in LTLService2.
+- added interface members LTLQuote2.OriginCity, LTLQuote2.OriginState, LTLQuote2.DestinationCity, LTLQuote2.DestinationState, 
+  LTLQuote2.SameDayPickup, LTLQuote2.SameDayPickupCharge.
+- revisioned to stored procedure to uspLTLQuoteCreate4; added stored procedure uspLTLQuoteCreateWithOverride.
+- added LTLGateway2::GetQuoteWithOverride(); modified LTLService2::CreateQuoteForAdmin() to use LTLGateway2::GetQuoteWithOverride().
+- revisioned to uspLTLQuoteLogEntry3; modified LTLGateway2::CreateQuoteLogEntry() to pass LTLQuote2.SameDayPickupCharge.
+- added interface member LTLShipment2.SameDayPickup.
+- revisioned to uspLTLShipmentsView3, uspLTLShipmentCreate4, uspLTLShipmentRead4, and uspLTLShipmentUpdate4.
+- modified LTLGateway2::CreateLTLShipment and LTLGateway2::::UpdateShipment to pass SameDayPickup and OverrideCharge (always 
+  passing in LTLShipment2.TotalCharge so always an override from web or Windows client).
+
+v4.0.5.1, 11/23/14 ---------------------------------------------------------------------------
+Requirements/features
+- none.
+Design
+- revised LTLService2 client/shipper/consignee create and update methods to parse phone numbers to 1234567890.
+- revised LTLService2::ReadLTLClient(string) to return null when client not found (usually looking for a sales 
+  rep for a client) and and to Trim() SalesRepClientNumber.
+- revised LTLGateway2::CreateLTLClient() and LTLGateway2::UpdateLTLClient() to ensure null is passed for
+  SalesRepClientNumber instead of an empty string.
+
+v4.0.5.2, 12/09/14 ---------------------------------------------------------------------------
+Requirements/features
+- added workflows to client management on ILTLAdminService2 implementations.
+Design
+- none.
+
+v4.0.5.3, 03/10/15 ---------------------------------------------------------------------------
+Requirements/features
+- added ILTLClientService2::ReadPalletBOLData();
+Design
+- none.
+
+v4.0.5.4, 04/21/15 ---------------------------------------------------------------------------
+Requirements/features
+- added support for estimated delivery date in quotes and shipments.
+Design
+- added LTLQuote2::EstimatedDeliveryDate.
+- added LTLShipment2::ContactName, LTLShipment2::ContactPhone, LTLShipment2::CreatedUSerID, LTLShipment2::EstimatedDeliveryDate, LTLShipment2::DeliveryDate.
+- stored procedure changes in LTLGateway2: uspLTLShipmentQuoteGetList5, uspLTLQuoteGetList5, uspLTLShipmentPalletLabelInfoGet5, 
+  uspLTLShipmentPaperworkGet5, uspLTLShipmentsView5, uspLTLShipmentRead5.
+
+v4.0.6.0, 09/09/15 ---------------------------------------------------------------------------
+Requirements/features
+- added support BBB Scxhedule and BBB Load Tenders.
+Design
+- modified IDispatchService, DispatchService, and DispatchGateway to support BBB.

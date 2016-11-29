@@ -1,0 +1,22 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Areas/Tracking/Views/Shared/Site.Master" AutoEventWireup="true" CodeBehind="Reports.master.cs" Inherits="Argix.Views.Services.Services" %>
+<%@ MasterType VirtualPath="~/Areas/Tracking/Views/Shared/Site.master" %>
+
+<asp:Content ID="cMeta" runat="server" ContentPlaceHolderID="MetaContent">
+    <asp:ContentPlaceHolder ID="MetaContent" runat="server" />
+</asp:Content>
+<asp:Content ID="cLeft" runat="server" ContentPlaceHolderID="LeftContent">
+    <div id="title">Reports</div>
+    <div id="submenu">
+        <asp:TreeView ID="trvMain" runat="server" width="100%" ImageSet="XPFileExplorer" DataSourceID="xmlReports" Target="_blank" PopulateNodesFromClient="False" NodeIndent="6" ExpandDepth="1" ShowLines="True" BackColor="Window">
+            <DataBindings>
+                <asp:TreeNodeBinding DataMember="reports" SelectAction="Expand" TextField="Text" />
+                <asp:TreeNodeBinding DataMember="department" SelectAction="Expand" TextField="Text" />
+                <asp:TreeNodeBinding DataMember="report" NavigateUrlField="NavigateUrl" TextField="Text" ValueField="Value" />
+            </DataBindings>
+        </asp:TreeView>
+        <asp:XmlDataSource ID="xmlReports" runat="server" DataFile="~/App_Data/default.xml" EnableCaching="false" />
+	</div>
+</asp:Content>
+<asp:Content ID="cRight" runat="server" ContentPlaceHolderID="RightContent">
+    <asp:ContentPlaceHolder ID="PageContent" runat="server"/>
+</asp:Content>

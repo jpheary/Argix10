@@ -1,0 +1,270 @@
+﻿/* GRAY USED IN SITE #c5c7c9  */
+/* RED USED IN SITE #ee2a24  */
+
+body {
+	font-family: Calibri, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	background-color: #ffffff;
+    text-align: left;
+}
+
+#page {
+    position: relative;
+	width: 900px;
+    height: 600px;
+	margin: auto;
+	text-align: left;
+	background-color: #ffffff;
+}
+#header {
+    height: 90px;
+}
+#logo {
+    float: left;
+    width: auto;
+    margin: 9px 6px 6px 6px;
+}
+
+#superMenu {
+    float: right;
+    width: 300px;
+    height: 65px;
+    margin: 0px 3px 0px 0px;
+    padding: 0;
+    border: 0px solid #000000;
+}
+#superMenu ul { margin: 6px 0px; padding: 0px; list-style-type: none; overflow: hidden; }
+#superMenu ul li { 
+    display: block;
+	float: right;
+    margin: 0px;
+    padding: 0px;
+    border: 0px solid #000000; 
+}
+#superMenu ul li a {
+	width: 100px;
+	padding: 0px 12px 0px 12px;
+	color: #000000;
+	font-family: Michroma;
+	font-weight: 400;
+	font-size: 10px;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+#superMenu ul li a:hover { color: #ee2a24; }
+
+#mainMenu {
+    float: right;
+    width: 500px;
+    height: 25px;
+    margin: 0px 3px 0px 0px;
+    padding: 0;
+    border: 0px solid #000000;
+}
+#mainMenu ul{ margin: 0px 0px; padding: 0px; list-style-type: none; overflow: hidden; }
+#mainMenu ul li { 
+	float: right;
+    display: block;
+    margin: 2px 0px;
+    padding: 0px;
+    border: 0px solid #000000; 
+}
+#mainMenu ul li a {
+	padding: 3px 24px 3px 24px;
+	border-left: 1px solid #ffffff;
+	color: #000000;	
+	font-family: Michroma;
+	font-weight: 400;
+	font-size: 10px;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+#mainMenu ul li a:hover { color: #ee2a24; }
+
+#sideMenu {
+    float: left;
+    width: 125px;
+    margin: 0px 25px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    border: 0px solid #000000;
+}
+#sideMenu ul { margin: 0px 0px; padding: 0px; list-style-type: none; overflow: hidden; }
+#sideMenu ul li { 
+	float: left;
+    display: block;
+    margin: 2px 0px;
+    padding: 0px 0px 0px 0px;
+    border: 0px solid #000000; 
+}
+#sideMenu ul li input {
+    width: 125px;
+    height: 25px;
+	padding: 0px 0px 0px 0px;
+	border: 0px solid #ffffff;
+	color: #000000;	
+	font-weight: 400;
+	font-size: 10px;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+#sideMenu ul li a:hover { color: #ee2a24; }
+
+#content {
+    float: left;
+    width: 750px;
+    height: 350px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+.terminalcontent {
+    float: left;
+    width: 500px;
+    height: 400px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+.urlheader {
+    width: 200px;
+}
+.descheader {
+    width: 300px;
+}
+
+.roadshowcontent {
+    float: right;
+    width: 225px;
+    height: 400px;
+    margin: 0px 0px 0px 25px;
+    padding: 0px 0px 0px 0px;
+}
+
+#head {
+    position: relative;
+    width: 900px;
+    height: 3px;
+    padding: 0px;
+    background: #c5c7c9;
+}
+#body {
+    position: relative;
+    width: 900px;
+    padding: 0px 10px 10px 10px;
+}
+#footer {
+	width: 900px;
+	height: 48px;
+	margin-top: 12px;
+	text-align: center;
+    vertical-align: middle;
+}
+#title {
+    margin: 0px 0px 25px 0px;
+    padding: 0px 0px 0px 5px;
+	color: #ee2a24;
+	font-family: Michroma;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: left;
+}
+
+.subtitle {
+    margin: 0px 0px 10px 0px;
+    padding: 0px 0px 0px 5px;
+	color: #000000;
+    font-size: 24px;
+    font-weight: 500;
+    font-style: italic;
+    text-align: left;
+}
+.sectiontitle {
+    margin: 0px 0px 10px 0px;
+    padding: 0px 0px 0px 5px;
+	color: #000000;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: left;
+}
+.sectionurl {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 20px 0px 0px;
+	color: #ee2a24;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: left;
+}
+.sectiondesc {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+	color: #000000;
+    font-size: 13px;
+    font-weight: 400;
+    text-align: left;
+}
+
+.aspNetDisabled {
+	background-color:#c5c7c9;
+	color: #000000;
+}
+.redline {
+    height:3px; 
+    background-color:#ee2a24;
+    font-size: 1px;
+}
+
+.tabPage {
+    float: left;
+    width: 875px;
+    height: 25px;
+    margin: 0px 0px 15px 0px;
+    padding: 0px 0px 0px 0px;
+    background-color: #ffffff;
+	text-align: left;
+}
+.tabPage ul{ margin: 0px 0px; padding: 0px; list-style-type: none; overflow: hidden; }
+.tabPage ul li { 
+	float: left;
+    display: block;
+    width: 120px;
+    height: 21px;
+    margin: 0px 1px 0px 0px;
+    padding: 1px 0px 0px 2px;
+    border: 1px solid #000000;
+}
+.tabPage ul li input {
+    width: 120px;
+    border-style: none;
+}
+
+.popupLink {
+    color: #ee2a24;
+	font: 400 'Open Sans Condensed', sans-serif, Helvetica, Arial, sans-serif;
+    text-decoration: none;
+	text-align: left;
+}
+
+a {
+    color: #000000;
+	font: 400 'Open Sans Condensed', sans-serif, Helvetica, Arial, sans-serif;
+    text-decoration: none;
+	text-align: left;
+}
+a:hover { color: #ee2a24; }
+input {
+    font-size: 11px;
+}
+select {
+    font-size: 11px;
+}
+option {
+    font-size: 11px;
+}
+
+.bold { font-weight: bold; }
+.clear { clear: both;  }
+.clearRight { clear: right; }
+.clearLeft { clear: left; }
+

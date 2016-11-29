@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b39e3068-6826-4a49-80a8-1e80a0698a8e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:34780/Argix10.Finance.Services/DriverComp.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DriverComp1.wsdl" MetadataType="Wsdl" ID="90295146-556c-4cbe-9966-db2bc23a2ed8" SourceId="1" SourceUrl="http://localhost:34780/Argix10.Finance.Services/DriverComp.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="DriverComp5.xsd" MetadataType="Schema" ID="195842c7-4f3a-4986-8984-04a6ace2e49d" SourceId="1" SourceUrl="http://localhost:34780/Argix10.Finance.Services/DriverComp.svc?xsd=xsd2" />
+    <MetadataFile FileName="DriverComp51.xsd" MetadataType="Schema" ID="3545ef15-459a-428f-b708-dc22f3185201" SourceId="1" SourceUrl="http://localhost:34780/Argix10.Finance.Services/DriverComp.svc?xsd=xsd5" />
+    <MetadataFile FileName="DriverComp52.xsd" MetadataType="Schema" ID="46a6cf2d-0634-4916-8275-b81fbefc62f2" SourceId="1" SourceUrl="http://localhost:34780/Argix10.Finance.Services/DriverComp.svc?xsd=xsd4" />
+    <MetadataFile FileName="DriverComp53.xsd" MetadataType="Schema" ID="cd3f4883-ac31-4730-9fc1-a81d0e32d8c6" SourceId="1" SourceUrl="http://localhost:34780/Argix10.Finance.Services/DriverComp.svc?xsd=xsd0" />
+    <MetadataFile FileName="DriverCompService1.wsdl" MetadataType="Wsdl" ID="7c3b97e6-b3c3-42a7-a809-e8ecd960a50a" SourceId="1" SourceUrl="http://localhost:34780/Argix10.Finance.Services/DriverComp.svc?wsdl" />
+    <MetadataFile FileName="DriverComp1.disco" MetadataType="Disco" ID="e032eb46-60f4-47e5-a71e-079de53672f8" SourceId="1" SourceUrl="http://localhost:34780/Argix10.Finance.Services/DriverComp.svc?disco" />
+    <MetadataFile FileName="DriverComp54.xsd" MetadataType="Schema" ID="5e6b9f32-141a-4c69-a18f-db1672b64531" SourceId="1" SourceUrl="http://localhost:34780/Argix10.Finance.Services/DriverComp.svc?xsd=xsd1" />
+    <MetadataFile FileName="DriverComp55.xsd" MetadataType="Schema" ID="8c424a98-a749-4570-b80b-374a96e0cca0" SourceId="1" SourceUrl="http://localhost:34780/Argix10.Finance.Services/DriverComp.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

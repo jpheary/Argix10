@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e685efe8-25ff-48e4-aad1-afb04a44efec" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:55732/Argix10.AgentLineHaul.Services/ShipScheduleTemplatesService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ShipScheduleTemplatesService8.xsd" MetadataType="Schema" ID="45be07a6-90f1-4a34-9f4f-902c56681f9a" SourceId="1" SourceUrl="http://localhost:55732/Argix10.AgentLineHaul.Services/ShipScheduleTemplatesService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ShipScheduleTemplatesService1.disco" MetadataType="Disco" ID="998720c0-1dab-43aa-92df-5dcfa62f10b7" SourceId="1" SourceUrl="http://localhost:55732/Argix10.AgentLineHaul.Services/ShipScheduleTemplatesService.svc?disco" />
+    <MetadataFile FileName="ShipScheduleTemplatesService87.xsd" MetadataType="Schema" ID="341df20d-a1b4-4f3b-99e9-cd7b77bec2dc" SourceId="1" SourceUrl="http://localhost:55732/Argix10.AgentLineHaul.Services/ShipScheduleTemplatesService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ShipScheduleTemplatesService83.xsd" MetadataType="Schema" ID="4c0d7ee7-2b67-4d4e-ab5e-9f1b5bdc5c9d" SourceId="1" SourceUrl="http://localhost:55732/Argix10.AgentLineHaul.Services/ShipScheduleTemplatesService.svc?xsd=xsd5" />
+    <MetadataFile FileName="ShipScheduleTemplatesService85.xsd" MetadataType="Schema" ID="d1293c6b-fa7e-4339-b417-f6e8d10d2e53" SourceId="1" SourceUrl="http://localhost:55732/Argix10.AgentLineHaul.Services/ShipScheduleTemplatesService.svc?xsd=xsd6" />
+    <MetadataFile FileName="ShipScheduleTemplatesService2.wsdl" MetadataType="Wsdl" ID="2a770919-c7bb-4113-ade7-51f13e0a3933" SourceId="1" SourceUrl="http://localhost:55732/Argix10.AgentLineHaul.Services/ShipScheduleTemplatesService.svc?wsdl" />
+    <MetadataFile FileName="ShipScheduleTemplatesService81.xsd" MetadataType="Schema" ID="2c47c393-7876-4666-9a2b-14018a1d57b6" SourceId="1" SourceUrl="http://localhost:55732/Argix10.AgentLineHaul.Services/ShipScheduleTemplatesService.svc?xsd=xsd4" />
+    <MetadataFile FileName="ShipScheduleTemplatesService84.xsd" MetadataType="Schema" ID="0bd8a2e2-bb51-4913-9b75-20b577eba37d" SourceId="1" SourceUrl="http://localhost:55732/Argix10.AgentLineHaul.Services/ShipScheduleTemplatesService.svc?xsd=xsd2" />
+    <MetadataFile FileName="ShipScheduleTemplatesService86.xsd" MetadataType="Schema" ID="e6fdbbcd-2225-4188-bc93-870ef4a9942c" SourceId="1" SourceUrl="http://localhost:55732/Argix10.AgentLineHaul.Services/ShipScheduleTemplatesService.svc?xsd=xsd3" />
+    <MetadataFile FileName="ShipScheduleTemplatesService21.wsdl" MetadataType="Wsdl" ID="961c6442-e19e-464d-9ed5-ba4ad6f2a646" SourceId="1" SourceUrl="http://localhost:55732/Argix10.AgentLineHaul.Services/ShipScheduleTemplatesService.svc?wsdl=wsdl0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

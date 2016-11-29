@@ -1,0 +1,46 @@
+Formula for pallet charge
+Charge = ((n * BR) * (1 - VDn)) * (1 - CD)
+
+where:
+n: pallet count (1-5)
+BR: Base Rate- base rate per pallet from pickup zone (Argix zone) to delivery zipcode; same for all clients
+VDn: Volume Discount- volume discount for n pallets; varies per client
+CD: Client Discount- discount on shipment total; varies per client
+
+
+Configuration
+Client Discounts
+ID	Eff Date	CD	VD1	VD2	VD3	VD4	VD5
+--------------------------------------------------------------------
+101	2014-07-16	0.1	0.0	0.2	0.3	0.4	0.5
+
+Pallet Rates (pickup zone to delivery zip)
+Zone	Zip	Eff Date	BR
+-------------------------------------
+Z	07747	2014-07-16	$100
+Z	18017	2014-07-16	$145
+
+
+Example: Pickup Ridgefield (Zone Z), Deliver 07747, Client 101
+BR = $100; CD = 0.1
+n	Rate	VDn	Charge
+------------------------------
+1	100	0.0	90
+2	200	0.2	144
+3	300	0.3	189
+4	400	0.4	212
+5	500	0.5	225
+
+
+TC = PC + FSC + ISC + ASC + TSC 
+where 
+	 PC = pallet charge from above
+	FSC = FSCR * Total where FSCR = (FSCB/10 - 0.115) where FSCB = Regional FSC Base Rate
+	ISC = 
+	ASC = constant
+	TSC = constant
+
+TC = PC + TC*(FSCB/10 - 0.115) + K
+10*TC = 10*PC + FSCB*TC - 1.15*TC + 10K
+(10-FSCB-1.15)*TC = 10*PC + 10K
+TC = (10*PC + 10K)/(8.85 - FSCB)

@@ -1,0 +1,33 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Default.master.cs" Inherits="DefaultMaster" ClassName="DefaultMaster" %>
+<%@ Register Assembly="System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Namespace="System.Web.UI.WebControls" TagPrefix="asp" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1" runat="server">
+    <title>Load Tenders</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <asp:ContentPlaceHolder ID="cpMeta" runat="server" />
+    <link id="Link1" runat="server" href="~/App_Themes/Argix/Argix.css" rel="stylesheet" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Michroma' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,300italic' rel='stylesheet' type='text/css'>
+    <script type="text/jscript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.10.2.js"></script>
+    <script type="text/jscript" src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/jquery-ui.js"></script>
+    <link rel="stylesheet" href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/themes/blitzer/jquery-ui.css" />
+</head>
+<body id="idBody" onunload="javascript:document.body.style.cursor='wait';">
+<form id="idForm" runat="server" >
+    <asp:ScriptManager ID="smPage" runat="server" EnableCdn="false" EnablePartialRendering="true" AsyncPostBackTimeout="600" ScriptMode="Auto" LoadScriptsBeforeUI="false"></asp:ScriptManager>
+    <div id="page">
+        <div id="header">
+            <div id="logo">
+                <a href="http://www.argixlogistics.com" target="_self"><img id="Img1" runat="server" src="~/App_Themes/Argix/Images/argix-logo.gif" alt="Argix logo" style="height:36px; border:0;" /></a>
+                <asp:UpdatePanel runat="server" ID="pnlMsg" UpdateMode="Always"><ContentTemplate><asp:Label ID="lblMsg" runat="server" Text="" /></ContentTemplate></asp:UpdatePanel>
+            </div>
+        </div>
+        <div id="title">Load Tenders</div>
+        <div id="body"><asp:contentplaceholder id="cpBody" runat="server" /></div>
+        <div id="footer">Copyright 2013-2015 Argix Logistics, Inc. v03032015</div>
+    </div>
+</form>
+</body>
+</html>

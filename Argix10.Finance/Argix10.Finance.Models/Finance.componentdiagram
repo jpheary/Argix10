@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<componentModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="7e43db0f-0013-42ea-ac67-8b3d5f442ef7" name="Finance" linkedPackageId="da17708d-7f1d-4502-bb2c-3a22527ae250" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="8c3ff9a7-9186-4a6d-bbb8-f61675056fbf">
+      <profileInstance Id="4a7c669e-54fa-4f93-9b69-ee5c0999023b" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="f42530d1-a573-4bc4-a7cb-d087b1fdcb3d">
+      <profileInstance Id="54041299-7188-468b-9bf3-b43d34f9d75c" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <componentModelHasComponents>
+      <component Id="03a66993-9f35-406a-9a2c-e98c5ae3b5ea" name="Component1" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="4559371a-29e9-429d-b46b-4162e74c619a" />
+      </component>
+    </componentModelHasComponents>
+  </packagedElements>
+  <package Id="da17708d-7f1d-4502-bb2c-3a22527ae250" name="Argix10.Finance.Models">
+    <elementDefinition Id="1d56e5fc-6503-47c9-9fa1-9df57859535a" />
+  </package>
+</componentModel>

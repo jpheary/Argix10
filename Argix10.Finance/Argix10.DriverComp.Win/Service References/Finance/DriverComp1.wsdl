@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://Argix.Finance" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://Argix.Finance" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://Argix.Finance/Imports">
+      <xsd:import schemaLocation="http://localhost:34780/Argix10.Finance.Services/DriverComp.svc?xsd=xsd0" namespace="http://Argix.Finance" />
+      <xsd:import schemaLocation="http://localhost:34780/Argix10.Finance.Services/DriverComp.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Argix" />
+      <xsd:import schemaLocation="http://localhost:34780/Argix10.Finance.Services/DriverComp.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:34780/Argix10.Finance.Services/DriverComp.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:34780/Argix10.Finance.Services/DriverComp.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Argix.Finance" />
+      <xsd:import schemaLocation="http://localhost:34780/Argix10.Finance.Services/DriverComp.svc?xsd=xsd4" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDriverCompService_GetServiceInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetServiceInfo" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_GetServiceInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetServiceInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_GetServiceInfo_ConfigurationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/Argix" name="detail" element="q1:ConfigurationFault" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_GetUserConfiguration_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserConfiguration" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_GetUserConfiguration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserConfigurationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_GetUserConfiguration_ConfigurationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/Argix" name="detail" element="q2:ConfigurationFault" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_WriteLogEntry_InputMessage">
+    <wsdl:part name="parameters" element="tns:WriteLogEntry" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_ReadRoadshowRoutes_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadRoadshowRoutes" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_ReadRoadshowRoutes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadRoadshowRoutesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_ReadRoadshowRoutes_DriverCompensationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/Argix.Finance" name="detail" element="q3:DriverCompensationFault" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_ReadDriverRoutes_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadDriverRoutes" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_ReadDriverRoutes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadDriverRoutesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_ReadDriverRoutes_DriverCompensationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/Argix.Finance" name="detail" element="q4:DriverCompensationFault" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_CreateDriverRoute_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateDriverRoute" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_CreateDriverRoute_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateDriverRouteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_CreateDriverRoute_DriverCompensationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/Argix.Finance" name="detail" element="q5:DriverCompensationFault" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_UpdateDriverRoute_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDriverRoute" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_UpdateDriverRoute_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDriverRouteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_UpdateDriverRoute_DriverCompensationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/Argix.Finance" name="detail" element="q6:DriverCompensationFault" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_DeleteDriverRoute_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteDriverRoute" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_DeleteDriverRoute_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteDriverRouteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_DeleteDriverRoute_DriverCompensationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/Argix.Finance" name="detail" element="q7:DriverCompensationFault" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_ReadTerminalConfigurations_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadTerminalConfigurations" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_ReadTerminalConfigurations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadTerminalConfigurationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_ReadTerminalConfigurations_DriverCompensationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/Argix.Finance" name="detail" element="q8:DriverCompensationFault" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_GetTerminalConfiguration_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTerminalConfiguration" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_GetTerminalConfiguration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTerminalConfigurationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_GetTerminalConfiguration_DriverCompensationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/Argix.Finance" name="detail" element="q9:DriverCompensationFault" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_ReadDriverEquipment_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadDriverEquipment" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_ReadDriverEquipment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadDriverEquipmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_ReadDriverEquipment_DriverCompensationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/Argix.Finance" name="detail" element="q10:DriverCompensationFault" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_CreateDriverEquipment_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateDriverEquipment" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_CreateDriverEquipment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateDriverEquipmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_CreateDriverEquipment_DriverCompensationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/Argix.Finance" name="detail" element="q11:DriverCompensationFault" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_UpdateDriverEquipment_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDriverEquipment" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_UpdateDriverEquipment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDriverEquipmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_UpdateDriverEquipment_DriverCompensationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/Argix.Finance" name="detail" element="q12:DriverCompensationFault" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_ReadVehicleMileageRates_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadVehicleMileageRates" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_ReadVehicleMileageRates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadVehicleMileageRatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_ReadVehicleMileageRates_ConfigurationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/Argix" name="detail" element="q13:ConfigurationFault" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_CreateVehicleMileageRate_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateVehicleMileageRate" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_CreateVehicleMileageRate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateVehicleMileageRateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_CreateVehicleMileageRate_ConfigurationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/Argix" name="detail" element="q14:ConfigurationFault" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_UpdateVehicleMileageRate_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateVehicleMileageRate" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_UpdateVehicleMileageRate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateVehicleMileageRateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_UpdateVehicleMileageRate_ConfigurationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/Argix" name="detail" element="q15:ConfigurationFault" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_ReadVehicleUnitRates_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadVehicleUnitRates" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_ReadVehicleUnitRates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadVehicleUnitRatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_ReadVehicleUnitRates_ConfigurationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/Argix" name="detail" element="q16:ConfigurationFault" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_CreateVehicleUnitRate_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateVehicleUnitRate" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_CreateVehicleUnitRate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateVehicleUnitRateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_CreateVehicleUnitRate_ConfigurationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://schemas.datacontract.org/2004/07/Argix" name="detail" element="q17:ConfigurationFault" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_UpdateVehicleUnitRate_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateVehicleUnitRate" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_UpdateVehicleUnitRate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateVehicleUnitRateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_UpdateVehicleUnitRate_ConfigurationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.datacontract.org/2004/07/Argix" name="detail" element="q18:ConfigurationFault" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_ReadRouteMileageRates_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadRouteMileageRates" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_ReadRouteMileageRates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadRouteMileageRatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_ReadRouteMileageRates_ConfigurationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://schemas.datacontract.org/2004/07/Argix" name="detail" element="q19:ConfigurationFault" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_CreateRouteMileageRate_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateRouteMileageRate" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_CreateRouteMileageRate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateRouteMileageRateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_CreateRouteMileageRate_ConfigurationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://schemas.datacontract.org/2004/07/Argix" name="detail" element="q20:ConfigurationFault" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_UpdateRouteMileageRate_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRouteMileageRate" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_UpdateRouteMileageRate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRouteMileageRateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_UpdateRouteMileageRate_ConfigurationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://schemas.datacontract.org/2004/07/Argix" name="detail" element="q21:ConfigurationFault" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_ReadRouteUnitRates_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadRouteUnitRates" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_ReadRouteUnitRates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadRouteUnitRatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_ReadRouteUnitRates_ConfigurationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://schemas.datacontract.org/2004/07/Argix" name="detail" element="q22:ConfigurationFault" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_CreateRouteUnitRate_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateRouteUnitRate" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_CreateRouteUnitRate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateRouteUnitRateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_CreateRouteUnitRate_ConfigurationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q23="http://schemas.datacontract.org/2004/07/Argix" name="detail" element="q23:ConfigurationFault" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_UpdateRouteUnitRate_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRouteUnitRate" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_UpdateRouteUnitRate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRouteUnitRateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_UpdateRouteUnitRate_ConfigurationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q24="http://schemas.datacontract.org/2004/07/Argix" name="detail" element="q24:ConfigurationFault" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_GetLocalTerminals_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLocalTerminals" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_GetLocalTerminals_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLocalTerminalsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_GetLocalTerminals_ConfigurationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q25="http://schemas.datacontract.org/2004/07/Argix" name="detail" element="q25:ConfigurationFault" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_GetAdjustmentTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdjustmentTypes" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_GetAdjustmentTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdjustmentTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_GetAdjustmentTypes_DriverCompensationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q26="http://schemas.datacontract.org/2004/07/Argix.Finance" name="detail" element="q26:DriverCompensationFault" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_GetDriverEquipmentTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDriverEquipmentTypes" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_GetDriverEquipmentTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDriverEquipmentTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_GetDriverEquipmentTypes_ConfigurationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q27="http://schemas.datacontract.org/2004/07/Argix" name="detail" element="q27:ConfigurationFault" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_GetRateTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRateTypes" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_GetRateTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRateTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_GetRateTypes_ConfigurationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q28="http://schemas.datacontract.org/2004/07/Argix" name="detail" element="q28:ConfigurationFault" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_GetPayPeriod_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPayPeriod" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_GetPayPeriod_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPayPeriodResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_GetPayPeriod_ConfigurationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q29="http://schemas.datacontract.org/2004/07/Argix" name="detail" element="q29:ConfigurationFault" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_GetFuelCost_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFuelCost" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_GetFuelCost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFuelCostResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDriverCompService_GetFuelCost_DriverCompensationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q30="http://schemas.datacontract.org/2004/07/Argix.Finance" name="detail" element="q30:DriverCompensationFault" />
+  </wsdl:message>
+  <wsdl:portType name="IDriverCompService">
+    <wsdl:operation name="GetServiceInfo">
+      <wsdl:input wsaw:Action="http://Argix.Finance/IDriverCompService/GetServiceInfo" message="tns:IDriverCompService_GetServiceInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Finance/IDriverCompService/GetServiceInfoResponse" message="tns:IDriverCompService_GetServiceInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.ConfigurationFault" name="ConfigurationFaultFault" message="tns:IDriverCompService_GetServiceInfo_ConfigurationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserConfiguration">
+      <wsdl:input wsaw:Action="http://Argix.Finance/IDriverCompService/GetUserConfiguration" message="tns:IDriverCompService_GetUserConfiguration_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Finance/IDriverCompService/GetUserConfigurationResponse" message="tns:IDriverCompService_GetUserConfiguration_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.ConfigurationFault" name="ConfigurationFaultFault" message="tns:IDriverCompService_GetUserConfiguration_ConfigurationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WriteLogEntry">
+      <wsdl:input wsaw:Action="http://Argix.Finance/IDriverCompService/WriteLogEntry" message="tns:IDriverCompService_WriteLogEntry_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadRoadshowRoutes">
+      <wsdl:input wsaw:Action="http://Argix.Finance/IDriverCompService/ReadRoadshowRoutes" message="tns:IDriverCompService_ReadRoadshowRoutes_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Finance/IDriverCompService/ReadRoadshowRoutesResponse" message="tns:IDriverCompService_ReadRoadshowRoutes_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Finance.DriverCompensationFault" name="DriverCompensationFaultFault" message="tns:IDriverCompService_ReadRoadshowRoutes_DriverCompensationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadDriverRoutes">
+      <wsdl:input wsaw:Action="http://Argix.Finance/IDriverCompService/ReadDriverRoutes" message="tns:IDriverCompService_ReadDriverRoutes_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Finance/IDriverCompService/ReadDriverRoutesResponse" message="tns:IDriverCompService_ReadDriverRoutes_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Finance.DriverCompensationFault" name="DriverCompensationFaultFault" message="tns:IDriverCompService_ReadDriverRoutes_DriverCompensationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateDriverRoute">
+      <wsdl:input wsaw:Action="http://Argix.Finance/IDriverCompService/CreateDriverRoute" message="tns:IDriverCompService_CreateDriverRoute_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Finance/IDriverCompService/CreateDriverRouteResponse" message="tns:IDriverCompService_CreateDriverRoute_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Finance.DriverCompensationFault" name="DriverCompensationFaultFault" message="tns:IDriverCompService_CreateDriverRoute_DriverCompensationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDriverRoute">
+      <wsdl:input wsaw:Action="http://Argix.Finance/IDriverCompService/UpdateDriverRoute" message="tns:IDriverCompService_UpdateDriverRoute_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Finance/IDriverCompService/UpdateDriverRouteResponse" message="tns:IDriverCompService_UpdateDriverRoute_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Finance.DriverCompensationFault" name="DriverCompensationFaultFault" message="tns:IDriverCompService_UpdateDriverRoute_DriverCompensationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDriverRoute">
+      <wsdl:input wsaw:Action="http://Argix.Finance/IDriverCompService/DeleteDriverRoute" message="tns:IDriverCompService_DeleteDriverRoute_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Finance/IDriverCompService/DeleteDriverRouteResponse" message="tns:IDriverCompService_DeleteDriverRoute_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Finance.DriverCompensationFault" name="DriverCompensationFaultFault" message="tns:IDriverCompService_DeleteDriverRoute_DriverCompensationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadTerminalConfigurations">
+      <wsdl:input wsaw:Action="http://Argix.Finance/IDriverCompService/ReadTerminalConfigurations" message="tns:IDriverCompService_ReadTerminalConfigurations_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Finance/IDriverCompService/ReadTerminalConfigurationsResponse" message="tns:IDriverCompService_ReadTerminalConfigurations_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Finance.DriverCompensationFault" name="DriverCompensationFaultFault" message="tns:IDriverCompService_ReadTerminalConfigurations_DriverCompensationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTerminalConfiguration">
+      <wsdl:input wsaw:Action="http://Argix.Finance/IDriverCompService/GetTerminalConfiguration" message="tns:IDriverCompService_GetTerminalConfiguration_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Finance/IDriverCompService/GetTerminalConfigurationResponse" message="tns:IDriverCompService_GetTerminalConfiguration_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Finance.DriverCompensationFault" name="DriverCompensationFaultFault" message="tns:IDriverCompService_GetTerminalConfiguration_DriverCompensationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadDriverEquipment">
+      <wsdl:input wsaw:Action="http://Argix.Finance/IDriverCompService/ReadDriverEquipment" message="tns:IDriverCompService_ReadDriverEquipment_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Finance/IDriverCompService/ReadDriverEquipmentResponse" message="tns:IDriverCompService_ReadDriverEquipment_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Finance.DriverCompensationFault" name="DriverCompensationFaultFault" message="tns:IDriverCompService_ReadDriverEquipment_DriverCompensationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateDriverEquipment">
+      <wsdl:input wsaw:Action="http://Argix.Finance/IDriverCompService/CreateDriverEquipment" message="tns:IDriverCompService_CreateDriverEquipment_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Finance/IDriverCompService/CreateDriverEquipmentResponse" message="tns:IDriverCompService_CreateDriverEquipment_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Finance.DriverCompensationFault" name="DriverCompensationFaultFault" message="tns:IDriverCompService_CreateDriverEquipment_DriverCompensationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDriverEquipment">
+      <wsdl:input wsaw:Action="http://Argix.Finance/IDriverCompService/UpdateDriverEquipment" message="tns:IDriverCompService_UpdateDriverEquipment_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Finance/IDriverCompService/UpdateDriverEquipmentResponse" message="tns:IDriverCompService_UpdateDriverEquipment_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Finance.DriverCompensationFault" name="DriverCompensationFaultFault" message="tns:IDriverCompService_UpdateDriverEquipment_DriverCompensationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadVehicleMileageRates">
+      <wsdl:input wsaw:Action="http://Argix.Finance/IDriverCompService/ReadVehicleMileageRates" message="tns:IDriverCompService_ReadVehicleMileageRates_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Finance/IDriverCompService/ReadVehicleMileageRatesResponse" message="tns:IDriverCompService_ReadVehicleMileageRates_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.DriverRatingFault" name="ConfigurationFaultFault" message="tns:IDriverCompService_ReadVehicleMileageRates_ConfigurationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateVehicleMileageRate">
+      <wsdl:input wsaw:Action="http://Argix.Finance/IDriverCompService/CreateVehicleMileageRate" message="tns:IDriverCompService_CreateVehicleMileageRate_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Finance/IDriverCompService/CreateVehicleMileageRateResponse" message="tns:IDriverCompService_CreateVehicleMileageRate_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.DriverRatingFault" name="ConfigurationFaultFault" message="tns:IDriverCompService_CreateVehicleMileageRate_ConfigurationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVehicleMileageRate">
+      <wsdl:input wsaw:Action="http://Argix.Finance/IDriverCompService/UpdateVehicleMileageRate" message="tns:IDriverCompService_UpdateVehicleMileageRate_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Finance/IDriverCompService/UpdateVehicleMileageRateResponse" message="tns:IDriverCompService_UpdateVehicleMileageRate_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.DriverRatingFault" name="ConfigurationFaultFault" message="tns:IDriverCompService_UpdateVehicleMileageRate_ConfigurationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadVehicleUnitRates">
+      <wsdl:input wsaw:Action="http://Argix.Finance/IDriverCompService/ReadVehicleUnitRates" message="tns:IDriverCompService_ReadVehicleUnitRates_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Finance/IDriverCompService/ReadVehicleUnitRatesResponse" message="tns:IDriverCompService_ReadVehicleUnitRates_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.DriverRatingFault" name="ConfigurationFaultFault" message="tns:IDriverCompService_ReadVehicleUnitRates_ConfigurationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateVehicleUnitRate">
+      <wsdl:input wsaw:Action="http://Argix.Finance/IDriverCompService/CreateVehicleUnitRate" message="tns:IDriverCompService_CreateVehicleUnitRate_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Finance/IDriverCompService/CreateVehicleUnitRateResponse" message="tns:IDriverCompService_CreateVehicleUnitRate_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.DriverRatingFault" name="ConfigurationFaultFault" message="tns:IDriverCompService_CreateVehicleUnitRate_ConfigurationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVehicleUnitRate">
+      <wsdl:input wsaw:Action="http://Argix.Finance/IDriverCompService/UpdateVehicleUnitRate" message="tns:IDriverCompService_UpdateVehicleUnitRate_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Finance/IDriverCompService/UpdateVehicleUnitRateResponse" message="tns:IDriverCompService_UpdateVehicleUnitRate_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.DriverRatingFault" name="ConfigurationFaultFault" message="tns:IDriverCompService_UpdateVehicleUnitRate_ConfigurationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadRouteMileageRates">
+      <wsdl:input wsaw:Action="http://Argix.Finance/IDriverCompService/ReadRouteMileageRates" message="tns:IDriverCompService_ReadRouteMileageRates_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Finance/IDriverCompService/ReadRouteMileageRatesResponse" message="tns:IDriverCompService_ReadRouteMileageRates_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.DriverRatingFault" name="ConfigurationFaultFault" message="tns:IDriverCompService_ReadRouteMileageRates_ConfigurationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateRouteMileageRate">
+      <wsdl:input wsaw:Action="http://Argix.Finance/IDriverCompService/CreateRouteMileageRate" message="tns:IDriverCompService_CreateRouteMileageRate_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Finance/IDriverCompService/CreateRouteMileageRateResponse" message="tns:IDriverCompService_CreateRouteMileageRate_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.DriverRatingFault" name="ConfigurationFaultFault" message="tns:IDriverCompService_CreateRouteMileageRate_ConfigurationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRouteMileageRate">
+      <wsdl:input wsaw:Action="http://Argix.Finance/IDriverCompService/UpdateRouteMileageRate" message="tns:IDriverCompService_UpdateRouteMileageRate_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Finance/IDriverCompService/UpdateRouteMileageRateResponse" message="tns:IDriverCompService_UpdateRouteMileageRate_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.DriverRatingFault" name="ConfigurationFaultFault" message="tns:IDriverCompService_UpdateRouteMileageRate_ConfigurationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadRouteUnitRates">
+      <wsdl:input wsaw:Action="http://Argix.Finance/IDriverCompService/ReadRouteUnitRates" message="tns:IDriverCompService_ReadRouteUnitRates_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Finance/IDriverCompService/ReadRouteUnitRatesResponse" message="tns:IDriverCompService_ReadRouteUnitRates_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.DriverRatingFault" name="ConfigurationFaultFault" message="tns:IDriverCompService_ReadRouteUnitRates_ConfigurationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateRouteUnitRate">
+      <wsdl:input wsaw:Action="http://Argix.Finance/IDriverCompService/CreateRouteUnitRate" message="tns:IDriverCompService_CreateRouteUnitRate_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Finance/IDriverCompService/CreateRouteUnitRateResponse" message="tns:IDriverCompService_CreateRouteUnitRate_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.DriverRatingFault" name="ConfigurationFaultFault" message="tns:IDriverCompService_CreateRouteUnitRate_ConfigurationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRouteUnitRate">
+      <wsdl:input wsaw:Action="http://Argix.Finance/IDriverCompService/UpdateRouteUnitRate" message="tns:IDriverCompService_UpdateRouteUnitRate_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Finance/IDriverCompService/UpdateRouteUnitRateResponse" message="tns:IDriverCompService_UpdateRouteUnitRate_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.DriverRatingFault" name="ConfigurationFaultFault" message="tns:IDriverCompService_UpdateRouteUnitRate_ConfigurationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLocalTerminals">
+      <wsdl:input wsaw:Action="http://Argix.Finance/IDriverCompService/GetLocalTerminals" message="tns:IDriverCompService_GetLocalTerminals_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Finance/IDriverCompService/GetLocalTerminalsResponse" message="tns:IDriverCompService_GetLocalTerminals_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.DriverRatingFault" name="ConfigurationFaultFault" message="tns:IDriverCompService_GetLocalTerminals_ConfigurationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAdjustmentTypes">
+      <wsdl:input wsaw:Action="http://Argix.Finance/IDriverCompService/GetAdjustmentTypes" message="tns:IDriverCompService_GetAdjustmentTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Finance/IDriverCompService/GetAdjustmentTypesResponse" message="tns:IDriverCompService_GetAdjustmentTypes_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Finance.DriverCompensationFault" name="DriverCompensationFaultFault" message="tns:IDriverCompService_GetAdjustmentTypes_DriverCompensationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDriverEquipmentTypes">
+      <wsdl:input wsaw:Action="http://Argix.Finance/IDriverCompService/GetDriverEquipmentTypes" message="tns:IDriverCompService_GetDriverEquipmentTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Finance/IDriverCompService/GetDriverEquipmentTypesResponse" message="tns:IDriverCompService_GetDriverEquipmentTypes_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.DriverRatingFault" name="ConfigurationFaultFault" message="tns:IDriverCompService_GetDriverEquipmentTypes_ConfigurationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRateTypes">
+      <wsdl:input wsaw:Action="http://Argix.Finance/IDriverCompService/GetRateTypes" message="tns:IDriverCompService_GetRateTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Finance/IDriverCompService/GetRateTypesResponse" message="tns:IDriverCompService_GetRateTypes_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.DriverRatingFault" name="ConfigurationFaultFault" message="tns:IDriverCompService_GetRateTypes_ConfigurationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPayPeriod">
+      <wsdl:input wsaw:Action="http://Argix.Finance/IDriverCompService/GetPayPeriod" message="tns:IDriverCompService_GetPayPeriod_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Finance/IDriverCompService/GetPayPeriodResponse" message="tns:IDriverCompService_GetPayPeriod_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.DriverRatingFault" name="ConfigurationFaultFault" message="tns:IDriverCompService_GetPayPeriod_ConfigurationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFuelCost">
+      <wsdl:input wsaw:Action="http://Argix.Finance/IDriverCompService/GetFuelCost" message="tns:IDriverCompService_GetFuelCost_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Finance/IDriverCompService/GetFuelCostResponse" message="tns:IDriverCompService_GetFuelCost_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Finance.DriverCompensationFault" name="DriverCompensationFaultFault" message="tns:IDriverCompService_GetFuelCost_DriverCompensationFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

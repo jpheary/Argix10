@@ -1,0 +1,22 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/MasterPages/Default.master" AutoEventWireup="true" CodeFile="Profile.master.cs" Inherits="_ProfileMaster" %>
+<%@ MasterType VirtualPath="~/MasterPages/Default.master" %>
+
+<asp:Content ID="cMeta" runat="server" ContentPlaceHolderID="cpMeta">
+    <asp:ContentPlaceHolder ID="cpMeta" runat="server" />
+</asp:Content>
+<asp:Content ID="cBody" ContentPlaceHolderID="cpBody" Runat="Server">
+    <div class="submenu">
+        <div class="submenutitle">Profile</div>
+	    <ul>
+            <li><asp:HyperLink ID="lnkProfile" runat="server" NavigateUrl="~/Members/MyProfile.aspx" Text="My Profile" /></li>
+            <li><asp:HyperLink ID="lnkChangePassword" runat="server" NavigateUrl="~/Account/ChangePassword.aspx" Text="Change Password" /></li>
+            <li><asp:HyperLink ID="lnkGuests" runat="server" NavigateUrl="~/Admin/ManageGuests.aspx" Text="Manage Guests" /></li>
+            <li><asp:HyperLink ID="lnkUsers" runat="server" NavigateUrl="~/Admin/ManageUsers.aspx" Text="Manage Users" /></li>
+            <li><asp:HyperLink ID="lnkMembers" runat="server" NavigateUrl="~/Admin/Memberships.aspx" Text="Manage Membership" /></li>
+	    </ul>
+    </div>
+    <div class="subcontent">
+        <asp:ContentPlaceHolder ID="cpContent" runat="server"/>
+    </div>
+</asp:Content>
+

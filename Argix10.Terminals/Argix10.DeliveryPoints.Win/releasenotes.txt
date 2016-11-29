@@ -1,0 +1,122 @@
+              --------------------------------------------------------
+                    Delivery Points Application Readme File
+		                       	  May, 2015
+              --------------------------------------------------------
+                         (c) Copyright Argix Logistics, 2004-2015
+
+This document provides late-breaking or other information that supplements the Delivery Points documentation.
+
+------------------------
+How to Use This Document
+------------------------
+To view the Readme file on-screen in Windows Notepad, maximize the Notepad window and click Word 
+Wrap on the Edit menu. To print the Readme file, open it in Notepad or another word processor, 
+and then use the Print command on the File menu.
+
+==============
+CONTENTS
+==============
+INSTALLATION
+   DEPLOYMENT
+   CONFIGURATION
+
+NOTES
+   GENERAL
+   DEPENDENCIES
+   OPERATION
+   VERSION HISTORY
+==============
+
+
+INSTALLATION
+==============
+DEPLOYMENT
+DeliveryPoints is installed into a deployment folder visible from an IIS web service as follows:
+1.	Create a virtual folder c:\inetpub\wwwroot\Argix10.DeliveryPoints on a web server using Windows explorer.
+2.	Copy the following files into this folder:
+		Argix10.Windows.dll
+		Infragistics4.Shared.v12.1.dll
+		Infragistics4.Win.UltraWinGrid.v12.1.dll
+		Infragistics4.Win.v12.1.dll
+		DeliveryPoints.application
+		DeliveryPoints.exe
+		DeliveryPoints.exe.config
+		DeliveryPoints.exe.manifest
+		releasenotes.txt
+4.	Copy the deployment manifest, DeliveryPoints.application, into the DeliveryPoints folder. This manifest points to
+	tha application manifest (i.e. \DeliveryPoints_4_0_0_2\DeliveryPoints.exe.manifest)
+5.	Launch the Internet Information Services snap-in and validate that the virtual folder allows
+	anonymous access. A web application does not need to be created for deployment.
+6.	Verify http access from Internet Explorer to the following url: 
+		http://rgxvmweb/Argix10/Apps/Terminals/DeliveryPoints/DeliveryPoints.application
+7.	The Click-Once deployment is installed on the client machine in the C:\Users\<username>\AppData\Local\Apps\2.0 folder.
+8.	Version rollbacks are accomplished by simply copying the deployment manifest (i.e. DeliveryPoints.application) from 
+	a previous Click-Once deployment folder (i.e DeliveryPoints_4_0_0_1) into the DeliveryPoints root folder
+
+
+CONFIGURATION
+Open the global database, goto the Configuration table, and add/edit the values below:
+	Application     PCName          Key                       Value									Security 
+	--------------- --------------- ------------------------- ------------------------------------- -------- 
+	DeliveryPoints  Default         ExportFile                c:\deliverypoints\deliverypoints.txt	1        
+	DeliveryPoints  Default         LastDeliveryPointUpdate   03-21-2014 06:56						1        
+	DeliveryPoints  Default         TraceLevel                4										1        
+
+
+NOTES
+==============
+GENERAL
+The Delivery Points Application (DeliveryPoints.exe) is a Windows based application used update
+delivery point information (customer addresses) in Roadshow from recent additons and updates to 
+vendor/store locations in the AS/400.
+
+
+DEPENDENCIES
+The Dispatch application is dependent upon the following web services: 
+- http://rgxvmweb/Argix10/Argix10.Terminals.Services/DeliveryPoints.svc
+- http://rgxvmweb/Argix10/Argix10.Membership.Services/RoleService.svc
+
+
+OPERATION
+The Delivery Points Application (DeliveryPoints.exe) operates by launching from a web server deployment url 
+(i.e. http://rgxvmweb/Argix10/Apps/Terminals/DeliveryPoints/DeliveryPoints.application). After a brief splash 
+screen, a sizeable window appears and displays delivery points from a start date to today. Some delivery point 
+fields can be edited. The delivery points can be exported to a comma delimited file for import into Roadshow. 
+The taskbar displays the operating terminal and connection status. Additional operating steps can be found in 
+the on-line documentation provided by the Help/Contents menu item.
+
+
+ROLE MANAGEMENT
+The following roles are used in this application:
+Roadshow Specialist- can do everything.
+
+Use the following link to access the role manager to create and edit role assignments for Argix employees: 
+http://rgxvmweb/Argix10/Apps/IT/Membership/Membership.application
+
+
+VERSION HISTORY
+v3.5.0, 12/14/10, 01/17/12 -----------------------------------------------------------------
+Requirements/features
+- ported to Microsoft .NET Framework v3.5.
+Design
+- changed from event-driven object model to web services model using WCF.
+- added DeliveryPointsEndpointBehavior; increased maxReceivedMessageSize to accomodate large datasets
+
+
+v3.5.1, 08/27/12, --------------------------------------------------------------------------
+Requirements/features
+- added a new feature that compares the delivery point data from AS/400 with the current Roadshow data
+  and color codes and differences. A yellow row indicates a comparative record was not found in Roadshow;
+  a red cell indicates a difference between the fields.
+Design
+- none
+
+
+v4.0.0, 03/28/14, 04/08/14, 05/07/15 ------------------------------------------------------
+Requirements/features
+- modified to accomodate multiple customer and stop windows.
+- added maps and window tables.
+Design/deployment
+- upgraded to Infragistics NetAdvantage 2012 third party control suite (required: Infragistics4.Win.v12.1.dll, Infragistics2.Shared.v12.1.dll, Infragistics2.Win.UltraWinGrid.v12.1.dll)
+- added role-based security using web service http://rgxvmweb/Argix10/Argix10.Membership.Services/RoleService.svc.
+- increase maxReceivedMessageSize="655360000" on the wsHttpBinding binding.

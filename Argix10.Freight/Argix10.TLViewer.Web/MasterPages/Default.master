@@ -1,0 +1,61 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Default.master.cs" Inherits="DefaultMaster" %>
+<%@ Register Assembly="System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Namespace="System.Web.UI.WebControls" TagPrefix="asp" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Argix Logistics TL Viewer</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <asp:ContentPlaceHolder ID="cpMeta" runat="server" />
+    <link id="Link1" runat="server" href="~/App_Themes/Argix/Argix.css" rel="stylesheet" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Michroma' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,300italic' rel='stylesheet' type='text/css'>
+    <script type="text/jscript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.10.2.js"></script>
+    <script type="text/jscript" src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/jquery-ui.js"></script>
+    <script type="text/jscript" src="scripts/tlvscript.js"></script>
+    <script type="text/jscript">
+        $(document).ready(function () {
+            $("#TLBody").keydown(OnKeyDown);
+            $("#TLBody").keyup(OnKeyUp);
+        });
+    </script>
+</head>
+<body id="TLBody" onunload="javascript:document.body.style.cursor='wait';">
+<form id="idForm" runat="server">
+    <asp:ScriptManager ID="smPage" runat="server" EnablePartialRendering="true" ScriptMode="Auto" LoadScriptsBeforeUI="false" />
+    <div id="page">
+        <div id="header">
+            <div id="logo">
+                <a href="http://www.argixlogistics.com" target="_self"><img id="Img1" runat="server" src="~/App_Themes/Argix/Images/argix-logo.gif" alt="Argix logo" style="height:36px; border:0;" /></a>
+                <asp:UpdatePanel runat="server" ID="pnlMsg" UpdateMode="Always"><ContentTemplate><asp:Label ID="lblMsg" runat="server" Text="" /></ContentTemplate></asp:UpdatePanel>
+            </div>
+            <div id="superMenu"></div>
+            <div class="clearRight"></div>
+            <div id="mainMenu">
+            	<ul>
+                    <li><asp:HyperLink ID="lnkTLView" runat="server" NavigateUrl="~/Default.aspx" Text="TL View" /></li>
+                    <li><asp:HyperLink ID="lnkAgentView" runat="server" NavigateUrl="~/AgentView.aspx" Text="Agent View" /></li>
+		        </ul>
+            </div>
+        </div>
+        <div id="head"></div>
+        <div style="width:95%">
+            <div id="title" style="float:left">TLViewer</div>
+            <div style="float:right; margin-top:25px">
+                <asp:UpdatePanel runat="server" ID="upnlTerminals" UpdateMode="Always">
+                <ContentTemplate>
+                Terminal&nbsp;
+                <asp:DropDownList ID="cboTerminal" runat="server" Width="200px" DataTextField="Description" DataValueField="TerminalID" AutoPostBack="True" ToolTip="Select a terminal" OnSelectedIndexChanged="OnTerminalChanged" onchange="javascript:document.body.style.cursor='wait';" />
+                &nbsp;<asp:Button ID="btnRefresh" runat="server" Text="Refresh" Height="18px" ToolTip="Refresh the view" CommandName="Refresh" OnCommand="OnButtonCommand" OnClientClick="javascript:document.body.style.cursor='wait';" />
+                </ContentTemplate>
+                </asp:UpdatePanel>
+            </div>
+            <div style="clear:both"></div>
+        </div>
+        <div id="body"><asp:ContentPlaceHolder id="cpBody" runat="server" /></div>
+        <div style="clear:both"></div>
+        <div id="footer">Copyright 2004-2014 Argix Logistics, Inc. v05162014</div>
+    </div>
+</form>
+</body>
+</html>

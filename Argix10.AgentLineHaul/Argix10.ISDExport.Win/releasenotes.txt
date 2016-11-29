@@ -1,0 +1,163 @@
+              --------------------------------------------------------
+                    ISD Export Application Readme File
+		                       	  July, 2015
+              --------------------------------------------------------
+                         (c) Copyright Argix Logistics, 2004-2015
+
+This document provides late-breaking or other information that supplements the ISD Export documentation.
+
+------------------------
+How to Use This Document
+------------------------
+To view the Readme file on-screen in Windows Notepad, maximize the Notepad window and click Word 
+Wrap on the Edit menu. To print the Readme file, open it in Notepad or another word processor, 
+and then use the Print command on the File menu.
+
+==============
+CONTENTS
+==============
+INSTALLATION
+   DEPLOYMENT
+   CONFIGURATION
+
+NOTES
+   GENERAL
+   DEPENDENCIES
+   OPERATION
+   VERSION HISTORY
+==============
+
+
+INSTALLATION
+==============
+DEPLOYMENT
+ISDExport is installed into a Click-Once deployment folder visible from an IIS web service as follows:
+1.	Create a virtual folder c:\inetpub\wwwroot\Argix10\Apps\AgentLineHaul\ISDExport on a web server like rgxvmweb using 
+	Windows explorer. 
+2.	Create a sub-folder called Application Files. 
+3.	Copy the new versioned Click-Once deployment folder (i.e ISDExport_4_0_0_2) into the Application Files folder; this folder 
+	contains the following:
+		Argix10.Windows.Lib.dll
+		Infragistics4.Shared.v12.1.dll
+		Infragistics4.Win.UltraWinGrid.v12.1.dll
+		Infragistics4.Win.v12.1.dll
+		releasenotes.txt
+		ISDExport.application
+		ISDExport.exe
+		ISDExport.exe.config
+		ISDExport.exe.manifest
+4.	Copy the deployment manifest, ISDExport.application, into the ISDExport folder. This manifest points to
+	tha application manifest (i.e. \ISDExport_4_0_0_2\ISDExport.exe.manifest)
+5.	Launch the Internet Information Services snap-in and validate that the virtual folder allows
+	anonymous access. A web application does not need to be created for deployment.
+6.	Verify http access from Internet Explorer to the following url: 
+		http://rgxvmweb/Argix10/Apps/AgentLineHaul/ISDExport/ISDExport.application
+7.	The Click-Once deployment is installed on the client machine in the C:\Users\<username>\AppData\Local\Apps\2.0 folder.
+8.	Version rollbacks are accomplished by simply copying the deployment manifest (i.e. ISDExport.application) from 
+	a previous Click-Once deployment folder (i.e ISDExport_4_0_0_1) into the ISDExport root folder
+
+
+CONFIGURATION
+Open the local TSort database, goto the Configuration table, and add/edit the values below:
+	Application     PCName          Key                       Value                     Security 
+	--------------- --------------- ------------------------- ------------------------- -------- 
+	ISD Export      Default         TraceLevel                3                         1        
+
+
+
+NOTES
+==============
+GENERAL
+The ISD Export Application (ISDExport.exe) is a Windows based application used to export sorted item 
+records into a text file suitable for import into the Bearware RDS system.
+
+
+DEPENDENCIES
+The Dispatch application is dependent upon the following web services: 
+- http://rgxvmweb/Argix10/Argix10.AgentLineHaul.Services/ISDExportService.svc
+- http://rgxvmweb/Argix10/Argix10.Membership.Services/RoleService.svc
+
+
+ROLE MANAGEMENT
+The following roles are used in this application:
+Tsort Clerk
+- can read pickups and sorted items
+- can export sorted items
+- can read client configuration
+Tsort Supervisor
+- can do everything Tsort Clerk can do
+- can edit client configuration
+
+Use the following link to access the role manager to create and edit role assignments for Argix employees: 
+http://rgxvmweb/Argix10/Apps/IT/Membership/Membership.application
+
+
+OPERATION
+Normal:
+The ISD Export Application (ISDExport.exe) operates by launching from a web server deployment url 
+(i.e. http://localhost/Argix10/Apps/ISDExport/ISDExport.application). After a brief splash screen, a 
+sizeable window appears and displays a split window with a Pickups grid on top and a Sorted Items grid 
+on bottom. The Pickups grid shows pickups for the selected day for ISD clients. Select a pickup to 
+display the cartons sorted for that pickup in the Sorted Items grid. If there are sorted cartons for 
+the selected pickup, use the File/Export menu item to export the sorted items to a text file. The 
+taskbar displays the operating terminal and connection status. Additional operating steps can be found 
+in the on-line documentation provided by the Help/Contents menu item.
+
+
+VERSION HISTORY
+ v3.0.0, 09/10/09 ---------------------------------------------------------------------------
+Requirements/features
+- ported to Visual Studio 2008.
+Design/deployment
+- requires .NET Framework 3.5
+
+ v3.0.1, 05/19/10 ---------------------------------------------------------------------------
+Requirements/features
+- None.
+Design/deployment
+- corrected bug in export format: changed time format from hhmmss to HHmmss.
+
+ v3.0.2, 07/20/10 ---------------------------------------------------------------------------
+Requirements/features
+- Modified exporter for RDS4 to remove non-alpha-numeric characters from TrailerNumber, SealNumber, and BOLNumber.
+- Added create, update, delete of client entries (now password protected)
+Design/deployment
+- None.
+
+ v3.5.0, 03/08/11, 08/11/11, 09/26/11, 10/11/11, 10/24/11, 11/28/11, 02/09/12, 03/26/12, 08/03/12
+Requirements/features
+- None.
+Design/deployment
+- Upgraded to Infragistics NetAdvantage 2010 third party control suite (required: Infragistics2.Win.v10.1.dll, Infragistics2.Shared.v10.1.dll, Infragistics2.Win.UltraWinGrid.v10.1.dll)
+- Minor design changes.
+- Rebuild for change in config database connection (JARGXTS to JARGXVMTS)
+- Rebuild for change in config database connection (LLRGXAD2 to LLRGXAD1)
+- Rebuild for change in config database connection (MMRGXAD2 to MMRGXAD1)
+- Rebuild for change in config database connection (ATRGXAD2 to ATRGXAD1)
+- Rebuild for change in config database connection (CHRGXAD2 to CHRGXAD1)
+- Rebuild for change in config database connection (MARGXAD2 to MARGXAD1)
+- Rebuild for change in config database connection (CTRGXAD1 to CTRGXAD2)
+- rebuild for new config database connections (AGNFIRGXTS, AGSFSRGXTS)
+
+
+v4.0.0, 01/15/13 ---------------------------------------------------------------------------
+Requirements/features
+- None.
+Design/deployment
+- Application ported to .NET Framework 4.0 using Visual Studio 2010.
+
+v4.0.1, 10/10/13 ---------------------------------------------------------------------------
+Requirements/features
+- None.
+Design/deployment
+- upgraded to Infragistics NetAdvantage 2012 third party control suite (required: Infragistics4.Win.v12.1.dll, Infragistics2.Shared.v12.1.dll, Infragistics2.Win.UltraWinGrid.v12.1.dll)
+- added role-based security using web service http://rgxvmweb/Argix10/Argix10.Membership.Services/RoleService.svc.
+
+
+v4.0.1, 07/01/15 ---------------------------------------------------------------------------
+Requirements/features
+- none
+Design/deployment
+- modified RDS4Exporter::formatSortedItemRecord() to add weight.
+- moved DateDaysBack from database configuration to User configuration.
+- added manifested quantity vs sorted quantity to the display.

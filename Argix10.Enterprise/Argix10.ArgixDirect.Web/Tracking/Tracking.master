@@ -1,0 +1,18 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="Tracking.master.cs" Inherits="TrackingMaster" %>
+
+<asp:Content ID="cLeft" runat="server" ContentPlaceHolderID="LeftContent">
+    <div id="title">Tracking</div>
+    <div id="submenu">
+		<ul>
+			<li><a href="#">Track By Carton</a></li>
+			<li><a href="#">Track By Store</a></li>
+			<li><a href="#">Track By PO/PRO</a></li>
+			<li><a href="#">Reports</a></li>
+			<li><a href="#">Administration</a></li>
+		</ul>
+	</div>
+</asp:Content>
+<asp:Content ID="cRight" runat="server" ContentPlaceHolderID="RightContent">
+    <asp:ContentPlaceHolder ID="PageContent" runat="server"/>
+</asp:Content>
+

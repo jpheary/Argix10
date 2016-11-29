@@ -1,0 +1,50 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Default.master.cs" Inherits="_Default" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>ID Viewer</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <asp:ContentPlaceHolder ID="cpMeta" runat="server" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="viewport" content="user-scalable=no, width=device-width" />    
+    <link href='../App_Themes/Argix/Argix.css' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Michroma' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,300italic' rel='stylesheet' type='text/css' />
+</head>
+<body id="idBody" runat="server" style=" position:relative; margin-top:0; " >
+    <form id="idForm" runat="server" >
+        <asp:ScriptManager ID="smPage" runat="server" EnablePartialRendering="true" ScriptMode="Auto" />
+        <div id="page">
+            <div id="header">
+                <div id="logo">
+                    <a href="http://www.argixlogistics.com" target="_self"><img id="Img1" runat="server" src="~/App_Themes/Argix/Images/argix-logo.gif" alt="Argix logo" style="border: 0;" /></a>
+                </div>
+                <div id="title">IDViewer Mobile</div>
+            </div>
+            <div id="headline"></div>
+            <div id="content"><asp:contentplaceholder id="cpBody" runat="server"></asp:contentplaceholder></div>
+            <div id="mainMenu">
+		        <ul>
+			        <li>
+                        <asp:ImageButton ID="imgProfiles" runat="server" Height="24px" ImageUrl="~/App_Themes/Argix/Images/id-card.png" CommandName="Employees" OnCommand="OnChangeView" />
+                        <br /><asp:Label ID="lblProfiles" runat="server" Text="Profiles"></asp:Label>
+                    </li>
+			        <li>
+                        <asp:ImageButton ID="imgPhotos" runat="server" Height="24px" ImageUrl="~/App_Themes/Argix/Images/camera.png" CommandName="Photos" OnCommand="OnChangeView" />
+                        <br /><asp:Label ID="lblPhotos" runat="server" Text="Photos"></asp:Label>
+                    </li>
+                    <li>
+                        <asp:ImageButton ID="imgSearch" runat="server" Height="24px" ImageUrl="~/App_Themes/Argix/Images/search.png" CommandName="Search" OnCommand="OnChangeView" />
+                        <br /><asp:Label ID="lblSearch" runat="server" Text="Search"></asp:Label>
+                    </li>
+                    <li>&nbsp;</li>
+                    <li>&nbsp;</li>
+		        </ul>
+	        </div>
+            <div id="copyright">2012 Argix Logistics</div>
+        </div>
+    </form>
+</body>
+</html>

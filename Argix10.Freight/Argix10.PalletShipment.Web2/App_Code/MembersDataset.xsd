@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="MembersDataset" targetNamespace="http://tempuri.org/MembersDataset.xsd" xmlns:mstns="http://tempuri.org/MembersDataset.xsd" xmlns="http://tempuri.org/MembersDataset.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="MembersDataset" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" >
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="MembershipTable" >
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ApplicationId" type="xs:string" minOccurs="0" />
+              <xs:element name="UserName" type="xs:string" minOccurs="0" />
+              <xs:element name="Password" type="xs:string" minOccurs="0" />
+              <xs:element name="Email" type="xs:string" minOccurs="0" />
+              <xs:element name="IsApproved" type="xs:boolean" minOccurs="0" />
+              <xs:element name="IsLockedOut" type="xs:boolean" minOccurs="0" />
+              <xs:element name="CreateDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LastLoginDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Comment" type="xs:string" minOccurs="0" />
+              <xs:element name="IsOnline" type="xs:boolean" minOccurs="0" />
+              <xs:element name="LastActivityDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ClientID" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

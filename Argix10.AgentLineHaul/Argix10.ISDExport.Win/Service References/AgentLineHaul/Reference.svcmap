@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b049d06f-02ff-43b2-bf7b-5ee52597815c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:55732/Argix10.AgentLineHaul.Services/ISDExportService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ISDExportService.xsd" MetadataType="Schema" ID="ee798bec-c2e2-4dfd-8d80-bf7cff756e0e" SourceId="1" SourceUrl="http://localhost:55732/Argix10.AgentLineHaul.Services/ISDExportService.svc?xsd=xsd4" />
+    <MetadataFile FileName="ISDExportService.wsdl" MetadataType="Wsdl" ID="cc2ce515-76f1-48bb-a373-8254e7649428" SourceId="1" SourceUrl="http://localhost:55732/Argix10.AgentLineHaul.Services/ISDExportService.svc?wsdl" />
+    <MetadataFile FileName="ISDExportService1.xsd" MetadataType="Schema" ID="d280b75b-e422-47bc-9736-d5b229f13288" SourceId="1" SourceUrl="http://localhost:55732/Argix10.AgentLineHaul.Services/ISDExportService.svc?xsd=xsd3" />
+    <MetadataFile FileName="ISDExportService1.wsdl" MetadataType="Wsdl" ID="82204b0f-c5ba-4507-a2e4-e11b1e61f29d" SourceId="1" SourceUrl="http://localhost:55732/Argix10.AgentLineHaul.Services/ISDExportService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="ISDExportService2.xsd" MetadataType="Schema" ID="b4c0d082-f914-4ea0-ad82-8998968ffaea" SourceId="1" SourceUrl="http://localhost:55732/Argix10.AgentLineHaul.Services/ISDExportService.svc?xsd=xsd2" />
+    <MetadataFile FileName="ISDExportService3.xsd" MetadataType="Schema" ID="9533c41b-4557-4fdd-b375-2806e1384372" SourceId="1" SourceUrl="http://localhost:55732/Argix10.AgentLineHaul.Services/ISDExportService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ISDExportService4.xsd" MetadataType="Schema" ID="fb1c00f2-96e4-497b-8c55-be4d24037479" SourceId="1" SourceUrl="http://localhost:55732/Argix10.AgentLineHaul.Services/ISDExportService.svc?xsd=xsd5" />
+    <MetadataFile FileName="ISDExportService.disco" MetadataType="Disco" ID="11b279b2-98ae-41a6-af73-7bfe763a54b2" SourceId="1" SourceUrl="http://localhost:55732/Argix10.AgentLineHaul.Services/ISDExportService.svc?disco" />
+    <MetadataFile FileName="ISDExportService5.xsd" MetadataType="Schema" ID="c54d44e2-93d2-4b02-8e7a-fc0e511b8fc4" SourceId="1" SourceUrl="http://localhost:55732/Argix10.AgentLineHaul.Services/ISDExportService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

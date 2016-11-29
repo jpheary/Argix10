@@ -1,0 +1,1298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.crossmatch.com/webservices/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" targetNamespace="http://www.crossmatch.com/webservices/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.crossmatch.com/webservices/">
+      <s:import namespace="http://www.w3.org/2001/XMLSchema" />
+      <s:element name="Log">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="taskID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="actiontext" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LogResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="Login">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LoginResult" type="tns:MobileLoginResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="MobileLoginResponse">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IsReset" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsSuccessfull" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SecurityGroupID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="UserId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ErrorCode" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SignOut">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VisitorID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="OperatorID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ManualAction" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="macAddress" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="group" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SignOutResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SignOutResult" type="tns:VisTrakSimpleResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="VisTrakSimpleResult">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="success" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SearchForKey">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mandatoryKey1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mandatoryKey2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="optional" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchForKeyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SearchForKeyResult" type="tns:VisTrakKeyMatchResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="VisTrakKeyMatchResult">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="success" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="found" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="optional" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="visitorId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="dataset">
+            <s:complexType>
+              <s:sequence>
+                <s:element ref="s:schema" />
+                <s:any />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CheckForBannedList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="firstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lastName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckForBannedListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CheckForBannedListResult" type="tns:VisTrakVisitorCheckResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="VisTrakVisitorCheckResult">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="error" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CheckVisitorForSignIn">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="visitorId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckVisitorForSignInResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CheckVisitorForSignInResult" type="tns:VisTrakVisitorCheckResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetrieveCurrentVisitor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mandatorykey1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mandatorykey2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="optional" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetrieveCurrentVisitorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RetrieveCurrentVisitorResult" type="tns:VisTrakResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="VisTrakResult">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="success" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="dataset">
+            <s:complexType>
+              <s:sequence>
+                <s:element ref="s:schema" />
+                <s:any />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RetrieveVisitor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mandatorykey1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mandatorykey2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="optional" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetrieveVisitorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RetrieveVisitorResult" type="tns:VisTrakResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerifyCurrentVisitors">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="minutiae" type="tns:ArrayOfString" />
+            <s:element minOccurs="1" maxOccurs="1" name="populationGroup" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="VerifyCurrentVisitorsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="VerifyCurrentVisitorsResult" type="tns:VisTrakResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerifyVisitors">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mandatoryKey1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mandatoryKey2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="optional" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="minutiae" type="tns:ArrayOfString" />
+            <s:element minOccurs="1" maxOccurs="1" name="position" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="one2one" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerifyVisitorsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="VerifyVisitorsResult" type="tns:VisTrakKeyMatchResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetrieveVisitorInformation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VisitorID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetrieveVisitorInformationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RetrieveVisitorInformationResult" type="tns:VisTrakResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetrieveVisitorInformationWithoutPhoto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VisitorID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetrieveVisitorInformationWithoutPhotoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RetrieveVisitorInformationWithoutPhotoResult" type="tns:VisTrakResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DisplayCurrentVisitorsDetails">
+        <s:complexType />
+      </s:element>
+      <s:element name="DisplayCurrentVisitorsDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DisplayCurrentVisitorsDetailsResult" type="tns:VisTrakResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DisplayVisitorDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mandatoryKey1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mandatoryKey2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="optional" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DisplayVisitorDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DisplayVisitorDetailsResult" type="tns:VisTrakKeyMatchResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdatePhoto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="visitorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="photo" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WorkstationID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdatePhotoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdatePhotoResult" type="tns:VisTrakSimpleResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateMinutiae">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="visitorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="minutiae" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateMinutiaeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateMinutiaeResult" type="tns:VisTrakSimpleResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PerformSignIn">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="visitorID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="hostId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="host" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="reasonId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="update" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="workStationID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="group" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PerformSignInResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PerformSignInResult" type="tns:VisTrakSimpleResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSettings">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ZoneID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSettingsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetSettingsResult" type="tns:VisTrakResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Search">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user4" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user5" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user6" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user7" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user8" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user9" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user10" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Host" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Group" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="SearchType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SearchResult" type="tns:VisTrakResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VisitorHistory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="visitorID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VisitorHistoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="VisitorHistoryResult" type="tns:VisTrakResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnrollUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="firstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lastName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user4" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user5" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user6" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user7" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user8" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user9" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user10" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="visitorType" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="comments" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="minutiae" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="photo" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="group" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="matchNameSearchandFingerPrintMatch" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnrollUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EnrollUserResult" type="tns:VisTrakEnrollResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="VisTrakEnrollResult">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="error" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="dataset">
+            <s:complexType>
+              <s:sequence>
+                <s:element ref="s:schema" />
+                <s:any />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UpdateVisitorInformation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VisitorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="firstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lastName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user4" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user5" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user6" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user7" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user8" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user9" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user10" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="comments" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="statusID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="photo" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="minutiae" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="group" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateVisitorInformationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateVisitorInformationResult" type="tns:VisTrakResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateVisitorInformationAndLog">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="original">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="updated">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WorkstationID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateVisitorInformationAndLogResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateVisitorInformationAndLogResult" type="tns:VisTrakResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PrintBadge">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VisitorId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="GateId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PrintBadgeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PrintBadgeResult" type="tns:VisTrakSimpleResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SignInItems">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VisitorID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SignInItemsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SignInItemsResult" type="tns:VisTrakSignInItems" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="VisTrakSignInItems">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="success" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="totalNumberOfVisits" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="lastVisitsIn" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="lastHost" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetPreEnrollList">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetPreEnrollListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetPreEnrollListResult" type="tns:VisTrakResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWorkstation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="macAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWorkstationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetWorkstationResult" type="tns:VisTrakResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegisterWorkstation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="macAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="description" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegisterWorkstationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RegisterWorkstationResult" type="tns:VisTrakResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Verify">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="firstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lastName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user3" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="populationGroup" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="position" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="minutiae" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerifyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="VerifyResult" type="tns:VisTrakResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetActivities">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="visitorID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetActivitiesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetActivitiesResult" type="tns:VisTrakResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreatePassThroughActivity">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="visitorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="userID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="workstationID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="populationGroupID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreatePassThroughActivityResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CreatePassThroughActivityResult" type="tns:VisTrakSimpleResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LogActivity">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="visitorId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="actionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="comments" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="userID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="workstationID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="populationGroupID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LogActivityResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LogActivityResult" type="tns:VisTrakSimpleResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWorkstations">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="populationgroup" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWorkstationsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetWorkstationsResult" type="tns:VisTrakResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="LogSoapIn">
+    <wsdl:part name="parameters" element="tns:Log" />
+  </wsdl:message>
+  <wsdl:message name="LogSoapOut">
+    <wsdl:part name="parameters" element="tns:LogResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoginSoapIn">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="LoginSoapOut">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="SignOutSoapIn">
+    <wsdl:part name="parameters" element="tns:SignOut" />
+  </wsdl:message>
+  <wsdl:message name="SignOutSoapOut">
+    <wsdl:part name="parameters" element="tns:SignOutResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchForKeySoapIn">
+    <wsdl:part name="parameters" element="tns:SearchForKey" />
+  </wsdl:message>
+  <wsdl:message name="SearchForKeySoapOut">
+    <wsdl:part name="parameters" element="tns:SearchForKeyResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckForBannedListSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckForBannedList" />
+  </wsdl:message>
+  <wsdl:message name="CheckForBannedListSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckForBannedListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckVisitorForSignInSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckVisitorForSignIn" />
+  </wsdl:message>
+  <wsdl:message name="CheckVisitorForSignInSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckVisitorForSignInResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveCurrentVisitorSoapIn">
+    <wsdl:part name="parameters" element="tns:RetrieveCurrentVisitor" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveCurrentVisitorSoapOut">
+    <wsdl:part name="parameters" element="tns:RetrieveCurrentVisitorResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveVisitorSoapIn">
+    <wsdl:part name="parameters" element="tns:RetrieveVisitor" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveVisitorSoapOut">
+    <wsdl:part name="parameters" element="tns:RetrieveVisitorResponse" />
+  </wsdl:message>
+  <wsdl:message name="VerifyCurrentVisitorsSoapIn">
+    <wsdl:part name="parameters" element="tns:VerifyCurrentVisitors" />
+  </wsdl:message>
+  <wsdl:message name="VerifyCurrentVisitorsSoapOut">
+    <wsdl:part name="parameters" element="tns:VerifyCurrentVisitorsResponse" />
+  </wsdl:message>
+  <wsdl:message name="VerifyVisitorsSoapIn">
+    <wsdl:part name="parameters" element="tns:VerifyVisitors" />
+  </wsdl:message>
+  <wsdl:message name="VerifyVisitorsSoapOut">
+    <wsdl:part name="parameters" element="tns:VerifyVisitorsResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveVisitorInformationSoapIn">
+    <wsdl:part name="parameters" element="tns:RetrieveVisitorInformation" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveVisitorInformationSoapOut">
+    <wsdl:part name="parameters" element="tns:RetrieveVisitorInformationResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveVisitorInformationWithoutPhotoSoapIn">
+    <wsdl:part name="parameters" element="tns:RetrieveVisitorInformationWithoutPhoto" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveVisitorInformationWithoutPhotoSoapOut">
+    <wsdl:part name="parameters" element="tns:RetrieveVisitorInformationWithoutPhotoResponse" />
+  </wsdl:message>
+  <wsdl:message name="DisplayCurrentVisitorsDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:DisplayCurrentVisitorsDetails" />
+  </wsdl:message>
+  <wsdl:message name="DisplayCurrentVisitorsDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:DisplayCurrentVisitorsDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="DisplayVisitorDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:DisplayVisitorDetails" />
+  </wsdl:message>
+  <wsdl:message name="DisplayVisitorDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:DisplayVisitorDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePhotoSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdatePhoto" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePhotoSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdatePhotoResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateMinutiaeSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateMinutiae" />
+  </wsdl:message>
+  <wsdl:message name="UpdateMinutiaeSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateMinutiaeResponse" />
+  </wsdl:message>
+  <wsdl:message name="PerformSignInSoapIn">
+    <wsdl:part name="parameters" element="tns:PerformSignIn" />
+  </wsdl:message>
+  <wsdl:message name="PerformSignInSoapOut">
+    <wsdl:part name="parameters" element="tns:PerformSignInResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSettingsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSettings" />
+  </wsdl:message>
+  <wsdl:message name="GetSettingsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSettingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchSoapIn">
+    <wsdl:part name="parameters" element="tns:Search" />
+  </wsdl:message>
+  <wsdl:message name="SearchSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="VisitorHistorySoapIn">
+    <wsdl:part name="parameters" element="tns:VisitorHistory" />
+  </wsdl:message>
+  <wsdl:message name="VisitorHistorySoapOut">
+    <wsdl:part name="parameters" element="tns:VisitorHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnrollUserSoapIn">
+    <wsdl:part name="parameters" element="tns:EnrollUser" />
+  </wsdl:message>
+  <wsdl:message name="EnrollUserSoapOut">
+    <wsdl:part name="parameters" element="tns:EnrollUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateVisitorInformationSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateVisitorInformation" />
+  </wsdl:message>
+  <wsdl:message name="UpdateVisitorInformationSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateVisitorInformationResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateVisitorInformationAndLogSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateVisitorInformationAndLog" />
+  </wsdl:message>
+  <wsdl:message name="UpdateVisitorInformationAndLogSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateVisitorInformationAndLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrintBadgeSoapIn">
+    <wsdl:part name="parameters" element="tns:PrintBadge" />
+  </wsdl:message>
+  <wsdl:message name="PrintBadgeSoapOut">
+    <wsdl:part name="parameters" element="tns:PrintBadgeResponse" />
+  </wsdl:message>
+  <wsdl:message name="SignInItemsSoapIn">
+    <wsdl:part name="parameters" element="tns:SignInItems" />
+  </wsdl:message>
+  <wsdl:message name="SignInItemsSoapOut">
+    <wsdl:part name="parameters" element="tns:SignInItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPreEnrollListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPreEnrollList" />
+  </wsdl:message>
+  <wsdl:message name="GetPreEnrollListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPreEnrollListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWorkstationSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWorkstation" />
+  </wsdl:message>
+  <wsdl:message name="GetWorkstationSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWorkstationResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegisterWorkstationSoapIn">
+    <wsdl:part name="parameters" element="tns:RegisterWorkstation" />
+  </wsdl:message>
+  <wsdl:message name="RegisterWorkstationSoapOut">
+    <wsdl:part name="parameters" element="tns:RegisterWorkstationResponse" />
+  </wsdl:message>
+  <wsdl:message name="VerifySoapIn">
+    <wsdl:part name="parameters" element="tns:Verify" />
+  </wsdl:message>
+  <wsdl:message name="VerifySoapOut">
+    <wsdl:part name="parameters" element="tns:VerifyResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetActivitiesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetActivities" />
+  </wsdl:message>
+  <wsdl:message name="GetActivitiesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetActivitiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreatePassThroughActivitySoapIn">
+    <wsdl:part name="parameters" element="tns:CreatePassThroughActivity" />
+  </wsdl:message>
+  <wsdl:message name="CreatePassThroughActivitySoapOut">
+    <wsdl:part name="parameters" element="tns:CreatePassThroughActivityResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogActivitySoapIn">
+    <wsdl:part name="parameters" element="tns:LogActivity" />
+  </wsdl:message>
+  <wsdl:message name="LogActivitySoapOut">
+    <wsdl:part name="parameters" element="tns:LogActivityResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWorkstationsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWorkstations" />
+  </wsdl:message>
+  <wsdl:message name="GetWorkstationsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWorkstationsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="VisTrakWebServiceSoap">
+    <wsdl:operation name="Log">
+      <wsdl:input message="tns:LogSoapIn" />
+      <wsdl:output message="tns:LogSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input message="tns:LoginSoapIn" />
+      <wsdl:output message="tns:LoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SignOut">
+      <wsdl:input message="tns:SignOutSoapIn" />
+      <wsdl:output message="tns:SignOutSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchForKey">
+      <wsdl:input message="tns:SearchForKeySoapIn" />
+      <wsdl:output message="tns:SearchForKeySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckForBannedList">
+      <wsdl:input message="tns:CheckForBannedListSoapIn" />
+      <wsdl:output message="tns:CheckForBannedListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckVisitorForSignIn">
+      <wsdl:input message="tns:CheckVisitorForSignInSoapIn" />
+      <wsdl:output message="tns:CheckVisitorForSignInSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveCurrentVisitor">
+      <wsdl:input message="tns:RetrieveCurrentVisitorSoapIn" />
+      <wsdl:output message="tns:RetrieveCurrentVisitorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveVisitor">
+      <wsdl:input message="tns:RetrieveVisitorSoapIn" />
+      <wsdl:output message="tns:RetrieveVisitorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyCurrentVisitors">
+      <wsdl:input message="tns:VerifyCurrentVisitorsSoapIn" />
+      <wsdl:output message="tns:VerifyCurrentVisitorsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyVisitors">
+      <wsdl:input message="tns:VerifyVisitorsSoapIn" />
+      <wsdl:output message="tns:VerifyVisitorsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveVisitorInformation">
+      <wsdl:input message="tns:RetrieveVisitorInformationSoapIn" />
+      <wsdl:output message="tns:RetrieveVisitorInformationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveVisitorInformationWithoutPhoto">
+      <wsdl:input message="tns:RetrieveVisitorInformationWithoutPhotoSoapIn" />
+      <wsdl:output message="tns:RetrieveVisitorInformationWithoutPhotoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DisplayCurrentVisitorsDetails">
+      <wsdl:input message="tns:DisplayCurrentVisitorsDetailsSoapIn" />
+      <wsdl:output message="tns:DisplayCurrentVisitorsDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DisplayVisitorDetails">
+      <wsdl:input message="tns:DisplayVisitorDetailsSoapIn" />
+      <wsdl:output message="tns:DisplayVisitorDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePhoto">
+      <wsdl:input message="tns:UpdatePhotoSoapIn" />
+      <wsdl:output message="tns:UpdatePhotoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMinutiae">
+      <wsdl:input message="tns:UpdateMinutiaeSoapIn" />
+      <wsdl:output message="tns:UpdateMinutiaeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PerformSignIn">
+      <wsdl:input message="tns:PerformSignInSoapIn" />
+      <wsdl:output message="tns:PerformSignInSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSettings">
+      <wsdl:input message="tns:GetSettingsSoapIn" />
+      <wsdl:output message="tns:GetSettingsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Search">
+      <wsdl:input message="tns:SearchSoapIn" />
+      <wsdl:output message="tns:SearchSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VisitorHistory">
+      <wsdl:input message="tns:VisitorHistorySoapIn" />
+      <wsdl:output message="tns:VisitorHistorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnrollUser">
+      <wsdl:input message="tns:EnrollUserSoapIn" />
+      <wsdl:output message="tns:EnrollUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVisitorInformation">
+      <wsdl:input message="tns:UpdateVisitorInformationSoapIn" />
+      <wsdl:output message="tns:UpdateVisitorInformationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVisitorInformationAndLog">
+      <wsdl:input message="tns:UpdateVisitorInformationAndLogSoapIn" />
+      <wsdl:output message="tns:UpdateVisitorInformationAndLogSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PrintBadge">
+      <wsdl:input message="tns:PrintBadgeSoapIn" />
+      <wsdl:output message="tns:PrintBadgeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SignInItems">
+      <wsdl:input message="tns:SignInItemsSoapIn" />
+      <wsdl:output message="tns:SignInItemsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPreEnrollList">
+      <wsdl:input message="tns:GetPreEnrollListSoapIn" />
+      <wsdl:output message="tns:GetPreEnrollListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkstation">
+      <wsdl:input message="tns:GetWorkstationSoapIn" />
+      <wsdl:output message="tns:GetWorkstationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterWorkstation">
+      <wsdl:input message="tns:RegisterWorkstationSoapIn" />
+      <wsdl:output message="tns:RegisterWorkstationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Verify">
+      <wsdl:input message="tns:VerifySoapIn" />
+      <wsdl:output message="tns:VerifySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActivities">
+      <wsdl:input message="tns:GetActivitiesSoapIn" />
+      <wsdl:output message="tns:GetActivitiesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreatePassThroughActivity">
+      <wsdl:input message="tns:CreatePassThroughActivitySoapIn" />
+      <wsdl:output message="tns:CreatePassThroughActivitySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LogActivity">
+      <wsdl:input message="tns:LogActivitySoapIn" />
+      <wsdl:output message="tns:LogActivitySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkstations">
+      <wsdl:input message="tns:GetWorkstationsSoapIn" />
+      <wsdl:output message="tns:GetWorkstationsSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="VisTrakWebServiceSoap" type="tns:VisTrakWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Log">
+      <soap:operation soapAction="http://www.crossmatch.com/webservices/Log" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://www.crossmatch.com/webservices/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SignOut">
+      <soap:operation soapAction="http://www.crossmatch.com/webservices/SignOut" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchForKey">
+      <soap:operation soapAction="http://www.crossmatch.com/webservices/SearchForKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckForBannedList">
+      <soap:operation soapAction="http://www.crossmatch.com/webservices/CheckForBannedList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckVisitorForSignIn">
+      <soap:operation soapAction="http://www.crossmatch.com/webservices/CheckVisitorForSignIn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveCurrentVisitor">
+      <soap:operation soapAction="http://www.crossmatch.com/webservices/RetrieveCurrentVisitor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveVisitor">
+      <soap:operation soapAction="http://www.crossmatch.com/webservices/RetrieveVisitor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyCurrentVisitors">
+      <soap:operation soapAction="http://www.crossmatch.com/webservices/VerifyCurrentVisitors" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyVisitors">
+      <soap:operation soapAction="http://www.crossmatch.com/webservices/VerifyVisitors" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveVisitorInformation">
+      <soap:operation soapAction="http://www.crossmatch.com/webservices/RetrieveVisitorInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveVisitorInformationWithoutPhoto">
+      <soap:operation soapAction="http://www.crossmatch.com/webservices/RetrieveVisitorInformationWithoutPhoto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DisplayCurrentVisitorsDetails">
+      <soap:operation soapAction="http://www.crossmatch.com/webservices/DisplayCurrentVisitorsDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DisplayVisitorDetails">
+      <soap:operation soapAction="http://www.crossmatch.com/webservices/DisplayVisitorDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePhoto">
+      <soap:operation soapAction="http://www.crossmatch.com/webservices/UpdatePhoto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMinutiae">
+      <soap:operation soapAction="http://www.crossmatch.com/webservices/UpdateMinutiae" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PerformSignIn">
+      <soap:operation soapAction="http://www.crossmatch.com/webservices/PerformSignIn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSettings">
+      <soap:operation soapAction="http://www.crossmatch.com/webservices/GetSettings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Search">
+      <soap:operation soapAction="http://www.crossmatch.com/webservices/Search" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VisitorHistory">
+      <soap:operation soapAction="http://www.crossmatch.com/webservices/VisitorHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnrollUser">
+      <soap:operation soapAction="http://www.crossmatch.com/webservices/EnrollUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVisitorInformation">
+      <soap:operation soapAction="http://www.crossmatch.com/webservices/UpdateVisitorInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVisitorInformationAndLog">
+      <soap:operation soapAction="http://www.crossmatch.com/webservices/UpdateVisitorInformationAndLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrintBadge">
+      <soap:operation soapAction="http://www.crossmatch.com/webservices/PrintBadge" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SignInItems">
+      <soap:operation soapAction="http://www.crossmatch.com/webservices/SignInItems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPreEnrollList">
+      <soap:operation soapAction="http://www.crossmatch.com/webservices/GetPreEnrollList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkstation">
+      <soap:operation soapAction="http://www.crossmatch.com/webservices/GetWorkstation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterWorkstation">
+      <soap:operation soapAction="http://www.crossmatch.com/webservices/RegisterWorkstation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Verify">
+      <soap:operation soapAction="http://www.crossmatch.com/webservices/Verify" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActivities">
+      <soap:operation soapAction="http://www.crossmatch.com/webservices/GetActivities" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreatePassThroughActivity">
+      <soap:operation soapAction="http://www.crossmatch.com/webservices/CreatePassThroughActivity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogActivity">
+      <soap:operation soapAction="http://www.crossmatch.com/webservices/LogActivity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkstations">
+      <soap:operation soapAction="http://www.crossmatch.com/webservices/GetWorkstations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="VisTrakWebService">
+    <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">VisTrak WebServices</documentation>
+    <wsdl:port name="VisTrakWebServiceSoap" binding="tns:VisTrakWebServiceSoap">
+      <soap:address location="http://rgxvistrak/VisTrakWebServices/VisTrakWebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

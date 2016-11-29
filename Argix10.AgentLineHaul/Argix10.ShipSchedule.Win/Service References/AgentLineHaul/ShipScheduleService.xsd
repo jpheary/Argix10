@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Argix.AgentLineHaul" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Argix.AgentLineHaul" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ShipScheduleFault">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ShipScheduleFault" nillable="true" type="tns:ShipScheduleFault" />
+  <xs:complexType name="ShipScheduleTrip">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BolNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="Canceled" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CarrierServiceID" type="xs:long" />
+      <xs:element minOccurs="0" name="DriverName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FreightAssigned" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IsMandatory" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="LastUpdated" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LoadNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PaperworkComplete" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="RowVersion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ScheduleID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ScheduledClose" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ScheduledDeparture" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TemplateID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TractorNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TrailerComplete" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TrailerDispatched" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TrailerID" type="xs:int" />
+      <xs:element minOccurs="0" name="TrailerNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TripID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ShipScheduleTrip" nillable="true" type="tns:ShipScheduleTrip" />
+  <xs:complexType name="ShipScheduleStop">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AgentTerminalID" type="xs:long" />
+      <xs:element minOccurs="0" name="LastUpdated" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Notes" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RowVersion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ScheduledArrival" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ScheduledOFD1" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StopID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StopNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tag" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TripID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ShipScheduleStop" nillable="true" type="tns:ShipScheduleStop" />
+</xs:schema>

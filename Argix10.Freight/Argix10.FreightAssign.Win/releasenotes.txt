@@ -1,0 +1,203 @@
+                         --------------------------------------------------
+                    	     Freight Assignment Application Readme File
+											October, 2013
+                         --------------------------------------------------
+                         		(c) Copyright Argix Logistics, 2004-2013
+
+This document provides late-breaking or other information that supplements the Freight Assignment 
+documentation.
+
+------------------------
+How to Use This Document
+------------------------
+To view the Readme file on-screen in Windows Notepad, maximize the Notepad window and click Word 
+Wrap on the Edit menu. To print the Readme file, open it in Notepad or another word processor, 
+and then use the Print command on the File menu.
+
+==============
+CONTENTS
+==============
+INSTALLATION
+   DEPLOYMENT
+   CONFIGURATION
+
+NOTES
+   GENERAL
+   DEPENDENCIES
+   OPERATION
+   VERSION HISTORY
+==============
+
+
+INSTALLATION
+==============
+DEPLOYMENT
+Freight Assignment is installed into a Click-Once deployment folder visible from an IIS web service as follows:
+1.	Create a virtual folder c:\inetpub\wwwroot\Argix10\Apps\Freight\FreightAssign on a web server like rgxvmweb using 
+	Windows explorer. 
+2.	Create a sub-folder called Application Files. 
+3.	Copy the new versioned Click-Once deployment folder (i.e FreightAssign_4_0_0_2) into the Application Files folder; this folder 
+	contains the following:
+		Argix10.Windows.Lib.dll
+		FreightAssign.application
+		FreightAssign.exe
+		FreightAssign.exe.config
+		FreightAssign.exe.manifest
+		Infragistics4.Shared.v12.1.dll
+		Infragistics4.Win.UltraWinGrid.v12.1.dll
+		Infragistics4.Win.v12.1.dll
+		releasenotes.txt
+4.	Copy the deployment manifest, FreightAssign.application, into the FreightAssign folder. This manifest points to
+	tha application manifest (i.e. \FreightAssign_4_0_0_2\FreightAssign.exe.manifest)
+5.	Launch the Internet Information Services snap-in and validate that the virtual folder allows
+	anonymous access. A web application does not need to be created for deployment.
+6.	Verify http access from Internet Explorer to the following url: 
+		http://rgxvmweb/Argix10/Apps/Freight/FreightAssign/FreightAssign.application
+7.	The Click-Once deployment is installed on the client machine in the C:\Users\<username>\AppData\Local\Apps\2.0 folder.
+8.	Version rollbacks are accomplished by simply copying the deployment manifest (i.e. FreightAssign.application) from 
+	a previous Click-Once deployment folder (i.e FreightAssign_4_0_0_1) into the FreightAssign root folder
+
+
+CONFIGURATION
+Open the local sort database (i.e. TSORT on jargxvmts), goto the Configuration table, and add/edit the 
+values below. Individual users can have overrides from the default values.
+	Application               PCName          Key                       Value                     Security 
+	------------------------- --------------- ------------------------- ------------------------- -------- 
+    Freight Assignment        Default         TraceLevel                2                         1        
+
+
+NOTES
+==============
+GENERAL
+The Freight Assignment Application (FreightAssign.exe) is a Windows based application used to 
+manage station assignments for sorting direct freight.
+
+
+DEPENDENCIES
+The Dispatch application is dependent upon the following web services: 
+- http://rgxvmweb/Argix10/Argix10.Freight.Services/TsortService.svc
+- http://rgxvmweb/Argix10/Argix10.Membership.Services/RoleService.svc
+
+
+ROLE MANAGEMENT
+The following roles are used in this application:
+Tsort Clerk
+- can do everything.
+Tsort Supervisor
+- can do everything.
+
+Use the following link to access the role manager to create and edit role assignments for Argix employees: 
+http://rgxvmweb/Argix10/Apps/IT/Membership/Membership.application
+
+
+OPERATION
+The Freight Assignment Application (FreightAssign.exe) operates by launching from a web server deployment 
+url (i.e. http://rgxvmweb/Argix10/Apps/Freight/FreightAssign/FreightAssign.application). After a brief splash 
+screen, a sizeable window appears and displays inbound freight in an upper grid and station sort assignments 
+in a lower grid. The user can assign and unassign these shipments from sort stations in the operating terminal. 
+The taskbar displays the operating terminal and sort station. Additional operating steps can be found in the 
+on-line documentation provided by the Help/Contents menu item.
+
+
+VERSION HISTORY
+v1.1.1, 05/18/04 ---------------------------------------------------------------------------
+Requirements/features
+- no new requirements or features
+Design/deployment
+- ported to C#
+- added support for SQL Server data sources
+
+v2.0.0, ??/??/04 ---------------------------------------------------------------------------
+Requirements/features
+- ?
+Design/deployment
+- ?
+
+v2.1.0, 02/??/05 ---------------------------------------------------------------------------
+Requirements/features
+- added new Assigment History view
+- added new status bar to display operating terminal and database connection source/status
+- added new menu item Tools/Use Web Services... that allows runtime switching between backend data source access (IT USE ONLY)
+Design/deployment
+- added support for application log tracing to Windows event log
+- removed support for DB2 data sources (no longer required: Tsort.DataAccess.OLEDBase.dll, Tsort.FreightAssign.Bus.dll)
+- added support for application log tracing to database ArgixLog table
+- added app.config key (UseWebSvc) for configuration switching between backend data source access (web service or ado.net)
+- removed business layer components (no longer required: Tsort.Enterprise.Bus.dll, Tsort.Enterprise.Data.dll, Tsort.Sort.Bus.dll, Tsort.Sort.Data.dll)
+- added data access through generic web service Tsort.Data.WebSvc (i.e. JARGXTS.TSORT.WebSvc)
+- application configuration parameters moved from app.config to database (AS400Lib)
+- added additional configuration parameters to database (MISPassword, TraceLevel= 0:None; 1:Debug; 2:Information; 3:Warning; 4:Error)
+- upgraded to Infragistics NetAdvantage 2004 third party control suite (required: Infragistics.Win.v3.2.dll, Infragistics.Shared.v3.2.dll, Infragistics.Win.UltraWinGrid.v3.2.dll)
+
+
+v2.3.0, 04/20/05 ---------------------------------------------------------------------------
+Requirements/features
+- none.
+Design/deployment
+- added MessageManager for statusbar message management.
+- upgraded to Infragistics NetAdvantage 2005 third party control suite (required: Infragistics.Win.v5.1.dll, Infragistics.Shared.v5.1.dll, Infragistics.Win.UltraWinGrid.v5.1.dll)
+
+v2.3.1, 07/11/05 ---------------------------------------------------------------------------
+Requirements/features
+- added new requirement constraint: can assign shipment if shipment is marked as sortable.
+Design/deployment
+- added support for new field IsSortable.
+
+v2.4.0, 12/21/05 ---------------------------------------------------------------------------
+Requirements/features
+- none.
+Design/deployment
+- updated Microsoft.ApplicationsBlock.Data component; added configurable command timeout.
+
+v2.7.0, 05/08/08 ---------------------------------------------------------------------------
+Requirements/features
+- none.
+Design/deployment
+- upgraded to Infragistics NetAdvantage 2006 third party control suite (required: Infragistics.Win.v6.3.dll, Infragistics.Shared.v6.3.dll, Infragistics.Win.UltraWinGrid.v6.3.dll)
+
+v3.0.0, 09/16/09 ---------------------------------------------------------------------------
+Requirements/features
+- None.
+Design/deployment
+- Application ported to .NET Framework 3.5 using Visual Studio 2008.
+
+v3.0.1, 04/15/10 ---------------------------------------------------------------------------
+Requirements/features
+- Removed terminal selection feature; can only access from from local terminal.
+Design/deployment
+- Removed terminal selection combobox.
+- Removed usage of FreightSync component; AS/400 synchronization to local LAN managed by database.
+
+v3.5.0, 08/25/10 ---------------------------------------------------------------------------
+Requirements/features
+- removed web service data access feature.
+Design/deployment
+- upgraded to Infragistics NetAdvantage 2008 third party control suite (required: Infragistics2.Win.v8.1.dll, Infragistics2.Shared.v8.1.dll, Infragistics2.Win.UltraWinGrid.v8.1.dll)
+
+v3.5.1, 03/21/11, 08/11/11, 09/28/11, 10/11/11, 10/24/11, 11/28/11, 02/09/12, 03/26/12, 04/18/12, 08/03/12
+Requirements/features
+- none.
+Design/deployment
+- upgraded to Infragistics NetAdvantage 2010 third party control suite (required: Infragistics2.Win.v10.1.dll, Infragistics2.Shared.v10.1.dll, Infragistics2.Win.UltraWinGrid.v10.1.dll)
+- Rebuild for change in config database connection (JARGXTS to JARGXVMTS)
+- rebuild for change in config database connection (LLRGXAD2 to LLRGXAD1)
+- rebuild for change in config database connection (MMRGXAD2 to MMRGXAD1)
+- rebuild for change in config database connection (ATRGXAD2 to ATRGXAD1)
+- rebuild for change in config database connection (CHRGXAD2 to CHRGXAD1)
+- rebuild for change in config database connection (MARGXAD2 to MARGXAD1)
+- rebuild for change in config database connection (CTRGXAD1 to CTRGXAD2)
+- rebuild for new config database connection (AGNFIRGXTS)
+- rebuild for new config database connections (AGNFIRGXTS, AGSFSRGXTS)
+
+v4.0.0, 12/04/12, 01/31/13
+Requirements/features
+- none.
+Design/deployment
+- re-designed to use Argix10.Freight.Services/TsortService.svc web service
+
+v4.0.1, 10/21/13 ---------------------------------------------------------------------------
+Requirements/features
+- None.
+Design/deployment
+- upgraded to Infragistics NetAdvantage 2012 third party control suite (required: Infragistics4.Win.v12.1.dll, Infragistics2.Shared.v12.1.dll, Infragistics2.Win.UltraWinGrid.v12.1.dll)
+- added role-based security using web service http://rgxvmweb/Argix10/Argix10.Membership.Services/RoleService.svc.

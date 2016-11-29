@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<reports Text="Argix Logistics">
+    <department Text="Delivery Window" ToolTip="">
+        <report Text="Detail By Store" Value="DeliveryWindowDetailByStore" NavigateUrl="~/Reports/DeliveryWindowDetailByStore.aspx" ToolTip="" />
+        <report Text="Summary By Store" Value="DeliveryWindowSummaryByStore" NavigateUrl="~/Reports/DeliveryWindowSummaryByStore.aspx" ToolTip="" />
+    </department>
+    <department Text="Scanning" ToolTip="">
+        <report Text="Detail By Store" Value="ScanningDetailByStore" NavigateUrl="~/Reports/ScanningDetailByStore.aspx" ToolTip="" />
+        <report Text="Summary By Store" Value="ScanningSummaryByStore" NavigateUrl="~/Reports/ScanningSummaryByStore.aspx" ToolTip="" />
+    </department>
+    <department Text="Random House" ToolTip="">
+        <report Text="Requested Delivery Date" Value="RequestedDeliveryDate" NavigateUrl="~/Reports/RequestedDeliveryDate.aspx" ToolTip="" />
+    </department>
+</reports>

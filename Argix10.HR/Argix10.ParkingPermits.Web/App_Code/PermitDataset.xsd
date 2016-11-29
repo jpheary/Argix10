@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="PermitDataset" targetNamespace="http://tempuri.org/PermitDataset.xsd" elementFormDefault="qualified"
+	attributeFormDefault="qualified" xmlns="http://tempuri.org/PermitDataset.xsd" xmlns:mstns="http://tempuri.org/PermitDataset.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="PermitDataset" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="ParkingPermitTable">
+					<xs:complexType>
+						<xs:sequence>
+              <xs:element name="ID" type="xs:int" minOccurs="0" />
+              <xs:element name="Number" type="xs:string" minOccurs="0" />
+              <xs:element name="VehicleID" type="xs:int" minOccurs="0" />
+              <xs:element name="IssueState" type="xs:string" minOccurs="0" />
+              <xs:element name="PlateNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="Year" type="xs:string" minOccurs="0" />
+              <xs:element name="Make" type="xs:string" minOccurs="0" />
+              <xs:element name="Model" type="xs:string" minOccurs="0" />
+              <xs:element name="Color" type="xs:string" minOccurs="0" />
+              <xs:element name="ContactLastName" type="xs:string" minOccurs="0" />
+              <xs:element name="ContactFirstName" type="xs:string" minOccurs="0" />
+              <xs:element name="ContactMiddleName" type="xs:string" minOccurs="0" />
+              <xs:element name="ContactPhoneNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="BadgeNumber" type="xs:int" minOccurs="0" />
+              <xs:element name="Activated" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ActivatedBy" type="xs:string" minOccurs="0" />
+              <xs:element name="Inactivated" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="InactivatedBy" type="xs:string" minOccurs="0" />
+              <xs:element name="InactiveReason" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

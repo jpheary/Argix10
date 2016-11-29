@@ -1,0 +1,72 @@
+              --------------------------------------------------------
+							HR Services Readme File
+		                       	  June, 2015
+              --------------------------------------------------------
+                         (c) Copyright Argix Logistics, 2011-2015
+
+This document provides late-breaking or other information that supplements the AgentLineHaul Services documentation.
+
+------------------------
+How to Use This Document
+------------------------
+To view the Readme file on-screen in Windows Notepad, maximize the Notepad window and click Word 
+Wrap on the Edit menu. To print the Readme file, open it in Notepad or another word processor, 
+and then use the Print command on the File menu.
+
+==============
+CONTENTS
+==============
+NOTES
+   GENERAL
+   DEPENDENCIES
+   VERSION HISTORY
+==============
+
+
+NOTES
+==============
+GENERAL
+The HR Service (Argix10.HR.Services) is a WCF web application that provides HR 
+business services related to Argix Logistics business activities.
+
+
+DEPENDENCIES
+SMTP Services (http://rgxvmweb/Argix10/Argix10.Enterprise.Services/SMTP.svc).
+
+
+VERSION HISTORY
+v4.0.0, 02/06/14 ---------------------------------------------------------------------------
+Requirements/features
+- new release.
+Design
+- new release.
+
+v4.0.1, 07/10/14 ---------------------------------------------------------------------------
+Requirements/features
+- new release.
+Design
+- database changed from rgxkronos to rgxvmitsql.
+
+v4.0.2, 08/29/14 ---------------------------------------------------------------------------
+Requirements/features
+- none.
+Design
+- removed photo and signature fields from view resultsets (uspIDViewerBadgeDataGetList) to improve performance.
+
+v4.0.3, 09/16/14 ---------------------------------------------------------------------------
+Requirements/features
+- added IEmployeeBadgeService::AddEmployeeDepartment() and IVendorBadgeService::AddVendorDepartment() for 
+  Administrator role.
+Design
+- added role-based permissions to applicable BadgeService methods.
+
+
+v4.1.0, 06/29/15 ---------------------------------------------------------------------------
+Requirements/features
+- added new services for Parking Permits.
+Design
+- added new services Permit.svc and PermitSearch.svc.
+- added new interfaces in IPermitService.cs.
+- added new service implementations in PernmitService.cs for HR.
+- added new service implementations in PermitSearchService.cs for Security personnel.
+- added new database rgxvmsqlit::ArgixPermits.

@@ -1,0 +1,64 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title></title>
+    <link href="~/styles/site.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form runat="server">
+        <div style="float:left; width:60px; border: 1px solid #ffffff">
+            <div style="height:24px; background:#000000; color:#ffffff; text-align:center;">000000</div>
+            <div style="height:24px; background:#333333; color:#ffffff; text-align:center;">333333</div>
+            <div style="height:24px; background:#666666; color:#ffffff; text-align:center;">666666</div>
+            <div style="height:24px; background:#a9a9a9; color:#ffffff; text-align:center;">a9a9a9</div>
+            <div style="height:24px; background:#cc3333; color:#ffffff; text-align:center;">cc3333</div>
+            <div style="height:24px; background:#d23059; color:#ffffff; text-align:center;">d23059</div>
+            <div style="height:24px; background:#ffffff; color:#000000; text-align:center;">ffffff</div>
+        </div>
+        <div id="page">
+            <div id="header">
+                <div id="logo"><a runat="server" href="~/Default.aspx"><img runat="server" src="~/styles/images/logo.jpg" alt="Argix logo" style="border: 0;" /></a></div>
+                <div id="superMenu">
+		            <ul>
+			            <li>
+                            <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                                <AnonymousTemplate>
+                                    <a runat="server" href="~/Account/Login.aspx" ID="HeadLoginStatus">Client Login</a>
+                                </AnonymousTemplate>
+                                <LoggedInTemplate>
+                                    Welcome <span class="bold"><asp:LoginName ID="HeadLoginName" runat="server" /></span>
+                                    <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out" LogoutPageUrl="~/"/>
+                                </LoggedInTemplate>
+                            </asp:LoginView>
+                        </li>
+			            <li><a href="~/ContactUs.aspx">Contact Us</a></li>
+		            </ul>
+                </div>
+                <div class="clearRight"></div>
+                <div id="mainMenu">
+		            <ul>
+			            <li><a runat="server" href="~/Tracking/Tracking.aspx">Tracking</a></li>
+			            <li><a runat="server" href="~/WhyArgix/WhyArgix.aspx">Why Argix</a></li>
+			            <li><a runat="server" href="~/Services/Services.aspx">Services</a></li>
+			            <li><a runat="server" href="~/AboutUs/AboutUs.aspx">About Us</a></li>
+		            </ul>
+	            </div>
+            </div>
+            <div id="left">
+                <asp:ContentPlaceHolder ID="LeftContent" runat="server"/>
+                <div id="address">
+                    <img runat="server" src="~/styles/images/address.gif" alt="Argix Address" />
+                </div>
+            </div>
+            <div id="right">
+                <asp:ContentPlaceHolder ID="RightContent" runat="server"/>
+            </div>
+            <div id="footer">
+                Copyright 2012 Argix Direct, Inc.
+            </div>
+        </div>
+    </form>
+</body>
+</html>

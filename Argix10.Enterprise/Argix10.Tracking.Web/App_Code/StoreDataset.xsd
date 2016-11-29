@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="StoreDataset" targetNamespace="http://tempuri.org/StoreDataset.xsd" xmlns:mstns="http://tempuri.org/StoreDataset.xsd" xmlns="http://tempuri.org/StoreDataset.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="StoreDataset" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="StoreDataset" msprop:Generator_DataSetName="StoreDataset">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded" >
+		  <xs:element name="StoreTable">
+			  <xs:complexType>
+				  <xs:sequence>
+					  <xs:element name="NUMBER" type="xs:int" minOccurs="0" />
+					  <xs:element name="NAME" type="xs:string" minOccurs="0" />
+					  <xs:element name="ADDRESSLINE1" type="xs:string" minOccurs="0" />
+					  <xs:element name="ADDRESS_LINE2" type="xs:string" minOccurs="0" />
+					  <xs:element name="CITY" type="xs:string" minOccurs="0" />
+					  <xs:element name="STATE" type="xs:string" minOccurs="0" />
+					  <xs:element name="ZIP" type="xs:string" minOccurs="0" />
+					  <xs:element name="DESCRIPTION" type="xs:string" minOccurs="0" />
+				  </xs:sequence>
+			  </xs:complexType>
+		  </xs:element>
+	  </xs:choice>
+  </xs:complexType>
+  </xs:element>
+</xs:schema>

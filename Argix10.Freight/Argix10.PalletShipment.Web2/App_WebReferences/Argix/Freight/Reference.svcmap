@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="40d9534c-981e-4e60-8f4d-4c2920d46836" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:33027/Argix10.Freight.Services/LTLService2.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="LTLService21.xsd" MetadataType="Schema" ID="1b6d8416-041b-4eaf-b766-b5608f0f3d1a" SourceId="1" SourceUrl="http://localhost:33027/Argix10.Freight.Services/LTLService2.svc?xsd=xsd4" />
+    <MetadataFile FileName="LTLService212.xsd" MetadataType="Schema" ID="67c344d4-b5ec-4057-9f53-2a2c274344b5" SourceId="1" SourceUrl="http://localhost:33027/Argix10.Freight.Services/LTLService2.svc?xsd=xsd2" />
+    <MetadataFile FileName="LTLService213.xsd" MetadataType="Schema" ID="361adae0-5aca-4b90-b0b0-ce7c8b2f93e9" SourceId="1" SourceUrl="http://localhost:33027/Argix10.Freight.Services/LTLService2.svc?xsd=xsd1" />
+    <MetadataFile FileName="LTLService21.wsdl" MetadataType="Wsdl" ID="39464b7a-508a-4bf3-b3fe-167850250694" SourceId="1" SourceUrl="http://localhost:33027/Argix10.Freight.Services/LTLService2.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="LTLService214.xsd" MetadataType="Schema" ID="8d4d13f3-4b83-4736-b26b-c9264865f152" SourceId="1" SourceUrl="http://localhost:33027/Argix10.Freight.Services/LTLService2.svc?xsd=xsd5" />
+    <MetadataFile FileName="LTLService212.wsdl" MetadataType="Wsdl" ID="d4bfa8c1-bfda-43b7-9503-2d3aac90132a" SourceId="1" SourceUrl="http://localhost:33027/Argix10.Freight.Services/LTLService2.svc?wsdl" />
+    <MetadataFile FileName="LTLService215.xsd" MetadataType="Schema" ID="382ffb43-41b2-4fa5-b12a-9a91de76da15" SourceId="1" SourceUrl="http://localhost:33027/Argix10.Freight.Services/LTLService2.svc?xsd=xsd3" />
+    <MetadataFile FileName="LTLService2.disco" MetadataType="Disco" ID="281b43e2-58b1-45eb-a549-e276492cc7d1" SourceId="1" SourceUrl="http://localhost:33027/Argix10.Freight.Services/LTLService2.svc?disco" />
+    <MetadataFile FileName="LTLService216.xsd" MetadataType="Schema" ID="58b4beb7-9a89-4007-bcdd-490cabca4965" SourceId="1" SourceUrl="http://localhost:33027/Argix10.Freight.Services/LTLService2.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

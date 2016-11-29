@@ -1,0 +1,806 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://Argix.Freight" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://Argix.Freight" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://Argix.Freight/Imports">
+      <xsd:import schemaLocation="http://localhost:11138/Argix10.Freight.Services/Dispatch.svc?xsd=xsd0" namespace="http://Argix.Freight" />
+      <xsd:import schemaLocation="http://localhost:11138/Argix10.Freight.Services/Dispatch.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Argix" />
+      <xsd:import schemaLocation="http://localhost:11138/Argix10.Freight.Services/Dispatch.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:11138/Argix10.Freight.Services/Dispatch.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:11138/Argix10.Freight.Services/Dispatch.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Argix.Freight" />
+      <xsd:import schemaLocation="http://localhost:11138/Argix10.Freight.Services/Dispatch.svc?xsd=xsd4" />
+      <xsd:import schemaLocation="http://localhost:11138/Argix10.Freight.Services/Dispatch.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Argix.Enterprise" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDispatchService_GetServiceInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetServiceInfo" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_GetServiceInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetServiceInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_GetServiceInfo_ConfigurationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/Argix" name="detail" element="q1:ConfigurationFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_GetUserConfiguration_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserConfiguration" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_GetUserConfiguration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserConfigurationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_GetUserConfiguration_ConfigurationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/Argix" name="detail" element="q2:ConfigurationFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_WriteLogEntry_InputMessage">
+    <wsdl:part name="parameters" element="tns:WriteLogEntry" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ViewPickupLog_InputMessage">
+    <wsdl:part name="parameters" element="tns:ViewPickupLog" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ViewPickupLog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ViewPickupLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ViewPickupLog_DispatchFaultFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q3:DispatchFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ViewPickupLogTemplates_InputMessage">
+    <wsdl:part name="parameters" element="tns:ViewPickupLogTemplates" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ViewPickupLogTemplates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ViewPickupLogTemplatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ViewPickupLogTemplates_DispatchFaultFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q4:DispatchFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_AddPickupRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPickupRequest" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_AddPickupRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPickupRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_AddPickupRequest_DispatchFaultFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q5:DispatchFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ChangePickupRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangePickupRequest" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ChangePickupRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangePickupRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ChangePickupRequest_DispatchFaultFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q6:DispatchFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_VerifyPickupRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyPickupRequest" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_VerifyPickupRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyPickupRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_VerifyPickupRequest_DispatchFaultFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q7:DispatchFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_AssignDriverToPickupRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:AssignDriverToPickupRequest" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_AssignDriverToPickupRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AssignDriverToPickupRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_AssignDriverToPickupRequest_DispatchFaultFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q8:DispatchFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ArrivePickupRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:ArrivePickupRequest" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ArrivePickupRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ArrivePickupRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ArrivePickupRequest_DispatchFaultFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q9:DispatchFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_CancelPickupRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:CancelPickupRequest" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_CancelPickupRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CancelPickupRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_CancelPickupRequest_DispatchFaultFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q10:DispatchFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ViewClientInboundSchedule_InputMessage">
+    <wsdl:part name="parameters" element="tns:ViewClientInboundSchedule" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ViewClientInboundSchedule_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ViewClientInboundScheduleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ViewClientInboundSchedule_DispatchFaultFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q11:DispatchFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ViewClientInboundScheduleTemplates_InputMessage">
+    <wsdl:part name="parameters" element="tns:ViewClientInboundScheduleTemplates" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ViewClientInboundScheduleTemplates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ViewClientInboundScheduleTemplatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ViewClientInboundScheduleTemplates_DispatchFaultFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q12:DispatchFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_AddClientInboundFreight_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddClientInboundFreight" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_AddClientInboundFreight_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddClientInboundFreightResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_AddClientInboundFreight_DispatchFaultFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q13:DispatchFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ChangeClientInboundFreight_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeClientInboundFreight" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ChangeClientInboundFreight_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeClientInboundFreightResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ChangeClientInboundFreight_DispatchFaultFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q14:DispatchFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_CancelClientInboundFreight_InputMessage">
+    <wsdl:part name="parameters" element="tns:CancelClientInboundFreight" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_CancelClientInboundFreight_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CancelClientInboundFreightResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_CancelClientInboundFreight_DispatchFaultFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q15:DispatchFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ViewInboundSchedule_InputMessage">
+    <wsdl:part name="parameters" element="tns:ViewInboundSchedule" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ViewInboundSchedule_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ViewInboundScheduleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ViewInboundSchedule_DispatchFaultFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q16:DispatchFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ViewInboundScheduleTemplates_InputMessage">
+    <wsdl:part name="parameters" element="tns:ViewInboundScheduleTemplates" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ViewInboundScheduleTemplates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ViewInboundScheduleTemplatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ViewInboundScheduleTemplates_DispatchFaultFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q17:DispatchFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_AddScheduledInboundFreight_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddScheduledInboundFreight" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_AddScheduledInboundFreight_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddScheduledInboundFreightResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_AddScheduledInboundFreight_DispatchFaultFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q18:DispatchFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ChangeScheduledInboundFreight_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeScheduledInboundFreight" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ChangeScheduledInboundFreight_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeScheduledInboundFreightResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ChangeScheduledInboundFreight_DispatchFaultFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q19:DispatchFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_CancelScheduledInboundFreight_InputMessage">
+    <wsdl:part name="parameters" element="tns:CancelScheduledInboundFreight" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_CancelScheduledInboundFreight_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CancelScheduledInboundFreightResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_CancelScheduledInboundFreight_DispatchFaultFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q20:DispatchFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ViewOutboundSchedule_InputMessage">
+    <wsdl:part name="parameters" element="tns:ViewOutboundSchedule" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ViewOutboundSchedule_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ViewOutboundScheduleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ViewOutboundSchedule_DispatchFaultFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q21:DispatchFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ViewOutboundScheduleTemplates_InputMessage">
+    <wsdl:part name="parameters" element="tns:ViewOutboundScheduleTemplates" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ViewOutboundScheduleTemplates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ViewOutboundScheduleTemplatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ViewOutboundScheduleTemplates_DispatchFaultFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q22:DispatchFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_AddScheduledOutboundFreight_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddScheduledOutboundFreight" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_AddScheduledOutboundFreight_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddScheduledOutboundFreightResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_AddScheduledOutboundFreight_DispatchFaultFault_FaultMessage">
+    <wsdl:part xmlns:q23="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q23:DispatchFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ChangeScheduledOutboundFreight_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeScheduledOutboundFreight" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ChangeScheduledOutboundFreight_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeScheduledOutboundFreightResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ChangeScheduledOutboundFreight_DispatchFaultFault_FaultMessage">
+    <wsdl:part xmlns:q24="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q24:DispatchFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_CancelScheduledOutboundFreight_InputMessage">
+    <wsdl:part name="parameters" element="tns:CancelScheduledOutboundFreight" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_CancelScheduledOutboundFreight_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CancelScheduledOutboundFreightResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_CancelScheduledOutboundFreight_DispatchFaultFault_FaultMessage">
+    <wsdl:part xmlns:q25="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q25:DispatchFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ViewTrailerLog_InputMessage">
+    <wsdl:part name="parameters" element="tns:ViewTrailerLog" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ViewTrailerLog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ViewTrailerLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ViewTrailerLog_DispatchFaultFault_FaultMessage">
+    <wsdl:part xmlns:q26="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q26:DispatchFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ViewTrailerLogYardCheck_InputMessage">
+    <wsdl:part name="parameters" element="tns:ViewTrailerLogYardCheck" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ViewTrailerLogYardCheck_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ViewTrailerLogYardCheckResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ViewTrailerLogYardCheck_DispatchFaultFault_FaultMessage">
+    <wsdl:part xmlns:q27="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q27:DispatchFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ViewTrailerLogArchive_InputMessage">
+    <wsdl:part name="parameters" element="tns:ViewTrailerLogArchive" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ViewTrailerLogArchive_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ViewTrailerLogArchiveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ViewTrailerLogArchive_DispatchFaultFault_FaultMessage">
+    <wsdl:part xmlns:q28="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q28:DispatchFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_SearchTrailerLog_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchTrailerLog" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_SearchTrailerLog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchTrailerLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_SearchTrailerLog_DispatchFaultFault_FaultMessage">
+    <wsdl:part xmlns:q29="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q29:DispatchFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_AddTrailerEntry_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddTrailerEntry" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_AddTrailerEntry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddTrailerEntryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_AddTrailerEntry_DispatchFaultFault_FaultMessage">
+    <wsdl:part xmlns:q30="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q30:DispatchFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ChangeTrailerEntry_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeTrailerEntry" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ChangeTrailerEntry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeTrailerEntryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ChangeTrailerEntry_DispatchFaultFault_FaultMessage">
+    <wsdl:part xmlns:q31="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q31:DispatchFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_CancelTrailerEntry_InputMessage">
+    <wsdl:part name="parameters" element="tns:CancelTrailerEntry" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_CancelTrailerEntry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CancelTrailerEntryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_CancelTrailerEntry_DispatchFaultFault_FaultMessage">
+    <wsdl:part xmlns:q32="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q32:DispatchFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ViewLoadTenderLog_InputMessage">
+    <wsdl:part name="parameters" element="tns:ViewLoadTenderLog" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ViewLoadTenderLog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ViewLoadTenderLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ViewLoadTenderLog_DispatchFaultFault_FaultMessage">
+    <wsdl:part xmlns:q33="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q33:DispatchFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_CreateLoadTenderEntry_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateLoadTenderEntry" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_CreateLoadTenderEntry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateLoadTenderEntryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_CreateLoadTenderEntry_DispatchFaultFault_FaultMessage">
+    <wsdl:part xmlns:q34="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q34:DispatchFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ReadLoadTenderEntry_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadLoadTenderEntry" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ReadLoadTenderEntry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadLoadTenderEntryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ReadLoadTenderEntry_DispatchFaultFault_FaultMessage">
+    <wsdl:part xmlns:q35="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q35:DispatchFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_UpdateLoadTenderEntry_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateLoadTenderEntry" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_UpdateLoadTenderEntry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateLoadTenderEntryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_UpdateLoadTenderEntry_DispatchFaultFault_FaultMessage">
+    <wsdl:part xmlns:q36="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q36:DispatchFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_TenderLoadTenderEntry_InputMessage">
+    <wsdl:part name="parameters" element="tns:TenderLoadTenderEntry" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_TenderLoadTenderEntry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TenderLoadTenderEntryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_TenderLoadTenderEntry_DispatchFaultFault_FaultMessage">
+    <wsdl:part xmlns:q37="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q37:DispatchFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ScheduleBBBTripLoadTenderEntry_InputMessage">
+    <wsdl:part name="parameters" element="tns:ScheduleBBBTripLoadTenderEntry" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ScheduleBBBTripLoadTenderEntry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ScheduleBBBTripLoadTenderEntryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ScheduleBBBTripLoadTenderEntry_DispatchFaultFault_FaultMessage">
+    <wsdl:part xmlns:q38="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q38:DispatchFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_SchedulePickupLoadTenderEntry_InputMessage">
+    <wsdl:part name="parameters" element="tns:SchedulePickupLoadTenderEntry" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_SchedulePickupLoadTenderEntry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SchedulePickupLoadTenderEntryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_SchedulePickupLoadTenderEntry_DispatchFaultFault_FaultMessage">
+    <wsdl:part xmlns:q39="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q39:DispatchFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_CancelLoadTenderEntry_InputMessage">
+    <wsdl:part name="parameters" element="tns:CancelLoadTenderEntry" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_CancelLoadTenderEntry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CancelLoadTenderEntryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_CancelLoadTenderEntry_DispatchFaultFault_FaultMessage">
+    <wsdl:part xmlns:q40="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q40:DispatchFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_GetLoadTender_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLoadTender" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_GetLoadTender_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLoadTenderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_GetLoadTender_DispatchFaultFault_FaultMessage">
+    <wsdl:part xmlns:q41="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q41:DispatchFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ViewBBBSchedule_InputMessage">
+    <wsdl:part name="parameters" element="tns:ViewBBBSchedule" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ViewBBBSchedule_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ViewBBBScheduleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ViewBBBSchedule_DispatchFaultFault_FaultMessage">
+    <wsdl:part xmlns:q42="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q42:DispatchFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_AddBBBScheduleTrip_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddBBBScheduleTrip" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_AddBBBScheduleTrip_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddBBBScheduleTripResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_AddBBBScheduleTrip_DispatchFaultFault_FaultMessage">
+    <wsdl:part xmlns:q43="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q43:DispatchFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ChangeBBBScheduleTrip_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeBBBScheduleTrip" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ChangeBBBScheduleTrip_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeBBBScheduleTripResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ChangeBBBScheduleTrip_DispatchFaultFault_FaultMessage">
+    <wsdl:part xmlns:q44="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q44:DispatchFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_CancelBBBScheduleTrip_InputMessage">
+    <wsdl:part name="parameters" element="tns:CancelBBBScheduleTrip" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_CancelBBBScheduleTrip_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CancelBBBScheduleTripResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_CancelBBBScheduleTrip_DispatchFaultFault_FaultMessage">
+    <wsdl:part xmlns:q45="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q45:DispatchFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_GetAppointmentTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAppointmentTypes" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_GetAppointmentTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAppointmentTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_GetAppointmentTypes_DispatchFaultFault_FaultMessage">
+    <wsdl:part xmlns:q46="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q46:DispatchFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_GetFreghtDesginationTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFreghtDesginationTypes" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_GetFreghtDesginationTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFreghtDesginationTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_GetFreghtDesginationTypes_DispatchFaultFault_FaultMessage">
+    <wsdl:part xmlns:q47="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q47:DispatchFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ViewBlog_InputMessage">
+    <wsdl:part name="parameters" element="tns:ViewBlog" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ViewBlog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ViewBlogResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_ViewBlog_DispatchFaultFault_FaultMessage">
+    <wsdl:part xmlns:q48="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q48:DispatchFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_AddBlogEntry_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddBlogEntry" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_AddBlogEntry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddBlogEntryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_AddBlogEntry_DispatchFaultFault_FaultMessage">
+    <wsdl:part xmlns:q49="http://schemas.datacontract.org/2004/07/Argix.Freight" name="detail" element="q49:DispatchFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_GetClients_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetClients" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_GetClients_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetClientsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_GetClients_EnterpriseFaultFault_FaultMessage">
+    <wsdl:part xmlns:q50="http://schemas.datacontract.org/2004/07/Argix.Enterprise" name="detail" element="q50:EnterpriseFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_GetAgents_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgents" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_GetAgents_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_GetAgents_EnterpriseFaultFault_FaultMessage">
+    <wsdl:part xmlns:q51="http://schemas.datacontract.org/2004/07/Argix.Enterprise" name="detail" element="q51:EnterpriseFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_GetTerminals_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTerminals" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_GetTerminals_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTerminalsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_GetTerminals_EnterpriseFaultFault_FaultMessage">
+    <wsdl:part xmlns:q52="http://schemas.datacontract.org/2004/07/Argix.Enterprise" name="detail" element="q52:EnterpriseFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_GetCarriers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCarriers" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_GetCarriers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCarriersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_GetCarriers_EnterpriseFaultFault_FaultMessage">
+    <wsdl:part xmlns:q53="http://schemas.datacontract.org/2004/07/Argix.Enterprise" name="detail" element="q53:EnterpriseFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_GetDrivers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDrivers" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_GetDrivers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDriversResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_GetDrivers_EnterpriseFaultFault_FaultMessage">
+    <wsdl:part xmlns:q54="http://schemas.datacontract.org/2004/07/Argix.Enterprise" name="detail" element="q54:EnterpriseFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_GetLocations_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLocations" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_GetLocations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLocationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_GetLocations_EnterpriseFaultFault_FaultMessage">
+    <wsdl:part xmlns:q55="http://schemas.datacontract.org/2004/07/Argix.Enterprise" name="detail" element="q55:EnterpriseFault" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_GetVendors_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVendors" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_GetVendors_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVendorsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDispatchService_GetVendors_EnterpriseFaultFault_FaultMessage">
+    <wsdl:part xmlns:q56="http://schemas.datacontract.org/2004/07/Argix.Enterprise" name="detail" element="q56:EnterpriseFault" />
+  </wsdl:message>
+  <wsdl:portType name="IDispatchService">
+    <wsdl:operation name="GetServiceInfo">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchService/GetServiceInfo" message="tns:IDispatchService_GetServiceInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchService/GetServiceInfoResponse" message="tns:IDispatchService_GetServiceInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.ConfigurationFault" name="ConfigurationFaultFault" message="tns:IDispatchService_GetServiceInfo_ConfigurationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserConfiguration">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchService/GetUserConfiguration" message="tns:IDispatchService_GetUserConfiguration_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchService/GetUserConfigurationResponse" message="tns:IDispatchService_GetUserConfiguration_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.ConfigurationFault" name="ConfigurationFaultFault" message="tns:IDispatchService_GetUserConfiguration_ConfigurationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WriteLogEntry">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchService/WriteLogEntry" message="tns:IDispatchService_WriteLogEntry_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ViewPickupLog">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchService/ViewPickupLog" message="tns:IDispatchService_ViewPickupLog_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchService/ViewPickupLogResponse" message="tns:IDispatchService_ViewPickupLog_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.DispatchFault" name="DispatchFaultFault" message="tns:IDispatchService_ViewPickupLog_DispatchFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ViewPickupLogTemplates">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchService/ViewPickupLogTemplates" message="tns:IDispatchService_ViewPickupLogTemplates_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchService/ViewPickupLogTemplatesResponse" message="tns:IDispatchService_ViewPickupLogTemplates_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.DispatchFault" name="DispatchFaultFault" message="tns:IDispatchService_ViewPickupLogTemplates_DispatchFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPickupRequest">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchService/AddPickupRequest" message="tns:IDispatchService_AddPickupRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchService/AddPickupRequestResponse" message="tns:IDispatchService_AddPickupRequest_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.DispatchFault" name="DispatchFaultFault" message="tns:IDispatchService_AddPickupRequest_DispatchFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangePickupRequest">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchService/ChangePickupRequest" message="tns:IDispatchService_ChangePickupRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchService/ChangePickupRequestResponse" message="tns:IDispatchService_ChangePickupRequest_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.DispatchFault" name="DispatchFaultFault" message="tns:IDispatchService_ChangePickupRequest_DispatchFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyPickupRequest">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchService/VerifyPickupRequest" message="tns:IDispatchService_VerifyPickupRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchService/VerifyPickupRequestResponse" message="tns:IDispatchService_VerifyPickupRequest_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.DispatchFault" name="DispatchFaultFault" message="tns:IDispatchService_VerifyPickupRequest_DispatchFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AssignDriverToPickupRequest">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchService/AssignDriverToPickupRequest" message="tns:IDispatchService_AssignDriverToPickupRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchService/AssignDriverToPickupRequestResponse" message="tns:IDispatchService_AssignDriverToPickupRequest_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.DispatchFault" name="DispatchFaultFault" message="tns:IDispatchService_AssignDriverToPickupRequest_DispatchFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ArrivePickupRequest">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchService/ArrivePickupRequest" message="tns:IDispatchService_ArrivePickupRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchService/ArrivePickupRequestResponse" message="tns:IDispatchService_ArrivePickupRequest_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.DispatchFault" name="DispatchFaultFault" message="tns:IDispatchService_ArrivePickupRequest_DispatchFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelPickupRequest">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchService/CancelPickupRequest" message="tns:IDispatchService_CancelPickupRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchService/CancelPickupRequestResponse" message="tns:IDispatchService_CancelPickupRequest_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.DispatchFault" name="DispatchFaultFault" message="tns:IDispatchService_CancelPickupRequest_DispatchFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ViewClientInboundSchedule">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchService/ViewClientInboundSchedule" message="tns:IDispatchService_ViewClientInboundSchedule_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchService/ViewClientInboundScheduleResponse" message="tns:IDispatchService_ViewClientInboundSchedule_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.DispatchFault" name="DispatchFaultFault" message="tns:IDispatchService_ViewClientInboundSchedule_DispatchFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ViewClientInboundScheduleTemplates">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchService/ViewClientInboundScheduleTemplates" message="tns:IDispatchService_ViewClientInboundScheduleTemplates_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchService/ViewClientInboundScheduleTemplatesResponse" message="tns:IDispatchService_ViewClientInboundScheduleTemplates_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.DispatchFault" name="DispatchFaultFault" message="tns:IDispatchService_ViewClientInboundScheduleTemplates_DispatchFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddClientInboundFreight">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchService/AddClientInboundFreight" message="tns:IDispatchService_AddClientInboundFreight_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchService/AddClientInboundFreightResponse" message="tns:IDispatchService_AddClientInboundFreight_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.DispatchFault" name="DispatchFaultFault" message="tns:IDispatchService_AddClientInboundFreight_DispatchFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeClientInboundFreight">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchService/ChangeClientInboundFreight" message="tns:IDispatchService_ChangeClientInboundFreight_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchService/ChangeClientInboundFreightResponse" message="tns:IDispatchService_ChangeClientInboundFreight_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.DispatchFault" name="DispatchFaultFault" message="tns:IDispatchService_ChangeClientInboundFreight_DispatchFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelClientInboundFreight">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchService/CancelClientInboundFreight" message="tns:IDispatchService_CancelClientInboundFreight_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchService/CancelClientInboundFreightResponse" message="tns:IDispatchService_CancelClientInboundFreight_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.DispatchFault" name="DispatchFaultFault" message="tns:IDispatchService_CancelClientInboundFreight_DispatchFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ViewInboundSchedule">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchService/ViewInboundSchedule" message="tns:IDispatchService_ViewInboundSchedule_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchService/ViewInboundScheduleResponse" message="tns:IDispatchService_ViewInboundSchedule_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.DispatchFault" name="DispatchFaultFault" message="tns:IDispatchService_ViewInboundSchedule_DispatchFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ViewInboundScheduleTemplates">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchService/ViewInboundScheduleTemplates" message="tns:IDispatchService_ViewInboundScheduleTemplates_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchService/ViewInboundScheduleTemplatesResponse" message="tns:IDispatchService_ViewInboundScheduleTemplates_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.DispatchFault" name="DispatchFaultFault" message="tns:IDispatchService_ViewInboundScheduleTemplates_DispatchFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddScheduledInboundFreight">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchService/AddScheduledInboundFreight" message="tns:IDispatchService_AddScheduledInboundFreight_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchService/AddScheduledInboundFreightResponse" message="tns:IDispatchService_AddScheduledInboundFreight_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.DispatchFault" name="DispatchFaultFault" message="tns:IDispatchService_AddScheduledInboundFreight_DispatchFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeScheduledInboundFreight">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchService/ChangeScheduledInboundFreight" message="tns:IDispatchService_ChangeScheduledInboundFreight_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchService/ChangeScheduledInboundFreightResponse" message="tns:IDispatchService_ChangeScheduledInboundFreight_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.DispatchFault" name="DispatchFaultFault" message="tns:IDispatchService_ChangeScheduledInboundFreight_DispatchFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelScheduledInboundFreight">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchService/CancelScheduledInboundFreight" message="tns:IDispatchService_CancelScheduledInboundFreight_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchService/CancelScheduledInboundFreightResponse" message="tns:IDispatchService_CancelScheduledInboundFreight_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.DispatchFault" name="DispatchFaultFault" message="tns:IDispatchService_CancelScheduledInboundFreight_DispatchFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ViewOutboundSchedule">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchService/ViewOutboundSchedule" message="tns:IDispatchService_ViewOutboundSchedule_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchService/ViewOutboundScheduleResponse" message="tns:IDispatchService_ViewOutboundSchedule_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.DispatchFault" name="DispatchFaultFault" message="tns:IDispatchService_ViewOutboundSchedule_DispatchFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ViewOutboundScheduleTemplates">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchService/ViewOutboundScheduleTemplates" message="tns:IDispatchService_ViewOutboundScheduleTemplates_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchService/ViewOutboundScheduleTemplatesResponse" message="tns:IDispatchService_ViewOutboundScheduleTemplates_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.DispatchFault" name="DispatchFaultFault" message="tns:IDispatchService_ViewOutboundScheduleTemplates_DispatchFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddScheduledOutboundFreight">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchService/AddScheduledOutboundFreight" message="tns:IDispatchService_AddScheduledOutboundFreight_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchService/AddScheduledOutboundFreightResponse" message="tns:IDispatchService_AddScheduledOutboundFreight_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.DispatchFault" name="DispatchFaultFault" message="tns:IDispatchService_AddScheduledOutboundFreight_DispatchFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeScheduledOutboundFreight">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchService/ChangeScheduledOutboundFreight" message="tns:IDispatchService_ChangeScheduledOutboundFreight_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchService/ChangeScheduledOutboundFreightResponse" message="tns:IDispatchService_ChangeScheduledOutboundFreight_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.DispatchFault" name="DispatchFaultFault" message="tns:IDispatchService_ChangeScheduledOutboundFreight_DispatchFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelScheduledOutboundFreight">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchService/CancelScheduledOutboundFreight" message="tns:IDispatchService_CancelScheduledOutboundFreight_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchService/CancelScheduledOutboundFreightResponse" message="tns:IDispatchService_CancelScheduledOutboundFreight_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.DispatchFault" name="DispatchFaultFault" message="tns:IDispatchService_CancelScheduledOutboundFreight_DispatchFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ViewTrailerLog">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchService/ViewTrailerLog" message="tns:IDispatchService_ViewTrailerLog_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchService/ViewTrailerLogResponse" message="tns:IDispatchService_ViewTrailerLog_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.DispatchFault" name="DispatchFaultFault" message="tns:IDispatchService_ViewTrailerLog_DispatchFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ViewTrailerLogYardCheck">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchService/ViewTrailerLogYardCheck" message="tns:IDispatchService_ViewTrailerLogYardCheck_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchService/ViewTrailerLogYardCheckResponse" message="tns:IDispatchService_ViewTrailerLogYardCheck_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.DispatchFault" name="DispatchFaultFault" message="tns:IDispatchService_ViewTrailerLogYardCheck_DispatchFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ViewTrailerLogArchive">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchService/ViewTrailerLogArchive" message="tns:IDispatchService_ViewTrailerLogArchive_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchService/ViewTrailerLogArchiveResponse" message="tns:IDispatchService_ViewTrailerLogArchive_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.DispatchFault" name="DispatchFaultFault" message="tns:IDispatchService_ViewTrailerLogArchive_DispatchFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchTrailerLog">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchService/SearchTrailerLog" message="tns:IDispatchService_SearchTrailerLog_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchService/SearchTrailerLogResponse" message="tns:IDispatchService_SearchTrailerLog_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.DispatchFault" name="DispatchFaultFault" message="tns:IDispatchService_SearchTrailerLog_DispatchFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddTrailerEntry">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchService/AddTrailerEntry" message="tns:IDispatchService_AddTrailerEntry_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchService/AddTrailerEntryResponse" message="tns:IDispatchService_AddTrailerEntry_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.DispatchFault" name="DispatchFaultFault" message="tns:IDispatchService_AddTrailerEntry_DispatchFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeTrailerEntry">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchService/ChangeTrailerEntry" message="tns:IDispatchService_ChangeTrailerEntry_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchService/ChangeTrailerEntryResponse" message="tns:IDispatchService_ChangeTrailerEntry_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.DispatchFault" name="DispatchFaultFault" message="tns:IDispatchService_ChangeTrailerEntry_DispatchFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelTrailerEntry">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchService/CancelTrailerEntry" message="tns:IDispatchService_CancelTrailerEntry_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchService/CancelTrailerEntryResponse" message="tns:IDispatchService_CancelTrailerEntry_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.DispatchFault" name="DispatchFaultFault" message="tns:IDispatchService_CancelTrailerEntry_DispatchFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ViewLoadTenderLog">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchService/ViewLoadTenderLog" message="tns:IDispatchService_ViewLoadTenderLog_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchService/ViewLoadTenderLogResponse" message="tns:IDispatchService_ViewLoadTenderLog_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.DispatchFault" name="DispatchFaultFault" message="tns:IDispatchService_ViewLoadTenderLog_DispatchFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateLoadTenderEntry">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchService/CreateLoadTenderEntry" message="tns:IDispatchService_CreateLoadTenderEntry_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchService/CreateLoadTenderEntryResponse" message="tns:IDispatchService_CreateLoadTenderEntry_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.DispatchFault" name="DispatchFaultFault" message="tns:IDispatchService_CreateLoadTenderEntry_DispatchFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadLoadTenderEntry">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchService/ReadLoadTenderEntry" message="tns:IDispatchService_ReadLoadTenderEntry_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchService/ReadLoadTenderEntryResponse" message="tns:IDispatchService_ReadLoadTenderEntry_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.DispatchFault" name="DispatchFaultFault" message="tns:IDispatchService_ReadLoadTenderEntry_DispatchFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLoadTenderEntry">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchService/UpdateLoadTenderEntry" message="tns:IDispatchService_UpdateLoadTenderEntry_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchService/UpdateLoadTenderEntryResponse" message="tns:IDispatchService_UpdateLoadTenderEntry_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.DispatchFault" name="DispatchFaultFault" message="tns:IDispatchService_UpdateLoadTenderEntry_DispatchFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TenderLoadTenderEntry">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchService/TenderLoadTenderEntry" message="tns:IDispatchService_TenderLoadTenderEntry_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchService/TenderLoadTenderEntryResponse" message="tns:IDispatchService_TenderLoadTenderEntry_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.DispatchFault" name="DispatchFaultFault" message="tns:IDispatchService_TenderLoadTenderEntry_DispatchFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ScheduleBBBTripLoadTenderEntry">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchService/ScheduleBBBTripLoadTenderEntry" message="tns:IDispatchService_ScheduleBBBTripLoadTenderEntry_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchService/ScheduleBBBTripLoadTenderEntryResponse" message="tns:IDispatchService_ScheduleBBBTripLoadTenderEntry_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.DispatchFault" name="DispatchFaultFault" message="tns:IDispatchService_ScheduleBBBTripLoadTenderEntry_DispatchFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SchedulePickupLoadTenderEntry">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchService/SchedulePickupLoadTenderEntry" message="tns:IDispatchService_SchedulePickupLoadTenderEntry_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchService/SchedulePickupLoadTenderEntryResponse" message="tns:IDispatchService_SchedulePickupLoadTenderEntry_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.DispatchFault" name="DispatchFaultFault" message="tns:IDispatchService_SchedulePickupLoadTenderEntry_DispatchFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelLoadTenderEntry">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchService/CancelLoadTenderEntry" message="tns:IDispatchService_CancelLoadTenderEntry_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchService/CancelLoadTenderEntryResponse" message="tns:IDispatchService_CancelLoadTenderEntry_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.DispatchFault" name="DispatchFaultFault" message="tns:IDispatchService_CancelLoadTenderEntry_DispatchFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLoadTender">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchService/GetLoadTender" message="tns:IDispatchService_GetLoadTender_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchService/GetLoadTenderResponse" message="tns:IDispatchService_GetLoadTender_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.DispatchFault" name="DispatchFaultFault" message="tns:IDispatchService_GetLoadTender_DispatchFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ViewBBBSchedule">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchService/ViewBBBSchedule" message="tns:IDispatchService_ViewBBBSchedule_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchService/ViewBBBScheduleResponse" message="tns:IDispatchService_ViewBBBSchedule_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.DispatchFault" name="DispatchFaultFault" message="tns:IDispatchService_ViewBBBSchedule_DispatchFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddBBBScheduleTrip">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchService/AddBBBScheduleTrip" message="tns:IDispatchService_AddBBBScheduleTrip_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchService/AddBBBScheduleTripResponse" message="tns:IDispatchService_AddBBBScheduleTrip_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.DispatchFault" name="DispatchFaultFault" message="tns:IDispatchService_AddBBBScheduleTrip_DispatchFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeBBBScheduleTrip">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchService/ChangeBBBScheduleTrip" message="tns:IDispatchService_ChangeBBBScheduleTrip_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchService/ChangeBBBScheduleTripResponse" message="tns:IDispatchService_ChangeBBBScheduleTrip_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.DispatchFault" name="DispatchFaultFault" message="tns:IDispatchService_ChangeBBBScheduleTrip_DispatchFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelBBBScheduleTrip">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchService/CancelBBBScheduleTrip" message="tns:IDispatchService_CancelBBBScheduleTrip_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchService/CancelBBBScheduleTripResponse" message="tns:IDispatchService_CancelBBBScheduleTrip_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.DispatchFault" name="DispatchFaultFault" message="tns:IDispatchService_CancelBBBScheduleTrip_DispatchFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAppointmentTypes">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchService/GetAppointmentTypes" message="tns:IDispatchService_GetAppointmentTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchService/GetAppointmentTypesResponse" message="tns:IDispatchService_GetAppointmentTypes_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.DispatchFault" name="DispatchFaultFault" message="tns:IDispatchService_GetAppointmentTypes_DispatchFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFreghtDesginationTypes">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchService/GetFreghtDesginationTypes" message="tns:IDispatchService_GetFreghtDesginationTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchService/GetFreghtDesginationTypesResponse" message="tns:IDispatchService_GetFreghtDesginationTypes_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.DispatchFault" name="DispatchFaultFault" message="tns:IDispatchService_GetFreghtDesginationTypes_DispatchFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ViewBlog">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchService/ViewBlog" message="tns:IDispatchService_ViewBlog_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchService/ViewBlogResponse" message="tns:IDispatchService_ViewBlog_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.DispatchFault" name="DispatchFaultFault" message="tns:IDispatchService_ViewBlog_DispatchFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddBlogEntry">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchService/AddBlogEntry" message="tns:IDispatchService_AddBlogEntry_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchService/AddBlogEntryResponse" message="tns:IDispatchService_AddBlogEntry_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Freight.DispatchFault" name="DispatchFaultFault" message="tns:IDispatchService_AddBlogEntry_DispatchFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClients">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchService/GetClients" message="tns:IDispatchService_GetClients_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchService/GetClientsResponse" message="tns:IDispatchService_GetClients_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Enterprise.EnterpriseFault" name="EnterpriseFaultFault" message="tns:IDispatchService_GetClients_EnterpriseFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAgents">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchService/GetAgents" message="tns:IDispatchService_GetAgents_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchService/GetAgentsResponse" message="tns:IDispatchService_GetAgents_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Enterprise.EnterpriseFault" name="EnterpriseFaultFault" message="tns:IDispatchService_GetAgents_EnterpriseFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTerminals">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchService/GetTerminals" message="tns:IDispatchService_GetTerminals_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchService/GetTerminalsResponse" message="tns:IDispatchService_GetTerminals_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Enterprise.EnterpriseFault" name="EnterpriseFaultFault" message="tns:IDispatchService_GetTerminals_EnterpriseFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCarriers">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchService/GetCarriers" message="tns:IDispatchService_GetCarriers_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchService/GetCarriersResponse" message="tns:IDispatchService_GetCarriers_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Enterprise.EnterpriseFault" name="EnterpriseFaultFault" message="tns:IDispatchService_GetCarriers_EnterpriseFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDrivers">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchService/GetDrivers" message="tns:IDispatchService_GetDrivers_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchService/GetDriversResponse" message="tns:IDispatchService_GetDrivers_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Enterprise.EnterpriseFault" name="EnterpriseFaultFault" message="tns:IDispatchService_GetDrivers_EnterpriseFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLocations">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchService/GetLocations" message="tns:IDispatchService_GetLocations_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchService/GetLocationsResponse" message="tns:IDispatchService_GetLocations_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Enterprise.EnterpriseFault" name="EnterpriseFaultFault" message="tns:IDispatchService_GetLocations_EnterpriseFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVendors">
+      <wsdl:input wsaw:Action="http://Argix.Freight/IDispatchService/GetVendors" message="tns:IDispatchService_GetVendors_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Freight/IDispatchService/GetVendorsResponse" message="tns:IDispatchService_GetVendors_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Enterprise.EnterpriseFault" name="EnterpriseFaultFault" message="tns:IDispatchService_GetVendors_EnterpriseFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

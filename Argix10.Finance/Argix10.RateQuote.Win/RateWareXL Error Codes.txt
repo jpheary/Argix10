@@ -1,0 +1,75 @@
+Error Codes
+Code Description Error 								Type 	Resolution
+-1 Fatal Error. Check the log file for details. 	Server	Please contact SMC3 Technical Support at 1-800-272-3425. Reference Error Code -1.
+-2 Warning. Turn on logging for details 			Server 	Please contact SMC3 Technical Support at 1-800-272-3425. Reference Error Code -2.
+0 Function Success 									Client 	No error
+1 Unknown Error 									Server 	Please contact SMC3 Technical Support at 1-800-272-3425. Reference Error Code 1.
+2 Open File error 									Server 	Please contact SMC3 Technical Support at 1-800-272-3425. Reference Error Code 2.
+3 Read File error 									Server 	Please contact SMC3 Technical Support at 1-800-272-3425. Reference Error Code 3.
+4 Memory Allocation error 							Server 	Please contact SMC3 Technical Support at 1-800-272-3425. Reference Error Code 4.
+5 Invalid OrgDestToGateWayPoint Flag 				Client 	Please contact SMC3 Technical Support at 1-800-272-3425. Reference Error Code 5.
+6 Class Not Found 									Client 	Please use the proper NMFC class.
+7 Invalid Weight 									Client 	Please verify the weight for each detail line is between 1 and 999999.
+9 Invalid discount									Client 	Please ensure the discount is numeric and does not exceed 99.99
+10 Invalid origin postal code 						Client 	Please ensure the postal code is correct.
+11 Origin postal code not in tariff 				Client 	Please ensure the origin postal code is correct. It is possible the postal code is not valid for the effective date of the tariff.
+12 Invalid destination postal code 					Client 	Please ensure the postal code is correct.
+13 Destination postal code not in tariff 			Client 	Please ensure the destination postal code is correct. It is possible the postal code is not valid for the effective date of the tariff.
+14 Origin/Destination combination not in tariff 	Client 	The postal code combination is not within the territory governed by the tariff you are using. If you are certain both postal codes are part of the territory, then it is possible that the postal code pair is only valid in one direction.
+15 Tariff name must be specified 					Client 	Please enter the tariff name for a currently installed tariff.
+16 Invalid shipment detail 							Client 	Please verify shipment detail lines.
+17 Invalid shipment date 							Client 	Please ensure the shipment date is in CCYYMMDD format and falls within the effective date of the tariff.
+21 Ratebase number not found 						Server 	Please contact SMC3 Technical Support at 1-800-272-3425. Reference Error Code 21.
+22 Maximum number of lane adjustment hits exceeded 	Server	Please contact SMC3 Technical Support at 1-800-272-3425. Reference Error Code 22.
+23 No GateWay Flag 									Client 	Please contact SMC3 Technical Support at 1-800-272-3425. Reference Error Code 23.
+24 Invalid country code/postal code combination 	Client 	The postal code does not exist in the country code specified. Please ensure the postal code and country codes are correct.
+25 Lane adjustments process error 					Server 	Please contact SMC3 Technical Support at 1-800-272-3425. Reference Error Code 25.
+26 Unable to open log file 							Server 	Please contact SMC3 Technical Support at 1-800-272-3425. Reference Error Code 26.
+27 No detail lines found for this shipment 			Client 	Please enter detail lines for this shipment before continuing.
+28 Invalid origin country 							Client 	Please ensure the origin country contains only letters and does not exceed 3 characters.
+29 Invalid destination country 						Client 	Please ensure the destination country contains only letters and does not exceed 3 characters.
+30 Invalid single shipment, flag must be Y/N 		Client 	Please verify single shipment equals "Y" or "N".
+31 More than 100 detail lines found for this shipment Client 	Please reduce the number of detail lines to less than or equal to 100 for this shipment.
+32 Tariff not found 								Client 	Either the Data Module you want to use has not been installed or the Tariff Name is invalid.
+33 Invalid rate adjustment factor 					Client 	Please ensure the rate adjustment factor is numeric and does not exceed 9.9999
+34 Invalid use discount, flag must be Y/N 			Client 	"Y"=Use supplied discounts; "N"=Ignore the supplied discounts
+35 Invalid discount application, flag must be R/C	Client 	Please verify discount application equals "R" or "C". "R" = discount applied to rates, "C" =discount applied to charges.
+36 Invalid MC floor 								Client 	Please ensure the minimum charge floor amount is numeric and does not exceed 99999.99
+37 Invalid LTL surcharge percentage 				Client 	Please verify the LTL surcharge percentage is numeric and does not exceed 99.99
+38 Invalid TL surcharge percentage 					Client 	Please verify the TL surcharge percentage is numeric and does not exceed 99.99
+39 Invalid surcharge application, flag must be G/N 	Client 	Please verify surcharge application equals "G" or "N". "G"=surcharge applied to gross charges, "N"=surcharge applied to net charges
+40 Invalid stop alternation weight 					Client 	Please verify the Stop Alternation weight does not exceed 999999.
+41 Invalid shipment ID 								Client 	Please verify shipment ID does not exceed 20 ascii characters.
+42 Corrupt file 									Server	Please contact SMC3 Technical Support at 1-800-272-3425. Reference Error Code 42.
+44 Invalid director version							Server	Please contact SMC3 Technical Support at 1-800-272-3425. Reference Error Code 44.
+45 Invalid state/postal code combination 			Client 	The postal code does not exist in the state specified or the state abbreviation is invalid.
+46 Density not found 								Client 	Please verify density. Value must be numeric and cannot exceed 9999.99
+47 Invalid type 									Client 	Please verify detail type. "Density"=density and weight of line item, "CUBE"=cube and weight of line item, "LWH"=length, width and height and the weight of line item.
+48 Invalid pieces 									Client 	Please verify total shipment pieces is numeric and does not exceed 999999.
+49 Invalid density units 							Client 	Please verify density units. L=pounds/feet3, K=kilograms/meters3
+50 Invalid dimension Units 							Client 	Please verify dimension units. F=feet; M=meters; I=inches; C=centimeters
+51 Invalid weight Units 							Client 	Please verify weight units. L=pounds, K=kilograms
+52 Invalid cube 									Client 	Please ensure the cube units are valid and the total cube of the shipment is numeric and does not exceed 999999999999.9
+53 Invalid length 									Client 	Please ensure the total length of the shipment is numeric and does not exceed 9999.99.
+54 Invalid width 									Client 	Please ensure the total width of the shipment is numeric and does not exceed 9999.99
+55 Invalid height 									Client 	Please ensure the total height of the shipment is numeric and does not exceed 9999.99.
+56 Invalid dimming density 							Client 	Please ensure dimming density is numeric and does not exceed 9999.99 for L or K units.
+57 Invalid dimming factor 							Client 	Please ensure dimming factor is numeric and does not exceed 99999.99 for I and C units.
+58 Invalid dimming units 							Client 	Dimming units must be L=pounds/feet3 or K=kilograms/meters3 if using a dimming density or I=inches3/pound or C=centimeters3/kilogram if using a dimming factor
+59 Invalid use dimming minimum charge flag 			Client 	Please ensure the dimming minimum charge flag equals "Y" or "N". "Y"=Allow Minimum Charges to apply; "N"=Do not use minimum charges
+60 Point Selection required 						Client 	A Point Selection is required.
+61 Invalid Country Code 							Client 	Please ensure the Country Code is correct.
+62 Invalid Postal Code 								Client 	Please ensure the Postal Code is correct.
+63 Invalid Province/State Code 						Client 	Please ensure the Province/State Code is correct.
+64 Invalid Origin/Destination Flag 					Client 	Please ensure the Origin/Destination Flag is correct.
+65 Invalid Page Number 								Client 	Please ensure the Page Number is correct.
+66 Point List not supported for this tariff 		Client 	The Point List is not supported for this tariff.
+67 Invalid Page Number this request 				Client 	Please ensure the Page Number is correct.
+68 Postal Code required 							Client 	A Postal Code is required.
+69 Method Not Supported 							Client 	The Method is not supported. Please correct.
+70 Invalid Point 									Client 	Please ensure the Point is correct.
+71 Invalid Linear Feet 								Client 	Please ensure that Linear Feet is correct.
+72 Invalid Max Linear Feet Allowed 					Client 	Please ensure the Max Linear Feet Allowed is correct.
+73 Invalid Max Trailer Length Override 				Client 	Please ensure the Max Trailer Length Override is correct.
+74 Maximum Linear Feet Exceeded 					Client 	The Maximum Linear Feet has been exceeded. Please correct.
+75 Invalid Linear Surcharge Percentage 				Client 	Please ensure the Linear Surcharge Percentage is correct.

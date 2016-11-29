@@ -1,0 +1,14 @@
+<asp:GridView runat="server" BorderStyle="Inset" BorderWidth="1" CellPadding="2" CellSpacing="0" GridLines="Both" BackColor="#ffffff" >
+    <HeaderStyle BorderStyle="None" BackColor="#cccccc" ForeColor="#000000" Wrap="True" />
+    <FooterStyle BackColor="#ffffff" ForeColor="#000000" Wrap="false" />
+    <RowStyle BorderStyle="None" BorderWidth="0" />
+    <SelectedRowStyle BorderStyle="None" BorderWidth="0px" BackColor="#0a246a" ForeColor="#ffffff" />
+    <EmptyDataRowStyle BackColor="#ffffff" ForeColor="#000000" Wrap="false"  />
+</asp:GridView>
+
+<asp:CustomValidator runat="server" />
+<asp:CompareValidator runat="server" Display="None" />
+<asp:RangeValidator runat="server" Display="None" />
+<asp:RegularExpressionValidator runat="server" Display="None" />
+<asp:RequiredFieldValidator runat="server" Display="None" />
+<asp:ValidationSummary runat="server" DisplayMode="BulletList" ShowSummary="false" ShowMessageBox="true" />

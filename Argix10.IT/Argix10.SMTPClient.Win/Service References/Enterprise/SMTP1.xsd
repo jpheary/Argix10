@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://Argix" elementFormDefault="qualified" targetNamespace="http://Argix" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="SendMailMessage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="fromEmailAddress" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="toEmailAddress" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="subject" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="isBodyHtml" type="xs:boolean" />
+        <xs:element minOccurs="0" name="body" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendMailMessageResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendMailMessageWithBlindCopy">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="fromEmailAddress" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="toEmailAddress" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="subject" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="isBodyHtml" type="xs:boolean" />
+        <xs:element minOccurs="0" name="body" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bccEmailAddress" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendMailMessageWithBlindCopyResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

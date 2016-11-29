@@ -1,0 +1,446 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{872EF7FF-4279-4C11-9B93-0142BE3E3D5D}</ProjectGuid>
+    <ProjectTypeGuids>{E53F8FEA-EAE0-44A6-8774-FFD645390401};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Argix</RootNamespace>
+    <AssemblyName>ArgixLogistics</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PublishDatabaseSettings>
+      <Objects>
+        <ObjectGroup Name="MembershipDB-Deployment" Order="1">
+          <Destination Path="" />
+          <Object Type="dbFullSql">
+            <PreSource Path="Data Source=RGXSQL400%3bInitial Catalog=TsortEnterpriseMembership%3bPersist Security Info=True%3bUser ID=sa%3bPassword=objects" ScriptSchema="True" ScriptData="False" CopyAllFullTextCatalogs="False" DriDefaults="True" />
+            <Source Path="obj\Debug\AutoScripts\MembershipDB-Deployment_SchemaOnly.sql" Transacted="True" />
+          </Object>
+        </ObjectGroup>
+      </Objects>
+    </PublishDatabaseSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\..\packages\EntityFramework.4.1.10331.0\lib\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.WebPages, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Helpers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Areas\Mobile\Controllers\TrackingController.cs" />
+    <Compile Include="Areas\Mobile\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Mobile\MobileAreaRegistration.cs" />
+    <Compile Include="Areas\Mobile\Models\EnterpriseGateway.cs" />
+    <Compile Include="Areas\Mobile\Models\TrackingDataSet.cs">
+      <DependentUpon>TrackingDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Areas\Mobile\Models\TrackingDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TrackingDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Mobile\Models\TrackingModels.cs" />
+    <Compile Include="Areas\Mobile\Models\HomeModels.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\TrackingController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\EmailGateway.cs" />
+    <Compile Include="Models\EnterpriseGateway.cs" />
+    <Compile Include="Models\HomeModels.cs" />
+    <Compile Include="Models\TrackingDataSet.cs">
+      <DependentUpon>TrackingDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Models\TrackingDataSet.Designer.cs">
+      <DependentUpon>TrackingDataSet.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Models\TrackingModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\Enterprise\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="apple-touch-icon.png" />
+    <Content Include="Areas\Mobile\Views\Home\brands_served.aspx" />
+    <Content Include="Areas\Mobile\Views\Home\contact.aspx" />
+    <Content Include="Areas\Mobile\Views\Home\login.aspx" />
+    <Content Include="Areas\Mobile\Views\Home\thankyou.aspx" />
+    <Content Include="Areas\Mobile\Views\Tracking\trackingtls.aspx" />
+    <Content Include="Areas\Mobile\Views\Tracking\trackingstores.aspx" />
+    <Content Include="Areas\Mobile\Views\Home\difference.aspx" />
+    <Content Include="Areas\Mobile\Views\Home\distribution.aspx" />
+    <Content Include="Areas\Mobile\Views\Home\Index.aspx" />
+    <Content Include="Areas\Mobile\Views\Home\supply_chain.aspx" />
+    <Content Include="Areas\Mobile\Views\Home\technology_difference.aspx" />
+    <Content Include="Areas\Mobile\Views\Tracking\tracking.aspx" />
+    <Content Include="Areas\Mobile\Views\Home\transportation.aspx" />
+    <Content Include="argix-logo-rpts.gif" />
+    <Content Include="Content\argix.css" />
+    <Content Include="Content\images\about_side.jpg" />
+    <Content Include="Content\images\air_side.jpg" />
+    <Content Include="Content\images\argix-logo.gif" />
+    <Content Include="Content\images\argix-logom.gif" />
+    <Content Include="Content\images\argix-nav-over_01.gif" />
+    <Content Include="Content\images\argix-nav-over_02.gif" />
+    <Content Include="Content\images\argix-nav-over_03.gif" />
+    <Content Include="Content\images\argix-nav-over_04.gif" />
+    <Content Include="Content\images\argix-nav-over_05.gif" />
+    <Content Include="Content\images\argix-nav-over_06.gif" />
+    <Content Include="Content\images\argix-nav-over_07.gif" />
+    <Content Include="Content\images\argix-nav_01.gif" />
+    <Content Include="Content\images\argix-nav_02.gif" />
+    <Content Include="Content\images\argix-nav_03.gif" />
+    <Content Include="Content\images\argix-nav_04.gif" />
+    <Content Include="Content\images\argix-nav_05.gif" />
+    <Content Include="Content\images\argix-nav_06.gif" />
+    <Content Include="Content\images\argix-nav_07.gif" />
+    <Content Include="Content\images\argix_logo.gif" />
+    <Content Include="Content\images\argix_swoosh.jpg" />
+    <Content Include="Content\images\argix_swoosh_home.jpg" />
+    <Content Include="Content\images\B2B_side.jpg" />
+    <Content Include="Content\images\B2C_side.jpg" />
+    <Content Include="Content\images\consolidation_side.jpg" />
+    <Content Include="Content\images\contact_header_01.jpg" />
+    <Content Include="Content\images\contact_header_02.jpg" />
+    <Content Include="Content\images\contact_header_03.jpg" />
+    <Content Include="Content\images\customs_side.jpg" />
+    <Content Include="Content\images\dc_side.jpg" />
+    <Content Include="Content\images\difference.jpg" />
+    <Content Include="Content\images\differencem.jpg" />
+    <Content Include="Content\images\difference_side_lg.jpg" />
+    <Content Include="Content\images\distribution.gif" />
+    <Content Include="Content\images\distributionm.jpg" />
+    <Content Include="Content\images\distribution_side.jpg" />
+    <Content Include="Content\images\domestic_side.jpg" />
+    <Content Include="Content\images\drayage_side.jpg" />
+    <Content Include="Content\images\fulfillment_side.jpg" />
+    <Content Include="Content\images\index-buttons_01.jpg" />
+    <Content Include="Content\images\index-buttons_02.jpg" />
+    <Content Include="Content\images\index-buttons_03.jpg" />
+    <Content Include="Content\images\index_01.gif" />
+    <Content Include="Content\images\index_03.gif" />
+    <Content Include="Content\images\index_03.jpg" />
+    <Content Include="Content\images\index_04.jpg" />
+    <Content Include="Content\images\index_04m.jpg" />
+    <Content Include="Content\images\index_05.jpg" />
+    <Content Include="Content\images\index_05m.jpg" />
+    <Content Include="Content\images\industries.jpg" />
+    <Content Include="Content\images\industriesm.jpg" />
+    <Content Include="Content\images\industries_side.jpg" />
+    <Content Include="Content\images\international_side.jpg" />
+    <Content Include="Content\images\ltl_regional.jpg" />
+    <Content Include="Content\images\ltl_side.jpg" />
+    <Content Include="Content\images\network.jpg" />
+    <Content Include="Content\images\network_side_lg.jpg" />
+    <Content Include="Content\images\ocean_side.jpg" />
+    <Content Include="Content\images\privacypolicy.png" />
+    <Content Include="Content\images\profile.jpg" />
+    <Content Include="Content\images\redarrow.gif" />
+    <Content Include="Content\images\regional_side.jpg" />
+    <Content Include="Content\images\reports.jpg" />
+    <Content Include="Content\images\select.gif" />
+    <Content Include="Content\images\sort_side.jpg" />
+    <Content Include="Content\images\spacer.gif" />
+    <Content Include="Content\images\supply-chain.jpg" />
+    <Content Include="Content\images\supply-chainm.jpg" />
+    <Content Include="Content\images\supply_side.jpg" />
+    <Content Include="Content\images\technology-header.jpg" />
+    <Content Include="Content\images\technology-headerm.jpg" />
+    <Content Include="Content\images\technology_side.jpg" />
+    <Content Include="Content\images\tracking.gif" />
+    <Content Include="Content\images\transportation.jpg" />
+    <Content Include="Content\images\transportationm.jpg" />
+    <Content Include="Content\images\trans_side.jpg" />
+    <Content Include="Content\images\warehousing_side.jpg" />
+    <Content Include="Content\argix_style.css" />
+    <Content Include="Content\mobile.css" />
+    <Content Include="Content\tracking.css" />
+    <Content Include="mail.htm" />
+    <Content Include="mail.html" />
+    <Content Include="Scripts\includes\formchek.js" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\messages\PasswordReset.htm" />
+    <Content Include="Content\messages\Registration.htm" />
+    <Content Include="Scripts\jquery-1.5.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.5.1.js" />
+    <Content Include="Scripts\jquery-1.5.1.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.11.js" />
+    <Content Include="Scripts\jquery-ui-1.8.11.min.js" />
+    <Content Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\menu\Copy of menu_data.js" />
+    <Content Include="Scripts\menu\menu_data.js" />
+    <Content Include="Scripts\menu\menu_data_index.js" />
+    <Content Include="Scripts\menu\milonic_src.js" />
+    <Content Include="Scripts\menu\mmenudom.js" />
+    <Content Include="Scripts\menu\mmenuns4.js" />
+    <Content Include="Scripts\modernizr-1.7.js" />
+    <Content Include="Scripts\modernizr-1.7.min.js" />
+    <None Include="Areas\Mobile\Models\TrackingDataSet.xsc">
+      <DependentUpon>TrackingDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Areas\Mobile\Models\TrackingDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TrackingDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Areas\Mobile\Models\TrackingDataSet.xss">
+      <DependentUpon>TrackingDataSet.xsd</DependentUpon>
+    </None>
+    <Content Include="Areas\Mobile\Views\Tracking\Web.config" />
+    <None Include="Models\TrackingDataSet.xsc">
+      <DependentUpon>TrackingDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Models\TrackingDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TrackingDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\TrackingDataSet.xss">
+      <DependentUpon>TrackingDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Service References\Enterprise\Argix.Enterprise.TrackingItems.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Enterprise\Argix.Enterprise.TrackingStoreItems.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Enterprise\Tracking.disco" />
+    <None Include="Service References\Enterprise\configuration91.svcinfo" />
+    <None Include="Service References\Enterprise\configuration.svcinfo" />
+    <None Include="Service References\Enterprise\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Views\Home\about.aspx" />
+    <Content Include="Views\Home\air_freight.aspx" />
+    <Content Include="Views\Home\brands_served.aspx" />
+    <Content Include="Views\Account\changepassword.aspx" />
+    <Content Include="Views\Home\consolidation.aspx" />
+    <Content Include="Views\Home\contact.aspx" />
+    <Content Include="Views\Home\privacy.aspx" />
+    <Content Include="Views\Home\customs_brokerage.aspx" />
+    <Content Include="Views\Home\DCbypass.aspx" />
+    <Content Include="Views\Home\difference.aspx" />
+    <Content Include="Views\Home\distribution.aspx" />
+    <Content Include="Views\Home\domestic_deconsolidation.aspx" />
+    <Content Include="Views\Home\drayage.aspx" />
+    <Content Include="Views\Home\fulfillmentservices.aspx" />
+    <Content Include="Views\Home\international.aspx" />
+    <Content Include="Views\Account\login.aspx" />
+    <Content Include="Views\Home\LTDdelivery.aspx" />
+    <Content Include="Views\Home\nationwideB2Bdelivery.aspx" />
+    <Content Include="Views\Home\nationwideB2Cdelivery.aspx" />
+    <Content Include="Views\Home\network.aspx" />
+    <Content Include="Views\Home\ocean_freight.aspx" />
+    <Content Include="Views\Account\recoverpassword.aspx" />
+    <Content Include="Views\Home\regionaldelivery.aspx" />
+    <Content Include="Views\Account\register.aspx" />
+    <Content Include="Views\Home\sortingservies.aspx" />
+    <Content Include="Views\Home\supply_chain.aspx" />
+    <Content Include="Views\Home\technology_difference.aspx" />
+    <Content Include="Views\Home\thank_you.aspx" />
+    <Content Include="Views\Home\transportation.aspx" />
+    <Content Include="Views\Home\warehousing.aspx" />
+    <Content Include="Views\Tracking\ItemDetail.aspx" />
+    <Content Include="Views\Tracking\ItemSummary.aspx" />
+    <Content Include="Views\Tracking\Index.aspx" />
+    <Content Include="Views\Tracking\MyProfile.aspx" />
+    <Content Include="Views\Tracking\Profile.aspx" />
+    <Content Include="Views\Tracking\Reports.aspx" />
+    <Content Include="Views\Tracking\StoreDetail.aspx" />
+    <Content Include="Views\Tracking\StoreSummary.aspx" />
+    <Content Include="Views\Tracking\TrackByItem.aspx" />
+    <Content Include="Views\Tracking\TrackByContract.aspx" />
+    <Content Include="Views\Tracking\TrackByStore.aspx" />
+    <Content Include="Views\Tracking\Tracking.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\MicrosoftAjax.js" />
+    <Content Include="Scripts\MicrosoftAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
+    <Content Include="Views\Home\index.aspx" />
+    <Content Include="Views\Shared\Error.aspx" />
+    <Content Include="Views\Shared\LogOnUserControl.ascx" />
+    <Content Include="Views\Shared\Site.Master" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Areas\Mobile\Views\Shared\Site.Master" />
+    <Content Include="Areas\Mobile\Views\Web.config" />
+    <Content Include="Views\Shared\Index.Master" />
+    <Content Include="Areas\Mobile\Views\Shared\Tracking.Master" />
+    <None Include="Service References\Enterprise\Tracking.wsdl" />
+    <None Include="Service References\Enterprise\Tracking.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Enterprise\Tracking1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Enterprise\Tracking2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Enterprise\Tracking3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Enterprise\Tracking4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Enterprise\TrackingService.wsdl" />
+    <Content Include="Views\Shared\Tracking.Master" />
+    <Content Include="Views\Shared\TrackingSite.Master" />
+    <Content Include="Views\Shared\Profile.Master" />
+    <None Include="_bin_deployableAssemblies\Microsoft.Web.Infrastructure.dll" />
+    <None Include="_bin_deployableAssemblies\System.Web.WebPages.Razor.dll" />
+    <None Include="_bin_deployableAssemblies\System.Web.WebPages.dll" />
+    <None Include="_bin_deployableAssemblies\System.Web.WebPages.Deployment.dll" />
+    <None Include="_bin_deployableAssemblies\System.Web.Razor.dll" />
+    <None Include="_bin_deployableAssemblies\System.Web.Helpers.dll" />
+    <None Include="_bin_deployableAssemblies\System.Web.Mvc.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\Enterprise\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>4495</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

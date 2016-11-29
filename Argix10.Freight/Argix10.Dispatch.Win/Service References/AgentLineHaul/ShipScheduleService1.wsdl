@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:i0="http://Argix.AgentLineHaul" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:i1="http://Argix.Freight" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ShipScheduleService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="WSHttpBinding_IShipScheduleService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_IDispatchService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_IZoneClosingService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:import namespace="http://Argix.AgentLineHaul" location="http://localhost:5026/Argix10.AgentLineHaul.Services/ShipScheduleService.svc?wsdl=wsdl0" />
+  <wsdl:import namespace="http://Argix.Freight" location="http://localhost:5026/Argix10.AgentLineHaul.Services/ShipScheduleService.svc?wsdl=wsdl1" />
+  <wsdl:types />
+  <wsdl:binding name="WSHttpBinding_IShipScheduleService" type="i0:IShipScheduleService">
+    <wsp:PolicyReference URI="#WSHttpBinding_IShipScheduleService_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetServiceInfo">
+      <soap12:operation soapAction="http://Argix.AgentLineHaul/IShipScheduleService/GetServiceInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ConfigurationFaultFault">
+        <soap12:fault use="literal" name="ConfigurationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserConfiguration">
+      <soap12:operation soapAction="http://Argix.AgentLineHaul/IShipScheduleService/GetUserConfiguration" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ConfigurationFaultFault">
+        <soap12:fault use="literal" name="ConfigurationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="WriteLogEntry">
+      <soap12:operation soapAction="http://Argix.AgentLineHaul/IShipScheduleService/WriteLogEntry" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="GetShipSchedules">
+      <soap12:operation soapAction="http://Argix.AgentLineHaul/IShipScheduleService/GetShipSchedules" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ShipScheduleFaultFault">
+        <soap12:fault use="literal" name="ShipScheduleFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetShipSchedule">
+      <soap12:operation soapAction="http://Argix.AgentLineHaul/IShipScheduleService/GetShipSchedule" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ShipScheduleFaultFault">
+        <soap12:fault use="literal" name="ShipScheduleFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetShipScheduleTemplates">
+      <soap12:operation soapAction="http://Argix.AgentLineHaul/IShipScheduleService/GetShipScheduleTemplates" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ShipScheduleFaultFault">
+        <soap12:fault use="literal" name="ShipScheduleFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateShipSchedule">
+      <soap12:operation soapAction="http://Argix.AgentLineHaul/IShipScheduleService/CreateShipSchedule" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ShipScheduleFaultFault">
+        <soap12:fault use="literal" name="ShipScheduleFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateShipScheduleTrip">
+      <soap12:operation soapAction="http://Argix.AgentLineHaul/IShipScheduleService/CreateShipScheduleTrip" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ShipScheduleFaultFault">
+        <soap12:fault use="literal" name="ShipScheduleFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FindShipScheduleTrip">
+      <soap12:operation soapAction="http://Argix.AgentLineHaul/IShipScheduleService/FindShipScheduleTrip" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ShipScheduleFaultFault">
+        <soap12:fault use="literal" name="ShipScheduleFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateShipSchedule">
+      <soap12:operation soapAction="http://Argix.AgentLineHaul/IShipScheduleService/UpdateShipSchedule" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ShipScheduleFaultFault">
+        <soap12:fault use="literal" name="ShipScheduleFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateShipScheduleTrip">
+      <soap12:operation soapAction="http://Argix.AgentLineHaul/IShipScheduleService/UpdateShipScheduleTrip" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ShipScheduleFaultFault">
+        <soap12:fault use="literal" name="ShipScheduleFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateShipScheduleTripStop">
+      <soap12:operation soapAction="http://Argix.AgentLineHaul/IShipScheduleService/UpdateShipScheduleTripStop" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ShipScheduleFaultFault">
+        <soap12:fault use="literal" name="ShipScheduleFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCarriers">
+      <soap12:operation soapAction="http://Argix.AgentLineHaul/IShipScheduleService/GetCarriers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShippers">
+      <soap12:operation soapAction="http://Argix.AgentLineHaul/IShipScheduleService/GetShippers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTerminals">
+      <soap12:operation soapAction="http://Argix.AgentLineHaul/IShipScheduleService/GetTerminals" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSHttpBinding_IDispatchService" type="i1:IDispatchService">
+    <wsp:PolicyReference URI="#WSHttpBinding_IDispatchService_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetShipSchedules">
+      <soap12:operation soapAction="http://Argix.Freight/IDispatchService/GetShipSchedules" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DispatchFaultFault">
+        <soap12:fault use="literal" name="DispatchFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetShipSchedule">
+      <soap12:operation soapAction="http://Argix.Freight/IDispatchService/GetShipSchedule" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DispatchFaultFault">
+        <soap12:fault use="literal" name="DispatchFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetTerminals">
+      <soap12:operation soapAction="http://Argix.Freight/IDispatchService/GetTerminals" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSHttpBinding_IZoneClosingService" type="i0:IZoneClosingService">
+    <wsp:PolicyReference URI="#WSHttpBinding_IZoneClosingService_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetShipScheduleView">
+      <soap12:operation soapAction="http://Argix.AgentLineHaul/IZoneClosingService/GetShipScheduleView" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ShipScheduleFaultFault">
+        <soap12:fault use="literal" name="ShipScheduleFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FindEarlierTripOnPriorSchedule">
+      <soap12:operation soapAction="http://Argix.AgentLineHaul/IZoneClosingService/FindEarlierTripOnPriorSchedule" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ShipScheduleFaultFault">
+        <soap12:fault use="literal" name="ShipScheduleFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FindEarlierTripOnCurrentSchedule">
+      <soap12:operation soapAction="http://Argix.AgentLineHaul/IZoneClosingService/FindEarlierTripOnCurrentSchedule" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ShipScheduleFaultFault">
+        <soap12:fault use="literal" name="ShipScheduleFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FindShipSchedule">
+      <soap12:operation soapAction="http://Argix.AgentLineHaul/IZoneClosingService/FindShipSchedule" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ShipScheduleFaultFault">
+        <soap12:fault use="literal" name="ShipScheduleFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="OpenTrip">
+      <soap12:operation soapAction="http://Argix.AgentLineHaul/IZoneClosingService/OpenTrip" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ShipScheduleFaultFault">
+        <soap12:fault use="literal" name="ShipScheduleFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CloseTrip">
+      <soap12:operation soapAction="http://Argix.AgentLineHaul/IZoneClosingService/CloseTrip" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ShipScheduleFaultFault">
+        <soap12:fault use="literal" name="ShipScheduleFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AssignTL">
+      <soap12:operation soapAction="http://Argix.AgentLineHaul/IZoneClosingService/AssignTL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ShipScheduleFaultFault">
+        <soap12:fault use="literal" name="ShipScheduleFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UnassignTL">
+      <soap12:operation soapAction="http://Argix.AgentLineHaul/IZoneClosingService/UnassignTL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ShipScheduleFaultFault">
+        <soap12:fault use="literal" name="ShipScheduleFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="MoveTL">
+      <soap12:operation soapAction="http://Argix.AgentLineHaul/IZoneClosingService/MoveTL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ShipScheduleFaultFault">
+        <soap12:fault use="literal" name="ShipScheduleFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ShipScheduleService">
+    <wsdl:port name="WSHttpBinding_IShipScheduleService" binding="tns:WSHttpBinding_IShipScheduleService">
+      <soap12:address location="http://localhost:5026/Argix10.AgentLineHaul.Services/ShipScheduleService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://localhost:5026/Argix10.AgentLineHaul.Services/ShipScheduleService.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="WSHttpBinding_IDispatchService" binding="tns:WSHttpBinding_IDispatchService">
+      <soap12:address location="http://localhost:5026/Argix10.AgentLineHaul.Services/ShipScheduleService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://localhost:5026/Argix10.AgentLineHaul.Services/ShipScheduleService.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="WSHttpBinding_IZoneClosingService" binding="tns:WSHttpBinding_IZoneClosingService">
+      <soap12:address location="http://localhost:5026/Argix10.AgentLineHaul.Services/ShipScheduleService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://localhost:5026/Argix10.AgentLineHaul.Services/ShipScheduleService.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

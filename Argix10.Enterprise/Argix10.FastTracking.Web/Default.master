@@ -1,0 +1,33 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Default.master.cs" Inherits="DefaultMaster" ClassName="DefaultMaster" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1" runat="server">
+    <title>Argix Logistics Fast Tracking</title>
+</head>
+<body>
+<div id="page">
+    <div id="header"><img src="App_Themes/ArgixDirect/Images/Argix-Client_banner.jpg" alt="Argix Logistics, Inc." /></div>
+    <div id="headerline"></div>
+    <div id="content">
+        <form id="form1" runat="server">
+            <table>
+                <tr style="height:20px">
+                    <td style="text-align:right; margin-top:0px; margin-left:15px;">
+                        <asp:LinkButton ID="btnGoSummary" runat="server" OnClick="GoSummary" >Return to summary</asp:LinkButton>
+                        &nbsp;<asp:ImageButton ID="btnImgGoSummary" runat="server" ImageUrl="~/App_Themes/ArgixDirect/Images/btn_arrow_red_right.gif" ImageAlign="AbsBottom" OnClick="GoSummaryImg" /> 
+                    </td>
+                    <td style="text-align:right; margin-top:0px; margin-right:15px;">
+                        <asp:LinkButton ID="btnTrackNew" runat="server" OnClick="TrackNew" >Track new shipment</asp:LinkButton>
+                        &nbsp;<asp:ImageButton ID="btnImgTrackNew" runat="server" ImageUrl="~/App_Themes/ArgixDirect/Images/btn_arrow_red_right.gif" ImageAlign="AbsBottom" OnClick="TrackNewImg" /> 
+                    </td>
+                </tr>
+                <tr><td colspan="2"><asp:contentplaceholder id="cpBody" runat="server"></asp:contentplaceholder></td></tr>
+                <tr><td colspan="2">&nbsp;</td></tr>
+            </table>
+            <div id="footer"><asp:Label ID="lblFootnote" runat="server" Text="Tracking data provided by Argix Logistics as of " /></div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

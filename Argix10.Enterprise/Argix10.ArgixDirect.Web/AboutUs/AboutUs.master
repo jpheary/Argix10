@@ -1,0 +1,14 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="AboutUs.master.cs" Inherits="AboutUsMaster" %>
+
+<asp:Content ID="cLeft" runat="server" ContentPlaceHolderID="LeftContent">
+    <div id="title">About Us</div>
+    <div id="submenu">
+		<ul>
+			<li><a runat="server" href="~/AboutUs/Location.aspx">Location</a></li>
+		</ul>
+	</div>
+</asp:Content>
+<asp:Content ID="cRight" runat="server" ContentPlaceHolderID="RightContent">
+    <asp:ContentPlaceHolder ID="PageContent" runat="server"/>
+</asp:Content>
+

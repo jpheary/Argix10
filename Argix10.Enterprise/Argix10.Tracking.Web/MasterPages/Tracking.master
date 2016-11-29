@@ -1,0 +1,19 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/MasterPages/Default.master" AutoEventWireup="true" CodeFile="Tracking.master.cs" Inherits="_TrackingMaster" %>
+<%@ MasterType VirtualPath="~/MasterPages/Default.master" %>
+
+<asp:Content ID="cMeta" runat="server" ContentPlaceHolderID="cpMeta">
+    <asp:ContentPlaceHolder ID="cpMeta" runat="server" />
+</asp:Content>
+<asp:Content ID="cBody" ContentPlaceHolderID="cpBody" Runat="Server">
+    <div class="submenu">
+        <div class="submenutitle">Tracking</div>
+	    <ul>
+            <li><asp:HyperLink ID="lnkTrackByCarton" runat="server" NavigateUrl="~/Members/TrackByCarton.aspx" Text="Track By Carton" /></li>
+            <li><asp:HyperLink ID="lnkTrackByStore" runat="server" NavigateUrl="~/Members/TrackByStore.aspx" Text="Track By Store" /></li>
+            <li><asp:HyperLink ID="lnkTrackByShipment" runat="server" NavigateUrl="~/Members/TrackByShipment.aspx" Text="Track By Shipment" /></li>
+	    </ul>
+    </div>
+    <div class="subcontent">
+        <asp:ContentPlaceHolder ID="cpContent" runat="server"/>
+    </div>
+</asp:Content>

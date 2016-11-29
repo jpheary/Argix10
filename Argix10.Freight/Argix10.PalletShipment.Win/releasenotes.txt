@@ -1,0 +1,165 @@
+              --------------------------------------------------------
+                    		PalletShipment Application Readme File
+		                       		July, 2015
+              --------------------------------------------------------
+                         (c) Copyright Argix Logistics, 2014-2015
+
+This document provides late-breaking or other information that supplements the PalletShipment documentation.
+
+------------------------
+How to Use This Document
+------------------------
+To view the Readme file on-screen in Windows Notepad, maximize the Notepad window and click Word 
+Wrap on the Edit menu. To print the Readme file, open it in Notepad or another word processor, 
+and then use the Print command on the File menu.
+
+==============
+CONTENTS
+==============
+INSTALLATION
+   DEPLOYMENT
+   CONFIGURATION
+
+NOTES
+   GENERAL
+   DEPENDENCIES
+   OPERATION
+   VERSION HISTORY
+==============
+
+
+INSTALLATION
+==============
+DEPLOYMENT
+PalletShipment is installed into a deployment folder visible from an IIS web service as follows:
+1.	Create a virtual folder c:\inetpub\wwwroot\Argix10.PalletShipment on a web server using Windows explorer.
+2.	Copy the following files into this folder:
+		Argix10.Windows.dll
+		Infragistics4.Shared.v12.1.dll
+		Infragistics4.Win.UltraWinGrid.v12.1.dll
+		Infragistics4.Win.v12.1.dll
+		PalletShipment.application
+		PalletShipment.exe
+		PalletShipment.exe.config
+		PalletShipment.exe.manifest
+		releasenotes.txt
+4.	Copy the deployment manifest, PalletShipment.application, into the PalletShipment folder. This manifest points to
+	tha application manifest (i.e. \PalletShipment_4_0_0_2\PalletShipment.exe.manifest)
+5.	Launch the Internet Information Services snap-in and validate that the virtual folder allows
+	anonymous access. A web application does not need to be created for deployment.
+6.	Verify http access from Internet Explorer to the following url: 
+		http://rgxvmweb/Argix10/Apps/Freight/PalletShipment/PalletShipment.application
+7.	The Click-Once deployment is installed on the client machine in the C:\Users\<username>\AppData\Local\Apps\2.0 folder.
+8.	Version rollbacks are accomplished by simply copying the deployment manifest (i.e. PalletShipment.application) from 
+	a previous Click-Once deployment folder (i.e PalletShipment_4_0_0_1) into the PalletShipment root folder
+
+
+CONFIGURATION
+Open the global database, goto the Configuration table, and add/edit the values below:
+	Application     PCName          Key                       Value                     Security 
+	--------------- --------------- ------------------------- ------------------------- -------- 
+	PalletShipment  Default         TraceLevel                4                         1        
+
+
+NOTES
+==============
+GENERAL
+The PalletShipment Application (PalletShipment.exe) is a Windows based application that is
+used by Finance to administer Pallet Shipment clients and by Operations to administer
+Pallet Shipment shippers, consignees, and shipments.
+
+
+DEPENDENCIES
+The Dispatch application is dependent upon the following web services: 
+- http://rgxvmweb/Argix10/Argix10.Freight.Services/LTLService2.svc
+- http://rgxvmweb.argix.com/Argix10/Argix10.Enterprise.Services/LTLTracking.svc
+- http://rgxvmweb.argix.com/Argix10/Argix10.Enterprise.Services/USPS.svc
+- http://rgxvmweb/Argix10/Argix10.Membership.Services/RoleService.svc
+
+
+OPERATION
+Normal:
+The PalletShipment Application (palletshipment.exe) operates by launching from a web server deployment 
+url (i.e. http://rgxvmweb/Argix10/Apps/Freight/PalletShipment/PalletShipment.application). After a brief 
+splash screen, a sizeable window appears that allows interaction with PSP Clients. Additional 
+operating steps can be found in the on-line documentation provided by the Help/Contents menu item.
+
+
+ROLE MANAGEMENT
+The following roles are used in this application:
+Billing Supervisor
+	create/update/approve clients
+Dispatch Supervisor
+	create/update shippers, consignees
+	create/update/cancel shipments
+SalesRep
+	create/update clients
+	create/update shippers, consignees
+	create/update/cancel shipments
+	log/approve/tender/book/cancel loadtenderquotes
+SalesRepAdmin
+	same as SalesRep
+	change owner (SalesRep) of a LoadTenderQuote
+No Role
+	view everything
+	quick quote
+	track shipments
+	print inbound labels/inbound paperwork
+
+Use the following link to access the role manager to create and edit role assignments for Argix employees: 
+http://rgxvmweb/Argix10/Apps/IT/Membership/Membership.application
+
+
+VERSION HISTORY
+v4.0.0, 08/21/13, 01/16/14 -----------------------------------------------------------------
+Requirements/features
+- new
+Design/deployment
+- new
+
+v4.0.2, 03/04/14 ---------------------------------------------------------------------------
+Requirements/features
+- none
+Design/deployment
+- new backend database.
+
+v4.0.3, 08/28/14 ---------------------------------------------------------------------------
+Requirements/features
+- added support for BillingSupervisor to create/update/approve clients
+- added support for DispatchSupervisor to create/update shippers, consignees, shipments
+Design/deployment
+- none.
+
+v4.0.4, 10/03/14, 10/27/14, 10/29/14, 11/07/14, 12/09/14, 01/09/15 -------------------------
+Requirements/features
+- added QuickQuote tab to support DAT Load Board entries.
+- added SalesRep role.
+- added export, print, and print preview for all grids.
+- added invalid address override by user for new shippers and consignees.
+- added Quick Quoter tool window.
+Design/deployment
+- added QuickQuoteControl, LoadTenderQuoteDataset; modified main to add QuickQuote tab.
+- added Reminders, RemindersDataset, dlgReminders, and dlgReminder.
+- added dlgLoadTenderQuote; modified dlgLTLShipment to consume LoadTenderQuotes.
+- revised main::setUserSettings() to handle failures to the Role Service.
+
+
+v4.0.5, 05/18/15, ~06/03/15, @07/16/15, #07/23/15 ------------------------------------------
+Requirements/features
+- added support for EstimatedDeliveryDate on quotes.
+- added USPS address validation to dlgLTLClient, dlgLTLConsignee, dlgLTLShipper with dlgVerifyAddress.
+~ added validation to shipment appointment windows for military time and end > start time.
+~ added validation to shipper/consignee hours of operation for military time and end > start time.
+~ added Tracking Tool to flyout window.
+~ added Quick Quote Tool to flyout window.
+@ added PSP Route Detail report.
+Design/deployment
+- revised navigation from tabbed SDI to MDI with new child windows (i.e. winClient, winQuotes, etc).
+- added IToolbar/IPSPToolbar/IQuoteToolbar interfaces and implemented in new child windows for main toolbar services.
+~ added new flyout toolbar window for tracking tool, quote tool, etc.
+~ added new dlgVerifyAddress dialog for address validation user selection.
+# dlgLTLShipment- validating shipper/consignee appointment format (corrects error "String was not recognized as a valid 
+  DateTime."); moved this.DialogResult = DialogResult.OK to last line before closing dialog so that the dialog remians
+  open for corrections (corrects error "Cannot insert the value NULL into column 'CreatedUserID', ...").
+# dlgLTLShipper/dlgLTLConsignee- replaced zipcode not supported exception with MessageBox warning (elimintes error
+  "<zipcode> is currently not supported for <pickup/delivery>.").

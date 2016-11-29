@@ -1,0 +1,265 @@
+body {
+    font-family: "Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
+    font-size: .8em;
+    margin: 0px;
+    padding: 0px;
+	background-color:#ffffff;
+}
+
+#header {
+    width: 320px;
+    height: 50px;
+    background: #ffffff;
+    
+}
+#logo {
+    float: left;
+    height: 40px;
+    margin: 5px 5px;
+}
+#login {
+    display:block;
+    float: right;
+    padding: 25px 5px 0px 0px;
+}
+#login a { 
+    color: #000000;
+    text-decoration: none; 
+}
+
+#content { 
+    width: 308px;
+    padding: 12px 6px;
+}
+.body-copy {
+	font-family:'UbuntuRegular',  Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 14px;
+	color: #000;
+    text-align: left;
+}
+
+.menu {
+    width: 320px;
+    height: 25px;
+    background: #ffffff;
+    margin: 0px 0px 0px 6px;
+    padding: 0px;
+}
+.menuItem {
+    float: left;
+    width: 103px;
+    margin: 0px;
+    padding: 2px 0px;
+    border: 1px solid #000000;
+    text-align: center;
+}
+.menuItem a {
+	font-size: 11px;
+    color: #cc3333;
+    text-decoration: none;
+	text-transform: uppercase;
+}
+
+.pageMenu {
+    display: block;
+    width: 270px;
+    font-size: 1.0em;
+    border: 0px solid #000000;
+    margin: 3px 5px;
+    padding: 5px 5px;
+    background: #000000;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+ .imgFloatRight {
+	float:right;
+	margin: 20px 5px 5px 5px;
+}
+.textContainer {
+	margin: 10px 30px 10px 10px;
+    text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 1.0em;
+    color: #000000;
+    font-variant: small-caps;
+    text-transform: none;
+    font-weight: 600;
+    margin-bottom: 0px;
+}
+h1 { font-size: 1.2em; padding-bottom: 0px; margin-bottom: 0px; }
+h2 { font-size: 1.1em; font-weight: 800; }
+h3 { font-size: 1.1em; }
+h4 { font-size: 1.0em; }
+h5, h6 { font-size: 1em; }
+
+p {
+    margin-bottom: 5px;
+    line-height: 1.2em;
+}
+
+.hidden { display: none; }
+.unhidden { display: block; }
+
+.execName {
+    width: 75px;
+
+}
+.execTerm {
+	font-style: italic;
+	font-weight: bold;
+	color: #D23059;
+}
+.redText {
+	color:#D23059;
+}
+
+.boldText  {
+	font-weight: bold;
+}
+
+#back {
+    height: 25px;
+}
+#back a {
+    padding: 2px 25px 2px 10px;
+    border: 0px solid #000000;
+    background: #000000;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.header {
+	margin: 0px;
+	padding: 0px;
+}
+.header-home {
+	width: 314px;
+	height: 115px;
+	background-image: url(../content/images/index_05m.jpg);
+	background-repeat: no-repeat;
+}
+.header-distribution {
+	width: 314px;
+	height: 86px;
+	padding: 10px 0px 0px 0px;
+	text-align: right;
+	background-image: url(../content/images/distributionm.jpg);
+	background-repeat: no-repeat;
+}
+.header-technology {
+	width: 314px;
+	height: 86px;
+	padding: 10px 0px 0px 0px;
+	text-align: right;
+	background-image: url(../content/images/technology-headerm.jpg);
+	background-repeat: no-repeat;
+}
+.header-difference {
+	width: 314px;
+	height: 86px;
+	padding: 10px 0px 0px 0px;
+	text-align: right;
+	background-image: url(../content/images/differencem.jpg);
+	background-repeat: no-repeat;
+}
+.header-transportation {
+	width: 314px;
+	height: 86px;
+	padding: 10px 0px 0px 0px;
+	text-align: right;
+	background-image: url(../content/images/transportationm.jpg);
+	background-repeat: no-repeat;
+}
+.header-supply-chain {
+	width: 314px;
+	height: 86px;
+	padding: 10px 0px 0px 0px;
+	text-align: right;
+	background-image: url(../content/images/supply-chainm.jpg);
+	background-repeat: no-repeat;
+}
+.header-industries {
+	width: 314px;
+	height: 86px;
+	padding: 10px 0px 0px 0px;
+	text-align: right;
+	background-image: url(../content/images/industriesm.jpg);
+	background-repeat: no-repeat;
+}
+
+.headline {
+	font-family: 'Michroma', sans-serif;
+	font-size: 18px;
+	color: #000;
+}
+.headline-red {
+	font-family: 'Michroma', sans-serif;
+	font-size: 18px;
+	color: #ee2a24;
+}
+.login-home {
+	height: 15px;
+	width: 103px;
+	margin: 0px 0px 0px 87px;
+	padding: 0px 0px 0px 0px;
+	background-image: url(../content/images/index_04m.jpg);
+}
+.big_caps {
+	font-family: 'Michroma', sans-serif;
+	font-size: 20px;
+	color: #ee2a24;
+	margin: 0px 0px 0px 10px;
+}
+.big_caps_t {
+	font-family: 'Michroma', sans-serif;
+	font-size: 20px;
+	color: #ee2a24;
+	margin: 0px 0px 0px 10px;
+}
+.titles {
+	font-family: 'Michroma', sans-serif;
+	font-size: 12px;
+	line-height: 15px;
+	color: #ee2a24;
+}
+.body-copy {
+	font-family:'UbuntuRegular',  Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 14px;
+	color: #000;
+	padding: 0px 0px 0px 25px;
+	margin: 0px 0px 10px 0px;
+}
+.body-copy-sm {
+	font-family: 'UbuntuRegular', Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 14px;
+	color: #000;
+	padding: 0px 0px 0px 25px;
+	margin: 0px 0px 10px 0px;
+}
+
+.pageMenu {
+    display: block;
+    width: 260px;
+    font-size: 1.0em;
+    border: 0px solid #000000;
+    margin: 3px 5px 3px 25px;
+    padding: 5px 5px 5px 5px;
+    background: #000000;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.hidden { display: none; }
+.unhidden { display: block; }
+.clearFloat { 
+	clear: both;
+	height: 0;
+	font-size: 1px;
+	line-height: 0px;
+}.

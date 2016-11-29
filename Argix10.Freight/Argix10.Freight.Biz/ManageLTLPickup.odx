@@ -1,0 +1,1209 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="093b8bc4-c440-4a1e-9034-769a74ebaa55" LowerBound="1.1" HigherBound="273.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="Argix.Freight" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="3e5e5e10-e889-4122-b731-fa37f99a6661" ParentLink="Module_PortType" LowerBound="60.1" HigherBound="67.1">
+            <om:Property Name="Synchronous" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:portType name=&quot;IDispatchSystemService&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="IDispatchSystemServicePortType" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="OperationDeclaration" OID="15069074-2995-4d91-ba93-a838392a3b0f" ParentLink="PortType_OperationDeclaration" LowerBound="62.1" HigherBound="66.1">
+                <om:Property Name="OperationType" Value="RequestResponse" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:operation name=&quot;SchedulePickupRequest&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="SchedulePickupRequest" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="053ff90d-8cbb-434a-8c1b-c21276c19adc" ParentLink="OperationDeclaration_FaultMessageRef" LowerBound="64.82" HigherBound="64.120">
+                    <om:Property Name="Ref" Value="Argix.Freight.SchedulePickupFaultMessageType" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Fault" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="40f01a4b-5bd4-47da-999d-fb34c8417d72" ParentLink="OperationDeclaration_ResponseMessageRef" LowerBound="64.47" HigherBound="64.80">
+                    <om:Property Name="Ref" Value="Argix.Freight.SchedulePickupResponseMessageType" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="AnalystComments" Value="&lt;wsdl:output message=&quot;http://Argix.Freight:IDispatchSystemService_SchedulePickupRequest_OutputMessage&quot;/&gt;&#xD;&#xA;Action=&quot;http://Argix.Freight/IDispatchSystemService/SchedulePickupRequestResponse&quot;&#xD;&#xA;" />
+                    <om:Property Name="Name" Value="Response" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="1fa0e62d-9354-4fb1-a7c4-ae2b44bdc3ff" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="64.13" HigherBound="64.45">
+                    <om:Property Name="Ref" Value="Argix.Freight.SchedulePickupRequestMessageType" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="AnalystComments" Value="&lt;wsdl:input message=&quot;http://Argix.Freight:IDispatchSystemService_SchedulePickupRequest_InputMessage&quot;/&gt;&#xD;&#xA;Action=&quot;http://Argix.Freight/IDispatchSystemService/SchedulePickupRequest&quot;&#xD;&#xA;" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="e78984ad-56c7-48dc-9d11-c33bd881d103" ParentLink="Module_PortType" LowerBound="67.1" HigherBound="78.1">
+            <om:Property Name="Synchronous" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:portType name=&quot;ILTLSystemService&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="ILTLSystemServicePortType" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="OperationDeclaration" OID="868852fd-0faa-40ff-8119-c201cf6ee006" ParentLink="PortType_OperationDeclaration" LowerBound="69.1" HigherBound="73.1">
+                <om:Property Name="OperationType" Value="RequestResponse" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:operation name=&quot;DispatchShipment&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="DispatchShipment" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="7bb1dccb-e40d-4317-a3f9-4fe132edbaa3" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="71.13" HigherBound="71.47">
+                    <om:Property Name="Ref" Value="Argix.Freight.DispatchShipmentRequestMessageType" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="AnalystComments" Value="&lt;wsdl:input message=&quot;http://Argix.Freight:ILTLSystemService_DispatchShipment_InputMessage&quot;/&gt;&#xD;&#xA;Action=&quot;http://Argix.Freight/ILTLSystemService/DispatchShipment&quot;&#xD;&#xA;" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="b6d6a1a8-87aa-4c9f-9037-ea133512bc44" ParentLink="OperationDeclaration_FaultMessageRef" LowerBound="71.86" HigherBound="71.126">
+                    <om:Property Name="Ref" Value="Argix.Freight.DispatchShipmentFaultMessageType" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Fault" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="6c161988-28e0-48b1-bc93-d8514b4826b9" ParentLink="OperationDeclaration_ResponseMessageRef" LowerBound="71.49" HigherBound="71.84">
+                    <om:Property Name="Ref" Value="Argix.Freight.DispatchShipmentResponseMessageType" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="AnalystComments" Value="&lt;wsdl:output message=&quot;http://Argix.Freight:ILTLSystemService_DispatchShipment_OutputMessage&quot;/&gt;&#xD;&#xA;Action=&quot;http://Argix.Freight/ILTLSystemService/DispatchShipmentResponse&quot;&#xD;&#xA;" />
+                    <om:Property Name="Name" Value="Response" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="OperationDeclaration" OID="d9da2d65-7d1e-4735-8c37-e33ed7045f8c" ParentLink="PortType_OperationDeclaration" LowerBound="73.1" HigherBound="77.1">
+                <om:Property Name="OperationType" Value="RequestResponse" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:operation name=&quot;ArriveShipment&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="ArriveShipment" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="9354ade8-fdfe-4bd9-91e1-a972e207f7cf" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="75.13" HigherBound="75.45">
+                    <om:Property Name="Ref" Value="Argix.Freight.ArriveShipmentRequestMessageType" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="AnalystComments" Value="&lt;wsdl:input message=&quot;http://Argix.Freight:ILTLSystemService_ArriveShipment_InputMessage&quot;/&gt;&#xD;&#xA;Action=&quot;http://Argix.Freight/ILTLSystemService/ArriveShipment&quot;&#xD;&#xA;" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="8effa21d-acdb-4a14-9b28-f70f12e3f7cb" ParentLink="OperationDeclaration_FaultMessageRef" LowerBound="75.82" HigherBound="75.120">
+                    <om:Property Name="Ref" Value="Argix.Freight.ArriveShipmentFaultMessageType" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Fault" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="d108c739-c8b2-4bd5-a6f8-d255595f5475" ParentLink="OperationDeclaration_ResponseMessageRef" LowerBound="75.47" HigherBound="75.80">
+                    <om:Property Name="Ref" Value="Argix.Freight.ArriveShipmentResponseMessageType" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="AnalystComments" Value="&lt;wsdl:output message=&quot;http://Argix.Freight:ILTLSystemService_ArriveShipment_OutputMessage&quot;/&gt;&#xD;&#xA;Action=&quot;http://Argix.Freight/ILTLSystemService/ArriveShipmentResponse&quot;&#xD;&#xA;" />
+                    <om:Property Name="Name" Value="Response" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="a1e59c4b-de20-462b-8e8a-afc7c859a5ad" ParentLink="Module_PortType" LowerBound="78.1" HigherBound="97.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Public" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="LTLPortType" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="045f67ce-c826-40ef-b534-4c90ce653962" ParentLink="PortType_OperationDeclaration" LowerBound="80.1" HigherBound="84.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ScheduleLTLPickup" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="b905e1ae-a091-4eb0-821a-909215b9c36f" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="82.13" HigherBound="82.35">
+                    <om:Property Name="Ref" Value="Argix.Freight.LTLShipmentMessageType" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="OperationDeclaration" OID="c791ef51-7a7c-4bda-930e-b2f974a7bb26" ParentLink="PortType_OperationDeclaration" LowerBound="84.1" HigherBound="88.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ArriveLTLShipment" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="a6039f13-bbae-48ed-a432-82c0580a093b" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="86.13" HigherBound="86.37">
+                    <om:Property Name="Ref" Value="Argix.Freight.PickupRequestMessageType" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="OperationDeclaration" OID="84b3f04e-3545-4ebf-9f21-3dcbec06b722" ParentLink="PortType_OperationDeclaration" LowerBound="88.1" HigherBound="92.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ChangeLTLPickup" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="b4c00b3d-7d0e-401e-95f7-4b039732b560" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="90.13" HigherBound="90.35">
+                    <om:Property Name="Ref" Value="Argix.Freight.LTLShipmentMessageType" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="OperationDeclaration" OID="89a64df0-49e9-423d-b24d-f4b201524f64" ParentLink="PortType_OperationDeclaration" LowerBound="92.1" HigherBound="96.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="CancelLTLPickup" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="493a4609-d278-47c5-aef5-a6e4ea52e746" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="94.13" HigherBound="94.35">
+                    <om:Property Name="Ref" Value="Argix.Freight.LTLShipmentMessageType" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="e1266c56-e5e0-4cea-8e2b-b867cba8145a" ParentLink="Module_PortType" LowerBound="97.1" HigherBound="104.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="EmailPortType" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="a3463081-29bc-471a-8716-508dcb13f575" ParentLink="PortType_OperationDeclaration" LowerBound="99.1" HigherBound="103.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="EmailLTLShipment" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="338fcb30-2c12-4675-bb65-62738a0b2dc0" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="101.13" HigherBound="101.35">
+                    <om:Property Name="Ref" Value="Argix.Freight.LTLShipmentMessageType" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="cabf50ac-a0a0-4e82-8446-2c2ae2c25a8d" ParentLink="Module_PortType" LowerBound="104.1" HigherBound="111.1">
+            <om:Property Name="Synchronous" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="CRMPortType" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="OperationDeclaration" OID="18b5bdad-b18b-4b5f-8914-c903ec6a0db9" ParentLink="PortType_OperationDeclaration" LowerBound="106.1" HigherBound="110.1">
+                <om:Property Name="OperationType" Value="RequestResponse" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="CreateIssue" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="103de444-6131-48ba-bf72-886b85c0a46e" ParentLink="OperationDeclaration_FaultMessageRef" LowerBound="108.82" HigherBound="108.120">
+                    <om:Property Name="Ref" Value="Argix.Freight.CRMCreateIssueFaultMessageType" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Fault" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="f6902163-aa98-4680-9720-64502b28639f" ParentLink="OperationDeclaration_ResponseMessageRef" LowerBound="108.47" HigherBound="108.80">
+                    <om:Property Name="Ref" Value="Argix.Freight.CRMCreateIssueResponseMessageType" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Response" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="98a84aca-4cdb-4077-a478-5d834bf5691c" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="108.13" HigherBound="108.45">
+                    <om:Property Name="Ref" Value="Argix.Freight.CRMCreateIssueRequestMessageType" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="31613f04-3201-4ce3-a64a-59dcd791897f" ParentLink="Module_MessageType" LowerBound="4.1" HigherBound="8.1">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:message name=&quot;SchedulePickupRequestMessageType&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="SchedulePickupRequestMessageType" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="PartDeclaration" OID="2c0195a6-edc7-47cd-9623-b5775d5f17d6" ParentLink="MultipartMessageType_PartDeclaration" LowerBound="6.1" HigherBound="7.1">
+                <om:Property Name="ClassName" Value="Argix.Freight.FreightSystemServiceSchemas.SchedulePickupRequest" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:part name=&quot;parameters&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="parameters" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="903ae2f8-1f15-44da-be5b-de6015f23137" ParentLink="Module_MessageType" LowerBound="8.1" HigherBound="12.1">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:message name=&quot;SchedulePickupResponseMessageType&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="SchedulePickupResponseMessageType" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="PartDeclaration" OID="e197c8c0-0b70-4a23-9de0-a8e5f28c873e" ParentLink="MultipartMessageType_PartDeclaration" LowerBound="10.1" HigherBound="11.1">
+                <om:Property Name="ClassName" Value="Argix.Freight.FreightSystemServiceSchemas.SchedulePickupRequestResponse" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:part name=&quot;parameters&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="parameters" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="da7399fb-b772-443b-b11b-ded5d80f12f9" ParentLink="Module_MessageType" LowerBound="12.1" HigherBound="16.1">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:message name=&quot;SchedulePickupFaultMessageType&quot; /&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="SchedulePickupFaultMessageType" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="PartDeclaration" OID="2c9f6649-d087-482a-aea0-a6c57695879e" ParentLink="MultipartMessageType_PartDeclaration" LowerBound="14.1" HigherBound="15.1">
+                <om:Property Name="ClassName" Value="Argix.Freight.FreightSchemas.DispatchFault" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:part name=&quot;detail&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="detail" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="ee4dfd38-da1d-4970-ba8e-e198c056d4cd" ParentLink="Module_MessageType" LowerBound="16.1" HigherBound="20.1">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:message name=&quot;DispatchShipmentRequestMessageType&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="DispatchShipmentRequestMessageType" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="PartDeclaration" OID="b8cbcbb2-313a-44ca-965e-6ce1d705c190" ParentLink="MultipartMessageType_PartDeclaration" LowerBound="18.1" HigherBound="19.1">
+                <om:Property Name="ClassName" Value="Argix.Freight.FreightSystemServiceSchemas.DispatchShipment" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:part name=&quot;parameters&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="parameters" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="3c4d3080-8720-4996-bd73-99461226787b" ParentLink="Module_MessageType" LowerBound="20.1" HigherBound="24.1">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:message name=&quot;DispatchShipmentResponseMessageType&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="DispatchShipmentResponseMessageType" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="PartDeclaration" OID="392f5cbf-6017-4929-9c26-cdf4c066c0cc" ParentLink="MultipartMessageType_PartDeclaration" LowerBound="22.1" HigherBound="23.1">
+                <om:Property Name="ClassName" Value="Argix.Freight.FreightSystemServiceSchemas.DispatchShipmentResponse" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:part name=&quot;parameters&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="parameters" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="0778e0d2-1447-4451-8320-21f7a266fa4f" ParentLink="Module_MessageType" LowerBound="24.1" HigherBound="28.1">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:message name=&quot;DispatchShipmentFaultMessageType&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="DispatchShipmentFaultMessageType" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="PartDeclaration" OID="55582ef8-5711-4186-9697-0af0cdf09a4d" ParentLink="MultipartMessageType_PartDeclaration" LowerBound="26.1" HigherBound="27.1">
+                <om:Property Name="ClassName" Value="Argix.Freight.FreightSchemas.LTLFault" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:part name=&quot;detail&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="detail" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="8d3c612e-223d-4b6e-9fe2-0f0ce8e134a2" ParentLink="Module_MessageType" LowerBound="28.1" HigherBound="32.1">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:message name=&quot;ArriveShipmentRequestMessageType&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="ArriveShipmentRequestMessageType" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="PartDeclaration" OID="c4ef7b01-1e6b-4e75-8329-ece845f5c855" ParentLink="MultipartMessageType_PartDeclaration" LowerBound="30.1" HigherBound="31.1">
+                <om:Property Name="ClassName" Value="Argix.Freight.FreightSystemServiceSchemas.ArriveShipment" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:part name=&quot;parameters&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="parameters" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="138d6931-1ecf-4bce-a432-1bf23822c16b" ParentLink="Module_MessageType" LowerBound="32.1" HigherBound="36.1">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:message name=&quot;ArriveShipmentResponseMessageType&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="ArriveShipmentResponseMessageType" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="PartDeclaration" OID="b6f46425-7e3a-468f-8254-1ecb0e2e4ec5" ParentLink="MultipartMessageType_PartDeclaration" LowerBound="34.1" HigherBound="35.1">
+                <om:Property Name="ClassName" Value="Argix.Freight.FreightSystemServiceSchemas.ArriveShipmentResponse" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:part name=&quot;parameters&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="parameters" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="12d77a02-c94f-408d-9d59-72ca7c3d7a53" ParentLink="Module_MessageType" LowerBound="36.1" HigherBound="40.1">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:message name=&quot;ArriveShipmentFaultMessageType&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="ArriveShipmentFaultMessageType" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="PartDeclaration" OID="26476802-0875-4e96-b648-4e1f72eac9b7" ParentLink="MultipartMessageType_PartDeclaration" LowerBound="38.1" HigherBound="39.1">
+                <om:Property Name="ClassName" Value="Argix.Freight.FreightSchemas.LTLFault" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:part name=&quot;detail&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="detail" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="6be09c05-c1b0-4943-b232-3a94c9846d0d" ParentLink="Module_MessageType" LowerBound="40.1" HigherBound="44.1">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="LTLShipmentMessageType" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="PartDeclaration" OID="5da9f600-6eeb-407a-8961-cb9c545c890e" ParentLink="MultipartMessageType_PartDeclaration" LowerBound="42.1" HigherBound="43.1">
+                <om:Property Name="ClassName" Value="Argix.Freight.FreightSchemas.LTLShipment" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="detail" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="e538dca0-feee-40f5-bf0e-470286c524d9" ParentLink="Module_MessageType" LowerBound="44.1" HigherBound="48.1">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:message name=&quot;CRMCreateIssueRequestMessageType&quot; /&gt; " />
+            <om:Property Name="Name" Value="CRMCreateIssueRequestMessageType" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="PartDeclaration" OID="c0d47c54-4a97-43ca-9720-f7d3dbafd44e" ParentLink="MultipartMessageType_PartDeclaration" LowerBound="46.1" HigherBound="47.1">
+                <om:Property Name="ClassName" Value="Argix.CRMSystemServiceSchemas.CreateIssue" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="parameters" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="768526d9-b6f1-4fd2-a40a-f4d7a5506ca6" ParentLink="Module_MessageType" LowerBound="48.1" HigherBound="52.1">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:message name=&quot;CRMCreateIssueResponseMessageType&quot; /&gt; " />
+            <om:Property Name="Name" Value="CRMCreateIssueResponseMessageType" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="PartDeclaration" OID="6414f7bf-fe68-47ff-97c9-b8d5e1ddcb2f" ParentLink="MultipartMessageType_PartDeclaration" LowerBound="50.1" HigherBound="51.1">
+                <om:Property Name="ClassName" Value="Argix.CRMSystemServiceSchemas.CreateIssueResponse" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="parameters" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="1e615438-6fee-42a1-9421-719d2caceba9" ParentLink="Module_MessageType" LowerBound="52.1" HigherBound="56.1">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:message name=&quot;CRMCreateIssueFaultMessageType&quot; /&gt; " />
+            <om:Property Name="Name" Value="CRMCreateIssueFaultMessageType" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="PartDeclaration" OID="4c75fba3-fbc1-4eda-aeff-5d28b03e85c5" ParentLink="MultipartMessageType_PartDeclaration" LowerBound="54.1" HigherBound="55.1">
+                <om:Property Name="ClassName" Value="Argix.CustomersSchemas.CustomersFault" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="detail" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="89df1222-9088-4103-8146-0e04b2af63ce" ParentLink="Module_MessageType" LowerBound="56.1" HigherBound="60.1">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="PickupRequestMessageType" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="PartDeclaration" OID="360f01c2-5e7f-426c-b45e-236d8187ab3c" ParentLink="MultipartMessageType_PartDeclaration" LowerBound="58.1" HigherBound="59.1">
+                <om:Property Name="ClassName" Value="Argix.Freight.FreightSchemas.PickupRequest" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="detail" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="bccb244a-3631-45a5-b0ae-4af067667f9c" ParentLink="Module_ServiceDeclaration" LowerBound="115.1" HigherBound="272.1">
+            <om:Property Name="InitializedTransactionType" Value="True" />
+            <om:Property Name="IsInvokable" Value="False" />
+            <om:Property Name="TypeModifier" Value="Public" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:service name=&quot;ManageLTLPickup&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="ManageLTLPickup" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="CorrelationDeclaration" OID="8aef472d-be0a-407f-8dab-276df82974f7" ParentLink="ServiceDeclaration_CorrelationDeclaration" LowerBound="128.1" HigherBound="129.1">
+                <om:Property Name="Type" Value="Argix.Freight.PickupIDCorrelationType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="PickupIDCorrelation" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="StatementRef" OID="e9a048c0-4604-41cd-b012-569173c0326c" ParentLink="CorrelationDeclaration_StatementRef" LowerBound="172.107" HigherBound="172.137">
+                    <om:Property Name="Initializes" Value="True" />
+                    <om:Property Name="Ref" Value="74c5d04a-af5e-4ece-af0a-2bfbbd1be526" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="StatementRef_1" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="StatementRef" OID="1beb6130-7eb4-4ed1-ac6d-5e05327fea47" ParentLink="CorrelationDeclaration_StatementRef" LowerBound="179.97" HigherBound="179.116">
+                    <om:Property Name="Initializes" Value="False" />
+                    <om:Property Name="Ref" Value="d7aa00b4-e8a2-4ee2-9b62-b74371ed2ba4" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="StatementRef_2" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="150322da-dbf5-4e87-ba3f-cce5897dec5b" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="129.1" HigherBound="130.1">
+                <om:Property Name="Type" Value="Argix.Freight.SchedulePickupRequestMessageType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="SchedulePickupRequestMessage" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="111538b2-b05c-4146-ab04-6c1a0a709a45" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="130.1" HigherBound="131.1">
+                <om:Property Name="Type" Value="Argix.Freight.SchedulePickupResponseMessageType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="SchedulePickupResponseMessage" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="0a3e615b-f8e3-45d7-b22d-7692e047175a" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="131.1" HigherBound="132.1">
+                <om:Property Name="Type" Value="Argix.Freight.DispatchShipmentRequestMessageType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="DispatchShipmentRequestMessage" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="df313439-fc0d-4891-b2f9-0e6bf13a1d95" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="132.1" HigherBound="133.1">
+                <om:Property Name="Type" Value="Argix.Freight.DispatchShipmentResponseMessageType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="DispatchShipmentResponseMessage" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="bbda1a64-014b-45a1-be0f-446ba23ef2d4" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="133.1" HigherBound="134.1">
+                <om:Property Name="Type" Value="Argix.Freight.PickupRequestMessageType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="PickupRequestMessage" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="34c4c699-aba3-4d59-a97d-95196155108c" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="134.1" HigherBound="135.1">
+                <om:Property Name="Type" Value="Argix.Freight.ArriveShipmentRequestMessageType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ArriveShipmentRequestMessage" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="bac01166-e334-48fb-8b46-f60a56028284" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="135.1" HigherBound="136.1">
+                <om:Property Name="Type" Value="Argix.Freight.ArriveShipmentResponseMessageType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ArriveShipmentResponseMessage" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="a616f387-00e0-44e5-ad0f-848d6b0010bf" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="136.1" HigherBound="137.1">
+                <om:Property Name="Type" Value="Argix.Freight.CRMCreateIssueRequestMessageType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="CreateIssueRequestMessage" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="d2e42a91-aae1-488c-b58d-39c3db600ad7" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="137.1" HigherBound="138.1">
+                <om:Property Name="Type" Value="Argix.Freight.CRMCreateIssueResponseMessageType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="CreateIssueResponseMessage" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="4b2add0a-f3a4-467a-91c8-d91072bf9ea6" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="138.1" HigherBound="139.1">
+                <om:Property Name="Type" Value="Argix.Freight.LTLShipmentMessageType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="LTLShipmentMessage" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="7b5bce03-6523-4b07-87d1-09ca4afc8d5a" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="Receive" OID="aa5dd2cb-18fc-4812-83b2-8a7dbe44dfa2" ParentLink="ServiceBody_Statement" LowerBound="141.1" HigherBound="143.1">
+                    <om:Property Name="Activate" Value="True" />
+                    <om:Property Name="PortName" Value="LTLPort" />
+                    <om:Property Name="MessageName" Value="LTLShipmentMessage" />
+                    <om:Property Name="OperationName" Value="ScheduleLTLPickup" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ReceiveLTLShipment" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Scope" OID="b1a2c260-c89b-4fe0-84dd-895c9cc0003b" ParentLink="ServiceBody_Statement" LowerBound="143.1" HigherBound="270.1">
+                    <om:Property Name="InitializedTransactionType" Value="True" />
+                    <om:Property Name="IsSynchronized" Value="False" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ManageLTLPickupScope" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="Construct" OID="75fa0fff-9b1c-43ae-8ddb-44499838ace6" ParentLink="ComplexStatement_Statement" LowerBound="148.1" HigherBound="154.1">
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="ConstructPickupRequestMessage" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="Transform" OID="f6376181-edad-4249-a716-c4b6c647c04b" ParentLink="ComplexStatement_Statement" LowerBound="151.1" HigherBound="153.1">
+                            <om:Property Name="ClassName" Value="Argix.LTLShipmentToPickupMap" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="CreatePickupMessage" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="MessagePartRef" OID="34995baa-06ef-4452-914c-de0545be7c56" ParentLink="Transform_InputMessagePartRef" LowerBound="152.109" HigherBound="152.134">
+                                <om:Property Name="MessageRef" Value="LTLShipmentMessage" />
+                                <om:Property Name="PartRef" Value="detail" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="MessagePartReference_1" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                            <om:Element Type="MessagePartRef" OID="4f70a888-0ed0-49dd-9e92-50148afa59e2" ParentLink="Transform_OutputMessagePartRef" LowerBound="152.36" HigherBound="152.75">
+                                <om:Property Name="MessageRef" Value="SchedulePickupRequestMessage" />
+                                <om:Property Name="PartRef" Value="parameters" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="MessagePartReference_2" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                        </om:Element>
+                        <om:Element Type="MessageRef" OID="51b08388-e705-4beb-89f0-91d23f014fb9" ParentLink="Construct_MessageRef" LowerBound="149.31" HigherBound="149.59">
+                            <om:Property Name="Ref" Value="SchedulePickupRequestMessage" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="Send" OID="334093bf-8be7-4450-b16e-3140d16a63e6" ParentLink="ComplexStatement_Statement" LowerBound="154.1" HigherBound="156.1">
+                        <om:Property Name="PortName" Value="IDispatchSystemServicePort" />
+                        <om:Property Name="MessageName" Value="SchedulePickupRequestMessage" />
+                        <om:Property Name="OperationName" Value="SchedulePickupRequest" />
+                        <om:Property Name="OperationMessageName" Value="Request" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="SendSchedulePickupRequest" />
+                        <om:Property Name="Signal" Value="True" />
+                    </om:Element>
+                    <om:Element Type="Receive" OID="7074dd28-3627-4a68-86ee-c2560f8faaf6" ParentLink="ComplexStatement_Statement" LowerBound="156.1" HigherBound="158.1">
+                        <om:Property Name="Activate" Value="False" />
+                        <om:Property Name="PortName" Value="IDispatchSystemServicePort" />
+                        <om:Property Name="MessageName" Value="SchedulePickupResponseMessage" />
+                        <om:Property Name="OperationName" Value="SchedulePickupRequest" />
+                        <om:Property Name="OperationMessageName" Value="Response" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="ReceiveSchedulePickupResponse" />
+                        <om:Property Name="Signal" Value="True" />
+                    </om:Element>
+                    <om:Element Type="Scope" OID="d3263b65-dca5-4068-8678-d7ce7ccf9b79" ParentLink="ComplexStatement_Statement" LowerBound="158.1" HigherBound="261.1">
+                        <om:Property Name="InitializedTransactionType" Value="True" />
+                        <om:Property Name="IsSynchronized" Value="False" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="DispatchShipmentScope" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="Construct" OID="15a93efa-13f3-4e84-bd03-cf393ac408e4" ParentLink="ComplexStatement_Statement" LowerBound="163.1" HigherBound="171.1">
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="ConstructDispatchShipmentMessage" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="Transform" OID="78b6bb4a-7d55-42a8-8700-9d8656d1cdb5" ParentLink="ComplexStatement_Statement" LowerBound="166.1" HigherBound="168.1">
+                                <om:Property Name="ClassName" Value="Argix.LTLShipmentToLTLShipmentRequestMap" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="Transform_1" />
+                                <om:Property Name="Signal" Value="True" />
+                                <om:Element Type="MessagePartRef" OID="bc7734ce-04af-4d1e-a889-0f17eb09bb10" ParentLink="Transform_InputMessagePartRef" LowerBound="167.131" HigherBound="167.156">
+                                    <om:Property Name="MessageRef" Value="LTLShipmentMessage" />
+                                    <om:Property Name="PartRef" Value="detail" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="MessagePartReference_3" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                                <om:Element Type="MessagePartRef" OID="afe76a5e-f2fc-4bc1-a1d0-b760bbc666d6" ParentLink="Transform_OutputMessagePartRef" LowerBound="167.44" HigherBound="167.85">
+                                    <om:Property Name="MessageRef" Value="DispatchShipmentRequestMessage" />
+                                    <om:Property Name="PartRef" Value="parameters" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="MessagePartReference_4" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                            </om:Element>
+                            <om:Element Type="MessageAssignment" OID="fbe00279-8f64-499c-a1ee-c1c39b6cb43d" ParentLink="ComplexStatement_Statement" LowerBound="168.1" HigherBound="170.1">
+                                <om:Property Name="Expression" Value="DispatchShipmentRequestMessage.parameters.shipment.PickupID = SchedulePickupResponseMessage.parameters.SchedulePickupRequestResult;" />
+                                <om:Property Name="ReportToAnalyst" Value="False" />
+                                <om:Property Name="Name" Value="AssignPickupID" />
+                                <om:Property Name="Signal" Value="True" />
+                            </om:Element>
+                            <om:Element Type="MessageRef" OID="1b8b90dc-0864-4851-a5b0-9e3631926ecb" ParentLink="Construct_MessageRef" LowerBound="164.39" HigherBound="164.69">
+                                <om:Property Name="Ref" Value="DispatchShipmentRequestMessage" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                        </om:Element>
+                        <om:Element Type="Send" OID="74c5d04a-af5e-4ece-af0a-2bfbbd1be526" ParentLink="ComplexStatement_Statement" LowerBound="171.1" HigherBound="173.1">
+                            <om:Property Name="PortName" Value="ILTLSystemServicePort" />
+                            <om:Property Name="MessageName" Value="DispatchShipmentRequestMessage" />
+                            <om:Property Name="OperationName" Value="DispatchShipment" />
+                            <om:Property Name="OperationMessageName" Value="Request" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="SendDispatchShipmentRequest" />
+                            <om:Property Name="Signal" Value="True" />
+                        </om:Element>
+                        <om:Element Type="Receive" OID="06fa5caa-5e77-484c-bb3f-e94e3372a905" ParentLink="ComplexStatement_Statement" LowerBound="173.1" HigherBound="175.1">
+                            <om:Property Name="Activate" Value="False" />
+                            <om:Property Name="PortName" Value="ILTLSystemServicePort" />
+                            <om:Property Name="MessageName" Value="DispatchShipmentResponseMessage" />
+                            <om:Property Name="OperationName" Value="DispatchShipment" />
+                            <om:Property Name="OperationMessageName" Value="Response" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="ReceiveDispatchShipmentResponse" />
+                            <om:Property Name="Signal" Value="True" />
+                        </om:Element>
+                        <om:Element Type="Listen" OID="4a78ae59-0bac-4868-b3f9-d69ff110eb01" ParentLink="ComplexStatement_Statement" LowerBound="175.1" HigherBound="252.1">
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="ListenForPickupArrived" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="ListenBranch" OID="bf85af5d-c6c6-47e9-81af-bdf39c65f703" ParentLink="ReallyComplexStatement_Branch" LowerBound="175.1" HigherBound="175.1">
+                                <om:Property Name="IsGhostBranch" Value="True" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="ListenBranch_1" />
+                                <om:Property Name="Signal" Value="True" />
+                                <om:Element Type="Receive" OID="d7aa00b4-e8a2-4ee2-9b62-b74371ed2ba4" ParentLink="ListenBranch_Statement" LowerBound="178.1" HigherBound="179.117">
+                                    <om:Property Name="Activate" Value="False" />
+                                    <om:Property Name="PortName" Value="LTLPort" />
+                                    <om:Property Name="MessageName" Value="PickupRequestMessage" />
+                                    <om:Property Name="OperationName" Value="ArriveLTLShipment" />
+                                    <om:Property Name="OperationMessageName" Value="Request" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="ReceivePickup" />
+                                    <om:Property Name="Signal" Value="True" />
+                                </om:Element>
+                                <om:Element Type="Scope" OID="fdd9c6d7-db51-4dd0-89b5-a998837411a5" ParentLink="ComplexStatement_Statement" LowerBound="181.1" HigherBound="207.1">
+                                    <om:Property Name="InitializedTransactionType" Value="True" />
+                                    <om:Property Name="IsSynchronized" Value="False" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="ArriveShipmentScope" />
+                                    <om:Property Name="Signal" Value="True" />
+                                    <om:Element Type="Construct" OID="202d4a91-2430-447b-ab25-4d3b7f4e11e2" ParentLink="ComplexStatement_Statement" LowerBound="186.1" HigherBound="194.1">
+                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                        <om:Property Name="Name" Value="ConstructArriveShipmentMessage" />
+                                        <om:Property Name="Signal" Value="True" />
+                                        <om:Element Type="Transform" OID="140af6ee-0d52-4ec5-b4e8-10f462b42bd8" ParentLink="ComplexStatement_Statement" LowerBound="189.1" HigherBound="191.1">
+                                            <om:Property Name="ClassName" Value="Argix.PickupRequestToLTLShipmentMap" />
+                                            <om:Property Name="ReportToAnalyst" Value="True" />
+                                            <om:Property Name="Name" Value="TransformPickupToShipment" />
+                                            <om:Property Name="Signal" Value="True" />
+                                            <om:Element Type="MessagePartRef" OID="e5dadbb0-a0d8-45a9-8d44-7af0a4bd3ed6" ParentLink="Transform_InputMessagePartRef" LowerBound="190.140" HigherBound="190.160">
+                                                <om:Property Name="MessageRef" Value="PickupRequestMessage" />
+                                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                                <om:Property Name="Name" Value="MessagePartReference_5" />
+                                                <om:Property Name="Signal" Value="False" />
+                                            </om:Element>
+                                            <om:Element Type="MessagePartRef" OID="9ace3fab-1e10-4437-83b8-63b1d8ed04d7" ParentLink="Transform_OutputMessagePartRef" LowerBound="190.60" HigherBound="190.99">
+                                                <om:Property Name="MessageRef" Value="ArriveShipmentRequestMessage" />
+                                                <om:Property Name="PartRef" Value="parameters" />
+                                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                                <om:Property Name="Name" Value="MessagePartReference_6" />
+                                                <om:Property Name="Signal" Value="False" />
+                                            </om:Element>
+                                        </om:Element>
+                                        <om:Element Type="MessageAssignment" OID="f67bbf8a-3b28-4f31-8547-3183c60a3183" ParentLink="ComplexStatement_Statement" LowerBound="191.1" HigherBound="193.1">
+                                            <om:Property Name="Expression" Value="ArriveShipmentRequestMessage.parameters.shipment.ID = DispatchShipmentRequestMessage.parameters.shipment.ID;" />
+                                            <om:Property Name="ReportToAnalyst" Value="False" />
+                                            <om:Property Name="Name" Value="AssignShipmentID" />
+                                            <om:Property Name="Signal" Value="False" />
+                                        </om:Element>
+                                        <om:Element Type="MessageRef" OID="bbbe09fb-5e79-4536-80e9-0fac274f2cb6" ParentLink="Construct_MessageRef" LowerBound="187.55" HigherBound="187.83">
+                                            <om:Property Name="Ref" Value="ArriveShipmentRequestMessage" />
+                                            <om:Property Name="ReportToAnalyst" Value="True" />
+                                            <om:Property Name="Signal" Value="False" />
+                                        </om:Element>
+                                    </om:Element>
+                                    <om:Element Type="Send" OID="921e6283-401b-4656-8b8e-7e0e19ef1e8d" ParentLink="ComplexStatement_Statement" LowerBound="194.1" HigherBound="196.1">
+                                        <om:Property Name="PortName" Value="ILTLSystemServicePort" />
+                                        <om:Property Name="MessageName" Value="ArriveShipmentRequestMessage" />
+                                        <om:Property Name="OperationName" Value="ArriveShipment" />
+                                        <om:Property Name="OperationMessageName" Value="Request" />
+                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                        <om:Property Name="Name" Value="SendArriveShipmentRequest" />
+                                        <om:Property Name="Signal" Value="True" />
+                                    </om:Element>
+                                    <om:Element Type="Receive" OID="c531d6fe-7f96-485d-b8a6-95fce0790c7f" ParentLink="ComplexStatement_Statement" LowerBound="196.1" HigherBound="198.1">
+                                        <om:Property Name="Activate" Value="False" />
+                                        <om:Property Name="PortName" Value="ILTLSystemServicePort" />
+                                        <om:Property Name="MessageName" Value="ArriveShipmentResponseMessage" />
+                                        <om:Property Name="OperationName" Value="ArriveShipment" />
+                                        <om:Property Name="OperationMessageName" Value="Response" />
+                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                        <om:Property Name="Name" Value="ReceiveArriveShipmentResponse" />
+                                        <om:Property Name="Signal" Value="True" />
+                                    </om:Element>
+                                    <om:Element Type="Catch" OID="50d8bbbb-5b1e-4f6f-a25f-53d4bcd80ca8" ParentLink="Scope_Catch" LowerBound="201.1" HigherBound="205.1">
+                                        <om:Property Name="ExceptionName" Value="LTLFault" />
+                                        <om:Property Name="ExceptionType" Value="ILTLSystemServicePort.ArriveShipment.Fault" />
+                                        <om:Property Name="IsFaultMessage" Value="False" />
+                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                        <om:Property Name="Name" Value="CatchLTLFault" />
+                                        <om:Property Name="Signal" Value="True" />
+                                    </om:Element>
+                                </om:Element>
+                            </om:Element>
+                            <om:Element Type="ListenBranch" OID="e4034667-89ca-4ce0-b259-ec445aa8f73a" ParentLink="ReallyComplexStatement_Branch" LowerBound="175.1" HigherBound="175.1">
+                                <om:Property Name="IsGhostBranch" Value="True" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="ListenBranch_2" />
+                                <om:Property Name="Signal" Value="True" />
+                                <om:Element Type="Send" OID="3468e8af-58c0-4689-a4b9-3f3ea859e96c" ParentLink="ComplexStatement_Statement" LowerBound="211.1" HigherBound="213.1">
+                                    <om:Property Name="PortName" Value="EmailPort" />
+                                    <om:Property Name="MessageName" Value="LTLShipmentMessage" />
+                                    <om:Property Name="OperationName" Value="EmailLTLShipment" />
+                                    <om:Property Name="OperationMessageName" Value="Request" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="SendEmail" />
+                                    <om:Property Name="Signal" Value="True" />
+                                </om:Element>
+                                <om:Element Type="Scope" OID="c01ee6dc-5bc6-4d92-b9f6-81c908916f36" ParentLink="ComplexStatement_Statement" LowerBound="213.1" HigherBound="250.1">
+                                    <om:Property Name="InitializedTransactionType" Value="True" />
+                                    <om:Property Name="IsSynchronized" Value="False" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="CreateIssueScope" />
+                                    <om:Property Name="Signal" Value="True" />
+                                    <om:Element Type="Construct" OID="da08e13b-c38e-4177-b77e-142b16a51134" ParentLink="ComplexStatement_Statement" LowerBound="218.1" HigherBound="237.1">
+                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                        <om:Property Name="Name" Value="ConstructCreateIssueMessage" />
+                                        <om:Property Name="Signal" Value="True" />
+                                        <om:Element Type="Transform" OID="3b001c14-f02e-4261-9e47-4e1edd5e34d1" ParentLink="ComplexStatement_Statement" LowerBound="221.1" HigherBound="223.1">
+                                            <om:Property Name="ClassName" Value="Argix.LTLShipmentToCRMIssueMap" />
+                                            <om:Property Name="ReportToAnalyst" Value="True" />
+                                            <om:Property Name="Name" Value="TransformShipmentToIssue" />
+                                            <om:Property Name="Signal" Value="True" />
+                                            <om:Element Type="MessagePartRef" OID="40e87f28-8ef4-416c-96e6-a09580ace4af" ParentLink="Transform_InputMessagePartRef" LowerBound="222.132" HigherBound="222.157">
+                                                <om:Property Name="MessageRef" Value="LTLShipmentMessage" />
+                                                <om:Property Name="PartRef" Value="detail" />
+                                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                                <om:Property Name="Name" Value="MessagePartReference_7" />
+                                                <om:Property Name="Signal" Value="False" />
+                                            </om:Element>
+                                            <om:Element Type="MessagePartRef" OID="565a8566-73db-40fe-a6c7-78d67591087b" ParentLink="Transform_OutputMessagePartRef" LowerBound="222.60" HigherBound="222.96">
+                                                <om:Property Name="MessageRef" Value="CreateIssueRequestMessage" />
+                                                <om:Property Name="PartRef" Value="parameters" />
+                                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                                <om:Property Name="Name" Value="MessagePartReference_8" />
+                                                <om:Property Name="Signal" Value="False" />
+                                            </om:Element>
+                                        </om:Element>
+                                        <om:Element Type="MessageAssignment" OID="c59ae7de-6988-4275-9391-558fa71f92de" ParentLink="ComplexStatement_Statement" LowerBound="223.1" HigherBound="236.1">
+                                            <om:Property Name="Expression" Value="CreateIssueRequestMessage.parameters.issue.ActionTypeID = 1;&#xD;&#xA;CreateIssueRequestMessage.parameters.issue.AgentNumber = &quot;0001&quot;;&#xD;&#xA;CreateIssueRequestMessage.parameters.issue.Comment = &quot;LTL shipment has not been arrived. Please call the terminal manager to determine pickup status. If not picked-up, notify Dispatch to re-schedule; and notify the client with an updated status.&quot;;&#xD;&#xA;CreateIssueRequestMessage.parameters.issue.CompanyID = 999;&#xD;&#xA;CreateIssueRequestMessage.parameters.issue.CompanyName = &quot;LTLClient&quot;;&#xD;&#xA;CreateIssueRequestMessage.parameters.issue.Contact = &quot;Pallet Shipment Program&quot;;&#xD;&#xA;CreateIssueRequestMessage.parameters.issue.DistrictNumber = &quot;&quot;;&#xD;&#xA;CreateIssueRequestMessage.parameters.issue.RegionNumber = &quot;&quot;;&#xD;&#xA;CreateIssueRequestMessage.parameters.issue.StoreNumber = 0;&#xD;&#xA;CreateIssueRequestMessage.parameters.issue.Subject = &quot;LTL Shipment Pickup Not Arrived&quot;;&#xD;&#xA;CreateIssueRequestMessage.parameters.issue.TypeID = 29;&#xD;&#xA;CreateIssueRequestMessage.parameters.issue.UserID = &quot;BizTalk&quot;;" />
+                                            <om:Property Name="ReportToAnalyst" Value="True" />
+                                            <om:Property Name="Name" Value="AssignShipmentToCRMIssue" />
+                                            <om:Property Name="Signal" Value="False" />
+                                        </om:Element>
+                                        <om:Element Type="MessageRef" OID="cfed0481-2f22-43a6-92eb-dd2bd0bc8a21" ParentLink="Construct_MessageRef" LowerBound="219.55" HigherBound="219.80">
+                                            <om:Property Name="Ref" Value="CreateIssueRequestMessage" />
+                                            <om:Property Name="ReportToAnalyst" Value="True" />
+                                            <om:Property Name="Signal" Value="False" />
+                                        </om:Element>
+                                    </om:Element>
+                                    <om:Element Type="Send" OID="a74a673b-5397-4717-8698-79bdf4c35aa5" ParentLink="ComplexStatement_Statement" LowerBound="237.1" HigherBound="239.1">
+                                        <om:Property Name="PortName" Value="CRMPort" />
+                                        <om:Property Name="MessageName" Value="CreateIssueRequestMessage" />
+                                        <om:Property Name="OperationName" Value="CreateIssue" />
+                                        <om:Property Name="OperationMessageName" Value="Request" />
+                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                        <om:Property Name="Name" Value="SendCreateIssueRequest" />
+                                        <om:Property Name="Signal" Value="True" />
+                                    </om:Element>
+                                    <om:Element Type="Receive" OID="b963d766-0ea5-4227-8f9e-d4c5dc366d60" ParentLink="ComplexStatement_Statement" LowerBound="239.1" HigherBound="241.1">
+                                        <om:Property Name="Activate" Value="False" />
+                                        <om:Property Name="PortName" Value="CRMPort" />
+                                        <om:Property Name="MessageName" Value="CreateIssueResponseMessage" />
+                                        <om:Property Name="OperationName" Value="CreateIssue" />
+                                        <om:Property Name="OperationMessageName" Value="Response" />
+                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                        <om:Property Name="Name" Value="ReceiveCreateIssueResponse" />
+                                        <om:Property Name="Signal" Value="True" />
+                                    </om:Element>
+                                    <om:Element Type="Catch" OID="7e3a4e11-40e9-4d8b-b94c-df9323dd7853" ParentLink="Scope_Catch" LowerBound="244.1" HigherBound="248.1">
+                                        <om:Property Name="ExceptionName" Value="CustomersFault" />
+                                        <om:Property Name="ExceptionType" Value="CRMPort.CreateIssue.Fault" />
+                                        <om:Property Name="IsFaultMessage" Value="False" />
+                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                        <om:Property Name="Name" Value="CatchCustomersFault" />
+                                        <om:Property Name="Signal" Value="True" />
+                                    </om:Element>
+                                </om:Element>
+                                <om:Element Type="Delay" OID="88669c57-5bf7-473b-bf3c-1c95ed8e16bf" ParentLink="ListenBranch_Statement" LowerBound="208.1" HigherBound="209.69">
+                                    <om:Property Name="Timeout" Value="new System.TimeSpan(0, 5, 0)" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="Delay_1" />
+                                    <om:Property Name="Signal" Value="True" />
+                                </om:Element>
+                            </om:Element>
+                        </om:Element>
+                        <om:Element Type="Catch" OID="d372045f-e375-4fa8-86f0-23fc6c1fa376" ParentLink="Scope_Catch" LowerBound="255.1" HigherBound="259.1">
+                            <om:Property Name="ExceptionName" Value="LTLFault" />
+                            <om:Property Name="ExceptionType" Value="ILTLSystemServicePort.DispatchShipment.Fault" />
+                            <om:Property Name="IsFaultMessage" Value="False" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="CatchLTLFault" />
+                            <om:Property Name="Signal" Value="True" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="Catch" OID="8bbfe42f-6ff9-4910-b626-5ac2df4a58f7" ParentLink="Scope_Catch" LowerBound="264.1" HigherBound="268.1">
+                        <om:Property Name="ExceptionName" Value="DispatchFault" />
+                        <om:Property Name="ExceptionType" Value="IDispatchSystemServicePort.SchedulePickupRequest.Fault" />
+                        <om:Property Name="IsFaultMessage" Value="False" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="CatchDispatchFault" />
+                        <om:Property Name="Signal" Value="True" />
+                    </om:Element>
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="15d989ce-9f1f-479a-bfab-fde25ea8b28e" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="118.1" HigherBound="120.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="25" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="Argix.Freight.IDispatchSystemServicePortType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="IDispatchSystemServicePort" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="LogicalBindingAttribute" OID="7d3d934e-87b3-4da2-a218-a51f1dad1cc5" ParentLink="PortDeclaration_CLRAttribute" LowerBound="118.1" HigherBound="119.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="ce2b28d2-3f0f-4f05-a68c-8a3a1d1cfe9f" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="120.1" HigherBound="122.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="58" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="Argix.Freight.ILTLSystemServicePortType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ILTLSystemServicePort" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="LogicalBindingAttribute" OID="b1b3f27f-4456-4b1e-ada4-038afe40fcbd" ParentLink="PortDeclaration_CLRAttribute" LowerBound="120.1" HigherBound="121.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="7f914788-dc80-4959-b70a-75144c4d3be5" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="122.1" HigherBound="124.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="1" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="Argix.Freight.LTLPortType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="LTLPort" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="cc483b75-0b25-42a3-ae59-46183254b972" ParentLink="PortDeclaration_CLRAttribute" LowerBound="122.1" HigherBound="123.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="572b226c-b9aa-48e1-9a5f-3647c6ab9257" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="124.1" HigherBound="126.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="64" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="Argix.Freight.EmailPortType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="EmailPort" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="LogicalBindingAttribute" OID="55d0b973-bfd1-47f9-8222-d8c5b8fc93e8" ParentLink="PortDeclaration_CLRAttribute" LowerBound="124.1" HigherBound="125.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="7bca198f-9fcd-49af-859c-1c79061b7810" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="126.1" HigherBound="128.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="-1" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="Argix.Freight.CRMPortType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="CRMPort" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="LogicalBindingAttribute" OID="ac72d2ce-2079-492c-9474-0d2f2dc5ce97" ParentLink="PortDeclaration_CLRAttribute" LowerBound="126.1" HigherBound="127.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="CorrelationType" OID="2795d178-4b90-4797-8cfe-676bf1ac98ba" ParentLink="Module_CorrelationType" LowerBound="111.1" HigherBound="115.1">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="PickupIDCorrelationType" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="PropertyRef" OID="4dd90cef-cb9f-46bb-9566-94e7c27966a4" ParentLink="CorrelationType_PropertyRef" LowerBound="113.9" HigherBound="113.23">
+                <om:Property Name="Ref" Value="Argix.PickupID" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="PropertyRef_1" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module Argix.Freight
+{
+    internal messagetype SchedulePickupRequestMessageType
+    {
+        body FreightSystemServiceSchemas.SchedulePickupRequest parameters;
+    };
+    internal messagetype SchedulePickupResponseMessageType
+    {
+        body FreightSystemServiceSchemas.SchedulePickupRequestResponse parameters;
+    };
+    internal messagetype SchedulePickupFaultMessageType
+    {
+        body FreightSchemas.DispatchFault detail;
+    };
+    internal messagetype DispatchShipmentRequestMessageType
+    {
+        body FreightSystemServiceSchemas.DispatchShipment parameters;
+    };
+    internal messagetype DispatchShipmentResponseMessageType
+    {
+        body FreightSystemServiceSchemas.DispatchShipmentResponse parameters;
+    };
+    internal messagetype DispatchShipmentFaultMessageType
+    {
+        body FreightSchemas.LTLFault detail;
+    };
+    internal messagetype ArriveShipmentRequestMessageType
+    {
+        body FreightSystemServiceSchemas.ArriveShipment parameters;
+    };
+    internal messagetype ArriveShipmentResponseMessageType
+    {
+        body FreightSystemServiceSchemas.ArriveShipmentResponse parameters;
+    };
+    internal messagetype ArriveShipmentFaultMessageType
+    {
+        body FreightSchemas.LTLFault detail;
+    };
+    internal messagetype LTLShipmentMessageType
+    {
+        body FreightSchemas.LTLShipment detail;
+    };
+    internal messagetype CRMCreateIssueRequestMessageType
+    {
+        body Argix.CRMSystemServiceSchemas.CreateIssue parameters;
+    };
+    internal messagetype CRMCreateIssueResponseMessageType
+    {
+        body Argix.CRMSystemServiceSchemas.CreateIssueResponse parameters;
+    };
+    internal messagetype CRMCreateIssueFaultMessageType
+    {
+        body Argix.CustomersSchemas.CustomersFault detail;
+    };
+    internal messagetype PickupRequestMessageType
+    {
+        body FreightSchemas.PickupRequest detail;
+    };
+    internal porttype IDispatchSystemServicePortType
+    {
+        requestresponse SchedulePickupRequest
+        {
+            SchedulePickupRequestMessageType, SchedulePickupResponseMessageType, Fault = SchedulePickupFaultMessageType
+        };
+    };
+    internal porttype ILTLSystemServicePortType
+    {
+        requestresponse DispatchShipment
+        {
+            DispatchShipmentRequestMessageType, DispatchShipmentResponseMessageType, Fault = DispatchShipmentFaultMessageType
+        };
+        requestresponse ArriveShipment
+        {
+            ArriveShipmentRequestMessageType, ArriveShipmentResponseMessageType, Fault = ArriveShipmentFaultMessageType
+        };
+    };
+    public porttype LTLPortType
+    {
+        oneway ScheduleLTLPickup
+        {
+            LTLShipmentMessageType
+        };
+        oneway ArriveLTLShipment
+        {
+            PickupRequestMessageType
+        };
+        oneway ChangeLTLPickup
+        {
+            LTLShipmentMessageType
+        };
+        oneway CancelLTLPickup
+        {
+            LTLShipmentMessageType
+        };
+    };
+    internal porttype EmailPortType
+    {
+        oneway EmailLTLShipment
+        {
+            LTLShipmentMessageType
+        };
+    };
+    internal porttype CRMPortType
+    {
+        requestresponse CreateIssue
+        {
+            CRMCreateIssueRequestMessageType, CRMCreateIssueResponseMessageType, Fault = CRMCreateIssueFaultMessageType
+        };
+    };
+    internal correlationtype PickupIDCorrelationType
+    {
+        Argix.PickupID
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    public service ManageLTLPickup
+    {
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses IDispatchSystemServicePortType IDispatchSystemServicePort;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses ILTLSystemServicePortType ILTLSystemServicePort;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port implements LTLPortType LTLPort;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses EmailPortType EmailPort;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses CRMPortType CRMPort;
+        correlation PickupIDCorrelationType PickupIDCorrelation;
+        message SchedulePickupRequestMessageType SchedulePickupRequestMessage;
+        message SchedulePickupResponseMessageType SchedulePickupResponseMessage;
+        message DispatchShipmentRequestMessageType DispatchShipmentRequestMessage;
+        message DispatchShipmentResponseMessageType DispatchShipmentResponseMessage;
+        message PickupRequestMessageType PickupRequestMessage;
+        message ArriveShipmentRequestMessageType ArriveShipmentRequestMessage;
+        message ArriveShipmentResponseMessageType ArriveShipmentResponseMessage;
+        message CRMCreateIssueRequestMessageType CreateIssueRequestMessage;
+        message CRMCreateIssueResponseMessageType CreateIssueResponseMessage;
+        message LTLShipmentMessageType LTLShipmentMessage;
+        body ()
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("aa5dd2cb-18fc-4812-83b2-8a7dbe44dfa2")]
+            activate receive (LTLPort.ScheduleLTLPickup, LTLShipmentMessage);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("b1a2c260-c89b-4fe0-84dd-895c9cc0003b")]
+            scope
+            {
+                body
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("75fa0fff-9b1c-43ae-8ddb-44499838ace6")]
+                    construct SchedulePickupRequestMessage
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("f6376181-edad-4249-a716-c4b6c647c04b")]
+                        transform (SchedulePickupRequestMessage.parameters) = Argix.LTLShipmentToPickupMap (LTLShipmentMessage.detail);
+                    }
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("334093bf-8be7-4450-b16e-3140d16a63e6")]
+                    send (IDispatchSystemServicePort.SchedulePickupRequest, SchedulePickupRequestMessage);
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("7074dd28-3627-4a68-86ee-c2560f8faaf6")]
+                    receive (IDispatchSystemServicePort.SchedulePickupRequest, SchedulePickupResponseMessage);
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("d3263b65-dca5-4068-8678-d7ce7ccf9b79")]
+                    scope
+                    {
+                        body
+                        {
+                            [Microsoft.XLANGs.BaseTypes.DesignerPosition("15a93efa-13f3-4e84-bd03-cf393ac408e4")]
+                            construct DispatchShipmentRequestMessage
+                            {
+                                [Microsoft.XLANGs.BaseTypes.DesignerPosition("78b6bb4a-7d55-42a8-8700-9d8656d1cdb5")]
+                                transform (DispatchShipmentRequestMessage.parameters) = Argix.LTLShipmentToLTLShipmentRequestMap (LTLShipmentMessage.detail);
+                                [Microsoft.XLANGs.BaseTypes.DesignerPosition("fbe00279-8f64-499c-a1ee-c1c39b6cb43d")]
+                                DispatchShipmentRequestMessage.parameters.shipment.PickupID = SchedulePickupResponseMessage.parameters.SchedulePickupRequestResult;
+                            }
+                            [Microsoft.XLANGs.BaseTypes.DesignerPosition("74c5d04a-af5e-4ece-af0a-2bfbbd1be526")]
+                            send (ILTLSystemServicePort.DispatchShipment, DispatchShipmentRequestMessage, initialize PickupIDCorrelation);
+                            [Microsoft.XLANGs.BaseTypes.DesignerPosition("06fa5caa-5e77-484c-bb3f-e94e3372a905")]
+                            receive (ILTLSystemServicePort.DispatchShipment, DispatchShipmentResponseMessage);
+                            [Microsoft.XLANGs.BaseTypes.DesignerPosition("4a78ae59-0bac-4868-b3f9-d69ff110eb01")]
+                            listen
+                            {
+                                [Microsoft.XLANGs.BaseTypes.DesignerPosition("d7aa00b4-e8a2-4ee2-9b62-b74371ed2ba4")]
+                                until receive (LTLPort.ArriveLTLShipment, PickupRequestMessage, PickupIDCorrelation)
+                                {
+                                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("fdd9c6d7-db51-4dd0-89b5-a998837411a5")]
+                                    scope
+                                    {
+                                        body
+                                        {
+                                            [Microsoft.XLANGs.BaseTypes.DesignerPosition("202d4a91-2430-447b-ab25-4d3b7f4e11e2")]
+                                            construct ArriveShipmentRequestMessage
+                                            {
+                                                [Microsoft.XLANGs.BaseTypes.DesignerPosition("140af6ee-0d52-4ec5-b4e8-10f462b42bd8")]
+                                                transform (ArriveShipmentRequestMessage.parameters) = Argix.PickupRequestToLTLShipmentMap (PickupRequestMessage);
+                                                [Microsoft.XLANGs.BaseTypes.DesignerPosition("f67bbf8a-3b28-4f31-8547-3183c60a3183")]
+                                                ArriveShipmentRequestMessage.parameters.shipment.ID = DispatchShipmentRequestMessage.parameters.shipment.ID;
+                                            }
+                                            [Microsoft.XLANGs.BaseTypes.DesignerPosition("921e6283-401b-4656-8b8e-7e0e19ef1e8d")]
+                                            send (ILTLSystemServicePort.ArriveShipment, ArriveShipmentRequestMessage);
+                                            [Microsoft.XLANGs.BaseTypes.DesignerPosition("c531d6fe-7f96-485d-b8a6-95fce0790c7f")]
+                                            receive (ILTLSystemServicePort.ArriveShipment, ArriveShipmentResponseMessage);
+                                        }
+                                        exceptions
+                                        {
+                                            [Microsoft.XLANGs.BaseTypes.DesignerPosition("50d8bbbb-5b1e-4f6f-a25f-53d4bcd80ca8")]
+                                            catch (ILTLSystemServicePort.ArriveShipment.Fault LTLFault)
+                                            {
+                                            }
+                                        }
+                                    }
+                                }
+                                [Microsoft.XLANGs.BaseTypes.DesignerPosition("88669c57-5bf7-473b-bf3c-1c95ed8e16bf")]
+                                timeout new System.TimeSpan(0, 5, 0)
+                                {
+                                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("3468e8af-58c0-4689-a4b9-3f3ea859e96c")]
+                                    send (EmailPort.EmailLTLShipment, LTLShipmentMessage);
+                                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("c01ee6dc-5bc6-4d92-b9f6-81c908916f36")]
+                                    scope
+                                    {
+                                        body
+                                        {
+                                            [Microsoft.XLANGs.BaseTypes.DesignerPosition("da08e13b-c38e-4177-b77e-142b16a51134")]
+                                            construct CreateIssueRequestMessage
+                                            {
+                                                [Microsoft.XLANGs.BaseTypes.DesignerPosition("3b001c14-f02e-4261-9e47-4e1edd5e34d1")]
+                                                transform (CreateIssueRequestMessage.parameters) = Argix.LTLShipmentToCRMIssueMap (LTLShipmentMessage.detail);
+                                                [Microsoft.XLANGs.BaseTypes.DesignerPosition("c59ae7de-6988-4275-9391-558fa71f92de")]
+                                                CreateIssueRequestMessage.parameters.issue.ActionTypeID = 1;
+                                                CreateIssueRequestMessage.parameters.issue.AgentNumber = "0001";
+                                                CreateIssueRequestMessage.parameters.issue.Comment = "LTL shipment has not been arrived. Please call the terminal manager to determine pickup status. If not picked-up, notify Dispatch to re-schedule; and notify the client with an updated status.";
+                                                CreateIssueRequestMessage.parameters.issue.CompanyID = 999;
+                                                CreateIssueRequestMessage.parameters.issue.CompanyName = "LTLClient";
+                                                CreateIssueRequestMessage.parameters.issue.Contact = "Pallet Shipment Program";
+                                                CreateIssueRequestMessage.parameters.issue.DistrictNumber = "";
+                                                CreateIssueRequestMessage.parameters.issue.RegionNumber = "";
+                                                CreateIssueRequestMessage.parameters.issue.StoreNumber = 0;
+                                                CreateIssueRequestMessage.parameters.issue.Subject = "LTL Shipment Pickup Not Arrived";
+                                                CreateIssueRequestMessage.parameters.issue.TypeID = 29;
+                                                CreateIssueRequestMessage.parameters.issue.UserID = "BizTalk";
+                                            }
+                                            [Microsoft.XLANGs.BaseTypes.DesignerPosition("a74a673b-5397-4717-8698-79bdf4c35aa5")]
+                                            send (CRMPort.CreateIssue, CreateIssueRequestMessage);
+                                            [Microsoft.XLANGs.BaseTypes.DesignerPosition("b963d766-0ea5-4227-8f9e-d4c5dc366d60")]
+                                            receive (CRMPort.CreateIssue, CreateIssueResponseMessage);
+                                        }
+                                        exceptions
+                                        {
+                                            [Microsoft.XLANGs.BaseTypes.DesignerPosition("7e3a4e11-40e9-4d8b-b94c-df9323dd7853")]
+                                            catch (CRMPort.CreateIssue.Fault CustomersFault)
+                                            {
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        exceptions
+                        {
+                            [Microsoft.XLANGs.BaseTypes.DesignerPosition("d372045f-e375-4fa8-86f0-23fc6c1fa376")]
+                            catch (ILTLSystemServicePort.DispatchShipment.Fault LTLFault)
+                            {
+                            }
+                        }
+                    }
+                }
+                exceptions
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("8bbfe42f-6ff9-4910-b626-5ac2df4a58f7")]
+                    catch (IDispatchSystemServicePort.SchedulePickupRequest.Fault DispatchFault)
+                    {
+                    }
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://Argix.Finance" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://Argix.Finance" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://Argix.Finance/Imports">
+      <xsd:import schemaLocation="http://localhost:34780/Argix10.Finance.Services/RateQuoteService.svc?xsd=xsd0" namespace="http://Argix.Finance" />
+      <xsd:import schemaLocation="http://localhost:34780/Argix10.Finance.Services/RateQuoteService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:34780/Argix10.Finance.Services/RateQuoteService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Argix" />
+      <xsd:import schemaLocation="http://localhost:34780/Argix10.Finance.Services/RateQuoteService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:34780/Argix10.Finance.Services/RateQuoteService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Argix.Finance" />
+      <xsd:import schemaLocation="http://localhost:34780/Argix10.Finance.Services/RateQuoteService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Argix.RateWare" />
+      <xsd:import schemaLocation="http://localhost:34780/Argix10.Finance.Services/RateQuoteService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/System.ComponentModel" />
+      <xsd:import schemaLocation="http://localhost:34780/Argix10.Finance.Services/RateQuoteService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/System" />
+      <xsd:import schemaLocation="http://localhost:34780/Argix10.Finance.Services/RateQuoteService.svc?xsd=xsd8" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IRateQuoteService_GetServiceInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetServiceInfo" />
+  </wsdl:message>
+  <wsdl:message name="IRateQuoteService_GetServiceInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetServiceInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRateQuoteService_GetUserConfiguration_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserConfiguration" />
+  </wsdl:message>
+  <wsdl:message name="IRateQuoteService_GetUserConfiguration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserConfigurationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRateQuoteService_GetUserConfiguration_ConfigurationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/Argix" name="detail" element="q1:ConfigurationFault" />
+  </wsdl:message>
+  <wsdl:message name="IRateQuoteService_WriteLogEntry_InputMessage">
+    <wsdl:part name="parameters" element="tns:WriteLogEntry" />
+  </wsdl:message>
+  <wsdl:message name="IRateQuoteService_GetAvailableTariffs_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAvailableTariffs" />
+  </wsdl:message>
+  <wsdl:message name="IRateQuoteService_GetAvailableTariffs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAvailableTariffsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRateQuoteService_GetAvailableTariffs_RateQuoteFaultFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/Argix.Finance" name="detail" element="q2:RateQuoteFault" />
+  </wsdl:message>
+  <wsdl:message name="IRateQuoteService_GetClassCodes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetClassCodes" />
+  </wsdl:message>
+  <wsdl:message name="IRateQuoteService_GetClassCodes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetClassCodesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRateQuoteService_GetClassCodes_RateQuoteFaultFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/Argix.Finance" name="detail" element="q3:RateQuoteFault" />
+  </wsdl:message>
+  <wsdl:message name="IRateQuoteService_CalculateRates_InputMessage">
+    <wsdl:part name="parameters" element="tns:CalculateRates" />
+  </wsdl:message>
+  <wsdl:message name="IRateQuoteService_CalculateRates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CalculateRatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRateQuoteService_CalculateRates_RateQuoteFaultFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/Argix.Finance" name="detail" element="q4:RateQuoteFault" />
+  </wsdl:message>
+  <wsdl:message name="IRateQuoteService_CalculateLTLSimpleRate_InputMessage">
+    <wsdl:part name="parameters" element="tns:CalculateLTLSimpleRate" />
+  </wsdl:message>
+  <wsdl:message name="IRateQuoteService_CalculateLTLSimpleRate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CalculateLTLSimpleRateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRateQuoteService_CalculateLTLSimpleRate_RateQuoteFaultFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/Argix.Finance" name="detail" element="q5:RateQuoteFault" />
+  </wsdl:message>
+  <wsdl:message name="IRateQuoteService_CalculateLTLRate_InputMessage">
+    <wsdl:part name="parameters" element="tns:CalculateLTLRate" />
+  </wsdl:message>
+  <wsdl:message name="IRateQuoteService_CalculateLTLRate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CalculateLTLRateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRateQuoteService_CalculateLTLRate_RateQuoteFaultFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/Argix.Finance" name="detail" element="q6:RateQuoteFault" />
+  </wsdl:message>
+  <wsdl:message name="IRateQuoteService_CalculateLTLRates_InputMessage">
+    <wsdl:part name="parameters" element="tns:CalculateLTLRates" />
+  </wsdl:message>
+  <wsdl:message name="IRateQuoteService_CalculateLTLRates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CalculateLTLRatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRateQuoteService_CalculateLTLRates_RateQuoteFaultFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/Argix.Finance" name="detail" element="q7:RateQuoteFault" />
+  </wsdl:message>
+  <wsdl:message name="IRateQuoteService_GetLTLPointList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLTLPointList" />
+  </wsdl:message>
+  <wsdl:message name="IRateQuoteService_GetLTLPointList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLTLPointListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRateQuoteService_GetLTLPointList_RateQuoteFaultFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/Argix.Finance" name="detail" element="q8:RateQuoteFault" />
+  </wsdl:message>
+  <wsdl:message name="IRateQuoteService_CalculateDensityRates_InputMessage">
+    <wsdl:part name="parameters" element="tns:CalculateDensityRates" />
+  </wsdl:message>
+  <wsdl:message name="IRateQuoteService_CalculateDensityRates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CalculateDensityRatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRateQuoteService_CalculateDensityRates_RateQuoteFaultFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/Argix.Finance" name="detail" element="q9:RateQuoteFault" />
+  </wsdl:message>
+  <wsdl:message name="IRateQuoteService_CalculateLinearRates_InputMessage">
+    <wsdl:part name="parameters" element="tns:CalculateLinearRates" />
+  </wsdl:message>
+  <wsdl:message name="IRateQuoteService_CalculateLinearRates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CalculateLinearRatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRateQuoteService_CalculateLinearRates_RateQuoteFaultFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/Argix.Finance" name="detail" element="q10:RateQuoteFault" />
+  </wsdl:message>
+  <wsdl:message name="IRateQuoteService_GetMileage_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMileage" />
+  </wsdl:message>
+  <wsdl:message name="IRateQuoteService_GetMileage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMileageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRateQuoteService_GetMileage_RateQuoteFaultFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/Argix.Finance" name="detail" element="q11:RateQuoteFault" />
+  </wsdl:message>
+  <wsdl:message name="IRateQuoteService_ViewDeliveryZips_InputMessage">
+    <wsdl:part name="parameters" element="tns:ViewDeliveryZips" />
+  </wsdl:message>
+  <wsdl:message name="IRateQuoteService_ViewDeliveryZips_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ViewDeliveryZipsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRateQuoteService_ViewDeliveryZips_RateQuoteFaultFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/Argix.Finance" name="detail" element="q12:RateQuoteFault" />
+  </wsdl:message>
+  <wsdl:portType name="IRateQuoteService">
+    <wsdl:operation name="GetServiceInfo">
+      <wsdl:input wsaw:Action="http://Argix.Finance/IRateQuoteService/GetServiceInfo" message="tns:IRateQuoteService_GetServiceInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Finance/IRateQuoteService/GetServiceInfoResponse" message="tns:IRateQuoteService_GetServiceInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserConfiguration">
+      <wsdl:input wsaw:Action="http://Argix.Finance/IRateQuoteService/GetUserConfiguration" message="tns:IRateQuoteService_GetUserConfiguration_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Finance/IRateQuoteService/GetUserConfigurationResponse" message="tns:IRateQuoteService_GetUserConfiguration_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.ConfigurationFault" name="ConfigurationFaultFault" message="tns:IRateQuoteService_GetUserConfiguration_ConfigurationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WriteLogEntry">
+      <wsdl:input wsaw:Action="http://Argix.Finance/IRateQuoteService/WriteLogEntry" message="tns:IRateQuoteService_WriteLogEntry_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAvailableTariffs">
+      <wsdl:input wsaw:Action="http://Argix.Finance/IRateQuoteService/GetAvailableTariffs" message="tns:IRateQuoteService_GetAvailableTariffs_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Finance/IRateQuoteService/GetAvailableTariffsResponse" message="tns:IRateQuoteService_GetAvailableTariffs_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Finance.RateQuoteFault" name="RateQuoteFaultFault" message="tns:IRateQuoteService_GetAvailableTariffs_RateQuoteFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClassCodes">
+      <wsdl:input wsaw:Action="http://Argix.Finance/IRateQuoteService/GetClassCodes" message="tns:IRateQuoteService_GetClassCodes_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Finance/IRateQuoteService/GetClassCodesResponse" message="tns:IRateQuoteService_GetClassCodes_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Finance.RateQuoteFault" name="RateQuoteFaultFault" message="tns:IRateQuoteService_GetClassCodes_RateQuoteFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CalculateRates">
+      <wsdl:input wsaw:Action="http://Argix.Finance/IRateQuoteService/CalculateRates" message="tns:IRateQuoteService_CalculateRates_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Finance/IRateQuoteService/CalculateRatesResponse" message="tns:IRateQuoteService_CalculateRates_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Finance.RateQuoteFault" name="RateQuoteFaultFault" message="tns:IRateQuoteService_CalculateRates_RateQuoteFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CalculateLTLSimpleRate">
+      <wsdl:input wsaw:Action="http://Argix.Finance/IRateQuoteService/CalculateLTLSimpleRate" message="tns:IRateQuoteService_CalculateLTLSimpleRate_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Finance/IRateQuoteService/CalculateLTLSimpleRateResponse" message="tns:IRateQuoteService_CalculateLTLSimpleRate_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Finance.RateQuoteFault" name="RateQuoteFaultFault" message="tns:IRateQuoteService_CalculateLTLSimpleRate_RateQuoteFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CalculateLTLRate">
+      <wsdl:input wsaw:Action="http://Argix.Finance/IRateQuoteService/CalculateLTLRate" message="tns:IRateQuoteService_CalculateLTLRate_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Finance/IRateQuoteService/CalculateLTLRateResponse" message="tns:IRateQuoteService_CalculateLTLRate_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Finance.RateQuoteFault" name="RateQuoteFaultFault" message="tns:IRateQuoteService_CalculateLTLRate_RateQuoteFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CalculateLTLRates">
+      <wsdl:input wsaw:Action="http://Argix.Finance/IRateQuoteService/CalculateLTLRates" message="tns:IRateQuoteService_CalculateLTLRates_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Finance/IRateQuoteService/CalculateLTLRatesResponse" message="tns:IRateQuoteService_CalculateLTLRates_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Finance.RateQuoteFault" name="RateQuoteFaultFault" message="tns:IRateQuoteService_CalculateLTLRates_RateQuoteFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLTLPointList">
+      <wsdl:input wsaw:Action="http://Argix.Finance/IRateQuoteService/GetLTLPointList" message="tns:IRateQuoteService_GetLTLPointList_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Finance/IRateQuoteService/GetLTLPointListResponse" message="tns:IRateQuoteService_GetLTLPointList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Finance.RateQuoteFault" name="RateQuoteFaultFault" message="tns:IRateQuoteService_GetLTLPointList_RateQuoteFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CalculateDensityRates">
+      <wsdl:input wsaw:Action="http://Argix.Finance/IRateQuoteService/CalculateDensityRates" message="tns:IRateQuoteService_CalculateDensityRates_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Finance/IRateQuoteService/CalculateDensityRatesResponse" message="tns:IRateQuoteService_CalculateDensityRates_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Finance.RateQuoteFault" name="RateQuoteFaultFault" message="tns:IRateQuoteService_CalculateDensityRates_RateQuoteFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CalculateLinearRates">
+      <wsdl:input wsaw:Action="http://Argix.Finance/IRateQuoteService/CalculateLinearRates" message="tns:IRateQuoteService_CalculateLinearRates_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Finance/IRateQuoteService/CalculateLinearRatesResponse" message="tns:IRateQuoteService_CalculateLinearRates_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Finance.RateQuoteFault" name="RateQuoteFaultFault" message="tns:IRateQuoteService_CalculateLinearRates_RateQuoteFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMileage">
+      <wsdl:input wsaw:Action="http://Argix.Finance/IRateQuoteService/GetMileage" message="tns:IRateQuoteService_GetMileage_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Finance/IRateQuoteService/GetMileageResponse" message="tns:IRateQuoteService_GetMileage_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Finance.RateQuoteFault" name="RateQuoteFaultFault" message="tns:IRateQuoteService_GetMileage_RateQuoteFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ViewDeliveryZips">
+      <wsdl:input wsaw:Action="http://Argix.Finance/IRateQuoteService/ViewDeliveryZips" message="tns:IRateQuoteService_ViewDeliveryZips_InputMessage" />
+      <wsdl:output wsaw:Action="http://Argix.Finance/IRateQuoteService/ViewDeliveryZipsResponse" message="tns:IRateQuoteService_ViewDeliveryZips_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Argix.Finance.RateQuoteFault" name="RateQuoteFaultFault" message="tns:IRateQuoteService_ViewDeliveryZips_RateQuoteFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

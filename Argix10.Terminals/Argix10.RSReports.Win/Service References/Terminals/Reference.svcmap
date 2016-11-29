@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ef0206f6-e777-4b33-bd5c-479850fa16c1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:42462/Argix10.Terminals.Services/RSReports.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="RSReports.xsd" MetadataType="Schema" ID="ee7cc9cd-2aaa-431e-82ff-1c61139045f4" SourceId="1" SourceUrl="http://localhost:42462/Argix10.Terminals.Services/RSReports.svc?xsd=xsd3" />
+    <MetadataFile FileName="RSReports.disco" MetadataType="Disco" ID="8802b7c9-3fd4-41d6-ae2a-1e4f5a42b77e" SourceId="1" SourceUrl="http://localhost:42462/Argix10.Terminals.Services/RSReports.svc?disco" />
+    <MetadataFile FileName="RSReports1.xsd" MetadataType="Schema" ID="5a1af302-2d7f-4562-a3c0-45e70c44b29b" SourceId="1" SourceUrl="http://localhost:42462/Argix10.Terminals.Services/RSReports.svc?xsd=xsd1" />
+    <MetadataFile FileName="RSReports.wsdl" MetadataType="Wsdl" ID="5b535f08-d257-41e0-af86-d5cc139ab92a" SourceId="1" SourceUrl="http://localhost:42462/Argix10.Terminals.Services/RSReports.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="RSReports2.xsd" MetadataType="Schema" ID="0812d98a-f606-414b-a59c-aff61585c608" SourceId="1" SourceUrl="http://localhost:42462/Argix10.Terminals.Services/RSReports.svc?xsd=xsd0" />
+    <MetadataFile FileName="RSReports4.xsd" MetadataType="Schema" ID="8efa51f0-a5d4-4ac1-86a5-0d15ab23b405" SourceId="1" SourceUrl="http://localhost:42462/Argix10.Terminals.Services/RSReports.svc?xsd=xsd5" />
+    <MetadataFile FileName="RSReportsService.wsdl" MetadataType="Wsdl" ID="3a2224d0-ef64-4b95-af17-69f67d8e65b5" SourceId="1" SourceUrl="http://localhost:42462/Argix10.Terminals.Services/RSReports.svc?wsdl" />
+    <MetadataFile FileName="RSReports3.xsd" MetadataType="Schema" ID="12946ade-ed3d-4b09-8c80-0436b85d03b6" SourceId="1" SourceUrl="http://localhost:42462/Argix10.Terminals.Services/RSReports.svc?xsd=xsd2" />
+    <MetadataFile FileName="RSReports41.xsd" MetadataType="Schema" ID="832f068c-724a-40f5-b91d-873b93c0a68f" SourceId="1" SourceUrl="http://localhost:42462/Argix10.Terminals.Services/RSReports.svc?xsd=xsd4" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

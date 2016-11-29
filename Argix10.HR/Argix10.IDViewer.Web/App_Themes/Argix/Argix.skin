@@ -1,0 +1,36 @@
+<asp:Button runat="server" />
+<asp:Calendar runat="server" DayNameFormat="FirstLetter" NextPrevFormat="CustomText" ShowGridLines="True" BorderColor="#000000" BorderStyle="Solid" BorderWidth="1px">
+    <TodayDayStyle BackColor="#ffffff" ForeColor="#000000" />
+    <DayStyle ForeColor="#000000" />
+    <WeekendDayStyle BackColor="#ffffff" ForeColor="#000000" />
+    <NextPrevStyle ForeColor="#ffffff" />
+    <DayHeaderStyle BackColor="#ffffff" ForeColor="#000000" />
+    <TitleStyle BackColor="#000000" ForeColor="#ffffff" />
+</asp:Calendar>
+<asp:CheckBox runat="server" />
+<asp:CheckBoxList runat="server" />
+<asp:CustomValidator runat="server" />
+<asp:DropDownList runat="server" />
+<asp:FileUpload runat="server" />
+<asp:HyperLink runat="server" />
+<asp:Label runat="server" />
+<asp:LinkButton runat="server" />
+<asp:LoginName runat="server" />
+<asp:LoginStatus runat="server" />
+<asp:Panel runat="server" Wrap="False" Width="100%" BorderStyle="Solid" BorderWidth="0px" BorderColor="#000000" />
+<asp:RadioButtonList runat="server" />
+<asp:RegularExpressionValidator runat="server" />
+<asp:RequiredFieldValidator runat="server" />
+<asp:TextBox runat="server" />
+<asp:ValidationSummary runat="server" />
+
+<asp:GridView Runat="server" Font-Size="0.9em" BorderStyle="Inset" BorderWidth="1px" CellPadding="2" CellSpacing="0" GridLines="Both" BackColor="White" >
+    <AlternatingRowStyle />
+    <EditRowStyle />
+    <EmptyDataRowStyle BackColor="White" ForeColor="Black" Wrap="false"  />
+    <FooterStyle BackColor="White" ForeColor="Black" Wrap="false" />
+    <HeaderStyle BorderStyle="None" BorderWidth="0px" BorderColor="Window" BackColor="Control" ForeColor="ControlText" Wrap="True" />
+    <PagerStyle BackColor="Control" ForeColor="ControlText" HorizontalAlign="Left" />
+    <RowStyle BorderStyle="None" BorderWidth="0px" />
+    <SelectedRowStyle />
+</asp:GridView>

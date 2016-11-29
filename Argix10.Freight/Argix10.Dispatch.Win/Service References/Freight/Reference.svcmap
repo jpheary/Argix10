@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="3636403d-5569-40e8-83aa-d2e3494f7e47" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:11138/Argix10.Freight.Services/Dispatch.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Dispatch7.xsd" MetadataType="Schema" ID="5b2d759b-337c-48b6-8f1e-bc5c3eb93f45" SourceId="1" SourceUrl="http://localhost:11138/Argix10.Freight.Services/Dispatch.svc?xsd=xsd6" />
+    <MetadataFile FileName="Dispatch71.xsd" MetadataType="Schema" ID="dde681ce-21e3-45c4-b0dd-93209c34fec6" SourceId="1" SourceUrl="http://localhost:11138/Argix10.Freight.Services/Dispatch.svc?xsd=xsd5" />
+    <MetadataFile FileName="Dispatch72.xsd" MetadataType="Schema" ID="7bebc9de-ddbb-42fa-87ba-7913d79bd7ab" SourceId="1" SourceUrl="http://localhost:11138/Argix10.Freight.Services/Dispatch.svc?xsd=xsd4" />
+    <MetadataFile FileName="Dispatch73.xsd" MetadataType="Schema" ID="876a1e38-38a1-4d55-ad0b-61614d18b1c2" SourceId="1" SourceUrl="http://localhost:11138/Argix10.Freight.Services/Dispatch.svc?xsd=xsd3" />
+    <MetadataFile FileName="Dispatch74.xsd" MetadataType="Schema" ID="979d81e1-2a56-4672-86d0-d0dbfb8693ef" SourceId="1" SourceUrl="http://localhost:11138/Argix10.Freight.Services/Dispatch.svc?xsd=xsd2" />
+    <MetadataFile FileName="Dispatch75.xsd" MetadataType="Schema" ID="e9dcb458-7ae6-4837-a768-8a6a9eb98baa" SourceId="1" SourceUrl="http://localhost:11138/Argix10.Freight.Services/Dispatch.svc?xsd=xsd1" />
+    <MetadataFile FileName="Dispatch76.xsd" MetadataType="Schema" ID="173c6dde-dcb0-48fa-9292-16b33ecbd96d" SourceId="1" SourceUrl="http://localhost:11138/Argix10.Freight.Services/Dispatch.svc?xsd=xsd0" />
+    <MetadataFile FileName="DispatchService1.wsdl" MetadataType="Wsdl" ID="3b87c530-74c5-40d0-92b4-fa13e23079be" SourceId="1" SourceUrl="http://localhost:11138/Argix10.Freight.Services/Dispatch.svc?wsdl" />
+    <MetadataFile FileName="Dispatch1.wsdl" MetadataType="Wsdl" ID="cbfe49c7-5bc1-4f30-be20-2497472766f3" SourceId="1" SourceUrl="http://localhost:11138/Argix10.Freight.Services/Dispatch.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="Dispatch1.disco" MetadataType="Disco" ID="8dce4a9a-d33a-4fe2-9b0e-139d665c7c29" SourceId="1" SourceUrl="http://localhost:11138/Argix10.Freight.Services/Dispatch.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

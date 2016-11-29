@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="08d8a690-52e9-44ec-88e8-60923afe7220" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:25765/Argix10.Freight.Services/TsortService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TsortService.xsd" MetadataType="Schema" ID="bdfe4aa3-b82f-4779-b300-1f7f50548e88" SourceId="1" SourceUrl="http://localhost:25765/Argix10.Freight.Services/TsortService.svc?xsd=xsd1" />
+    <MetadataFile FileName="TsortService1.xsd" MetadataType="Schema" ID="57974561-b1bf-471b-967a-3884bc917144" SourceId="1" SourceUrl="http://localhost:25765/Argix10.Freight.Services/TsortService.svc?xsd=xsd2" />
+    <MetadataFile FileName="TsortService2.xsd" MetadataType="Schema" ID="ec6136b6-fb62-495c-920d-a7b2eeba4a25" SourceId="1" SourceUrl="http://localhost:25765/Argix10.Freight.Services/TsortService.svc?xsd=xsd4" />
+    <MetadataFile FileName="TsortService3.xsd" MetadataType="Schema" ID="a980d564-ab8a-4067-bfb2-26011ceb4da6" SourceId="1" SourceUrl="http://localhost:25765/Argix10.Freight.Services/TsortService.svc?xsd=xsd5" />
+    <MetadataFile FileName="TsortService4.xsd" MetadataType="Schema" ID="715bcb2e-64fc-4959-aba4-1426fa59db54" SourceId="1" SourceUrl="http://localhost:25765/Argix10.Freight.Services/TsortService.svc?xsd=xsd0" />
+    <MetadataFile FileName="TsortService.wsdl" MetadataType="Wsdl" ID="b1baf121-6b0a-43d3-9227-6dd85b0b168e" SourceId="1" SourceUrl="http://localhost:25765/Argix10.Freight.Services/TsortService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="TsortService.disco" MetadataType="Disco" ID="f461f1ba-f737-4323-9beb-ba3057ee35d3" SourceId="1" SourceUrl="http://localhost:25765/Argix10.Freight.Services/TsortService.svc?disco" />
+    <MetadataFile FileName="TsortService5.xsd" MetadataType="Schema" ID="903a68a4-aa57-4cb8-a8ea-14a55fd22d3f" SourceId="1" SourceUrl="http://localhost:25765/Argix10.Freight.Services/TsortService.svc?xsd=xsd3" />
+    <MetadataFile FileName="TsortService1.wsdl" MetadataType="Wsdl" ID="99c0f3c7-519b-45a7-b994-7936825a7ea4" SourceId="1" SourceUrl="http://localhost:25765/Argix10.Freight.Services/TsortService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
